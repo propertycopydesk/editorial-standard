@@ -6,10 +6,12 @@ import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import CredentialBadge from "@/components/CredentialBadge";
 import ConsultationModal from "@/components/ConsultationModal";
+import PainPointCard from "@/components/PainPointCard";
 
 const Index = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [selectedTier, setSelectedTier] = useState(0);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -18,6 +20,13 @@ const Index = () => {
       setIsMobileMenuOpen(false);
     }
   };
+
+  const pricingTiers = [
+    { name: "Standard", turnaround: "24-48 hours", price: "$75" },
+    { name: "Priority", turnaround: "12 hours", price: "$150" },
+    { name: "Rush", turnaround: "6 hours", price: "$250" },
+    { name: "Emergency", turnaround: "2 hours", price: "$500" },
+  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -145,13 +154,13 @@ const Index = () => {
               </Button>
             </div>
 
-            <p className="font-sans text-sm md:text-base text-muted-foreground max-w-xl mx-auto italic">
-              Trusted by agencies who understand that how you write about property shapes how people value it.
+            <p className="font-sans text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
+              Trusted by agencies who understand the undeniable value of professional property copy and how it shapes buyer perception.
             </p>
           </div>
         </section>
 
-        {/* Problem/Solution Section */}
+        {/* Problem Section */}
         <section className="section-padding bg-muted">
           <div className="container-editorial">
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground text-center mb-12 md:mb-16">
@@ -190,7 +199,7 @@ const Index = () => {
               </h3>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 "Clear, compelling narratives",
                 "Buyer psychology optimization",
@@ -208,17 +217,47 @@ const Index = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
 
-            <blockquote className="text-center">
-              <p className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
-                <span className="text-accent">"</span>
-                NOT JUST FASTER. BETTER.
-                <span className="text-accent">"</span>
+        {/* Main Tagline Section */}
+        <section className="section-padding">
+          <div className="container-editorial text-center">
+            <blockquote>
+              <p className="font-serif text-3xl md:text-4xl lg:text-5xl text-accent mb-6 leading-tight">
+                "The copy desk real estate has been missing"
               </p>
-              <footer className="font-sans text-muted-foreground">
-                AI tools make writing faster. We make writing better.
+              <footer className="font-sans text-lg md:text-xl text-muted-foreground">
+                We understand narrative, real estate, and buyer psychology
               </footer>
             </blockquote>
+          </div>
+        </section>
+
+        {/* Pain Points & Solutions Section */}
+        <section className="section-padding bg-muted">
+          <div className="container-editorial">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground text-center mb-12 md:mb-16">
+              The Real Cost of Generic Listing Copy
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+              <PainPointCard
+                title="Time Drain"
+                problem="Agents waste 2+ hours per listing writing descriptions. A 10-agent team loses 160-320 hours monthly just on writing."
+                solution="PropertyCopyDesk delivers professional copy in 24 hours. Get your time back for actual selling."
+              />
+              <PainPointCard
+                title="Lost Deals"
+                problem="Generic descriptions blend in. 'Stunning home' and 'great location' don't convert. Listings sit longer."
+                solution="Our editorial approach creates compelling narratives that drive 18% more inquiries and faster sales."
+              />
+              <PainPointCard
+                title="Inconsistent Quality"
+                problem="Every agent writes differently. No standards. No training. Listings look unprofessional."
+                solution="We implement editorial standards across your entire team. Consistent, high-quality listings every time."
+              />
+            </div>
           </div>
         </section>
 
@@ -226,16 +265,17 @@ const Index = () => {
         <section id="services" className="section-padding">
           <div className="container-editorial">
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground text-center mb-4">
-              Three Ways to Work With Us
+              Work With Us
             </h2>
             <p className="font-sans text-muted-foreground text-center mb-12 md:mb-16 max-w-xl mx-auto">
-              From team-wide implementation to individual listings
+              Choose the option that fits your needs
             </p>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
               <ServiceCard
-                badge="For Teams & Brokerages"
-                price="$6,000"
+                badge="For Real Estate Teams"
+                price="Starting at $6,000"
+                priceSubtext="Pricing scales with team size"
                 subtitle="Editorial Standards for Your Entire Team"
                 features={[
                   "Complete workflow audit",
@@ -243,39 +283,48 @@ const Index = () => {
                   "Team training on editorial standards",
                   "90-day implementation support",
                 ]}
-                roiCallout="Save 10-15 hours per agent per week | Payback: 11 days"
-                note="Limited to 3 teams per month"
-                ctaText="Close More Deals"
+                pricingBreakdown={[
+                  { label: "Small teams (5-15 agents)", price: "$6,000" },
+                  { label: "Medium teams (16-30 agents)", price: "$9,000" },
+                  { label: "Large teams (31+ agents)", price: "Custom" },
+                ]}
+                roiCallout="Save 10-15 hours per agent per week | ROI: 2,100% in Year 1"
+                note="Limited to 2 teams per month"
+                ctaText="Book Strategy Call"
                 onCtaClick={() => setIsModalOpen(true)}
               />
 
               <ServiceCard
-                badge="For Solo Agents"
-                price="$75/listing"
-                subtitle="24-Hour Turnaround"
+                badge="For Individual Agents"
+                price="From $75"
+                subtitle="Choose your turnaround time"
                 features={[
                   "Professional editing quality",
                   "Buyer psychology optimization",
                   "18% average increase in inquiries",
-                  "Same standards as $6,000 consulting clients",
+                  "Same standards as our $6,000 consulting",
                 ]}
-                ctaText="Refine My Listing"
+                pricingTiers={pricingTiers}
+                selectedTier={selectedTier}
+                onTierSelect={setSelectedTier}
+                ctaText="Submit Your Listing"
                 popular
                 onCtaClick={() => setIsModalOpen(true)}
               />
 
               <ServiceCard
-                badge="Coming Q1 2026"
+                badge="Coming Q2 2026"
                 badgeColor="gold"
-                price="$369"
-                originalPrice="$297"
+                price="$297"
+                originalPrice="$369"
                 subtitle="Learn Our System"
                 features={[
                   "The PropertyCopyDesk Editorial Method",
                   "Templates, style guides, frameworks",
                   "Everything we teach $6,000 consulting clients",
-                  "Lifetime access with quarterly updates",
+                  "Lifetime access + quarterly updates",
                 ]}
+                goldNote="Lock in $297 forever — Join waitlist now. Price increases to $369 when toolkit launches Q2 2026."
                 ctaText="Join Waitlist"
                 ctaDisabled
               />
@@ -286,12 +335,9 @@ const Index = () => {
         {/* Testimonials Section */}
         <section id="testimonials" className="section-padding bg-muted">
           <div className="container-editorial">
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground text-center mb-4">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground text-center mb-12 md:mb-16">
               Editorial Excellence Drives Results
             </h2>
-            <p className="font-sans text-muted-foreground text-center mb-12 md:mb-16 max-w-xl mx-auto">
-              What happens when you treat real estate writing as craft
-            </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               <TestimonialCard
@@ -317,19 +363,25 @@ const Index = () => {
         <section id="about" className="section-padding">
           <div className="container-editorial">
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground text-center mb-12 md:mb-16">
-              Why PropertyCopyDesk?
+              Why PropertyCopyDesk Works
             </h2>
 
             <div className="max-w-3xl mx-auto">
               <div className="prose prose-lg mx-auto mb-12">
                 <p className="font-sans text-lg text-muted-foreground leading-relaxed mb-6">
-                  Founded by Fatih Can, who studied English Literature, owns investment properties, and understands both the craft of writing and the business of real estate.
+                  Founded by Fatih Can — an English Literature scholar, property investor, and marketing professional who bridges three worlds most people never connect.
                 </p>
                 <p className="font-sans text-lg text-muted-foreground leading-relaxed mb-6">
-                  After watching agents struggle with generic descriptions, I built what real estate was missing: a professional editorial desk for property descriptions.
+                  After years of watching real estate agents struggle with generic, ineffective descriptions, I realized the problem: real estate has no editorial standard.
+                </p>
+                <p className="font-sans text-lg text-muted-foreground leading-relaxed mb-6">
+                  Journalism has copy desks. Publishing has editors. Marketing has content strategists. But real estate? Agents write alone.
+                </p>
+                <p className="font-sans text-lg text-muted-foreground leading-relaxed mb-6">
+                  PropertyCopyDesk fills that gap. We're not trying to be faster or cheaper. We're trying to be BETTER.
                 </p>
                 <p className="font-sans text-lg text-foreground leading-relaxed font-medium">
-                  We're not trying to be faster or cheaper. We're trying to be BETTER.
+                  Because how you write about property directly shapes how buyers value it.
                 </p>
               </div>
 
@@ -346,7 +398,7 @@ const Index = () => {
                 />
                 <CredentialBadge
                   icon={TrendingUp}
-                  title="Marketing Professional"
+                  title="Marketing Pro"
                   description="Buyer Psychology"
                 />
               </div>
@@ -357,42 +409,25 @@ const Index = () => {
         {/* Final CTA Section */}
         <section className="section-padding bg-primary text-primary-foreground">
           <div className="container-editorial text-center">
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-4">
-              Ready to Transform How You Write About Property?
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-12">
+              Ready to Transform Your Property Descriptions?
             </h2>
-            <p className="font-sans text-primary-foreground/70 mb-12 max-w-xl mx-auto">
-              Choose the path that fits your needs
-            </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-              <div className="text-center">
-                <h3 className="font-serif text-xl md:text-2xl mb-2">For Teams</h3>
-                <p className="font-sans text-primary-foreground/70 text-sm mb-6">
-                  Book a $6,000 strategy call
-                </p>
-                <Button
-                  variant="secondary"
-                  size="lg"
-                  className="w-full md:w-auto"
-                  onClick={() => setIsModalOpen(true)}
-                >
-                  Start Consultation
-                </Button>
-              </div>
-              <div className="text-center">
-                <h3 className="font-serif text-xl md:text-2xl mb-2">For Solo Agents</h3>
-                <p className="font-sans text-primary-foreground/70 text-sm mb-6">
-                  Submit a $75 listing
-                </p>
-                <Button
-                  variant="secondary"
-                  size="lg"
-                  className="w-full md:w-auto"
-                  onClick={() => setIsModalOpen(true)}
-                >
-                  Submit Listing
-                </Button>
-              </div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <Button
+                variant="secondary"
+                size="xl"
+                onClick={() => setIsModalOpen(true)}
+              >
+                For Teams: Book Strategy Call
+              </Button>
+              <Button
+                variant="secondary"
+                size="xl"
+                onClick={() => setIsModalOpen(true)}
+              >
+                For Agents: Submit a Listing
+              </Button>
             </div>
           </div>
         </section>
@@ -420,13 +455,13 @@ const Index = () => {
 
             {/* For Teams */}
             <div>
-              <h4 className="font-sans font-medium text-foreground mb-4">For Teams</h4>
-              <p className="font-sans text-sm text-muted-foreground mb-3">
-                Managing 5+ agents? Our $6,000 AI Implementation Consulting saves teams 10-15hrs/week per agent.
+              <h4 className="font-serif text-lg text-foreground mb-4">For Teams</h4>
+              <p className="font-sans text-sm text-muted-foreground mb-4">
+                Managing 5+ agents? Our editorial consulting saves 10-15 hours per agent per week.
               </p>
               <button
                 onClick={() => scrollToSection("services")}
-                className="font-sans text-sm text-accent hover:text-gold-dark transition-colors"
+                className="font-sans text-sm text-accent hover:underline"
               >
                 Learn About Consulting →
               </button>
@@ -434,24 +469,24 @@ const Index = () => {
 
             {/* Trust Indicators */}
             <div>
-              <h4 className="font-sans font-medium text-foreground mb-4">Trust Indicators</h4>
+              <h4 className="font-serif text-lg text-foreground mb-4">Trust</h4>
               <ul className="space-y-2 font-sans text-sm text-muted-foreground">
                 <li>200+ listings delivered monthly</li>
                 <li>4.9/5 average rating</li>
-                <li>Editorial standards since 2026</li>
+                <li>Editorial standards since 2025</li>
               </ul>
             </div>
           </div>
 
-          <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="font-sans text-xs text-muted-foreground">
+          <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="font-sans text-sm text-muted-foreground">
               © {new Date().getFullYear()} PropertyCopyDesk. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
-              <button className="font-sans text-xs text-muted-foreground hover:text-foreground transition-colors">
+              <button className="font-sans text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Privacy Policy
               </button>
-              <button className="font-sans text-xs text-muted-foreground hover:text-foreground transition-colors">
+              <button className="font-sans text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Terms of Service
               </button>
             </div>
@@ -460,7 +495,12 @@ const Index = () => {
       </footer>
 
       {/* Modal */}
-      <ConsultationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <ConsultationModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        selectedTier={selectedTier}
+        onTierChange={setSelectedTier}
+      />
     </div>
   );
 };

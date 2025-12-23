@@ -1,13 +1,29 @@
 import { X, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const PRICING_TIERS = [
+  { name: "Standard", turnaround: "24-48 hours", price: "$75" },
+  { name: "Priority", turnaround: "12 hours", price: "$150" },
+  { name: "Rush", turnaround: "6 hours", price: "$250" },
+  { name: "Emergency", turnaround: "2 hours", price: "$500" },
+];
+
 interface ConsultationModalProps {
   isOpen: boolean;
   onClose: () => void;
+  selectedTier?: number;
+  onTierChange?: (tier: number) => void;
 }
 
-const ConsultationModal = ({ isOpen, onClose }: ConsultationModalProps) => {
+const ConsultationModal = ({ 
+  isOpen, 
+  onClose, 
+  selectedTier = 0, 
+  onTierChange 
+}: ConsultationModalProps) => {
   if (!isOpen) return null;
+
+  const currentTier = PRICING_TIERS[selectedTier];
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
@@ -27,7 +43,7 @@ const ConsultationModal = ({ isOpen, onClose }: ConsultationModalProps) => {
                 Submit Your Listing
               </h2>
               <p className="text-muted-foreground font-sans text-sm">
-                Professional editing • 24-hour turnaround • $75 per listing
+                Professional editing • Choose your turnaround time
               </p>
             </div>
             <button
@@ -80,6 +96,49 @@ const ConsultationModal = ({ isOpen, onClose }: ConsultationModalProps) => {
 
             <div>
               <label className="block text-sm font-sans font-medium text-foreground mb-2">
+                Select Service Tier *
+              </label>
+              <div className="space-y-2">
+                {PRICING_TIERS.map((tier, index) => (
+                  <button
+                    key={index}
+                    type="button"
+                    onClick={() => onTierChange?.(index)}
+                    className={`w-full flex items-center justify-between p-3 border rounded text-left transition-all ${
+                      selectedTier === index
+                        ? "border-accent bg-accent/10"
+                        : "border-border hover:border-accent/50"
+                    }`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <div
+                        className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${
+                          selectedTier === index ? "border-accent" : "border-muted-foreground"
+                        }`}
+                      >
+                        {selectedTier === index && (
+                          <div className="w-2 h-2 rounded-full bg-accent" />
+                        )}
+                      </div>
+                      <div>
+                        <span className="font-sans text-sm font-medium text-foreground">
+                          {tier.name}
+                        </span>
+                        <span className="font-sans text-xs text-muted-foreground ml-2">
+                          ({tier.turnaround})
+                        </span>
+                      </div>
+                    </div>
+                    <span className="font-sans font-semibold text-foreground">
+                      {tier.price}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-sm font-sans font-medium text-foreground mb-2">
                 Email Address *
               </label>
               <input
@@ -91,12 +150,12 @@ const ConsultationModal = ({ isOpen, onClose }: ConsultationModalProps) => {
 
             <div className="bg-muted border border-border rounded p-4">
               <p className="text-xs text-muted-foreground font-sans text-center">
-                Form connects to Stripe checkout (not implemented in demo)
+                This is a demo — form doesn't actually submit
               </p>
             </div>
 
             <Button variant="editorial" size="lg" className="w-full" type="button">
-              Continue to Payment — $75
+              Continue to Checkout — {currentTier.price}
             </Button>
           </form>
         </div>
