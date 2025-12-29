@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Check, BookOpen, Home, TrendingUp, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Logo from "@/components/Logo";
@@ -7,6 +8,8 @@ import TestimonialCard from "@/components/TestimonialCard";
 import CredentialBadge from "@/components/CredentialBadge";
 import ConsultationModal from "@/components/ConsultationModal";
 import PainPointCard from "@/components/PainPointCard";
+
+const CALENDLY_URL = "https://calendly.com/propertycopydesk/roi-call";
 
 const Index = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,6 +22,10 @@ const Index = () => {
       element.scrollIntoView({ behavior: "smooth" });
       setIsMobileMenuOpen(false);
     }
+  };
+
+  const openCalendly = () => {
+    window.open(CALENDLY_URL, "_blank");
   };
 
   const pricingTiers = [
@@ -66,6 +73,18 @@ const Index = () => {
               >
                 About
               </button>
+              <Link
+                to="/blog"
+                className="text-sm font-sans text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Blog
+              </Link>
+              <Link
+                to="/consulting"
+                className="text-sm font-sans text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Consulting
+              </Link>
               <Button
                 variant="editorial"
                 size="sm"
@@ -106,6 +125,20 @@ const Index = () => {
               >
                 About
               </button>
+              <Link
+                to="/blog"
+                className="block text-sm font-sans text-muted-foreground hover:text-foreground transition-colors w-full text-left"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Blog
+              </Link>
+              <Link
+                to="/consulting"
+                className="block text-sm font-sans text-muted-foreground hover:text-foreground transition-colors w-full text-left"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Consulting
+              </Link>
               <Button
                 variant="editorial"
                 size="sm"
@@ -141,7 +174,7 @@ const Index = () => {
               <Button
                 variant="editorial"
                 size="lg"
-                onClick={() => setIsModalOpen(true)}
+                onClick={openCalendly}
               >
                 Book Consultation
               </Button>
@@ -291,7 +324,7 @@ const Index = () => {
                 roiCallout="Save 10-15 hours per agent per week | ROI: 2,100% in Year 1"
                 note="Limited to 2 teams per month"
                 ctaText="Book Strategy Call"
-                onCtaClick={() => setIsModalOpen(true)}
+                onCtaClick={openCalendly}
               />
 
               <ServiceCard
@@ -417,7 +450,7 @@ const Index = () => {
               <Button
                 variant="secondary"
                 size="xl"
-                onClick={() => setIsModalOpen(true)}
+                onClick={openCalendly}
               >
                 For Teams: Book Strategy Call
               </Button>
