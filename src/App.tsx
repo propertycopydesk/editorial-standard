@@ -8,6 +8,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Consulting from "./pages/Consulting";
 import Service from "./pages/Service";
+import ToolkitWaitlist from "./pages/ToolkitWaitlist";
 import NotFound from "./pages/NotFound";
 import ExitIntentPopup from "./components/ExitIntentPopup";
 
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/consulting" element={<Consulting />} />
           <Route path="/service" element={<Service />} />
+          <Route path="/toolkit-waitlist" element={<ToolkitWaitlist />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <ExitIntentPopup />

@@ -6,6 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import ROICalculator from "@/components/ROICalculator";
 import ConsultingTimeline from "@/components/ConsultingTimeline";
 import CalendlyEmbed from "@/components/CalendlyEmbed";
+import Footer from "@/components/Footer";
 
 const Consulting = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -35,6 +36,7 @@ const Consulting = () => {
           </Link>
           <div className="hidden md:flex items-center gap-8">
             <Link to="/" className="text-sm font-sans text-muted-foreground hover:text-foreground">Home</Link>
+            <Link to="/service" className="text-sm font-sans text-muted-foreground hover:text-foreground">Services</Link>
             <Link to="/blog" className="text-sm font-sans text-muted-foreground hover:text-foreground">Blog</Link>
             <Link to="/consulting" className="text-sm font-sans text-foreground font-medium">Consulting</Link>
             <Button variant="editorial" size="sm" onClick={() => setShowCalendly(true)}>Book Call</Button>
@@ -182,6 +184,8 @@ const Consulting = () => {
           </div>
         </section>
       </main>
+
+      <Footer />
 
       {/* Calendly Modal */}
       {showCalendly && (

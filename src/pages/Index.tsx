@@ -74,6 +74,12 @@ const Index = () => {
                 About
               </button>
               <Link
+                to="/service"
+                className="text-sm font-sans text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Services
+              </Link>
+              <Link
                 to="/blog"
                 className="text-sm font-sans text-muted-foreground hover:text-foreground transition-colors"
               >
@@ -125,6 +131,13 @@ const Index = () => {
               >
                 About
               </button>
+              <Link
+                to="/service"
+                className="block text-sm font-sans text-muted-foreground hover:text-foreground transition-colors w-full text-left"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Services
+              </Link>
               <Link
                 to="/blog"
                 className="block text-sm font-sans text-muted-foreground hover:text-foreground transition-colors w-full text-left"
