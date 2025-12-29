@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import BlogPostCard from "@/components/BlogPostCard";
 import LeadMagnetBox from "@/components/LeadMagnetBox";
+import Footer from "@/components/Footer";
 import { 
   blogPosts, 
   categories, 
@@ -60,6 +61,9 @@ const Blog = () => {
               <Link to="/" className="text-sm font-sans text-muted-foreground hover:text-foreground transition-colors">
                 Home
               </Link>
+              <Link to="/service" className="text-sm font-sans text-muted-foreground hover:text-foreground transition-colors">
+                Services
+              </Link>
               <Link to="/blog" className="text-sm font-sans text-foreground font-medium">
                 Blog
               </Link>
@@ -84,6 +88,9 @@ const Blog = () => {
             <div className="md:hidden mt-4 pt-4 border-t border-border space-y-4">
               <Link to="/" className="block text-sm font-sans text-muted-foreground hover:text-foreground transition-colors">
                 Home
+              </Link>
+              <Link to="/service" className="block text-sm font-sans text-muted-foreground hover:text-foreground transition-colors">
+                Services
               </Link>
               <Link to="/blog" className="block text-sm font-sans text-foreground font-medium">
                 Blog
@@ -222,25 +229,7 @@ const Blog = () => {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-border py-12">
-        <div className="container-editorial text-center">
-          <Link to="/" className="inline-block mb-4">
-            <div className="flex flex-col items-center">
-              <span className="font-serif text-lg font-semibold tracking-wide text-foreground">
-                PROPERTY
-              </span>
-              <div className="w-10 h-px bg-accent my-0.5" />
-              <span className="font-serif text-xs tracking-[0.2em] text-foreground">
-                COPY DESK
-              </span>
-            </div>
-          </Link>
-          <p className="font-sans text-sm text-muted-foreground">
-            © {new Date().getFullYear()} PropertyCopyDesk. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

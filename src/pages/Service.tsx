@@ -8,6 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Footer from "@/components/Footer";
 
 const CALENDLY_URL = "https://calendly.com/propertycopydesk/roi-call";
 
@@ -142,6 +143,12 @@ const Service = () => {
                 Home
               </Link>
               <Link
+                to="/service"
+                className="text-sm font-sans text-foreground font-medium"
+              >
+                Services
+              </Link>
+              <Link
                 to="/blog"
                 className="text-sm font-sans text-muted-foreground hover:text-foreground transition-colors"
               >
@@ -180,6 +187,12 @@ const Service = () => {
                 className="block text-sm font-sans text-muted-foreground hover:text-foreground transition-colors"
               >
                 Home
+              </Link>
+              <Link
+                to="/service"
+                className="block text-sm font-sans text-foreground font-medium"
+              >
+                Services
               </Link>
               <Link
                 to="/blog"
@@ -487,24 +500,7 @@ const Service = () => {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-border py-12">
-        <div className="container-editorial">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="font-sans text-sm text-muted-foreground">
-              © {new Date().getFullYear()} PropertyCopyDesk. All rights reserved.
-            </p>
-            <div className="flex items-center gap-6">
-              <Link to="/blog" className="font-sans text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Blog
-              </Link>
-              <Link to="/consulting" className="font-sans text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Consulting
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
