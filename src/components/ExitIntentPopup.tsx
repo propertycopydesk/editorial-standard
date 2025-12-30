@@ -3,6 +3,7 @@ import { X, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import { analytics } from "@/lib/analytics";
 
 const ExitIntentPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -19,6 +20,7 @@ const ExitIntentPopup = () => {
       if (e.clientY <= 0) {
         setIsVisible(true);
         sessionStorage.setItem("exitPopupShown", "true");
+        analytics.exitIntentShown();
         document.removeEventListener("mouseout", handleMouseLeave);
       }
     };
@@ -42,6 +44,9 @@ const ExitIntentPopup = () => {
     
     // Simulate form submission - replace with actual API call
     await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    analytics.exitIntentConverted();
+    analytics.leadMagnetDownload("exit_intent_toolkit");
     
     toast({
       title: "Success!",

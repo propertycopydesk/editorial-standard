@@ -62,7 +62,7 @@ const Blog = () => {
                 Home
               </Link>
               <Link to="/service" className="text-sm font-sans text-muted-foreground hover:text-foreground transition-colors">
-                Services
+                Listings
               </Link>
               <Link to="/blog" className="text-sm font-sans text-foreground font-medium">
                 Blog
@@ -90,7 +90,7 @@ const Blog = () => {
                 Home
               </Link>
               <Link to="/service" className="block text-sm font-sans text-muted-foreground hover:text-foreground transition-colors">
-                Services
+                Listings
               </Link>
               <Link to="/blog" className="block text-sm font-sans text-foreground font-medium">
                 Blog

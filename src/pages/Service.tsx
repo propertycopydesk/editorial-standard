@@ -146,7 +146,7 @@ const Service = () => {
                 to="/service"
                 className="text-sm font-sans text-foreground font-medium"
               >
-                Services
+                Listings
               </Link>
               <Link
                 to="/blog"
@@ -192,7 +192,7 @@ const Service = () => {
                 to="/service"
                 className="block text-sm font-sans text-foreground font-medium"
               >
-                Services
+                Listings
               </Link>
               <Link
                 to="/blog"

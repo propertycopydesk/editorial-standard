@@ -1,7 +1,8 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Slider } from "@/components/ui/slider";
 import { Button } from "@/components/ui/button";
 import { Calculator, TrendingUp, Clock, DollarSign } from "lucide-react";
+import { analytics } from "@/lib/analytics";
 
 interface ROICalculatorProps {
   onBookCall?: () => void;
@@ -9,6 +10,7 @@ interface ROICalculatorProps {
 
 const ROICalculator = ({ onBookCall }: ROICalculatorProps) => {
   const [agentCount, setAgentCount] = useState(10);
+  const [hasInteracted, setHasInteracted] = useState(false);
 
   const calculations = useMemo(() => {
     const hoursPerWeek = 15;
@@ -31,6 +33,16 @@ const ROICalculator = ({ onBookCall }: ROICalculatorProps) => {
       investmentCost
     };
   }, [agentCount]);
+
+  // Track when user interacts with calculator
+  useEffect(() => {
+    if (hasInteracted) {
+      const timer = setTimeout(() => {
+        analytics.roiCalculatorUsed(agentCount, calculations.annualSavings);
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [agentCount, hasInteracted, calculations.annualSavings]);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -58,7 +70,10 @@ const ROICalculator = ({ onBookCall }: ROICalculatorProps) => {
         </label>
         <Slider
           value={[agentCount]}
-          onValueChange={(value) => setAgentCount(value[0])}
+          onValueChange={(value) => {
+            setAgentCount(value[0]);
+            setHasInteracted(true);
+          }}
           min={5}
           max={30}
           step={1}
@@ -130,7 +145,10 @@ const ROICalculator = ({ onBookCall }: ROICalculatorProps) => {
         variant="editorial" 
         size="lg" 
         className="w-full"
-        onClick={onBookCall}
+        onClick={() => {
+          analytics.ctaClick("Book Strategy Call", "roi_calculator");
+          onBookCall?.();
+        }}
       >
         Book Your Strategy Call
       </Button>

@@ -3,6 +3,7 @@ import { FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import { analytics } from "@/lib/analytics";
 
 interface LeadMagnetBoxProps {
   title?: string;
@@ -10,6 +11,7 @@ interface LeadMagnetBoxProps {
   buttonText?: string;
   variant?: "default" | "compact" | "sidebar";
   className?: string;
+  magnetName?: string;
 }
 
 const LeadMagnetBox = ({
@@ -17,7 +19,8 @@ const LeadMagnetBox = ({
   description = "Get our comprehensive real estate copywriting toolkit",
   buttonText = "Get Free Access",
   variant = "default",
-  className = ""
+  className = "",
+  magnetName = "lead_magnet"
 }: LeadMagnetBoxProps) => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -31,6 +34,9 @@ const LeadMagnetBox = ({
     
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    analytics.leadMagnetDownload(magnetName);
+    analytics.formSubmit("lead_magnet", variant);
     
     toast({
       title: "Success!",
