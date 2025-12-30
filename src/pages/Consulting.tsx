@@ -36,7 +36,7 @@ const Consulting = () => {
           </Link>
           <div className="hidden md:flex items-center gap-8">
             <Link to="/" className="text-sm font-sans text-muted-foreground hover:text-foreground">Home</Link>
-            <Link to="/service" className="text-sm font-sans text-muted-foreground hover:text-foreground">Services</Link>
+            <Link to="/service" className="text-sm font-sans text-muted-foreground hover:text-foreground">Listings</Link>
             <Link to="/blog" className="text-sm font-sans text-muted-foreground hover:text-foreground">Blog</Link>
             <Link to="/consulting" className="text-sm font-sans text-foreground font-medium">Consulting</Link>
             <Button variant="editorial" size="sm" onClick={() => setShowCalendly(true)}>Book Call</Button>

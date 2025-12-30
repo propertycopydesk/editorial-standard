@@ -8,7 +8,8 @@ import TestimonialCard from "@/components/TestimonialCard";
 import CredentialBadge from "@/components/CredentialBadge";
 import ConsultationModal from "@/components/ConsultationModal";
 import PainPointCard from "@/components/PainPointCard";
-
+import Footer from "@/components/Footer";
+import { analytics } from "@/lib/analytics";
 const CALENDLY_URL = "https://calendly.com/propertycopydesk/roi-call";
 
 const Index = () => {
@@ -77,7 +78,7 @@ const Index = () => {
                 to="/service"
                 className="text-sm font-sans text-muted-foreground hover:text-foreground transition-colors"
               >
-                Services
+                Listings
               </Link>
               <Link
                 to="/blog"
@@ -136,7 +137,7 @@ const Index = () => {
                 className="block text-sm font-sans text-muted-foreground hover:text-foreground transition-colors w-full text-left"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Services
+                Listings
               </Link>
               <Link
                 to="/blog"
@@ -187,7 +188,10 @@ const Index = () => {
               <Button
                 variant="editorial"
                 size="lg"
-                onClick={openCalendly}
+                onClick={() => {
+                  analytics.ctaClick("Book Consultation", "hero");
+                  openCalendly();
+                }}
               >
                 Book Consultation
               </Button>
@@ -372,7 +376,10 @@ const Index = () => {
                 ]}
                 goldNote="Lock in $297 forever — Join waitlist now. Price increases to $369 when toolkit launches Q2 2026."
                 ctaText="Join Waitlist"
-                ctaDisabled
+                onCtaClick={() => {
+                  analytics.ctaClick("Join Waitlist", "services");
+                  window.location.href = "/toolkit-waitlist";
+                }}
               />
             </div>
           </div>
@@ -415,19 +422,28 @@ const Index = () => {
             <div className="max-w-3xl mx-auto">
               <div className="prose prose-lg mx-auto mb-12">
                 <p className="font-sans text-lg text-muted-foreground leading-relaxed mb-6">
-                  Founded by Fatih Can — an English Literature scholar, property investor, and marketing professional who bridges three worlds most people never connect.
+                  Founded by Fatih Can, an English Literature scholar, property investor, and marketing professional who calculated the real cost of bad real estate copy: <span className="text-foreground font-medium">$58,500 per year in wasted agent time.</span>
+                </p>
+                <p className="font-sans text-lg text-foreground leading-relaxed mb-6 font-medium">
+                  The problem isn't that agents can't write. It's that they shouldn't have to.
                 </p>
                 <p className="font-sans text-lg text-muted-foreground leading-relaxed mb-6">
-                  After years of watching real estate agents struggle with generic, ineffective descriptions, I realized the problem: real estate has no editorial standard.
+                  Agents write alone for 2+ hours per listing, producing generic descriptions that perform 18% worse than professionally edited alternatives.
+                </p>
+                <p className="font-sans text-lg text-foreground leading-relaxed mb-6 font-medium">
+                  PropertyCopyDesk is the editorial standard the industry never had.
                 </p>
                 <p className="font-sans text-lg text-muted-foreground leading-relaxed mb-6">
-                  Journalism has copy desks. Publishing has editors. Marketing has content strategists. But real estate? Agents write alone.
+                  We're not an AI tool. We're not Fiverr freelancers. We're professional editors who deliver expert property copy in 24 hours: copy that drives more inquiries, saves 10-15 hours per week, and positions properties for maximum value.
                 </p>
                 <p className="font-sans text-lg text-muted-foreground leading-relaxed mb-6">
-                  PropertyCopyDesk fills that gap. We're not trying to be faster or cheaper. We're trying to be BETTER.
+                  In all of our three tiers we have <span className="text-foreground font-medium">ONE standard</span>: professional property copy that actually converts.
+                </p>
+                <p className="font-sans text-lg text-muted-foreground leading-relaxed mb-6">
+                  Because how you describe property shapes how they value it, how quickly they respond, and how much they're willing to pay.
                 </p>
                 <p className="font-sans text-lg text-foreground leading-relaxed font-medium">
-                  Because how you write about property directly shapes how buyers value it.
+                  Real estate finally has its editorial standard. This is PropertyCopyDesk.
                 </p>
               </div>
 
@@ -463,14 +479,20 @@ const Index = () => {
               <Button
                 variant="secondary"
                 size="xl"
-                onClick={openCalendly}
+                onClick={() => {
+                  analytics.ctaClick("Book Strategy Call", "final_cta");
+                  openCalendly();
+                }}
               >
                 For Teams: Book Strategy Call
               </Button>
               <Button
                 variant="secondary"
                 size="xl"
-                onClick={() => setIsModalOpen(true)}
+                onClick={() => {
+                  analytics.ctaClick("Submit Listing", "final_cta");
+                  setIsModalOpen(true);
+                }}
               >
                 For Agents: Submit a Listing
               </Button>
@@ -479,66 +501,7 @@ const Index = () => {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-border py-12 md:py-16">
-        <div className="container-editorial">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 mb-12">
-            {/* Logo & Tagline */}
-            <div>
-              <div className="flex flex-col items-start mb-4">
-                <span className="font-serif text-lg font-semibold tracking-wide text-foreground">
-                  PROPERTY
-                </span>
-                <div className="w-10 h-px bg-accent my-0.5" />
-                <span className="font-serif text-xs tracking-[0.2em] text-foreground">
-                  COPY DESK
-                </span>
-              </div>
-              <p className="font-sans text-sm text-muted-foreground">
-                The Editorial Standard for Real Estate
-              </p>
-            </div>
-
-            {/* For Teams */}
-            <div>
-              <h4 className="font-serif text-lg text-foreground mb-4">For Teams</h4>
-              <p className="font-sans text-sm text-muted-foreground mb-4">
-                Managing 5+ agents? Our editorial consulting saves 10-15 hours per agent per week.
-              </p>
-              <button
-                onClick={() => scrollToSection("services")}
-                className="font-sans text-sm text-accent hover:underline"
-              >
-                Learn About Consulting →
-              </button>
-            </div>
-
-            {/* Trust Indicators */}
-            <div>
-              <h4 className="font-serif text-lg text-foreground mb-4">Trust</h4>
-              <ul className="space-y-2 font-sans text-sm text-muted-foreground">
-                <li>200+ listings delivered monthly</li>
-                <li>4.9/5 average rating</li>
-                <li>Editorial standards since 2025</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="font-sans text-sm text-muted-foreground">
-              © {new Date().getFullYear()} PropertyCopyDesk. All rights reserved.
-            </p>
-            <div className="flex items-center gap-6">
-              <button className="font-sans text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Privacy Policy
-              </button>
-              <button className="font-sans text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Terms of Service
-              </button>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
       {/* Modal */}
       <ConsultationModal
