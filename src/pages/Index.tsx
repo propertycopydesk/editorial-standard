@@ -95,7 +95,7 @@ const Index = () => {
               <Button
                 variant="editorial"
                 size="sm"
-                onClick={() => setIsModalOpen(true)}
+                onClick={() => window.open("https://airtable.com/appeZhHUgV9FzKthv/paggbLJsR25HCyAQA/form", "_blank")}
               >
                 Get Started
               </Button>
@@ -158,7 +158,7 @@ const Index = () => {
                 size="sm"
                 className="w-full"
                 onClick={() => {
-                  setIsModalOpen(true);
+                  window.open("https://airtable.com/appeZhHUgV9FzKthv/paggbLJsR25HCyAQA/form", "_blank");
                   setIsMobileMenuOpen(false);
                 }}
               >
@@ -491,7 +491,7 @@ onClick={() => {
                 size="xl"
                 onClick={() => {
                   analytics.ctaClick("Submit Listing", "final_cta");
-                  setIsModalOpen(true);
+                  window.open("https://airtable.com/appeZhHUgV9FzKthv/paggbLJsR25HCyAQA/form", "_blank");
                 }}
               >
                 For Agents: Submit a Listing

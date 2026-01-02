@@ -86,7 +86,7 @@ const BlogPost = () => {
                 {i === 1 && (
                   <div className="my-8 bg-accent/10 border border-accent/20 rounded-lg p-6">
                     <p className="font-serif text-lg text-foreground mb-3">Want this done for you?</p>
-                    <Button variant="editorial" asChild><Link to="/consulting">Submit a listing for $75</Link></Button>
+                    <Button variant="editorial" onClick={() => window.open("https://airtable.com/appeZhHUgV9FzKthv/paggbLJsR25HCyAQA/form", "_blank")}>Submit a listing for $75</Button>
                   </div>
                 )}
               </section>
