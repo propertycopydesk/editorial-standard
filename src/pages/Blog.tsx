@@ -70,8 +70,8 @@ const Blog = () => {
               <Link to="/consulting" className="text-sm font-sans text-muted-foreground hover:text-foreground transition-colors">
                 Consulting
               </Link>
-              <Button variant="editorial" size="sm" asChild>
-                <Link to="/consulting">Get Started</Link>
+              <Button variant="editorial" size="sm" onClick={() => window.open("https://airtable.com/appeZhHUgV9FzKthv/paggbLJsR25HCyAQA/form", "_blank")}>
+                Get Started
               </Button>
             </div>
 
@@ -98,8 +98,8 @@ const Blog = () => {
               <Link to="/consulting" className="block text-sm font-sans text-muted-foreground hover:text-foreground transition-colors">
                 Consulting
               </Link>
-              <Button variant="editorial" size="sm" className="w-full" asChild>
-                <Link to="/consulting">Get Started</Link>
+              <Button variant="editorial" size="sm" className="w-full" onClick={() => window.open("https://airtable.com/appeZhHUgV9FzKthv/paggbLJsR25HCyAQA/form", "_blank")}>
+                Get Started
               </Button>
             </div>
           )}

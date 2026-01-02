@@ -163,7 +163,7 @@ const Service = () => {
               <Button
                 variant="editorial"
                 size="sm"
-                onClick={() => document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => window.open("https://airtable.com/appeZhHUgV9FzKthv/paggbLJsR25HCyAQA/form", "_blank")}
               >
                 Get Started
               </Button>
@@ -212,7 +212,7 @@ const Service = () => {
                 className="w-full"
                 onClick={() => {
                   setIsMobileMenuOpen(false);
-                  document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
+                  window.open("https://airtable.com/appeZhHUgV9FzKthv/paggbLJsR25HCyAQA/form", "_blank");
                 }}
               >
                 Get Started
@@ -239,7 +239,7 @@ const Service = () => {
               <Button
                 variant="editorial"
                 size="lg"
-                onClick={() => document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => window.open("https://airtable.com/appeZhHUgV9FzKthv/paggbLJsR25HCyAQA/form", "_blank")}
               >
                 Submit Your Listing
               </Button>
@@ -379,7 +379,7 @@ const Service = () => {
             </div>
 
             <div className="text-center mt-12">
-              <Button variant="editorial" size="xl">
+              <Button variant="editorial" size="xl" onClick={() => window.open("https://airtable.com/appeZhHUgV9FzKthv/paggbLJsR25HCyAQA/form", "_blank")}>
                 Submit Your Listing — {pricingTiers[selectedTier].price}
               </Button>
               <p className="text-sm text-muted-foreground mt-4">
@@ -484,7 +484,7 @@ const Service = () => {
               <Button
                 variant="secondary"
                 size="xl"
-                onClick={() => document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => window.open("https://airtable.com/appeZhHUgV9FzKthv/paggbLJsR25HCyAQA/form", "_blank")}
               >
                 Submit Your Listing
               </Button>
