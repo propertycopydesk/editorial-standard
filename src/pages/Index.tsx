@@ -10,7 +10,7 @@ import ConsultationModal from "@/components/ConsultationModal";
 import PainPointCard from "@/components/PainPointCard";
 import Footer from "@/components/Footer";
 import { analytics } from "@/lib/analytics";
-const CALENDLY_URL = "https://calendly.com/propertycopydesk/roi-call";
+const BOOKING_URL = "https://cal.com/propertycopydesk/workflowdiscovery";
 
 const Index = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -25,8 +25,8 @@ const Index = () => {
     }
   };
 
-  const openCalendly = () => {
-    window.open(CALENDLY_URL, "_blank");
+  const openBooking = () => {
+    window.open(BOOKING_URL, "_blank");
   };
 
   const pricingTiers = [
@@ -188,9 +188,9 @@ const Index = () => {
               <Button
                 variant="editorial"
                 size="lg"
-                onClick={() => {
+onClick={() => {
                   analytics.ctaClick("Book Consultation", "hero");
-                  openCalendly();
+                  openBooking();
                 }}
               >
                 Book Consultation
@@ -341,7 +341,7 @@ const Index = () => {
                 roiCallout="Save 10-15 hours per agent per week | ROI: 2,100% in Year 1"
                 note="Limited to 2 teams per month"
                 ctaText="Book Strategy Call"
-                onCtaClick={openCalendly}
+                onCtaClick={openBooking}
               />
 
               <ServiceCard
@@ -479,9 +479,9 @@ const Index = () => {
               <Button
                 variant="secondary"
                 size="xl"
-                onClick={() => {
+onClick={() => {
                   analytics.ctaClick("Book Strategy Call", "final_cta");
-                  openCalendly();
+                  openBooking();
                 }}
               >
                 For Teams: Book Strategy Call
