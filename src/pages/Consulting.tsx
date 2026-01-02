@@ -5,12 +5,17 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import ROICalculator from "@/components/ROICalculator";
 import ConsultingTimeline from "@/components/ConsultingTimeline";
-import CalendlyEmbed from "@/components/CalendlyEmbed";
+
 import Footer from "@/components/Footer";
+
+const BOOKING_URL = "https://cal.com/propertycopydesk/workflowdiscovery";
 
 const Consulting = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [showCalendly, setShowCalendly] = useState(false);
+
+  const openBooking = () => {
+    window.open(BOOKING_URL, "_blank");
+  };
 
   const scrollToCalculator = () => {
     document.getElementById("calculator")?.scrollIntoView({ behavior: "smooth" });
@@ -39,7 +44,7 @@ const Consulting = () => {
             <Link to="/service" className="text-sm font-sans text-muted-foreground hover:text-foreground">Listings</Link>
             <Link to="/blog" className="text-sm font-sans text-muted-foreground hover:text-foreground">Blog</Link>
             <Link to="/consulting" className="text-sm font-sans text-foreground font-medium">Consulting</Link>
-            <Button variant="editorial" size="sm" onClick={() => setShowCalendly(true)}>Book Call</Button>
+            <Button variant="editorial" size="sm" onClick={openBooking}>Book Call</Button>
           </div>
           <button className="md:hidden p-2" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -57,7 +62,7 @@ const Consulting = () => {
             Custom AI workflow implementation for real estate teams. <span className="text-foreground font-medium">$6,000 investment. 2,100% ROI. 11-day payback.</span>
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="editorial" size="lg" onClick={() => setShowCalendly(true)}>Book Free ROI Strategy Call</Button>
+            <Button variant="editorial" size="lg" onClick={openBooking}>Book Free ROI Strategy Call</Button>
             <Button variant="editorial-outline" size="lg" onClick={scrollToCalculator}>Calculate Your Savings</Button>
           </div>
         </section>
@@ -65,7 +70,7 @@ const Consulting = () => {
         {/* ROI Calculator */}
         <section id="calculator" className="section-padding bg-muted">
           <div className="container-editorial max-w-2xl">
-            <ROICalculator onBookCall={() => setShowCalendly(true)} />
+            <ROICalculator onBookCall={openBooking} />
           </div>
         </section>
 
@@ -151,7 +156,7 @@ const Consulting = () => {
                       <li key={j} className="flex items-center gap-2 text-sm"><Check className="w-4 h-4 text-accent" />{item}</li>
                     ))}
                   </ul>
-                  <Button variant="editorial" className="w-full" onClick={() => setShowCalendly(true)}>Book Strategy Call</Button>
+                  <Button variant="editorial" className="w-full" onClick={openBooking}>Book Strategy Call</Button>
                 </div>
               ))}
             </div>
@@ -179,7 +184,7 @@ const Consulting = () => {
           <div className="container-editorial text-center">
             <h2 className="font-serif text-3xl md:text-4xl mb-4">Ready to Transform Your Team's Efficiency?</h2>
             <p className="text-primary-foreground/80 mb-8">Limited to 2-3 teams per quarter</p>
-            <Button variant="secondary" size="xl" onClick={() => setShowCalendly(true)}>Book Your Free 15-Minute Strategy Call</Button>
+            <Button variant="secondary" size="xl" onClick={openBooking}>Book Your Free 15-Minute Strategy Call</Button>
             <p className="text-sm text-primary-foreground/60 mt-4">No obligation. No sales pitch. Just ROI analysis.</p>
           </div>
         </section>
@@ -187,18 +192,6 @@ const Consulting = () => {
 
       <Footer />
 
-      {/* Calendly Modal */}
-      {showCalendly && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-          <div className="absolute inset-0 bg-foreground/60 backdrop-blur-sm" onClick={() => setShowCalendly(false)} />
-          <div className="relative bg-background rounded-lg shadow-2xl max-w-xl w-full max-h-[90vh] overflow-auto">
-            <button onClick={() => setShowCalendly(false)} className="absolute top-4 right-4 text-muted-foreground hover:text-foreground z-10">
-              <X className="w-5 h-5" />
-            </button>
-            <CalendlyEmbed url="https://calendly.com/propertycopydesk/roi-call" />
-          </div>
-        </div>
-      )}
     </div>
   );
 };

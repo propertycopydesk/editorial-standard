@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/accordion";
 import Footer from "@/components/Footer";
 
-const CALENDLY_URL = "https://calendly.com/propertycopydesk/roi-call";
+const BOOKING_URL = "https://cal.com/propertycopydesk/workflowdiscovery";
 
 const pricingTiers = [
   { name: "Standard", turnaround: "24-48 hours", price: "$75", available: true },
@@ -491,7 +491,7 @@ const Service = () => {
               <Button
                 variant="secondary"
                 size="xl"
-                onClick={() => window.open(CALENDLY_URL, "_blank")}
+                onClick={() => window.open(BOOKING_URL, "_blank")}
               >
                 Book a Call
               </Button>
