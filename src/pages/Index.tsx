@@ -95,7 +95,7 @@ const Index = () => {
               <Button
                 variant="editorial"
                 size="sm"
-                onClick={() => window.open("https://airtable.com/appeZhHUgV9FzKthv/paggbLJsR25HCyAQA/form", "_blank")}
+                onClick={() => setIsModalOpen(true)}
               >
                 Get Started
               </Button>
@@ -158,7 +158,7 @@ const Index = () => {
                 size="sm"
                 className="w-full"
                 onClick={() => {
-                  window.open("https://airtable.com/appeZhHUgV9FzKthv/paggbLJsR25HCyAQA/form", "_blank");
+                  setIsModalOpen(true);
                   setIsMobileMenuOpen(false);
                 }}
               >

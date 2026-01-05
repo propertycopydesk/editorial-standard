@@ -1,13 +1,17 @@
+import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, Clock, Share2, Facebook, Linkedin, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import BlogPostCard from "@/components/BlogPostCard";
 import LeadMagnetBox from "@/components/LeadMagnetBox";
+import ConsultationModal from "@/components/ConsultationModal";
 import { getPostBySlug, getRelatedPosts } from "@/data/blogPosts";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = getPostBySlug(slug || "");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedTier, setSelectedTier] = useState(0);
 
   if (!post) {
     return (
@@ -86,7 +90,7 @@ const BlogPost = () => {
                 {i === 1 && (
                   <div className="my-8 bg-accent/10 border border-accent/20 rounded-lg p-6">
                     <p className="font-serif text-lg text-foreground mb-3">Want this done for you?</p>
-                    <Button variant="editorial" onClick={() => window.open("https://airtable.com/appeZhHUgV9FzKthv/paggbLJsR25HCyAQA/form", "_blank")}>Submit a listing for $75</Button>
+                    <Button variant="editorial" onClick={() => setIsModalOpen(true)}>Submit a listing for $75</Button>
                   </div>
                 )}
               </section>
@@ -121,6 +125,13 @@ const BlogPost = () => {
           </section>
         )}
       </main>
+      
+      <ConsultationModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        selectedTier={selectedTier}
+        onTierChange={setSelectedTier}
+      />
     </div>
   );
 };

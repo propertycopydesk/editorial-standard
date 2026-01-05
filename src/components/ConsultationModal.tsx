@@ -148,6 +148,28 @@ const ConsultationModal = ({
               />
             </div>
 
+            <div>
+              <label className="block text-sm font-sans font-medium text-foreground mb-2">
+                Full Name *
+              </label>
+              <input
+                type="text"
+                placeholder="John Smith"
+                className="w-full px-4 py-3 border border-border rounded bg-background text-foreground font-sans text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-sans font-medium text-foreground mb-2">
+                Phone Number *
+              </label>
+              <input
+                type="tel"
+                placeholder="(555) 123-4567"
+                className="w-full px-4 py-3 border border-border rounded bg-background text-foreground font-sans text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+              />
+            </div>
+
             <div className="bg-muted border border-border rounded p-4">
               <p className="text-xs text-muted-foreground font-sans text-center">
                 This is a demo — form doesn't actually submit

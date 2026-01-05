@@ -9,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Footer from "@/components/Footer";
+import ConsultationModal from "@/components/ConsultationModal";
 
 const BOOKING_URL = "https://cal.com/propertycopydesk/qualificationcall";
 
@@ -100,6 +101,7 @@ const Service = () => {
   const [selectedTier, setSelectedTier] = useState(0);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -163,7 +165,7 @@ const Service = () => {
               <Button
                 variant="editorial"
                 size="sm"
-                onClick={() => window.open("https://airtable.com/appeZhHUgV9FzKthv/paggbLJsR25HCyAQA/form", "_blank")}
+                onClick={() => setIsModalOpen(true)}
               >
                 Get Started
               </Button>
@@ -212,7 +214,7 @@ const Service = () => {
                 className="w-full"
                 onClick={() => {
                   setIsMobileMenuOpen(false);
-                  window.open("https://airtable.com/appeZhHUgV9FzKthv/paggbLJsR25HCyAQA/form", "_blank");
+                  setIsModalOpen(true);
                 }}
               >
                 Get Started
@@ -239,7 +241,7 @@ const Service = () => {
               <Button
                 variant="editorial"
                 size="lg"
-                onClick={() => window.open("https://airtable.com/appeZhHUgV9FzKthv/paggbLJsR25HCyAQA/form", "_blank")}
+                onClick={() => setIsModalOpen(true)}
               >
                 Submit Your Listing
               </Button>
@@ -379,7 +381,7 @@ const Service = () => {
             </div>
 
             <div className="text-center mt-12">
-              <Button variant="editorial" size="xl" onClick={() => window.open("https://airtable.com/appeZhHUgV9FzKthv/paggbLJsR25HCyAQA/form", "_blank")}>
+              <Button variant="editorial" size="xl" onClick={() => setIsModalOpen(true)}>
                 Submit Your Listing — {pricingTiers[selectedTier].price}
               </Button>
               <p className="text-sm text-muted-foreground mt-4">
@@ -484,7 +486,7 @@ const Service = () => {
               <Button
                 variant="secondary"
                 size="xl"
-                onClick={() => window.open("https://airtable.com/appeZhHUgV9FzKthv/paggbLJsR25HCyAQA/form", "_blank")}
+                onClick={() => setIsModalOpen(true)}
               >
                 Submit Your Listing
               </Button>
@@ -501,6 +503,13 @@ const Service = () => {
       </main>
 
       <Footer />
+      
+      <ConsultationModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        selectedTier={selectedTier}
+        onTierChange={setSelectedTier}
+      />
     </div>
   );
 };
