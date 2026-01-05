@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/accordion";
 import Footer from "@/components/Footer";
 
-const BOOKING_URL = "https://cal.com/propertycopydesk/workflowdiscovery";
+const BOOKING_URL = "https://cal.com/propertycopydesk/qualificationcall";
 
 const pricingTiers = [
   { name: "Standard", turnaround: "24-48 hours", price: "$75", available: true },

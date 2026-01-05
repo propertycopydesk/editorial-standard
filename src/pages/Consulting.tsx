@@ -8,7 +8,7 @@ import ConsultingTimeline from "@/components/ConsultingTimeline";
 
 import Footer from "@/components/Footer";
 
-const BOOKING_URL = "https://cal.com/propertycopydesk/workflowdiscovery";
+const BOOKING_URL = "https://cal.com/propertycopydesk/qualificationcall";
 
 const Consulting = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
