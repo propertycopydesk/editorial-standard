@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import BlogPostCard from "@/components/BlogPostCard";
 import LeadMagnetBox from "@/components/LeadMagnetBox";
 import Footer from "@/components/Footer";
+import ConsultationModal from "@/components/ConsultationModal";
 import { 
   blogPosts, 
   categories, 
@@ -19,6 +20,8 @@ const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedTier, setSelectedTier] = useState(0);
 
   const filteredPosts = useMemo(() => {
     let posts = getPostsByCategory(selectedCategory);
@@ -70,7 +73,7 @@ const Blog = () => {
               <Link to="/consulting" className="text-sm font-sans text-muted-foreground hover:text-foreground transition-colors">
                 Consulting
               </Link>
-              <Button variant="editorial" size="sm" onClick={() => window.open("https://airtable.com/appeZhHUgV9FzKthv/paggbLJsR25HCyAQA/form", "_blank")}>
+              <Button variant="editorial" size="sm" onClick={() => setIsModalOpen(true)}>
                 Get Started
               </Button>
             </div>
@@ -98,7 +101,7 @@ const Blog = () => {
               <Link to="/consulting" className="block text-sm font-sans text-muted-foreground hover:text-foreground transition-colors">
                 Consulting
               </Link>
-              <Button variant="editorial" size="sm" className="w-full" onClick={() => window.open("https://airtable.com/appeZhHUgV9FzKthv/paggbLJsR25HCyAQA/form", "_blank")}>
+              <Button variant="editorial" size="sm" className="w-full" onClick={() => { setIsModalOpen(true); setIsMobileMenuOpen(false); }}>
                 Get Started
               </Button>
             </div>
@@ -230,6 +233,13 @@ const Blog = () => {
       </main>
 
       <Footer />
+      
+      <ConsultationModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        selectedTier={selectedTier}
+        onTierChange={setSelectedTier}
+      />
     </div>
   );
 };
