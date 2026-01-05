@@ -10,7 +10,7 @@ import ConsultationModal from "@/components/ConsultationModal";
 import PainPointCard from "@/components/PainPointCard";
 import Footer from "@/components/Footer";
 import { analytics } from "@/lib/analytics";
-const BOOKING_URL = "https://cal.com/propertycopydesk/workflowdiscovery";
+const BOOKING_URL = "https://cal.com/propertycopydesk/qualificationcall";
 
 const Index = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
