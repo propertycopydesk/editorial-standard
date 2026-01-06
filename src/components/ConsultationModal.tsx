@@ -1,5 +1,9 @@
-import { X, Upload } from "lucide-react";
+import { useState } from "react";
+import { X, Upload, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { supabase } from "@/lib/supabase";
+import { useToast } from "@/hooks/use-toast";
+import { z } from "zod";
 
 const PRICING_TIERS = [
   { name: "Standard", turnaround: "24-48 hours", price: "$75" },
@@ -7,6 +11,14 @@ const PRICING_TIERS = [
   { name: "Rush", turnaround: "6 hours", price: "$250" },
   { name: "Emergency", turnaround: "2 hours", price: "$500" },
 ];
+
+const submissionSchema = z.object({
+  property_address: z.string().trim().min(1, "Property address is required").max(500, "Address must be less than 500 characters"),
+  current_description: z.string().max(5000, "Description must be less than 5000 characters").optional(),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
+  full_name: z.string().trim().min(1, "Full name is required").max(100, "Name must be less than 100 characters"),
+  phone: z.string().trim().min(1, "Phone number is required").max(20, "Phone must be less than 20 characters"),
+});
 
 interface ConsultationModalProps {
   isOpen: boolean;
@@ -21,9 +33,90 @@ const ConsultationModal = ({
   selectedTier = 0, 
   onTierChange 
 }: ConsultationModalProps) => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    property_address: "",
+    current_description: "",
+    email: "",
+    full_name: "",
+    phone: "",
+  });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
   if (!isOpen) return null;
 
   const currentTier = PRICING_TIERS[selectedTier];
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    // Clear error when user types
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: "" }));
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setErrors({});
+
+    // Validate form data
+    const result = submissionSchema.safeParse(formData);
+    if (!result.success) {
+      const fieldErrors: Record<string, string> = {};
+      result.error.errors.forEach((err) => {
+        if (err.path[0]) {
+          fieldErrors[err.path[0] as string] = err.message;
+        }
+      });
+      setErrors(fieldErrors);
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase
+        .from("consultation_submissions")
+        .insert({
+          property_address: result.data.property_address,
+          current_description: result.data.current_description || null,
+          service_tier: currentTier.name,
+          service_price: currentTier.price,
+          turnaround: currentTier.turnaround,
+          email: result.data.email,
+          full_name: result.data.full_name,
+          phone: result.data.phone,
+        });
+
+      if (error) throw error;
+
+      toast({
+        title: "Submission received!",
+        description: "We'll be in touch within your selected turnaround time.",
+      });
+
+      // Reset form and close modal
+      setFormData({
+        property_address: "",
+        current_description: "",
+        email: "",
+        full_name: "",
+        phone: "",
+      });
+      onClose();
+    } catch (error) {
+      console.error("Submission error:", error);
+      toast({
+        title: "Submission failed",
+        description: "Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
@@ -55,17 +148,25 @@ const ConsultationModal = ({
             </button>
           </div>
 
-          {/* Form (non-functional demo) */}
-          <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+          {/* Form */}
+          <form className="space-y-5" onSubmit={handleSubmit}>
             <div>
               <label className="block text-sm font-sans font-medium text-foreground mb-2">
                 Property Address *
               </label>
               <input
                 type="text"
+                name="property_address"
+                value={formData.property_address}
+                onChange={handleInputChange}
                 placeholder="123 Main Street, City, State ZIP"
-                className="w-full px-4 py-3 border border-border rounded bg-background text-foreground font-sans text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                className={`w-full px-4 py-3 border rounded bg-background text-foreground font-sans text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent ${
+                  errors.property_address ? "border-destructive" : "border-border"
+                }`}
               />
+              {errors.property_address && (
+                <p className="text-destructive text-xs mt-1">{errors.property_address}</p>
+              )}
             </div>
 
             <div>
@@ -73,6 +174,9 @@ const ConsultationModal = ({
                 Current Description (optional)
               </label>
               <textarea
+                name="current_description"
+                value={formData.current_description}
+                onChange={handleInputChange}
                 placeholder="Paste your current listing description here..."
                 rows={4}
                 className="w-full px-4 py-3 border border-border rounded bg-background text-foreground font-sans text-sm resize-none focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
@@ -143,9 +247,17 @@ const ConsultationModal = ({
               </label>
               <input
                 type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
                 placeholder="your@email.com"
-                className="w-full px-4 py-3 border border-border rounded bg-background text-foreground font-sans text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                className={`w-full px-4 py-3 border rounded bg-background text-foreground font-sans text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent ${
+                  errors.email ? "border-destructive" : "border-border"
+                }`}
               />
+              {errors.email && (
+                <p className="text-destructive text-xs mt-1">{errors.email}</p>
+              )}
             </div>
 
             <div>
@@ -154,9 +266,17 @@ const ConsultationModal = ({
               </label>
               <input
                 type="text"
+                name="full_name"
+                value={formData.full_name}
+                onChange={handleInputChange}
                 placeholder="John Smith"
-                className="w-full px-4 py-3 border border-border rounded bg-background text-foreground font-sans text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                className={`w-full px-4 py-3 border rounded bg-background text-foreground font-sans text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent ${
+                  errors.full_name ? "border-destructive" : "border-border"
+                }`}
               />
+              {errors.full_name && (
+                <p className="text-destructive text-xs mt-1">{errors.full_name}</p>
+              )}
             </div>
 
             <div>
@@ -165,19 +285,34 @@ const ConsultationModal = ({
               </label>
               <input
                 type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleInputChange}
                 placeholder="(555) 123-4567"
-                className="w-full px-4 py-3 border border-border rounded bg-background text-foreground font-sans text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                className={`w-full px-4 py-3 border rounded bg-background text-foreground font-sans text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent ${
+                  errors.phone ? "border-destructive" : "border-border"
+                }`}
               />
+              {errors.phone && (
+                <p className="text-destructive text-xs mt-1">{errors.phone}</p>
+              )}
             </div>
 
-            <div className="bg-muted border border-border rounded p-4">
-              <p className="text-xs text-muted-foreground font-sans text-center">
-                This is a demo — form doesn't actually submit
-              </p>
-            </div>
-
-            <Button variant="editorial" size="lg" className="w-full" type="button">
-              Continue to Checkout — {currentTier.price}
+            <Button 
+              variant="editorial" 
+              size="lg" 
+              className="w-full" 
+              type="submit"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? (
+                <>
+                  <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                  Submitting...
+                </>
+              ) : (
+                `Continue to Checkout — ${currentTier.price}`
+              )}
             </Button>
           </form>
         </div>
