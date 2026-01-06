@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { X, Upload, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { supabase } from "@/lib/supabase";
+import { supabase, isSupabaseConfigured } from "@/lib/supabase";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
 
@@ -77,20 +77,25 @@ const ConsultationModal = ({
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase
-        .from("consultation_submissions")
-        .insert({
-          property_address: result.data.property_address,
-          current_description: result.data.current_description || null,
-          service_tier: currentTier.name,
-          service_price: currentTier.price,
-          turnaround: currentTier.turnaround,
-          email: result.data.email,
-          full_name: result.data.full_name,
-          phone: result.data.phone,
-        });
+      if (!isSupabaseConfigured() || !supabase) {
+        // Demo mode - show success without saving
+        console.log("Supabase not configured - running in demo mode");
+      } else {
+        const { error } = await supabase
+          .from("consultation_submissions")
+          .insert({
+            property_address: result.data.property_address,
+            current_description: result.data.current_description || null,
+            service_tier: currentTier.name,
+            service_price: currentTier.price,
+            turnaround: currentTier.turnaround,
+            email: result.data.email,
+            full_name: result.data.full_name,
+            phone: result.data.phone,
+          });
 
-      if (error) throw error;
+        if (error) throw error;
+      }
 
       toast({
         title: "Submission received!",
