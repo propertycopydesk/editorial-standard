@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { X, Upload, Loader2 } from "lucide-react";
+import { useState, useRef } from "react";
+import { X, Upload, Loader2, ImageIcon, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { supabase, isSupabaseConfigured } from "@/lib/supabase";
 import { useToast } from "@/hooks/use-toast";
@@ -11,6 +11,10 @@ const PRICING_TIERS = [
   { name: "Rush", turnaround: "6 hours", price: "$250" },
   { name: "Emergency", turnaround: "2 hours", price: "$500" },
 ];
+
+const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
+const ALLOWED_TYPES = ["image/jpeg", "image/png", "image/webp"];
+const MAX_FILES = 10;
 
 const submissionSchema = z.object({
   property_address: z.string().trim().min(1, "Property address is required").max(500, "Address must be less than 500 characters"),
@@ -43,6 +47,9 @@ const ConsultationModal = ({
     phone: "",
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
+  const [uploadProgress, setUploadProgress] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   if (!isOpen) return null;
 
@@ -51,17 +58,96 @@ const ConsultationModal = ({
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-    // Clear error when user types
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: "" }));
     }
+  };
+
+  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(e.target.files || []);
+    addFiles(files);
+  };
+
+  const addFiles = (files: File[]) => {
+    const validFiles = files.filter(file => {
+      if (!ALLOWED_TYPES.includes(file.type)) {
+        toast({
+          title: "Invalid file type",
+          description: `${file.name} is not a supported image format`,
+          variant: "destructive",
+        });
+        return false;
+      }
+      if (file.size > MAX_FILE_SIZE) {
+        toast({
+          title: "File too large",
+          description: `${file.name} exceeds 10MB limit`,
+          variant: "destructive",
+        });
+        return false;
+      }
+      return true;
+    });
+
+    setSelectedFiles(prev => {
+      const combined = [...prev, ...validFiles];
+      if (combined.length > MAX_FILES) {
+        toast({
+          title: "Too many files",
+          description: `Maximum ${MAX_FILES} images allowed`,
+          variant: "destructive",
+        });
+        return combined.slice(0, MAX_FILES);
+      }
+      return combined;
+    });
+  };
+
+  const removeFile = (index: number) => {
+    setSelectedFiles(prev => prev.filter((_, i) => i !== index));
+  };
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    const files = Array.from(e.dataTransfer.files);
+    addFiles(files);
+  };
+
+  const uploadImages = async (): Promise<string[]> => {
+    if (!supabase || selectedFiles.length === 0) return [];
+    
+    setUploadProgress(true);
+    const uploadedUrls: string[] = [];
+    
+    for (const file of selectedFiles) {
+      const fileExt = file.name.split('.').pop();
+      const fileName = `${Date.now()}-${Math.random().toString(36).substring(7)}.${fileExt}`;
+      const filePath = `property-images/${fileName}`;
+      
+      const { error } = await supabase.storage
+        .from('consultation-uploads')
+        .upload(filePath, file);
+      
+      if (error) {
+        console.error('Upload error:', error);
+        continue;
+      }
+      
+      const { data: urlData } = supabase.storage
+        .from('consultation-uploads')
+        .getPublicUrl(filePath);
+      
+      uploadedUrls.push(urlData.publicUrl);
+    }
+    
+    setUploadProgress(false);
+    return uploadedUrls;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrors({});
 
-    // Validate form data
     const result = submissionSchema.safeParse(formData);
     if (!result.success) {
       const fieldErrors: Record<string, string> = {};
@@ -77,10 +163,16 @@ const ConsultationModal = ({
     setIsSubmitting(true);
 
     try {
+      let propertyImages: string[] = [];
+      
       if (!isSupabaseConfigured() || !supabase) {
-        // Demo mode - show success without saving
         console.log("Supabase not configured - running in demo mode");
       } else {
+        // Upload images first
+        if (selectedFiles.length > 0) {
+          propertyImages = await uploadImages();
+        }
+        
         const { error } = await supabase
           .from("consultation_submissions")
           .insert({
@@ -92,6 +184,7 @@ const ConsultationModal = ({
             email: result.data.email,
             full_name: result.data.full_name,
             phone: result.data.phone,
+            property_images: propertyImages.length > 0 ? propertyImages : null,
           });
 
         if (error) throw error;
@@ -102,7 +195,6 @@ const ConsultationModal = ({
         description: "We'll be in touch within your selected turnaround time.",
       });
 
-      // Reset form and close modal
       setFormData({
         property_address: "",
         current_description: "",
@@ -110,6 +202,7 @@ const ConsultationModal = ({
         full_name: "",
         phone: "",
       });
+      setSelectedFiles([]);
       onClose();
     } catch (error) {
       console.error("Submission error:", error);
@@ -192,15 +285,51 @@ const ConsultationModal = ({
               <label className="block text-sm font-sans font-medium text-foreground mb-2">
                 Upload Photos (up to 10 images)
               </label>
-              <div className="border-2 border-dashed border-border rounded p-6 text-center hover:border-accent transition-colors cursor-pointer">
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="image/jpeg,image/png,image/webp"
+                multiple
+                onChange={handleFileSelect}
+                className="hidden"
+              />
+              <div 
+                onClick={() => fileInputRef.current?.click()}
+                onDrop={handleDrop}
+                onDragOver={(e) => e.preventDefault()}
+                className="border-2 border-dashed border-border rounded p-6 text-center hover:border-accent transition-colors cursor-pointer"
+              >
                 <Upload className="w-8 h-8 text-muted-foreground mx-auto mb-2" />
                 <p className="text-sm text-muted-foreground font-sans">
                   Drop files here or click to browse
                 </p>
                 <p className="text-xs text-muted-foreground font-sans mt-1">
-                  JPG, PNG up to 10MB each
+                  JPG, PNG, WebP up to 10MB each
                 </p>
               </div>
+              
+              {selectedFiles.length > 0 && (
+                <div className="mt-3 space-y-2">
+                  {selectedFiles.map((file, index) => (
+                    <div key={index} className="flex items-center justify-between p-2 bg-muted rounded">
+                      <div className="flex items-center gap-2">
+                        <ImageIcon className="w-4 h-4 text-muted-foreground" />
+                        <span className="text-sm text-foreground truncate max-w-[200px]">{file.name}</span>
+                        <span className="text-xs text-muted-foreground">
+                          ({(file.size / 1024 / 1024).toFixed(1)}MB)
+                        </span>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => removeFile(index)}
+                        className="text-muted-foreground hover:text-destructive transition-colors"
+                      >
+                        <Trash2 className="w-4 h-4" />
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
 
             <div>
