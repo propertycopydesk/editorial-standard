@@ -46,17 +46,47 @@ const ConsultationModal = ({
 
   // Load PayPal SDK
   useEffect(() => {
-    if (showPayPal && !window.paypal) {
-      const script = document.createElement('script');
-      script.src = `https://www.paypal.com/sdk/js?client-id=${import.meta.env.VITE_PAYPAL_CLIENT_ID}&currency=USD`;
-      script.addEventListener('load', () => {
-        renderPayPalButtons();
+    if (!showPayPal) return;
+
+    const clientId = import.meta.env.VITE_PAYPAL_CLIENT_ID as string | undefined;
+
+    if (!clientId) {
+      toast({
+        title: "PayPal not configured",
+        description: "Add VITE_PAYPAL_CLIENT_ID in project secrets to enable payments.",
+        variant: "destructive",
       });
-      document.body.appendChild(script);
-    } else if (showPayPal && window.paypal) {
-      renderPayPalButtons();
+      setShowPayPal(false);
+      return;
     }
-  }, [showPayPal, selectedTier]);
+
+    if (window.paypal) {
+      renderPayPalButtons();
+      return;
+    }
+
+    const existingScript = document.getElementById("paypal-sdk") as HTMLScriptElement | null;
+    if (existingScript) {
+      existingScript.addEventListener("load", renderPayPalButtons, { once: true });
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.id = "paypal-sdk";
+    script.async = true;
+    script.src = `https://www.paypal.com/sdk/js?client-id=${clientId}&currency=USD`;
+    script.addEventListener("load", renderPayPalButtons, { once: true });
+    script.addEventListener("error", () => {
+      toast({
+        title: "PayPal failed to load",
+        description: "Double-check your VITE_PAYPAL_CLIENT_ID and try again.",
+        variant: "destructive",
+      });
+      setShowPayPal(false);
+    });
+
+    document.body.appendChild(script);
+  }, [showPayPal, selectedTier, submissionId, toast]);
 
   const renderPayPalButtons = () => {
     const container = document.getElementById('paypal-button-container');
@@ -132,8 +162,12 @@ const ConsultationModal = ({
 
     try {
       if (!isSupabaseConfigured() || !supabase) {
-        console.log("Supabase not configured - running in demo mode");
-        setShowPayPal(true);
+        toast({
+          title: "Submissions unavailable",
+          description:
+            "Add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in project secrets to enable listing submissions.",
+          variant: "destructive",
+        });
         setLoading(false);
         return;
       }
@@ -149,7 +183,7 @@ const ConsultationModal = ({
             full_name: formData.fullName,
             phone: formData.phoneNumber,
             service_tier: currentTier.name,
-            service_price: `$${currentTier.price}`,
+            service_price: `${currentTier.price}`,
             turnaround: currentTier.turnaround,
             payment_status: 'pending'
           }
