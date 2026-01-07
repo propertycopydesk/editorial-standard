@@ -45,7 +45,7 @@ const Footer = () => {
             {/* Social Links */}
             <div className="flex gap-4">
               <a
-                href="https://twitter.com/propertycopydesk"
+                href="https://x.com/propcopydesk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
