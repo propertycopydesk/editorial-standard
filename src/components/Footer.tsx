@@ -5,20 +5,83 @@ import { getRecentPosts } from "@/data/blogPosts";
 import { useState } from "react";
 import { analytics } from "@/lib/analytics";
 import { toast } from "@/hooks/use-toast";
+import { supabase, isSupabaseConfigured } from "@/lib/supabase";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const recentPosts = getRecentPosts(3);
 
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
+    if (!email) return;
+    
+    setIsSubmitting(true);
+    
+    try {
+      // 1. Save to Supabase first
+      if (isSupabaseConfigured() && supabase) {
+        const { error: supabaseError } = await supabase
+          .from('newsletter_subscribers')
+          .insert([{ email, source: 'website' }]);
+
+        if (supabaseError) {
+          // Check if it's a duplicate email error
+          if (supabaseError.code === '23505') {
+            toast({
+              title: "Already subscribed!",
+              description: "This email is already on our list.",
+            });
+            setIsSubmitting(false);
+            return;
+          }
+          throw supabaseError;
+        }
+      }
+
+      // 2. Add to Campaign Monitor
+      const apiKey = import.meta.env.VITE_CAMPAIGN_MONITOR_API_KEY;
+      const listId = import.meta.env.VITE_CAMPAIGN_MONITOR_LIST_ID;
+
+      if (apiKey && listId) {
+        const response = await fetch(
+          `https://api.createsend.com/api/v3.3/subscribers/${listId}.json`,
+          {
+            method: 'POST',
+            headers: {
+              'Authorization': `Basic ${btoa(apiKey + ':x')}`,
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              EmailAddress: email,
+              Name: email.split('@')[0],
+              Resubscribe: true,
+              RestartSubscriptionBasedAutoresponders: true
+            })
+          }
+        );
+
+        if (!response.ok) {
+          console.error('Campaign Monitor error:', await response.text());
+          // Still show success to user since it's saved in Supabase
+        }
+      }
+
       analytics.newsletterSignup("footer");
       toast({
-        title: "Thanks for subscribing!",
+        title: "Successfully subscribed! 🎉",
         description: "You'll receive our latest real estate insights.",
       });
       setEmail("");
+    } catch (error) {
+      console.error('Newsletter signup error:', error);
+      toast({
+        title: "Error",
+        description: "There was an error subscribing. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -149,8 +212,9 @@ const Footer = () => {
                 variant="editorial-gold"
                 size="sm"
                 className="w-full"
+                disabled={isSubmitting}
               >
-                Subscribe
+                {isSubmitting ? "Subscribing..." : "Subscribe"}
               </Button>
             </form>
           </div>
