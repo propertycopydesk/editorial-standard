@@ -491,7 +491,7 @@ onClick={() => {
                 size="xl"
                 onClick={() => {
                   analytics.ctaClick("Submit Listing", "final_cta");
-                  window.open("https://airtable.com/appeZhHUgV9FzKthv/paggbLJsR25HCyAQA/form", "_blank");
+                  setIsModalOpen(true);
                 }}
               >
                 For Agents: Submit a Listing
