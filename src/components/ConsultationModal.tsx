@@ -160,17 +160,26 @@ const ConsultationModal = ({
     e.preventDefault();
     setLoading(true);
 
+    console.log('=== FORM SUBMIT DEBUG ===');
+    console.log('Supabase URL:', import.meta.env.VITE_SUPABASE_URL);
+    console.log('Supabase Key exists:', !!import.meta.env.VITE_SUPABASE_ANON_KEY);
+    console.log('PayPal Client ID exists:', !!import.meta.env.VITE_PAYPAL_CLIENT_ID);
+    console.log('isSupabaseConfigured():', isSupabaseConfigured());
+    console.log('supabase object:', !!supabase);
+
     try {
       if (!isSupabaseConfigured() || !supabase) {
+        console.error('SUPABASE NOT CONFIGURED!');
         toast({
           title: "Submissions unavailable",
-          description:
-            "Add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in project secrets to enable listing submissions.",
+          description: "Add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in project secrets.",
           variant: "destructive",
         });
         setLoading(false);
         return;
       }
+
+      console.log('Attempting to insert into Supabase...');
 
       // Save submission to Supabase
       const { data: submission, error: dbError } = await supabase
@@ -191,8 +200,13 @@ const ConsultationModal = ({
         .select()
         .single();
 
-      if (dbError) throw dbError;
+      if (dbError) {
+        console.error('Database error:', dbError);
+        throw dbError;
+      }
 
+      console.log('Submission successful! ID:', submission.id);
+      console.log('Setting showPayPal to true...');
       setSubmissionId(submission.id);
       setShowPayPal(true);
       setLoading(false);
