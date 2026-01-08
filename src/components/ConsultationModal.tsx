@@ -98,28 +98,32 @@ const ConsultationModal = ({
     window.paypal.Buttons({
       createOrder: (data: any, actions: any) => {
         return actions.order.create({
-          intent: 'CAPTURE',
-          application_context: {
-            shipping_preference: 'NO_SHIPPING'
-          },
           purchase_units: [{
-            description: `${currentTier.name} - Property Listing Edit (${currentTier.turnaround})`,
             amount: {
+              currency_code: 'USD',
               value: currentTier.price.toString(),
-              currency_code: 'USD'
+              breakdown: {
+                item_total: {
+                  currency_code: 'USD',
+                  value: currentTier.price.toString()
+                }
+              }
             },
             custom_id: submissionId,
             items: [{
               name: currentTier.name,
               description: `Property Listing Edit (${currentTier.turnaround})`,
               unit_amount: {
-                value: currentTier.price.toString(),
-                currency_code: 'USD'
+                currency_code: 'USD',
+                value: currentTier.price.toString()
               },
               quantity: '1',
               category: 'DIGITAL_GOODS'
             }]
-          }]
+          }],
+          application_context: {
+            shipping_preference: 'NO_SHIPPING'
+          }
         });
       },
       onApprove: async (data: any, actions: any) => {
