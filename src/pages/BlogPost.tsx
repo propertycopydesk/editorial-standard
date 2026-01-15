@@ -110,7 +110,7 @@ const BlogPost = () => {
             {/* Author Bio */}
             <div className="bg-muted rounded-lg p-6 my-8">
               <h3 className="font-serif text-lg text-foreground mb-2">About the Author</h3>
-              <p className="text-muted-foreground font-sans">Fatih Can is the founder of PropertyCopyDesk, bringing together expertise in English Literature, property investment, and marketing to revolutionize real estate copywriting.</p>
+              <p className="text-muted-foreground font-sans">Fatih Can is the founder of PropertyCopyDesk, bringing together expertise in copywriting, property investment, and marketing to create compelling property copy that connects emotionally and converts into sales.</p>
             </div>
           </div>
         </article>
