@@ -1,3 +1,7 @@
+import blogWorkflowImage from "@/assets/blog-workflow.jpg";
+import blogMistakesImage from "@/assets/blog-mistakes.png";
+import blogGenaiImage from "@/assets/blog-genai.png";
+
 export interface BlogPost {
   id: string;
   slug: string;
@@ -32,7 +36,7 @@ export const blogPosts: BlogPost[] = [
     targetKeyword: "how to write real estate listing descriptions",
     category: "Listing Copy",
     readTime: 12,
-    publishDate: "2025-01-15",
+    publishDate: "2026-01-15",
     author: "Fatih Can",
     featured: true,
     heroImage: "/placeholder.svg",
@@ -69,7 +73,7 @@ export const blogPosts: BlogPost[] = [
     targetKeyword: "chatgpt vs professional copywriter",
     category: "AI Tools",
     readTime: 10,
-    publishDate: "2025-01-10",
+    publishDate: "2026-01-10",
     author: "Fatih Can",
     featured: true,
     heroImage: "/placeholder.svg",
@@ -106,7 +110,7 @@ export const blogPosts: BlogPost[] = [
     targetKeyword: "real estate team efficiency",
     category: "Team Efficiency",
     readTime: 8,
-    publishDate: "2025-01-05",
+    publishDate: "2026-01-05",
     author: "Fatih Can",
     featured: true,
     heroImage: "/placeholder.svg",
@@ -133,36 +137,36 @@ export const blogPosts: BlogPost[] = [
   {
     id: "4",
     slug: "listing-description-mistakes",
-    title: "5 Listing Description Mistakes That Kill Inquiries",
-    excerpt: "These common errors cost agents thousands in lost deals. Learn what they are and exactly how to fix each one.",
+    title: "The Five Fatal Mistakes Most Agents Make With Listing Copy",
+    excerpt: "After analyzing thousands of real estate listings, certain patterns emerge in ineffective copy. These mistakes appear so frequently they've become industry standard.",
     metaDescription: "Avoid these 5 listing description mistakes that kill buyer inquiries. With examples and fixes for each common error.",
     targetKeyword: "listing description mistakes",
     category: "Listing Copy",
     readTime: 7,
-    publishDate: "2024-12-28",
+    publishDate: "2025-12-28",
     author: "Fatih Can",
     featured: false,
-    heroImage: "/placeholder.svg",
+    heroImage: blogMistakesImage,
     sections: [
       {
-        title: "Mistake #1: Leading with Features, Not Benefits",
-        content: "Wrong: '2,500 sq ft home with 4 bedrooms'\nRight: 'Space for everyone to spread out—4 bedrooms across 2,500 thoughtfully designed square feet'"
+        title: "Mistake 1: Treating Listings as Specification Sheets",
+        content: "Persuasive marketing doesn't exist when every sentence begins with \"This property features\" or \"The home includes,\" you're writing a technical document now. Buyers can see the specifications in the data fields. Your description needs to do something those fields cannot: create an emotional connection and paint a picture of what life in this home could be."
       },
       {
-        title: "Mistake #2: Using Generic Superlatives",
-        content: "Words like 'stunning,' 'amazing,' and 'must-see' have lost all meaning. Instead, use specific details that create vivid mental images."
+        title: "Mistake 2: Using Vague, Meaningless Phrases",
+        content: "Terms like \"must see,\" \"won't last long,\" \"charming,\" and \"cozy\" have been overused to the point of meaninglessness. When you write that a property \"won't last long,\" you're making a claim without substantiation. When you write \"already receiving multiple inquiries since listing yesterday,\" you're providing social proof that creates genuine urgency."
       },
       {
-        title: "Mistake #3: Ignoring the Neighborhood",
-        content: "Buyers purchase communities, not just houses. Always include lifestyle benefits of the location."
+        title: "Mistake 3: Focusing on Features While Ignoring Benefits",
+        content: "A primary suite with an ensuite bathroom is a feature. A primary suite that \"offers a private retreat where you can start each day in your spa-like bathroom without fighting for mirror space\" describes a benefit. Features tell. Benefits sell."
       },
       {
-        title: "Mistake #4: Writing for Other Agents",
-        content: "MLS jargon confuses buyers. Write for the end consumer, not industry professionals."
+        title: "Mistake 4: Writing in a Monotonous Tone",
+        content: "A luxury estate demands sophisticated, elevated language. A starter home for first-time buyers needs an approachable, exciting copy that acknowledges the significance of this milestone. A family home should emphasize space, comfort, and the potential for creating core memories. When your tone doesn't match the property and target buyer, the disconnect is palpable, the sale stalls."
       },
       {
-        title: "Mistake #5: No Emotional Connection",
-        content: "The best listings help buyers visualize their life in the home. Paint a picture of experiences, not just spaces."
+        title: "Mistake 5: Neglecting the Headline Entirely",
+        content: "Your headline determines whether potential buyers click on your listing or scroll past it. On aggregate sites where dozens of properties compete for attention, your headline is your only chance to stand out. Yet most agents simply write the address or a generic phrase like \"Beautiful Home in [Neighborhood].\" These headlines do nothing to differentiate your listing from the thirty others on the same page. Even saying \"The Worst House on [Street]\" would get more clicks."
       }
     ],
     cta: {
@@ -180,7 +184,7 @@ export const blogPosts: BlogPost[] = [
     targetKeyword: "real estate workflow automation",
     category: "AI Tools",
     readTime: 15,
-    publishDate: "2024-12-20",
+    publishDate: "2025-12-20",
     author: "Fatih Can",
     featured: false,
     heroImage: "/placeholder.svg",
@@ -206,29 +210,33 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "6",
-    slug: "listingcopy-ai-vs-propertycopydesk",
-    title: "ListingCopy.ai vs PropertyCopyDesk: Which is Better?",
-    excerpt: "An honest comparison of automated AI tools versus professional editorial services for real estate listings.",
-    metaDescription: "ListingCopy.ai vs PropertyCopyDesk comparison. Features, pricing, pros and cons, and when to choose each service.",
-    targetKeyword: "listingcopy.ai alternative",
+    slug: "why-generic-ai-tools-fall-short",
+    title: "Why Generic AI Tools Fall Short (And What Professional Editing Provides)",
+    excerpt: "The proliferation of AI writing tools has led many agents to believe they can simply input property details and receive publication-ready descriptions. The reality is far more nuanced.",
+    metaDescription: "Why generic AI tools fall short for real estate listings and what professional editing provides. Fair Housing compliance and market-specific knowledge.",
+    targetKeyword: "ai real estate tools",
     category: "AI Tools",
     readTime: 9,
-    publishDate: "2024-12-15",
+    publishDate: "2025-12-15",
     author: "Fatih Can",
     featured: false,
-    heroImage: "/placeholder.svg",
+    heroImage: blogGenaiImage,
     sections: [
       {
-        title: "Feature Comparison",
-        content: "| Feature | ListingCopy.ai | PropertyCopyDesk |\n|---------|---------------|------------------|\n| AI-Generated | Yes | Hybrid |\n| Human Editing | No | Yes |\n| Turnaround | Instant | 2-24 hours |\n| Customization | Template-based | Fully custom |"
+        title: "The Limitations of Generic AI",
+        content: "Generic AI tools like LLMs or basic copywriting software (which are usually LLM wrappers) produce text that sounds plausible but lacks the market-specific knowledge, emotional intelligence, and strategic positioning that drives results.\n\nAI trained on generic datasets doesn't understand that luxury buyers in Greenwich, Connecticut respond to different language than first-time buyers in Austin, Texas. It doesn't know which neighborhoods are trending up or which features command premium prices in specific markets. It can't read between the lines of your rough notes to understand that the \"updated kitchen\" is actually a complete renovation with designer finishes worth emphasizing, while the \"new roof\" is important but not a primary selling point."
       },
       {
-        title: "Pricing Comparison",
-        content: "ListingCopy.ai: $29-99/month subscription\nPropertyCopyDesk: $75-500 per listing\n\nFor high-volume, low-complexity listings, ListingCopy.ai may be more economical. For luxury and unique properties, PropertyCopyDesk delivers higher ROI."
+        title: "Fair Housing Compliance Risks",
+        content: "More critically, generic AI tools can't ensure Fair Housing compliance. An AI might generate descriptions with phrases like \"perfect for families\" or \"ideal for young professionals\" both of which violate Fair Housing laws and could result in fines ranging from ten thousand to one hundred thousand dollars. Professional editors trained in compliance catch these violations before they reach the MLS."
       },
       {
-        title: "When to Choose PropertyCopyDesk",
-        content: "- Properties over $500K\n- Unique architectural features\n- Competitive luxury markets\n- When brand perception matters\n- Maximum conversion is the goal"
+        title: "The R.E.A.L. AI System Advantage",
+        content: "This is where the intersection of AI technology and human expertise creates exponential value. At PropertyCopyDesk, we've developed the R.E.A.L. AI System™ which is an AI trained specifically on thousands of successful real estate listings, combined with professional editors who understand both copywriting principles and real estate market dynamics. The AI generates strong first drafts in minutes. Our editors then refine that copy with market-specific knowledge, compliance review, and the subtle nuances that transform good copy into exceptional copy."
+      },
+      {
+        title: "The Result",
+        content: "The result is descriptions that are ninety percent complete from the AI, polished to one hundred percent by human expertise, and delivered in twenty-four hours instead of the two-plus hours most agents spend struggling with each listing."
       }
     ],
     cta: {
@@ -239,33 +247,37 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "7",
-    slug: "12-agent-team-case-study",
-    title: "How a 12-Agent Team Saved 120 Hours Per Month",
-    excerpt: "Detailed case study of Riverside Realty's workflow transformation and the specific metrics behind their success.",
-    metaDescription: "Case study: How a 12-agent real estate team saved 120 hours monthly with PropertyCopyDesk consulting. Metrics and implementation.",
-    targetKeyword: "real estate team case study",
+    slug: "how-propertycopydesk-transforms-your-listing-workflow",
+    title: "How PropertyCopyDesk Transforms Your Listing Workflow",
+    excerpt: "Our service emerged from a simple observation: real estate is the only major industry without an editorial standard. We built PropertyCopyDesk to fill that gap.",
+    metaDescription: "Learn how PropertyCopyDesk transforms your listing workflow with professional editorial services and the R.E.A.L. AI System for real estate teams.",
+    targetKeyword: "real estate listing workflow",
     category: "Team Efficiency",
     readTime: 11,
-    publishDate: "2024-12-10",
+    publishDate: "2025-12-10",
     author: "Fatih Can",
     featured: false,
-    heroImage: "/placeholder.svg",
+    heroImage: blogWorkflowImage,
     sections: [
       {
-        title: "The Challenge",
-        content: "Riverside Realty was losing 15+ hours per agent weekly on administrative tasks. Agent burnout was high, and listing quality was inconsistent."
+        title: "Why We Built PropertyCopyDesk",
+        content: "Our service emerged from a simple observation: real estate is the only major industry without an editorial standard. We built PropertyCopyDesk to fill that gap. You do not need another AI tool, but a professional editorial service that handles the entire copywriting process while you focus on what you do best: prospecting, and selling homes."
       },
       {
-        title: "Specific Metrics",
-        content: "- Time saved: 120 hours/month (10 hours/agent)\n- Inquiry increase: 18%\n- Days on market: Reduced by 8 days average\n- Agent satisfaction: Up 40%\n- ROI: 2,100% in Year 1"
+        title: "The Simple Workflow",
+        content: "The workflow is intentionally simple. You provide basic property details through our submission form: address, key features, photos, anything unique worth highlighting. Within twenty-four hours, you receive a professionally edited listing copy that includes the MLS description, three social media posts optimized for different platforms, and an email campaign template announcing the new listing to your database."
       },
       {
-        title: "Implementation Timeline",
-        content: "Week 1: Workflow audit and system design\nWeek 2: Custom template and prompt creation\nWeek 3: Team training sessions\nWeek 4: Launch and optimization"
+        title: "For Individual Agents",
+        content: "For individual agents, our seventy-five-dollar service tier handles single listings with the same professional standards we apply to our six-thousand-dollar consulting engagements with large teams. Priority and rush tiers are available when you need faster turnaround."
       },
       {
-        title: "Lessons Learned",
-        content: "1. Start with the biggest time drains\n2. Get agent buy-in early\n3. Measure everything\n4. Iterate based on feedback"
+        title: "For Teams and Brokerages",
+        content: "For teams and brokerages, our AI implementation consulting transforms your entire listing workflow. We build a custom version of our R.E.A.L. AI System™ calibrated to your market, brand voice, and specific needs. Your team receives training on using the system, templates for every listing type, and ongoing support. Most teams save ten to fifteen hours per week per agent. That's one hundred twenty to one hundred eighty hours monthly for a ten-agent team, translating to fifty-eight thousand five hundred dollars in annual productivity savings."
+      },
+      {
+        title: "The ROI",
+        content: "The return on investment becomes clear quickly. One consulting client reported that within three weeks of implementation, their agents were spending fifteen minutes per listing instead of two hours, while simultaneously seeing a twenty-three percent increase in listing inquiries. The six-thousand-dollar investment paid for itself in the first month through time savings alone, with the increased inquiries representing pure upside."
       }
     ],
     cta: {
@@ -283,7 +295,7 @@ export const blogPosts: BlogPost[] = [
     targetKeyword: "real estate listing description template",
     category: "Listing Copy",
     readTime: 6,
-    publishDate: "2024-12-05",
+    publishDate: "2025-12-05",
     author: "Fatih Can",
     featured: false,
     heroImage: "/placeholder.svg",
