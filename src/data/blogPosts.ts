@@ -1,6 +1,9 @@
 import blogWorkflowImage from "@/assets/blog-workflow.jpg";
 import blogMistakesImage from "@/assets/blog-mistakes.png";
 import blogGenaiImage from "@/assets/blog-genai.png";
+import blogBuyersImage from "@/assets/blog-buyers.png";
+import blogTrcImage from "@/assets/blog-trc.webp";
+import blogUnlockImage from "@/assets/blog-unlock.png";
 
 export interface BlogPost {
   id: string;
@@ -13,6 +16,7 @@ export interface BlogPost {
   readTime: number;
   publishDate: string;
   author: string;
+  authorBio?: string;
   featured: boolean;
   heroImage: string;
   sections: {
@@ -26,36 +30,46 @@ export interface BlogPost {
   };
 }
 
+export const authorBio = "Fatih Can is the founder of PropertyCopyDesk, bringing together expertise in copywriting, property investment, and marketing to create compelling property copy that connects emotionally and converts into sales.";
+
 export const blogPosts: BlogPost[] = [
   {
     id: "1",
-    slug: "how-to-write-real-estate-listing-descriptions",
-    title: "How to Write Real Estate Listing Descriptions That Actually Sell",
-    excerpt: "Master the art of writing compelling property descriptions that drive 18% more inquiries with our complete step-by-step guide.",
-    metaDescription: "Master the art of writing compelling property descriptions that drive 18% more inquiries. Complete step-by-step guide with examples.",
-    targetKeyword: "how to write real estate listing descriptions",
+    slug: "crafting-click-worthy-headlines-and-irresistible-property-descriptions",
+    title: "Crafting Click-Worthy Headlines and Irresistible Property Descriptions: Your Ultimate Guide to Transform Browsers into Buyers!",
+    excerpt: "Your property description could be the most compelling piece of copy ever written for real estate, but if your headline doesn't convince buyers to read it, that brilliance goes to waste.",
+    metaDescription: "Master click-worthy headlines and irresistible property descriptions that transform browsers into buyers. Complete guide with examples.",
+    targetKeyword: "real estate headlines property descriptions",
     category: "Listing Copy",
-    readTime: 12,
+    readTime: 14,
     publishDate: "2026-01-15",
     author: "Fatih Can",
     featured: true,
-    heroImage: "/placeholder.svg",
+    heroImage: blogBuyersImage,
     sections: [
       {
-        title: "Why Most Listings Fail",
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Studies show that 78% of listing descriptions use the same tired phrases: 'stunning home,' 'great location,' 'must see.' These generic descriptions fail to differentiate properties and result in 40% fewer inquiries than well-crafted listings.\n\nThe problem isn't that agents don't care—it's that they've never been taught the editorial standards that make copy compelling. Journalism has copy desks. Publishing has editors. Real estate? Agents write alone."
+        title: "The Weight of Your Headline",
+        content: "Your property description could be the most compelling piece of copy ever written for real estate, but if your headline doesn't convince buyers to read it, that brilliance goes to waste. The headline carries the entire weight of capturing attention in the three seconds a buyer spends deciding whether to engage with your listing.\n\nStart by understanding your target buyer's priorities. A young professional buying their first condo cares about different things than a family looking for their forever home or retirees seeking a low-maintenance lifestyle property. Your headline should speak directly to what matters most to them. \"Work from home in your dedicated office suite with fiber optic internet\" targets remote workers. \"Five bedrooms plus playroom means everyone gets their own space\" speaks to growing families. \"Single-level living with zero landscaping maintenance\" appeals to retirees."
       },
       {
-        title: "The R.E.A.L. Framework Explained",
-        content: "Our proprietary R.E.A.L. Framework transforms ordinary listings into compelling narratives:\n\n**R - Relevance**: Connect features to buyer desires. Don't say 'large backyard'—say 'weekend BBQ headquarters with room for the kids to play.'\n\n**E - Emotion**: Tap into the feelings buyers want to experience in their new home.\n\n**A - Authority**: Use specific details that establish credibility and paint a vivid picture.\n\n**L - Logic**: Address practical concerns while maintaining emotional appeal."
+        title: "Lead with Benefits, Not Features",
+        content: "Lead with the most compelling benefit, not just the biggest feature. \"Waterfront estate with private dock\" describes a feature. \"Wake up to sunrise over the lake from your primary suite\" describes an experience. Both mention the water, but one creates a vivid mental image while the other simply states a fact.\n\nUse specificity to build credibility. Instead of \"recently updated kitchen,\" try \"kitchen renovated in 2024 with custom cabinetry and professional-grade appliances.\" The specific year and details make the claim more believable and valuable."
       },
       {
-        title: "5 Common Mistakes to Avoid",
-        content: "1. **Starting with square footage** - Lead with lifestyle, not statistics\n2. **Using ALL CAPS** - It reads as desperate shouting\n3. **Overusing adjectives** - 'Beautiful stunning gorgeous home' means nothing\n4. **Ignoring the neighborhood** - Context matters as much as the home\n5. **No call to action** - Always guide the next step"
+        title: "Creating Genuine Urgency",
+        content: "Create urgency through genuine scarcity, not artificial pressure. \"Won't last long\" is meaningless. \"First showing received three offers—second showing scheduled for this weekend\" creates real urgency backed by evidence.\n\nTest different approaches and track what works. Some headlines should emphasize price value (\"Priced $40K below recent appraisal\"). Others should highlight unique features (\"Only home in the neighborhood with a pool and guest house\"). Track which headlines generate the most inquiries and refine your approach accordingly."
       },
       {
-        title: "Before/After Examples",
-        content: "**Before**: Beautiful 4BR home with updated kitchen and nice backyard. Great location near schools. Must see!\n\n**After**: Morning light floods the chef's kitchen as you prep breakfast, watching the kids play in the fenced backyard through oversized windows. Walking distance to Lincoln Elementary means peaceful mornings and easy commutes. Schedule your private tour before the weekend open house.\n\nThe second version increased inquiries by 34% in our A/B testing."
+        title: "Maintaining Interest After the Click",
+        content: "Once your headline captures attention, your description needs to maintain interest and build desire. This is where most listing copy fails. Agents either provide too little information, forcing interested buyers to reach out for basic details, or they provide too much in a way that overwhelms rather than entices.\n\nBegin with a hook that expands on your headline's promise. If your headline emphasized the outdoor space, your opening sentence should immediately paint a picture of that space: \"Step through French doors onto a professionally landscaped half-acre where nature becomes your backyard—complete with mature oak trees, a stone pathway to your private garden, and enough open lawn for everything from croquet to camping under the stars.\""
+      },
+      {
+        title: "Organizing Information Effectively",
+        content: "Organize information in a logical flow that mirrors how buyers evaluate properties. Most buyers think about homes in this sequence: overall impression and location, main living spaces, bedrooms and bathrooms, outdoor areas, and finally practical considerations like storage and parking. Structure your description to follow this natural progression rather than jumping randomly between features.\n\nBalance emotional appeal with practical information. Pure emotion without substance feels like fluff. Pure facts without emotion feel like a spreadsheet. The most effective descriptions weave both together: \"The chef's kitchen—with its Carrara marble island, professional-grade Wolf range, and custom floor-to-ceiling cabinetry—transforms meal preparation from a chore into a pleasure, whether you're experimenting with new recipes or hosting dinner parties for twelve.\""
+      },
+      {
+        title: "Show, Don't Tell",
+        content: "Use active, descriptive language that shows rather than tells. Don't write \"large windows provide natural light.\" Instead: \"Floor-to-ceiling windows flood the living room with southern light, eliminating the need for overhead lighting even on overcast days.\" The second version is specific, visual, and highlights a tangible benefit.\n\nAddress potential objections before they become reasons to dismiss the property. If the home is on a busy street, acknowledge it while reframing: \"While the home sits on Main Street, triple-pane windows and strategic landscaping create a surprisingly peaceful interior—you'll hear birds before traffic.\" This approach builds trust by acknowledging reality while demonstrating that potential concerns have been thoughtfully addressed."
       }
     ],
     cta: {
@@ -66,66 +80,78 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "2",
-    slug: "chatgpt-vs-professional-copywriter",
-    title: "ChatGPT vs. Professional Copywriter: Honest Real Estate Comparison",
-    excerpt: "We tested ChatGPT against our professional editors on 50 listings. Here's what we found (and when to use each).",
-    metaDescription: "We tested ChatGPT against professional copywriters on 50 real estate listings. See the honest comparison and learn when to use each.",
-    targetKeyword: "chatgpt vs professional copywriter",
-    category: "AI Tools",
+    slug: "unlocking-real-estate-copywriting-secrets",
+    title: "Unlocking Real Estate Copywriting: The Secrets Behind Selling More Properties and Why Most Agents Overlook Its Power!",
+    excerpt: "The difference between a listing that sits for 60 days and one that gets multiple offers in a week often comes down to a single factor: the quality of the words describing it.",
+    metaDescription: "Discover the secrets of real estate copywriting that sell more properties. Learn why professionally edited descriptions generate 18% more inquiries.",
+    targetKeyword: "real estate copywriting secrets",
+    category: "Listing Copy",
     readTime: 10,
     publishDate: "2026-01-10",
     author: "Fatih Can",
     featured: true,
-    heroImage: "/placeholder.svg",
+    heroImage: blogUnlockImage,
     sections: [
       {
-        title: "The Test Setup",
-        content: "We gave ChatGPT and our professional editors the same 50 listings across price ranges from $250K to $5M. We measured inquiry rates, time on page, and buyer feedback."
+        title: "The Million-Property Problem",
+        content: "Over 7 million homes change hands in the US every year. For each one, there's a listing description that either captures a buyer's imagination or sends them scrolling to the next property. The difference between these outcomes is the quality of the real estate copywriting.\n\nMost agents don't realize they're losing inquiries, showings, and ultimately sales because of poor listing copy. In fact, professionally edited property descriptions generate eighteen percent more inquiries than typical agent-written listings. That's not a small difference. For an agent with three listings per month, that's the difference between thirty-six inquiries and forty-three—seven additional opportunities that could turn into offers."
       },
       {
-        title: "Side-by-Side Comparison",
-        content: "| Factor | ChatGPT | Professional |\n|--------|---------|-------------|\n| Speed | 30 seconds | 2-4 hours |\n| Cost | ~$0.02 | $75-150 |\n| Inquiry Rate | +8% | +18% |\n| Uniqueness | Generic | Unique |\n| Market Knowledge | Limited | Expert |"
+        title: "The Missing Editorial Standard",
+        content: "Yet the real estate industry remains the only major sector without an editorial standard. Journalism has copy desks that transform reporter drafts into publication-ready articles. Publishing houses employ editors who turn manuscripts into bestsellers. Marketing agencies have content strategists who ensure every word reinforces the brand. But real estate? Agents write alone, usually at ten o'clock at night after a full day of showings, producing copy that costs them both time and money."
       },
       {
-        title: "When to Use Each",
-        content: "**Use ChatGPT when:**\n- You need a quick first draft\n- Budget is extremely tight\n- The property is straightforward\n\n**Use a professional when:**\n- Luxury properties over $750K\n- Unique or historic homes\n- Competitive markets\n- You want maximum ROI"
+        title: "What Real Estate Copywriting Encompasses",
+        content: "Real estate copywriting encompasses every written element of your property marketing: headlines that stop the scroll, descriptions that create desire, social media posts that generate engagement, email campaigns that drive showings, and even your agent bio that builds trust. Each of these touchpoints either moves a potential buyer closer to viewing a property or pushes them toward your competitor's listing.\n\nThe stakes are higher than most agents realize. Buying a home represents one of the largest financial and emotional decisions people make in their lifetime. They're not just purchasing square footage and updated appliances—they're buying into a vision of their future life. Will their children take their first steps in that living room? Will they host Thanksgiving dinners in that kitchen? Will weekend mornings feel peaceful in that backyard?"
       },
       {
-        title: "The Hybrid Approach",
-        content: "The smartest agents use both. Start with ChatGPT for the basic structure, then have a professional editor refine it. This cuts costs by 30% while maintaining 90% of the quality improvement."
+        title: "Features vs. Lifestyle",
+        content: "This is why listing features without context falls flat. When you write \"spacious open-concept kitchen with quartz countertops and stainless steel appliances,\" you're describing features. When you write \"the kind of kitchen where Sunday morning pancakes become family tradition, with enough counter space for three generations to cook together,\" you're selling a lifestyle. The second version doesn't ignore the features—it contextualizes them in a way that creates emotional resonance."
       }
     ],
     cta: {
       type: "service",
-      text: "See how PropertyCopyDesk improves on ChatGPT",
+      text: "See how PropertyCopyDesk improves your listings",
       buttonText: "Submit a Listing for $75"
     }
   },
   {
     id: "3",
-    slug: "real-cost-of-bad-listing-copy",
-    title: "The Real Cost of Bad Listing Copy (It's $110K/Year)",
-    excerpt: "Calculate how much your team loses annually on inefficient listing processes and subpar copy that doesn't convert.",
-    metaDescription: "Calculate how much your real estate team loses annually on bad listing copy. Hidden costs breakdown and ROI of professional copy.",
-    targetKeyword: "real estate team efficiency",
+    slug: "real-cost-of-diy-copywriting",
+    title: "The Real Cost of DIY Copywriting (It's More Than You Think)",
+    excerpt: "When agents write their own listing copy, they see it as 'free' because there's no direct out-of-pocket expense. But this logic ignores the substantial hidden costs.",
+    metaDescription: "Calculate the true cost of DIY real estate copywriting. Hidden costs breakdown including time, opportunity, performance, and compliance risks.",
+    targetKeyword: "real estate copywriting cost",
     category: "Team Efficiency",
     readTime: 8,
     publishDate: "2026-01-05",
     author: "Fatih Can",
     featured: true,
-    heroImage: "/placeholder.svg",
+    heroImage: blogTrcImage,
     sections: [
       {
-        title: "Time Audit Calculator",
-        content: "The average agent spends 2.5 hours per listing on descriptions. For a 10-agent team doing 15 listings/month each, that's 375 hours monthly—or $18,750 in lost productivity (at $50/hour opportunity cost)."
+        title: "The 'Free' Fallacy",
+        content: "When agents write their own listing copy, they see it as \"free\" because there's no direct out-of-pocket expense. But this logic ignores the substantial hidden costs that accumulate with every listing."
       },
       {
-        title: "Hidden Costs Breakdown",
-        content: "1. **Direct time cost**: $18,750/month × 12 = $225,000/year\n2. **Opportunity cost**: 3-4 fewer deals closed = $30,000 in lost commissions\n3. **Longer days on market**: Average 8 extra days = $12,000 in carrying costs\n4. **Brand perception**: Unquantifiable but real"
+        title: "Time Cost",
+        content: "Most agents spend between ninety minutes and three hours writing each listing description, including the inevitable revisions when something doesn't sound quite right. For an agent managing three listings per month, that's six to nine hours monthly (seventy-two to one hundred eight hours annually) spent on a task that professional services can complete better and faster."
       },
       {
-        title: "ROI of Professional Copy",
-        content: "Our consulting clients see:\n- 10-15 hours saved per agent per week\n- 18% increase in listing inquiries\n- 11-day average payback period\n- 2,100% ROI in Year 1"
+        title: "Opportunity Cost",
+        content: "Those six to nine hours per month could be spent on revenue-generating activities like prospecting, networking, showing properties, or negotiating offers. If your hourly value is one hundred dollars (a conservative estimate for a productive agent) you're effectively paying six hundred to nine hundred dollars per month in lost productivity to write your own copy."
+      },
+      {
+        title: "Performance Cost",
+        content: "Agent-written descriptions typically underperform professionally edited copy by eighteen percent in inquiry generation. For a four-hundred-thousand-dollar listing, that could mean the difference between three showings and five, or between receiving one offer and receiving multiple competing offers that drive the price up."
+      },
+      {
+        title: "Compliance Risk",
+        content: "Every Fair Housing violation carries the risk of significant fines. A single complaint can result in a ten-thousand-dollar penalty for a first offense, up to one hundred thousand dollars for repeat violations. Professional editing includes compliance review as standard practice."
+      },
+      {
+        title: "The True Cost Calculation",
+        content: "When you add these costs together, the true expense of DIY copywriting becomes clear: An agent spending six hours monthly on listings, valued at one hundred dollars per hour, with three properties that could benefit from eighteen percent more inquiries, is effectively spending six hundred dollars in time plus losing multiple potential offers. Against this backdrop, spending seventy-five dollars for a professional copy that arrives in twenty-four hours becomes not an expense but an investment with measurable return."
       }
     ],
     cta: {
