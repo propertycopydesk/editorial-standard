@@ -3,7 +3,7 @@ import blogGenaiImage from "@/assets/blog-genai.png";
 import blogBuyersImage from "@/assets/blog-buyers.png";
 import blogTrcImage from "@/assets/blog-trc.webp";
 import blogUnlockImage from "@/assets/blog-unlock.png";
-import blogWhyImage from "@/assets/blog-why.png";
+import blogDeskImage from "@/assets/blog-desk.png";
 import blogFutureImage from "@/assets/blog-future.webp";
 
 export interface BlogPost {
@@ -214,7 +214,7 @@ export const blogPosts: BlogPost[] = [
     publishDate: "2025-12-20",
     author: "Fatih Can",
     featured: false,
-    heroImage: blogWhyImage,
+    heroImage: blogDeskImage,
     sections: [
       {
         title: "The Unique Constraints of Real Estate Copywriting",

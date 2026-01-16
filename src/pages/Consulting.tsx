@@ -83,34 +83,6 @@ const Consulting = () => {
           </div>
         </section>
 
-        {/* Case Study */}
-        <section className="section-padding bg-muted">
-          <div className="container-editorial">
-            <div className="bg-background border border-border rounded-lg p-8 md:p-12">
-              <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-8 text-center">How Riverside Realty Saved 120 Hours/Month</h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-                {[
-                  { value: "120", label: "Hours Saved Monthly" },
-                  { value: "18%", label: "Inquiry Increase" },
-                  { value: "2,100%", label: "ROI in Year 1" },
-                  { value: "Zero", label: "Agent Turnover" },
-                ].map((stat, i) => (
-                  <div key={i} className="text-center">
-                    <p className="font-serif text-3xl md:text-4xl text-accent mb-2">{stat.value}</p>
-                    <p className="text-sm text-muted-foreground">{stat.label}</p>
-                  </div>
-                ))}
-              </div>
-              <blockquote className="border-l-4 border-accent pl-6 mb-6">
-                <p className="font-serif text-lg italic text-foreground mb-2">"PropertyCopyDesk transformed how our team operates. The time savings alone paid for the investment in 11 days."</p>
-                <footer className="text-sm text-muted-foreground">— Jennifer Kim, Broker/Owner</footer>
-              </blockquote>
-              <div className="text-center">
-                <Button variant="editorial-outline" asChild><Link to="/blog/12-agent-team-case-study">Read Full Case Study</Link></Button>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* What's Included */}
         <section className="section-padding">
