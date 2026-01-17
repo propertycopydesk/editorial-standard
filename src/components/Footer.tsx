@@ -36,7 +36,7 @@ const Footer = () => {
               SOURCE: 'website_footer',
               SIGNUP_DATE: new Date().toISOString()
             },
-            listIds: [], // Add your list ID here if you want: [123]
+            listIds: [3], // Brevo list ID
             updateEnabled: false, // Don't update if already exists
             emailBlacklisted: false
           })
