@@ -170,7 +170,7 @@ const Footer = () => {
             </p>
             {/* Social Links */}
             <div className="flex gap-4">
-              <a href="https://twitter.com/propertycopydesk" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/70 hover:text-accent transition-colors"
+              <a href="https://x.com/propcopydesk" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/70 hover:text-accent transition-colors"
                 onClick={() => analytics.ctaClick("twitter", "footer")}
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
