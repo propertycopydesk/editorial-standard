@@ -1,8 +1,16 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Zap, Check } from "lucide-react";
-import Footer from "@/components/Footer";
 import { analytics } from "@/lib/analytics";
+import ProblemSection from "@/components/landing/ProblemSection";
+import ResultsSection from "@/components/landing/ResultsSection";
+import HowItWorksSection from "@/components/landing/HowItWorksSection";
+import DifferentiationSection from "@/components/landing/DifferentiationSection";
+import PricingSection from "@/components/landing/PricingSection";
+import TestimonialsSection from "@/components/landing/TestimonialsSection";
+import FAQSection from "@/components/landing/FAQSection";
+import FinalCTASection from "@/components/landing/FinalCTASection";
+import SimpleFooter from "@/components/landing/SimpleFooter";
 
 const BOOKING_URL = "https://cal.com/propertycopydesk/qualificationcall";
 
@@ -101,9 +109,19 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        {/* All Landing Page Sections */}
+        <ProblemSection />
+        <ResultsSection />
+        <HowItWorksSection />
+        <DifferentiationSection />
+        <PricingSection />
+        <TestimonialsSection />
+        <FAQSection />
+        <FinalCTASection />
       </main>
 
-      <Footer />
+      <SimpleFooter />
     </div>
   );
 };
