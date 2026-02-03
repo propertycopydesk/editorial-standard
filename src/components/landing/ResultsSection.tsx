@@ -1,4 +1,4 @@
-import { TrendingUp, Phone, Trophy, BarChart3 } from "lucide-react";
+import { TrendingUp, Phone, MapPin, BarChart3 } from "lucide-react";
 
 const ResultsSection = () => {
   const results = [
@@ -13,9 +13,9 @@ const ResultsSection = () => {
       description: "$640K listing from ChatGPT search within 3 weeks",
     },
     {
-      icon: Trophy,
-      metric: "#1 in AI Search",
-      description: "Now appears in 67% of AI agent searches in Dallas",
+      icon: MapPin,
+      metric: "50+ Markets",
+      description: "We do this across North America in any town, city or metro",
     },
     {
       icon: BarChart3,
@@ -29,7 +29,7 @@ const ResultsSection = () => {
       <div className="container mx-auto px-6">
         {/* Headline */}
         <h2 className="text-3xl md:text-[40px] font-bold text-foreground text-center mb-12">
-          Some of Our Recent Results:
+          The Results Speak For Themselves.
         </h2>
 
         {/* Result Cards */}

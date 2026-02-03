@@ -28,30 +28,30 @@ const ProblemSection = () => {
       <div className="container mx-auto px-6 max-w-[900px] text-center">
         {/* Main Headline */}
         <h2 className="text-3xl md:text-[44px] font-bold text-foreground leading-tight mb-8">
-          Sellers don't Google 'realtor near me' anymore.
+          Stop chasing leads. Start being the answer.
         </h2>
 
         {/* Body paragraphs */}
         <div className="space-y-6 mb-12">
           <p className="text-xl md:text-2xl font-semibold text-foreground">
-            They ask ChatGPT: 'Who's the best agent in my city for selling my home?'
+            AI SEO puts you in front of ready-to-buy clients searching ChatGPT and Gemini.
           </p>
           <p className="text-xl md:text-2xl text-foreground">
-            And AI gives them <span className="font-bold">ONE name</span>. If it's not yours, you just lost a listing you'll never even know about.
+            AI-generated leads convert 9x better than traditional search
           </p>
         </div>
 
         {/* Stat Callout */}
         <div className="mb-16">
-          <p className="text-7xl font-bold text-foreground">64%</p>
+          <p className="text-7xl font-bold text-foreground">62%</p>
           <p className="text-lg text-muted-foreground max-w-[600px] mx-auto mt-4">
-            of sellers now use AI to research agents before contacting them
+            of people trust AI over friends & family for real estate advice
           </p>
         </div>
 
         {/* Two Types of Content Section */}
         <h3 className="text-2xl md:text-[36px] font-bold text-foreground mb-10">
-          We provide TWO types of content you NEED:
+          We provide TWO types of content you NEED
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
@@ -87,7 +87,7 @@ const ProblemSection = () => {
         </div>
 
         <p className="text-lg md:text-xl text-muted-foreground font-medium mb-16">
-          Most marketers only do #1 or #2. You need <span className="font-bold text-foreground">BOTH</span>.
+          Most marketers only do one or the other. You need <span className="font-bold text-foreground">BOTH</span> because 82% of Americans use AI for housing market info.
         </p>
 
         {/* Funnel Infographic */}
@@ -96,34 +96,38 @@ const ProblemSection = () => {
             The New Real Estate Marketing Funnel:
           </h4>
           
-          {/* Desktop Funnel */}
-          <div className="hidden md:flex items-center justify-between gap-2 mb-6">
-            {funnelSteps.map((step, index) => (
-              <div key={index} className="flex items-center">
-                <div className="text-center">
-                  <div className="bg-accent/10 border border-accent rounded-lg px-4 py-3 min-w-[140px]">
-                    <p className="text-sm font-semibold text-foreground">{step.label}</p>
+          {/* Desktop Funnel - Reorganized layout */}
+          <div className="hidden md:block">
+            <div className="flex items-start justify-center gap-4 mb-6">
+              {/* First two stacked */}
+              <div className="flex flex-col gap-2">
+                {funnelSteps.slice(0, 2).map((step, index) => (
+                  <div key={index} className="text-center">
+                    <div className="bg-accent/10 border border-accent rounded-lg px-4 py-3 min-w-[140px]">
+                      <p className="text-sm font-semibold text-foreground">{step.label}</p>
+                      <p className="text-xs text-muted-foreground mt-1">[{step.sublabel}]</p>
+                    </div>
                   </div>
-                </div>
-                {index < funnelSteps.length - 1 && (
-                  <ArrowRight className="w-5 h-5 text-accent mx-1 flex-shrink-0" />
-                )}
+                ))}
               </div>
-            ))}
-          </div>
-
-          {/* Desktop Sublabels */}
-          <div className="hidden md:flex items-start justify-between gap-2">
-            {funnelSteps.map((step, index) => (
-              <div key={index} className="flex items-center">
-                <div className="text-center min-w-[140px]">
-                  <p className="text-xs text-muted-foreground">[{step.sublabel}]</p>
+              
+              <ArrowRight className="w-5 h-5 text-accent mt-8 flex-shrink-0" />
+              
+              {/* Remaining three in a row */}
+              {funnelSteps.slice(2).map((step, index) => (
+                <div key={index} className="flex items-center">
+                  <div className="text-center">
+                    <div className="bg-accent/10 border border-accent rounded-lg px-4 py-3 min-w-[140px]">
+                      <p className="text-sm font-semibold text-foreground">{step.label}</p>
+                      <p className="text-xs text-muted-foreground mt-1">[{step.sublabel}]</p>
+                    </div>
+                  </div>
+                  {index < 2 && (
+                    <ArrowRight className="w-5 h-5 text-accent mx-2 flex-shrink-0" />
+                  )}
                 </div>
-                {index < funnelSteps.length - 1 && (
-                  <div className="w-5 mx-1" />
-                )}
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           {/* Mobile Funnel */}
@@ -139,6 +143,19 @@ const ProblemSection = () => {
                 )}
               </div>
             ))}
+          </div>
+          
+          {/* Focus Section */}
+          <div className="mt-10 pt-8 border-t border-border">
+            <h5 className="text-lg md:text-xl font-semibold text-foreground mb-4">
+              Want AI to recommend YOU? Focus on:
+            </h5>
+            <div className="flex flex-wrap justify-center gap-4 text-base md:text-lg text-foreground">
+              <span>✓ Strategic content creation</span>
+              <span>✓ Brand mentions</span>
+              <span>✓ Citations</span>
+              <span>✓ Authority building</span>
+            </div>
           </div>
         </div>
       </div>

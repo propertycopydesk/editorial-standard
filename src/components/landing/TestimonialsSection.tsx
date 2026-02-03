@@ -3,17 +3,17 @@ const TestimonialsSection = () => {
     {
       quote: "I went on a listing appointment and the seller said she found me on ChatGPT. $640K listing under agreement already!",
       name: "LeAnne C.",
-      brokerage: "[Brokerage Name]",
+      role: "Agent",
     },
     {
       quote: "Got my second appointment from ChatGPT this month. Both were looking for an agent with a high list-to-sale price ratio. That's exactly what we optimized for.",
       name: "Richard B.",
-      brokerage: "[Brokerage Name]",
+      role: "Broker",
     },
     {
       quote: "Just set a listing appointment from ChatGPT. The seller specifically said I was 'top rated in the market.' We're now showing up in 50%+ of AI searches.",
       name: "Julian P.",
-      brokerage: "[Brokerage Name]",
+      role: "Listing Agent",
     },
   ];
 
@@ -42,7 +42,7 @@ const TestimonialsSection = () => {
                 {testimonial.name}
               </p>
               <p className="text-sm text-muted-foreground">
-                {testimonial.brokerage}
+                {testimonial.role}
               </p>
             </div>
           ))}
