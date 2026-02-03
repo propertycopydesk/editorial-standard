@@ -10,7 +10,7 @@ import PricingSection from "@/components/landing/PricingSection";
 import TestimonialsSection from "@/components/landing/TestimonialsSection";
 import FAQSection from "@/components/landing/FAQSection";
 import FinalCTASection from "@/components/landing/FinalCTASection";
-import SimpleFooter from "@/components/landing/SimpleFooter";
+import Footer from "@/components/Footer";
 
 const BOOKING_URL = "https://cal.com/propertycopydesk/qualificationcall";
 
@@ -34,9 +34,15 @@ const Index = () => {
         <nav className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <span className="font-serif text-2xl font-semibold tracking-wide text-foreground">
-              PropertyCopyDesk
-            </span>
+            <div className="flex flex-col items-start">
+              <span className="font-serif text-lg md:text-xl font-semibold tracking-wide text-foreground">
+                PROPERTY
+              </span>
+              <div className="w-10 h-px bg-accent my-0.5" />
+              <span className="font-serif text-[10px] md:text-xs tracking-[0.2em] text-foreground">
+                COPY DESK
+              </span>
+            </div>
 
             {/* Desktop CTA */}
             <Button
@@ -78,13 +84,13 @@ const Index = () => {
         <section className="min-h-screen flex items-center justify-center pt-20 pb-16 px-6">
           <div className="max-w-[900px] mx-auto text-center">
             {/* Main Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-[56px] font-bold text-foreground leading-[1.1] mb-6">
-              Sellers Are Asking ChatGPT Who to Hire. Is It Recommending You or Your Competitor?
+            <h1 className="text-4xl md:text-5xl lg:text-[56px] font-bold text-foreground leading-[1.1] mb-6 font-serif">
+              Is AI Recommending You or Your Competitor?
             </h1>
 
             {/* Subheadline */}
             <p className="text-lg md:text-[22px] font-normal text-muted-foreground leading-relaxed max-w-[800px] mx-auto mb-8">
-              When ready-to-sell homeowners ask AI platforms like ChatGPT, Perplexity, and Google for agent recommendations in their city, we ensure you're the name they hear—not someone else.
+              When property buyers and sellers ask AI platforms like ChatGPT, Grok, and Perplexity for agent recommendations in their city, we ensure you're the name they hear.
             </p>
 
             {/* Primary CTA Button */}
@@ -104,7 +110,7 @@ const Index = () => {
               </span>
               <span className="flex items-center gap-2 text-base">
                 <Check className="w-4 h-4 text-accent" />
-                No market exclusivity—we accept serious agents only
+                No market exclusivity; we accept serious agents only
               </span>
             </div>
           </div>
@@ -112,8 +118,8 @@ const Index = () => {
 
         {/* All Landing Page Sections */}
         <ProblemSection />
-        <ResultsSection />
         <HowItWorksSection />
+        <ResultsSection />
         <DifferentiationSection />
         <PricingSection />
         <TestimonialsSection />
@@ -121,7 +127,7 @@ const Index = () => {
         <FinalCTASection />
       </main>
 
-      <SimpleFooter />
+      <Footer />
     </div>
   );
 };

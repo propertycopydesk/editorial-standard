@@ -27,7 +27,7 @@ const FAQSection = () => {
     },
     {
       question: "Do I need a lot of website content already?",
-      answer: "No. We can start from scratch. If you already have blog content, we'll optimize it for AI search first—but it's not required.",
+      answer: "No. We can start from scratch. If you already have blog content, we'll optimize it for AI search first, but it's not required.",
     },
     {
       question: "Why only 3 clients per month?",
@@ -40,7 +40,7 @@ const FAQSection = () => {
       return (
         <div className="space-y-4">
           <p className="text-muted-foreground">
-            <strong>Done-For-You</strong> is best if you're:
+            <strong>Get AI Visibility</strong> is best if you're:
           </p>
           <ul className="list-disc pl-6 text-muted-foreground space-y-1">
             <li>Doing 10+ deals/year and value your time</li>
@@ -48,7 +48,7 @@ const FAQSection = () => {
             <li>Have the budget ($1,299/month)</li>
           </ul>
           <p className="text-muted-foreground">
-            <strong>DIY Coaching</strong> is best if you're:
+            <strong>Coaching Program</strong> is best if you're:
           </p>
           <ul className="list-disc pl-6 text-muted-foreground space-y-1">
             <li>Early in your career</li>
