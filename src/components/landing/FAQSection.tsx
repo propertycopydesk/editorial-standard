@@ -10,30 +10,48 @@ const BOOKING_URL = "https://cal.com/propertycopydesk/qualificationcall";
 const FAQSection = () => {
   const faqs = [
     {
-      question: "How fast will I see results?",
-      answer: "Most clients get their first AI citation within 30 days. Full visibility (appearing in 50%+ of relevant AI searches) typically takes 60-90 days. If you don't get a citation in 30 days, we keep working for free.",
+      question: "What is AI visibility, and how does it help me?",
+      answer: "AI visibility means making sure you're the agent that large language models like ChatGPT recommend when consumers ask about the best agents in your market. We optimize your digital presence so AI doesn't overlook you.",
     },
     {
-      question: "What if my competitor is already using you?",
-      answer: "Unlike other agencies, we don't offer market exclusivity. We believe there's room for multiple great agents in every market. We only work with serious, high-production agents.",
+      question: "How soon will I see results?",
+      answer: "Most agents notice visibility improvements in 30–90 days. Results vary by market and competition, but we monitor progress so you can see measurable gains.",
     },
     {
-      question: "How is this different from regular SEO?",
-      answer: "Traditional SEO optimizes for Google rankings. AI visibility optimizes for being cited by ChatGPT, Perplexity, and Google AI. Different algorithms, different strategies. Most SEO agencies don't understand AI citation triggers yet.",
+      question: "Will other agents in my market be able to use PropertyCopyDesk too?",
+      answer: "We limit overlap to protect our clients. Market exclusivity is important to us (and you), so you don't compete with another PropertyCopyDesk agent in the same locality.",
+    },
+    {
+      question: "How do you decide what tier is best for me?",
+      answer: "It's best to talk to sales to determine the best tier for you. Markets with larger populations and more competition require additional effort and resources for the LLMs to recommend you as a top agent.",
+    },
+    {
+      question: "Can I add additional localities?",
+      answer: "Yes! If you want to improve your AI visibility in other localities (or prevent competitors from benefiting from PropertyCopyDesk), you can add on additional localities for a fee.",
+    },
+    {
+      question: "Is there a long-term commitment?",
+      answer: "We offer straightforward 6-month contracts but bill monthly.",
+    },
+    {
+      question: "Do I need to know anything about AI?",
+      answer: "No. Our team handles the technical work so you can focus on being a real estate agent. You provide basic inputs, and we take care of the AI optimization.",
+    },
+    {
+      question: "Do I get updates and new tools as AI evolves?",
+      answer: "Absolutely. We continually refine our offering as AI platforms change, and you'll automatically benefit from new strategies and updates.",
+    },
+    {
+      question: "How is PropertyCopyDesk different from a traditional SEO or marketing agency?",
+      answer: "Traditional SEO is about Google rankings. We focus on how AI chooses and recommends agents. Our framework is built for language models, not just search engines.",
     },
     {
       question: "Which option is right for me?",
       answer: "whichOption",
     },
-    {
-      question: "Do I need a lot of website content already?",
-      answer: "No. We can start from scratch. If you already have blog content, we'll optimize it for AI search first, but it's not required.",
-    },
-    {
-      question: "Why only 3 clients per month?",
-      answer: "We're focused on results, not scale. Each client gets hands-on strategy, custom content, and direct access to our team. We can't deliver that quality to 50 clients. Hence the limit.",
-    },
   ];
+
+  const contactLink = "mailto:hello@propertycopydesk.com";
 
   const renderAnswer = (answer: string) => {
     if (answer === "whichOption") {
@@ -99,6 +117,19 @@ const FAQSection = () => {
             </AccordionItem>
           ))}
         </Accordion>
+
+        {/* Contact Link */}
+        <div className="text-center mt-10">
+          <p className="text-lg text-muted-foreground">
+            Still need help?{" "}
+            <a
+              href={contactLink}
+              className="text-accent hover:underline font-medium"
+            >
+              Reach out to us
+            </a>
+          </p>
+        </div>
       </div>
     </section>
   );

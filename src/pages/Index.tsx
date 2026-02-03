@@ -84,13 +84,13 @@ const Index = () => {
         <section className="min-h-screen flex items-center justify-center pt-20 pb-16 px-6">
           <div className="max-w-[900px] mx-auto text-center">
             {/* Main Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-[56px] font-bold text-foreground leading-[1.1] mb-6 font-serif">
-              Is AI Recommending You or Your Competitor?
+            <h1 className="text-4xl md:text-5xl lg:text-[56px] font-bold text-foreground leading-[1.1] mb-6 font-serif whitespace-nowrap">
+              Are YOU the agent AI recommends?
             </h1>
 
             {/* Subheadline */}
             <p className="text-lg md:text-[22px] font-normal text-muted-foreground leading-relaxed max-w-[800px] mx-auto mb-8">
-              When property buyers and sellers ask AI platforms like ChatGPT, Grok, and Perplexity for agent recommendations in their city, we ensure you're the name they hear.
+              Become the agent AI recommends when buyers/sellers ask ChatGPT, Gemini, or Perplexity
             </p>
 
             {/* Primary CTA Button */}

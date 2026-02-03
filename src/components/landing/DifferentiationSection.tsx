@@ -1,4 +1,4 @@
-import { Zap } from "lucide-react";
+import { Lightbulb } from "lucide-react";
 
 const DifferentiationSection = () => {
   return (
@@ -6,21 +6,21 @@ const DifferentiationSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-[900px] mx-auto border-2 border-border rounded-xl p-8 md:p-14 text-center">
           {/* Icon */}
-          <Zap className="w-10 h-10 text-accent mx-auto mb-6" />
+          <div className="text-4xl mb-6">💡</div>
 
           {/* Headline */}
           <h2 className="text-2xl md:text-[32px] font-bold text-foreground mb-6">
-            Why We're Different From Other AI SEO Agencies
+            How We Are Different From Other AI SEO Agencies?
           </h2>
 
           {/* Body paragraphs */}
           <div className="space-y-4 text-lg md:text-xl text-muted-foreground leading-relaxed">
-            <p>Most agencies optimize for AI citations and stop there.</p>
+            <p>Most agencies only optimize for AI citations.</p>
             <p>
-              We optimize for AI citations <span className="font-bold text-foreground">AND</span> human conversion. You get more recommendations from AI <span className="font-bold text-foreground">AND</span> more of those people actually hire you.
+              Our services are optimized for the <span className="font-bold text-foreground">bot-to-human handoff</span>: content that bots can parse, understand, and confidently recommend to humans.
             </p>
             <p className="font-semibold text-foreground">
-              That's the difference between vanity metrics and revenue.
+              That's the difference between vanity metrics and REVENUE.
             </p>
           </div>
         </div>
