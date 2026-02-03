@@ -5,7 +5,7 @@ const ResultsSection = () => {
     {
       icon: TrendingUp,
       metric: "From $0 to $47K MRR",
-      description: "Agent went from zero AI visibility to 8 citations/month in 60 days",
+      description: "Agent went from zero AI visibility to 8 citations per month in 60 days",
     },
     {
       icon: Phone,

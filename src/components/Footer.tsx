@@ -166,7 +166,7 @@ const Footer = () => {
               </div>
             </Link>
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6">
-              Professional real estate copywriting and AI workflow consulting for agents and teams who value their time.
+              AI Visibility Optimization for Real Estate Professionals
             </p>
             {/* Social Links */}
             <div className="flex gap-4">

@@ -11,7 +11,7 @@ const PricingSection = () => {
   };
 
   const primaryFeatures = [
-    "5 premium bot + human optimized articles per month",
+    "6 premium bot + human optimized articles per month",
     "AI citation tracking across ChatGPT, Perplexity, Gemini, Google",
     "Monthly strategy calls to review results and optimize",
     "First citation in 30 days or we keep working for free",
@@ -39,7 +39,7 @@ const PricingSection = () => {
 
         {/* Pricing Cards */}
         <div className="flex flex-col lg:flex-row gap-8">
-          {/* Primary Card - Done-For-You */}
+          {/* Primary Card - Get AI Visibility */}
           <div className="lg:w-[70%] relative">
             {/* Badge */}
             <div className="absolute -top-3 left-8">
@@ -50,7 +50,7 @@ const PricingSection = () => {
 
             <div className="border-[3px] border-accent rounded-xl p-8 md:p-10 bg-card shadow-lg">
               <h3 className="text-3xl font-bold text-foreground mb-2">
-                Done-For-You AI Visibility
+                Get AI Visibility
               </h3>
               <p className="text-base text-muted-foreground mb-6">
                 We handle everything while you focus on closing deals
@@ -95,18 +95,18 @@ const PricingSection = () => {
             </div>
           </div>
 
-          {/* Secondary Card - DIY Coaching */}
+          {/* Secondary Card - Coaching Program */}
           <div className="lg:w-[30%] relative">
             {/* Badge */}
             <div className="absolute -top-3 left-8">
               <span className="bg-muted text-muted-foreground text-sm font-semibold px-3 py-1.5 rounded">
-                For DIY-ers
+                Have More Time?
               </span>
             </div>
 
             <div className="border border-border rounded-xl p-6 md:p-8 bg-card shadow-sm h-full flex flex-col">
               <h3 className="text-2xl font-semibold text-foreground mb-2">
-                DIY Coaching Program
+                Coaching Program
               </h3>
               <p className="text-sm text-muted-foreground mb-5">
                 Learn the system and implement it yourself

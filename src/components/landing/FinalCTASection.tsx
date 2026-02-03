@@ -5,15 +5,15 @@ const BOOKING_URL = "https://cal.com/propertycopydesk/qualificationcall";
 
 const FinalCTASection = () => {
   const openAudit = () => {
-    analytics.ctaClick("Request Free Audit", "final_cta");
+    analytics.ctaClick("Request Audit", "final-cta");
     window.open(BOOKING_URL, "_blank");
   };
 
   return (
     <section className="bg-primary py-16 md:py-24">
-      <div className="container mx-auto px-6 text-center">
+      <div className="container mx-auto px-6 max-w-[900px] text-center">
         {/* Headline */}
-        <h2 className="text-3xl md:text-[44px] font-bold text-primary-foreground leading-tight max-w-[900px] mx-auto mb-6">
+        <h2 className="text-3xl md:text-[44px] font-bold text-primary-foreground leading-[1.2] mb-6">
           See Where You Rank in AI Search (Before Your Competitor Steals Another Listing)
         </h2>
 
@@ -25,20 +25,20 @@ const FinalCTASection = () => {
         {/* CTA Button */}
         <Button
           onClick={openAudit}
+          size="lg"
           variant="secondary"
-          size="xl"
           className="text-xl md:text-[22px] py-8 px-12 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-shadow mb-6"
         >
           Request Your Free Audit →
         </Button>
 
-        {/* Trust Indicators */}
+        {/* Trust indicators */}
         <p className="text-base text-primary-foreground/70 mb-4">
-          ⚡ No credit card required • 15-minute Loom video walkthrough • Custom recommendations
+          No credit card required • 15-minute Loom video walkthrough • Custom recommendations
         </p>
 
-        {/* Scarcity Indicator */}
-        <p className="text-base font-medium text-primary-foreground/90">
+        {/* Scarcity indicator */}
+        <p className="text-base font-medium text-primary-foreground">
           🔴 Only 2 audit slots available this week
         </p>
       </div>

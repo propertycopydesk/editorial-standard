@@ -8,7 +8,7 @@ const HowItWorksSection = () => {
     {
       number: "02",
       title: "Human-Optimized Conversion",
-      description: "Getting cited is great—but meaningless if visitors don't convert. We ensure your content persuades humans to call you.",
+      description: "Getting cited is great, but meaningless if visitors don't convert. We ensure your content persuades humans to call you.",
     },
     {
       number: "03",
@@ -27,7 +27,7 @@ const HowItWorksSection = () => {
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-muted-foreground text-center max-w-[900px] mx-auto mb-14">
-          We optimize your content so AI platforms trust you as the local expert—then ensure the people AI sends actually hire you.
+          We optimize your content so AI platforms trust you as the local expert, then ensure the people AI sends actually hire you.
         </p>
 
         {/* Steps */}
