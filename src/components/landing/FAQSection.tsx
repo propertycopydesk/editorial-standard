@@ -22,16 +22,8 @@ const FAQSection = () => {
       answer: "We limit overlap to protect our clients. Market exclusivity is important to us (and you), so you don't compete with another PropertyCopyDesk agent in the same locality.",
     },
     {
-      question: "How do you decide what tier is best for me?",
-      answer: "It's best to talk to sales to determine the best tier for you. Markets with larger populations and more competition require additional effort and resources for the LLMs to recommend you as a top agent.",
-    },
-    {
-      question: "Can I add additional localities?",
-      answer: "Yes! If you want to improve your AI visibility in other localities (or prevent competitors from benefiting from PropertyCopyDesk), you can add on additional localities for a fee.",
-    },
-    {
       question: "Is there a long-term commitment?",
-      answer: "We offer straightforward 6-month contracts but bill monthly.",
+      answer: "We offer straightforward 3 to 6-month contracts but bill monthly.",
     },
     {
       question: "Do I need to know anything about AI?",
@@ -57,24 +49,24 @@ const FAQSection = () => {
     if (answer === "whichOption") {
       return (
         <div className="space-y-4">
-          <p className="text-muted-foreground">
+          <p className="text-primary/70">
             <strong>Get AI Visibility</strong> is best if you're:
           </p>
-          <ul className="list-disc pl-6 text-muted-foreground space-y-1">
+          <ul className="list-disc pl-6 text-primary/70 space-y-1">
             <li>Doing 10+ deals/year and value your time</li>
             <li>Want results fast (first citation in 30 days)</li>
             <li>Have the budget ($1,299/month)</li>
           </ul>
-          <p className="text-muted-foreground">
+          <p className="text-primary/70">
             <strong>Coaching Program</strong> is best if you're:
           </p>
-          <ul className="list-disc pl-6 text-muted-foreground space-y-1">
+          <ul className="list-disc pl-6 text-primary/70 space-y-1">
             <li>Early in your career</li>
             <li>Enjoy learning marketing strategies</li>
             <li>Have 5-10 hours/week to dedicate to implementation</li>
             <li>Want to save money by doing the work yourself</li>
           </ul>
-          <p className="text-muted-foreground">
+          <p className="text-primary/70">
             Still not sure?{" "}
             <a
               href={BOOKING_URL}
@@ -89,14 +81,14 @@ const FAQSection = () => {
         </div>
       );
     }
-    return <p className="text-muted-foreground leading-relaxed">{answer}</p>;
+    return <p className="text-primary/70 leading-relaxed">{answer}</p>;
   };
 
   return (
     <section className="bg-background py-12 md:py-20">
       <div className="container mx-auto px-6 max-w-[900px]">
         {/* Headline */}
-        <h2 className="text-3xl md:text-[40px] font-bold text-foreground text-center mb-12">
+        <h2 className="text-3xl md:text-[40px] font-bold text-primary text-center mb-12">
           Common Questions
         </h2>
 
@@ -108,7 +100,7 @@ const FAQSection = () => {
               value={`item-${index}`}
               className="border-b border-border py-2"
             >
-              <AccordionTrigger className="text-lg md:text-xl font-semibold text-foreground text-left hover:no-underline py-6">
+              <AccordionTrigger className="text-lg md:text-xl font-semibold text-primary text-left hover:no-underline py-6">
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent className="text-base md:text-[17px] pb-6">
@@ -120,7 +112,7 @@ const FAQSection = () => {
 
         {/* Contact Link */}
         <div className="text-center mt-10">
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-primary/70">
             Still need help?{" "}
             <a
               href={contactLink}

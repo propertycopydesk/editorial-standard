@@ -1,5 +1,3 @@
-import { Lightbulb } from "lucide-react";
-
 const DifferentiationSection = () => {
   return (
     <section className="bg-background py-12 md:py-16">
@@ -9,17 +7,17 @@ const DifferentiationSection = () => {
           <div className="text-4xl mb-6">💡</div>
 
           {/* Headline */}
-          <h2 className="text-2xl md:text-[32px] font-bold text-foreground mb-6">
+          <h2 className="text-2xl md:text-[32px] font-bold text-primary mb-6">
             How We Are Different From Other AI SEO Agencies?
           </h2>
 
           {/* Body paragraphs */}
-          <div className="space-y-4 text-lg md:text-xl text-muted-foreground leading-relaxed">
+          <div className="space-y-4 text-lg md:text-xl text-primary/70 leading-relaxed">
             <p>Most agencies only optimize for AI citations.</p>
             <p>
-              Our services are optimized for the <span className="font-bold text-foreground">bot-to-human handoff</span>: content that bots can parse, understand, and confidently recommend to humans.
+              Our services are optimized for the <span className="font-bold text-primary">bot-to-human handoff</span>: content that bots can parse, understand, and confidently recommend to humans.
             </p>
-            <p className="font-semibold text-foreground">
+            <p className="font-semibold text-primary">
               That's the difference between vanity metrics and REVENUE.
             </p>
           </div>
