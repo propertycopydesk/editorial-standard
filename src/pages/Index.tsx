@@ -35,11 +35,11 @@ const Index = () => {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex flex-col items-start">
-              <span className="font-serif text-lg md:text-xl font-semibold tracking-wide text-foreground">
+              <span className="font-serif text-lg md:text-xl font-semibold tracking-wide text-primary">
                 PROPERTY
               </span>
               <div className="w-10 h-px bg-accent my-0.5" />
-              <span className="font-serif text-[10px] md:text-xs tracking-[0.2em] text-foreground">
+              <span className="font-serif text-[10px] md:text-xs tracking-[0.2em] text-primary">
                 COPY DESK
               </span>
             </div>
@@ -47,7 +47,7 @@ const Index = () => {
             {/* Desktop CTA */}
             <Button
               onClick={openBooking}
-              className="hidden md:flex text-lg py-7 px-7 rounded-lg font-medium"
+              className="hidden md:flex text-lg py-7 px-7 rounded-lg font-medium btn-gold-shine"
             >
               Let's Talk
             </Button>
@@ -70,7 +70,7 @@ const Index = () => {
                   openBooking();
                   setIsMobileMenuOpen(false);
                 }}
-                className="w-full text-lg py-6 rounded-lg font-medium"
+                className="w-full text-lg py-6 rounded-lg font-medium btn-gold-shine"
               >
                 Let's Talk
               </Button>
@@ -84,26 +84,26 @@ const Index = () => {
         <section className="min-h-screen flex items-center justify-center pt-20 pb-16 px-6">
           <div className="max-w-[900px] mx-auto text-center">
             {/* Main Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-[56px] font-bold text-foreground leading-[1.1] mb-6 font-serif whitespace-nowrap">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-bold text-primary leading-[1.1] mb-6 font-serif md:whitespace-nowrap text-center">
               Are YOU the agent AI recommends?
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg md:text-[22px] font-normal text-muted-foreground leading-relaxed max-w-[800px] mx-auto mb-8">
-              Become the agent AI recommends when buyers/sellers ask ChatGPT, Gemini, or Perplexity
+            <p className="text-lg md:text-[22px] font-normal text-primary/70 leading-relaxed max-w-[800px] mx-auto mb-8 text-center">
+              We ensure you become the agent AI recommends when buyers/sellers ask ChatGPT, Gemini, Perplexity or Grok
             </p>
 
             {/* Primary CTA Button */}
             <Button
               onClick={openAudit}
               size="lg"
-              className="text-xl py-8 px-10 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-shadow mb-4"
+              className="text-xl py-8 px-10 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-shadow mb-4 btn-gold-shine"
             >
               See Where You Rank in AI Search (Free Audit) →
             </Button>
 
             {/* Trust Indicators */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mt-4 text-muted-foreground">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mt-4 text-primary/60">
               <span className="flex items-center gap-2 text-base">
                 <Zap className="w-4 h-4 text-accent" />
                 First AI citation in 30 days or we work for free

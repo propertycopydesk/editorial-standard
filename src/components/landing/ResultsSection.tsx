@@ -28,7 +28,7 @@ const ResultsSection = () => {
     <section className="bg-background py-12 md:py-20">
       <div className="container mx-auto px-6">
         {/* Headline */}
-        <h2 className="text-3xl md:text-[40px] font-bold text-foreground text-center mb-12">
+        <h2 className="text-3xl md:text-[40px] font-bold text-primary text-center mb-12">
           The Results Speak For Themselves.
         </h2>
 
@@ -37,13 +37,15 @@ const ResultsSection = () => {
           {results.map((result, index) => (
             <div
               key={index}
-              className="bg-card border border-border rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow"
+              className="bg-card border border-border rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center"
             >
-              <result.icon className="w-12 h-12 text-accent mb-4" />
-              <h3 className="text-2xl font-bold text-foreground mb-3">
+              <div className="flex justify-center mb-4">
+                <result.icon className="w-12 h-12 text-accent" />
+              </div>
+              <h3 className="text-2xl font-bold text-primary mb-3">
                 {result.metric}
               </h3>
-              <p className="text-base text-muted-foreground leading-relaxed">
+              <p className="text-base text-primary/70 leading-relaxed">
                 {result.description}
               </p>
             </div>

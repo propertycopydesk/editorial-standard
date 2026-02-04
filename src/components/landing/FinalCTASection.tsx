@@ -27,7 +27,7 @@ const FinalCTASection = () => {
           onClick={openAudit}
           size="lg"
           variant="secondary"
-          className="text-xl md:text-[22px] py-8 px-12 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-shadow mb-6"
+          className="text-xl md:text-[22px] py-8 px-12 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-shadow mb-6 btn-gold-shine"
         >
           Request Your Free Audit →
         </Button>

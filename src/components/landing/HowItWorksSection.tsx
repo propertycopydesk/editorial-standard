@@ -8,7 +8,7 @@ const HowItWorksSection = () => {
     {
       number: "02",
       title: "Human-Optimized Conversion",
-      description: "Getting cited is great, but meaningless if visitors don't convert. We ensure your content persuades humans to call you.",
+      description: "Getting cited is great but meaningless if visitors don't convert. We ensure your content persuades humans to call you.",
     },
     {
       number: "03",
@@ -21,13 +21,13 @@ const HowItWorksSection = () => {
     <section className="bg-muted py-12 md:py-20">
       <div className="container mx-auto px-6 max-w-[1100px]">
         {/* Headline */}
-        <h2 className="text-3xl md:text-[40px] font-bold text-foreground text-center mb-4">
+        <h2 className="text-3xl md:text-[40px] font-bold text-primary text-center mb-4">
           How We Make AI Recommend You
         </h2>
 
         {/* Subheadline */}
-        <p className="text-lg md:text-xl text-muted-foreground text-center max-w-[900px] mx-auto mb-14">
-          We optimize your content so AI platforms trust you as the local expert, then ensure the people AI sends actually hire you.
+        <p className="text-lg md:text-xl text-primary/60 text-center max-w-[900px] mx-auto mb-14">
+          We optimize your content so AI platforms trust you as the local expert then ensure the people AI sends actually hire you.
         </p>
 
         {/* Steps */}
@@ -40,12 +40,12 @@ const HowItWorksSection = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl font-bold text-foreground mt-4 mb-3">
+              <h3 className="text-2xl font-bold text-primary mt-4 mb-3">
                 {step.title}
               </h3>
 
               {/* Description */}
-              <p className="text-base text-muted-foreground leading-relaxed max-w-[320px] mx-auto md:mx-0">
+              <p className="text-base text-primary/70 leading-relaxed max-w-[320px] mx-auto md:mx-0">
                 {step.description}
               </p>
             </div>
