@@ -13,7 +13,7 @@ const NewPricingSection = () => {
     { title: "Meta Ads Management", desc: "Facebook + Instagram targeting & retargeting" },
     { title: "Multi-Platform Retargeting", desc: "Never lose a warm lead: we bring them back" },
     { title: "Conversion Tracking & Analytics", desc: "Know exactly where every lead came from" },
-    { title: "Bi-Weekly Performance Reports", desc: "Full transparency on leads, cost per lead, ROI" },
+    { title: "Weekly Performance Reports", desc: "Full transparency on leads, cost per lead, ROI" },
     { title: "AI Citation Tracking", desc: "Monitor when ChatGPT, Perplexity, Gemini mention you" },
     { title: "Bi-Weekly Strategy Calls", desc: "Optimize, adjust, and scale based on results" },
   ];
@@ -29,7 +29,7 @@ const NewPricingSection = () => {
           <span className="section-tag">The Investment</span>
           <h2 className="section-heading">One System. Immediate Results. Compounding ROI.</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            No contracts beyond 3 months. No hidden fees. Just the exact system to get you leads this week while building permanent AI visibility.
+            No contracts beyond 3 months. No hidden fees. Only the exact system to get you leads THIS week while building permanent AI visibility.
           </p>
         </div>
 
@@ -77,7 +77,7 @@ const NewPricingSection = () => {
                     <li>Cost per lead declining (documented in reports)</li>
                   </ol>
                   <p className="text-foreground font-medium">
-                    If we don't deliver all three, we work until promises are fulfilled 100% free of charge of your service fees. No questions asked. We're that confident this works.
+                    If we don't deliver all three, we work until promises are fulfilled. 100% free of charge. Without any service fees. No questions asked. We're that confident this works.
                   </p>
                 </div>
               </div>

@@ -18,7 +18,7 @@ const NewProblemSection = () => {
           </p>
           
           <p>
-            ChatGPT didn't say your name. It recommended your competitor. The one who started optimizing for AI search 90 days ago. The one who's getting listing appointments you'll never even know existed.
+            ChatGPT didn't say your name. It recommended your competitor. The one who started optimizing for AI search 90 days ago. The one who's getting listing appointments you'll never even know existed. Because you are probably not optimized for AI visibility.
           </p>
 
           <p>

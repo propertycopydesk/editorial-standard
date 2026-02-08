@@ -156,11 +156,11 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <Link to="/" className="flex flex-col items-start mb-6">
               <div className="flex flex-col">
-                <span className="font-sans text-lg font-bold tracking-wide text-foreground">
+                <span className="font-serif text-lg font-semibold tracking-wide text-foreground">
                   PROPERTY
                 </span>
                 <div className="w-10 h-px bg-accent my-0.5" />
-                <span className="font-sans text-xs tracking-[0.2em] text-foreground">
+                <span className="font-serif text-xs tracking-[0.2em] text-foreground">
                   COPY DESK
                 </span>
               </div>

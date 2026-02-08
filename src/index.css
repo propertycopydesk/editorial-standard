@@ -6,40 +6,40 @@
 
 @layer base {
   :root {
-    /* Dark theme as default */
-    --background: 220 20% 8%;
-    --foreground: 0 0% 95%;
+    /* Light theme - white background, dark navy text */
+    --background: 0 0% 100%;
+    --foreground: 220 25% 14%;
 
-    --card: 220 20% 10%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 98%;
+    --card-foreground: 220 25% 14%;
 
-    --popover: 220 20% 10%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 14%;
 
-    --primary: 0 0% 95%;
-    --primary-foreground: 220 20% 8%;
+    --primary: 220 25% 14%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 15%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 220 15% 94%;
+    --secondary-foreground: 220 25% 14%;
 
-    --muted: 220 15% 12%;
-    --muted-foreground: 220 10% 60%;
+    --muted: 220 15% 96%;
+    --muted-foreground: 220 15% 45%;
 
     --accent: 38 65% 55%;
-    --accent-foreground: 220 20% 8%;
+    --accent-foreground: 220 25% 14%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 95%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
     --ring: 38 65% 55%;
 
     --radius: 0.5rem;
 
     /* Custom brand colors */
-    --navy: 220 20% 8%;
-    --navy-light: 220 15% 15%;
+    --navy: 220 25% 14%;
+    --navy-light: 220 20% 25%;
     --gold: 38 65% 55%;
     --gold-light: 38 70% 65%;
     --gold-dark: 38 60% 45%;
@@ -88,11 +88,11 @@
     @apply max-w-6xl mx-auto px-4 sm:px-6 md:px-8;
   }
 
-  /* Grid background pattern */
+  /* Grid background pattern - light theme */
   .grid-pattern {
     background-image: 
-      linear-gradient(to right, hsl(220 15% 15% / 0.3) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(220 15% 15% / 0.3) 1px, transparent 1px);
+      linear-gradient(to right, hsl(220 15% 88% / 0.5) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(220 15% 88% / 0.5) 1px, transparent 1px);
     background-size: 60px 60px;
   }
 }
