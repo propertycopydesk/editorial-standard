@@ -45,8 +45,8 @@ const NewHeader = () => {
             onClick={scrollToPricing}
             className="btn-gold-shine text-sm md:text-base py-2 md:py-3 px-4 md:px-6 rounded-lg font-semibold"
           >
-            <span className="hidden sm:inline">Get MORE Leads — $2,499/mo</span>
-            <span className="sm:hidden">Get Leads</span>
+            <span className="hidden sm:inline">Founding Partner — $999/mo</span>
+            <span className="sm:hidden">$999/mo</span>
           </Button>
         </div>
       </nav>
