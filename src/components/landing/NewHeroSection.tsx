@@ -21,14 +21,16 @@ const NewHeroSection = () => {
           </span>
         </div>
 
-        {/* Main Headline */}
+        {/* Main Headline - Structured lines */}
         <h1 className="text-hero font-bold text-foreground mb-6 leading-tight">
-          Get 35-55 Qualified Leads This Month While Competitors Wait 6 Months for AI to Notice Them
+          <span className="block">Get 35-55 Qualified Leads This Month</span>
+          <span className="block">While Competitors Wait 6 Months</span>
+          <span className="block">for AI to Notice Them</span>
         </h1>
 
         {/* Subheadline */}
         <p className="text-subhero text-muted-foreground max-w-3xl mx-auto mb-10">
-          The only hybrid system that gets you leads in 7 days with paid ads while building your permanent AI rankings in the background. Real estate agents only. First leads guaranteed.
+          The <span className="font-semibold text-foreground">ONLY</span> hybrid system that gets you leads in 7 days with paid ads while building your permanent AI rankings in the background. Real estate agents only. First leads guaranteed.
         </p>
 
         {/* Primary CTA Button */}
@@ -42,7 +44,7 @@ const NewHeroSection = () => {
 
         {/* Trust Line */}
         <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-          <span>✓ First leads in 7 days or free work until you get leads</span>
+          <span>✓ First leads in 7 days or free work until you do</span>
           <span>✓ Real estate agents only (no other industries)</span>
           <span>✓ March 17 start · 2 spots left · 3-month guarantee</span>
         </div>

@@ -29,13 +29,13 @@ const NewHeader = () => {
     >
       <nav className="container-editorial py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo - Serif font */}
           <div className="flex flex-col items-start">
-            <span className="font-sans text-lg md:text-xl font-bold tracking-wide text-foreground">
+            <span className="font-serif text-lg md:text-xl font-semibold tracking-wide text-foreground">
               PROPERTY
             </span>
             <div className="w-10 h-px bg-accent my-0.5" />
-            <span className="font-sans text-[10px] md:text-xs tracking-[0.2em] text-foreground">
+            <span className="font-serif text-[10px] md:text-xs tracking-[0.2em] text-foreground">
               COPY DESK
             </span>
           </div>
