@@ -193,17 +193,17 @@ const FoundingPartnerPricingSection = () => {
             <div>
               <h4 className="font-semibold text-foreground mb-3">CONSERVATIVE OUTCOME:</h4>
               <ul className="space-y-1 text-sm text-muted-foreground">
-                <li>• 90 qualified leads in 90 days</li>
-                <li>• 8% conversion = 8 closings</li>
-                <li>• 8 × $12,000 avg commission = $96,000</li>
-                <li className="font-semibold text-accent">• ROI: 1,064%</li>
+                <li>• 90 qualified leads in 90 days (guaranteed minimum)</li>
+                <li>• 8% conversion = 7 closings</li>
+                <li>• 7 × $12,000 avg commission = $84,000</li>
+                <li className="font-semibold text-accent">• ROI: 919%</li>
               </ul>
             </div>
           </div>
           
           <div className="mt-6 pt-6 border-t border-border text-center">
             <p className="text-muted-foreground">
-              <span className="font-semibold text-foreground">Even at 3% conversion (pessimistic):</span> 3 closings × $12,000 = $36,000 → <span className="text-accent font-semibold">ROI: 336%</span>
+              <span className="font-semibold text-foreground">Even at 3% conversion (pessimistic):</span> 3 closings × $12,000 = $36,000 → <span className="text-accent font-semibold">ROI: 337%</span>
             </p>
             <p className="text-foreground font-medium mt-2">
               You need to close just 1 deal to break even.
