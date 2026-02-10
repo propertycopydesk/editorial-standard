@@ -225,13 +225,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/service" className="text-muted-foreground hover:text-accent transition-colors text-sm">
-                  Services & Pricing
-                </Link>
-              </li>
-              <li>
-                <Link to="/consulting" className="text-muted-foreground hover:text-accent transition-colors text-sm">
-                  Team Consulting
+                <Link to="/pricing" className="text-muted-foreground hover:text-accent transition-colors text-sm">
+                  Pricing
                 </Link>
               </li>
               <li>
@@ -240,9 +235,9 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/toolkit-waitlist" className="text-muted-foreground hover:text-accent transition-colors text-sm">
-                  Toolkit Waitlist
-                </Link>
+                <a href="/#faq" className="text-muted-foreground hover:text-accent transition-colors text-sm">
+                  FAQ
+                </a>
               </li>
             </ul>
           </div>
