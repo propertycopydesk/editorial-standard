@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 
-const BOOKING_URL = "https://cal.com/propertycopydesk/qualificationcall";
+const BOOKING_URL = "https://cal.com/propertycopydesk/auditcall";
 
 const NewHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);

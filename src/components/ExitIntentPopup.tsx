@@ -83,11 +83,13 @@ const ExitIntentPopup = () => {
           </div>
 
           <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-3">
-            Wait! Get the Free Real Estate Time-Saving Toolkit
+            Let's Keep in Touch
           </h2>
           
           <p className="text-muted-foreground font-sans mb-6">
-            10 Templates + 5 Scripts That Save 5+ Hours Per Week
+            Every week I share my winning strategies and methods to generate more leads.
+            <br /><br />
+            <span className="text-foreground font-medium">If you reply with your website, I will send your brand's AI visibility audit.</span>
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -107,7 +109,7 @@ const ExitIntentPopup = () => {
               className="w-full"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Sending..." : "Download Free Toolkit"}
+              {isSubmitting ? "Sending..." : "Subscribe"}
             </Button>
           </form>
 

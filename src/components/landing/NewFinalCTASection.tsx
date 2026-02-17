@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-const BOOKING_URL = "https://cal.com/propertycopydesk/qualificationcall";
+const BOOKING_URL = "https://cal.com/propertycopydesk/auditcall";
 
 const NewFinalCTASection = () => {
   const ref = useScrollReveal();

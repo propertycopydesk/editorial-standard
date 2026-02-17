@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/accordion";
 import Footer from "@/components/Footer";
 
-const BOOKING_URL = "https://cal.com/propertycopydesk/qualificationcall";
+const BOOKING_URL = "https://cal.com/propertycopydesk/auditcall";
 
 /* ─── Sticky Header ─── */
 const PricingHeader = () => {
