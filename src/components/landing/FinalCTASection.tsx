@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { analytics } from "@/lib/analytics";
 
-const BOOKING_URL = "https://cal.com/propertycopydesk/qualificationcall";
+const BOOKING_URL = "https://cal.com/propertycopydesk/auditcall";
 
 const FinalCTASection = () => {
   const openAudit = () => {

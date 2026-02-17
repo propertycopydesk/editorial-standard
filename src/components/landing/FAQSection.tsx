@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const BOOKING_URL = "https://cal.com/propertycopydesk/qualificationcall";
+const BOOKING_URL = "https://cal.com/propertycopydesk/auditcall";
 
 const FAQSection = () => {
   const faqs = [
