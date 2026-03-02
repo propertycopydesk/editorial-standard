@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Check, Shield, Star, Crown, Gem, FileText, Target, Smartphone, RefreshCw, BarChart3, Bot, Clock, Zap, HandHeart } from "lucide-react";
+import { Check, Shield, Star, Crown, Gem, FileText, Target, Smartphone, RefreshCw, BarChart3, Bot, Clock, HandHeart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import {
@@ -63,26 +63,16 @@ const PricingHero = () => {
   return (
     <section className="pt-32 pb-16 md:pt-40 md:pb-24">
       <div ref={ref} className="container-editorial scroll-reveal text-center">
-        {/* Urgency Badge */}
-        <div className="inline-flex items-center gap-2 border-2 border-destructive/50 rounded-full px-4 py-2 mb-8">
-          <span className="relative flex h-2.5 w-2.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-destructive opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-destructive"></span>
-          </span>
-          <span className="text-sm font-medium text-foreground">Founding Partner Launch · March 17 Start · 2 Spots Remaining</span>
-        </div>
-
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-          Founding Partner Pricing
+          Lock In Your Market Position at Founding Partner Pricing
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-          Lock in 40-60% lifetime discounts as one of our first 3 clients.<br />
-          The longer you commit, the deeper your savings—locked in forever.
+          The agents who join now aren't just getting a discount. They're getting a first-mover advantage in their market. We work with one agent per market. Once your area is claimed, it's closed to competitors.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 text-sm text-muted-foreground">
           <span className="flex items-center gap-1.5"><Check className="w-4 h-4 text-accent" /> 90-day performance guarantee (90 leads or free work)</span>
           <span className="flex items-center gap-1.5"><Check className="w-4 h-4 text-accent" /> Lifetime pricing lock</span>
-          <span className="flex items-center gap-1.5"><Check className="w-4 h-4 text-accent" /> Priority support & co-development</span>
+          <span className="flex items-center gap-1.5"><Check className="w-4 h-4 text-accent" /> One agent per market</span>
         </div>
       </div>
     </section>
@@ -95,7 +85,8 @@ const PricingCards = () => {
 
   const tiers = [
     {
-      name: "3-Month Commitment",
+      name: "Market Entry",
+      subtitle: "3-Month Commitment",
       icon: Star,
       price: "$1,499",
       discount: "40% off",
@@ -106,16 +97,16 @@ const PricingCards = () => {
       cardStyle: "border-border",
       features: [
         "3-month minimum, then month-to-month",
-        "Full AI Visibility Optimization (9 BOFU articles/month)",
+        "Full local authority content (9 articles/month)",
         "Google + Meta Ads Management",
         "Multi-Platform Retargeting",
-        "100% free work guarantee if <90 leads in 90 days",
+        "90-lead guarantee or full refund",
       ],
-      bestFor: "Agents testing a new channel who want flexibility",
       ctaStyle: "border-2 border-accent bg-background text-foreground hover:bg-accent hover:text-accent-foreground",
     },
     {
-      name: "6-Month Commitment",
+      name: "Market Authority",
+      subtitle: "6-Month Commitment",
       icon: Crown,
       price: "$1,249",
       discount: "50% off",
@@ -126,17 +117,17 @@ const PricingCards = () => {
       cardStyle: "border-accent shadow-xl scale-[1.02]",
       features: [
         "6-month minimum, then month-to-month",
-        "Full AI Visibility Optimization (9 BOFU articles/month)",
+        "Full local authority content (9 articles/month)",
         "Google + Meta Ads Management",
         "Multi-Platform Retargeting",
         "Priority support (24-hour response time)",
-        "100% free work guarantee if <90 leads in 90 days",
+        "90-lead guarantee or full refund",
       ],
-      bestFor: "Serious agents ready to dominate their market",
       ctaStyle: "btn-gold-shine",
     },
     {
-      name: "12-Month Commitment",
+      name: "Market Dominance",
+      subtitle: "12-Month Commitment",
       icon: Gem,
       price: "$999",
       discount: "60% off",
@@ -147,14 +138,13 @@ const PricingCards = () => {
       cardStyle: "border-border",
       features: [
         "12-month minimum, then month-to-month",
-        "Full AI Visibility Optimization (9 BOFU articles/month)",
+        "Full local authority content (9 articles/month)",
         "Google + Meta Ads Management",
         "Multi-Platform Retargeting",
         "VIP support (12-hour response time)",
         "Quarterly business review calls",
         "Co-development privileges (request features)",
       ],
-      bestFor: "Top producers betting on long-term dominance",
       ctaStyle: "border-2 border-accent bg-background text-foreground hover:bg-accent hover:text-accent-foreground",
     },
   ];
@@ -172,7 +162,6 @@ const PricingCards = () => {
                 key={i}
                 className={`relative bg-card border-2 rounded-2xl p-6 md:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${tier.cardStyle}`}
               >
-                {/* Badge */}
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                   <span className={`text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap ${tier.badgeStyle}`}>
                     {tier.badge}
@@ -184,7 +173,8 @@ const PricingCards = () => {
                     <Icon className="w-5 h-5 text-accent" />
                     <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">Founding Partner</span>
                   </div>
-                  <h3 className="text-base font-bold text-foreground mb-4">{tier.name}</h3>
+                  <h3 className="text-lg font-bold text-foreground mb-1">{tier.name}</h3>
+                  <p className="text-sm text-muted-foreground mb-4">{tier.subtitle}</p>
                   <div className="mb-1">
                     <span className="text-4xl font-bold text-foreground">{tier.price}</span>
                     <span className="text-muted-foreground">/month</span>
@@ -193,12 +183,10 @@ const PricingCards = () => {
                   <p className="text-xs text-muted-foreground">Locked in for LIFE</p>
                 </div>
 
-                {/* Savings */}
                 <div className="bg-accent/10 border border-accent/30 rounded-lg p-3 text-center mb-6">
                   <span className="text-sm font-semibold text-accent">💰 {tier.savings}/year savings</span>
                 </div>
 
-                {/* Features */}
                 <ul className="space-y-3 mb-6">
                   {tier.features.map((f, j) => (
                     <li key={j} className="flex items-start gap-2">
@@ -208,7 +196,6 @@ const PricingCards = () => {
                   ))}
                 </ul>
 
-                {/* Ad spend note */}
                 <div className="text-xs text-muted-foreground mb-6 pb-4 border-t border-border pt-4">
                   <p>+ $1,000-1,500/month ad spend (billed separately)</p>
                   <p className="mt-1">Decreases to $500-800/month by Month 6</p>
@@ -216,7 +203,7 @@ const PricingCards = () => {
 
                 <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="block">
                   <Button className={`w-full py-3 rounded-lg font-semibold ${tier.ctaStyle}`}>
-                    Choose {tier.name.split(" ")[0]} Plan →
+                    Get Your Free Market Audit →
                   </Button>
                 </a>
               </div>
@@ -232,12 +219,12 @@ const PricingCards = () => {
 const WhatsIncluded = () => {
   const ref = useScrollReveal();
   const features = [
-    { icon: FileText, title: "Full AI Visibility Optimization", desc: "9 BOFU articles/month optimized for ChatGPT, Perplexity, and Google AI. Local SEO setup. Schema markup." },
+    { icon: FileText, title: "Full Local Authority Content", desc: "9 articles/month written for your market, neighborhoods, and transaction types. Optimized for AI citation and organic search." },
     { icon: Target, title: "Google Ads Management", desc: "Search, Display, YouTube campaigns with daily monitoring and weekly optimization." },
     { icon: Smartphone, title: "Meta Ads Management", desc: "Facebook + Instagram targeting, advanced retargeting sequences, lookalike audiences." },
     { icon: RefreshCw, title: "Multi-Platform Retargeting", desc: "Never lose a warm lead. Sequential 3-stage messaging brings non-converters back." },
     { icon: BarChart3, title: "Performance Reporting", desc: "Weekly email updates every Friday. Monthly 30-minute strategy calls to optimize and scale." },
-    { icon: Bot, title: "AI Citation Tracking", desc: "Monitor when ChatGPT, Perplexity, Gemini, and Claude recommend you. Weekly screenshot proof." },
+    { icon: Bot, title: "AI Citation Tracking", desc: "Monitor when ChatGPT, Perplexity, Gemini, and Claude recommend you. Weekly tracking." },
   ];
 
   return (
@@ -261,41 +248,24 @@ const WhatsIncluded = () => {
   );
 };
 
-/* ─── ROI Calculator ─── */
+/* ─── ROI Section ─── */
 const ROISection = () => {
   const ref = useScrollReveal();
   return (
     <section className="section-padding bg-secondary/30">
       <div ref={ref} className="container-editorial scroll-reveal">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-4">The Math: Why This Is a Steal</h2>
-        <p className="text-center text-muted-foreground mb-12">Let's use the 6-MONTH COMMITMENT tier as an example</p>
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-4">The Math</h2>
 
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-          <div className="bg-card border border-border rounded-2xl p-8">
-            <h3 className="font-bold text-foreground mb-4">YOUR INVESTMENT (First 3 Months)</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>Service: $1,249/mo × 3 = <span className="text-foreground font-medium">$3,747</span></li>
-              <li>Ad spend: $1,500/mo × 3 = <span className="text-foreground font-medium">$4,500</span></li>
-              <li className="border-t border-border pt-2 font-bold text-foreground text-base">TOTAL: $8,247</li>
-            </ul>
-          </div>
-          <div className="bg-card border border-border rounded-2xl p-8">
-            <h3 className="font-bold text-foreground mb-4">CONSERVATIVE OUTCOME</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>90 qualified leads in 90 days (guaranteed minimum)</li>
-              <li>× 8% conversion rate = <span className="text-foreground font-medium">7 closings</span></li>
-              <li>× $12,000 avg commission = <span className="text-foreground font-medium">$84,000</span></li>
-              <li className="border-t border-border pt-2 font-bold text-accent text-base">ROI: 919%</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="max-w-4xl mx-auto bg-card border-2 border-accent/30 rounded-2xl p-6 text-center">
-          <p className="text-muted-foreground">
-            <span className="font-semibold text-foreground">Even at 3% conversion (pessimistic):</span> 3 closings × $12,000 = $36,000 →{" "}
-            <span className="text-accent font-bold">ROI: 337%</span>
+        <div className="max-w-3xl mx-auto space-y-6 text-lg text-muted-foreground leading-relaxed">
+          <p>
+            The math is straightforward. You need to close one deal to cover your first 90 days entirely. But that's besides the point of why serious agents are choosing this.
           </p>
-          <p className="text-foreground font-medium mt-2">You only need to close 1 deal to break even.</p>
+          <p>
+            They're choosing it because waiting has a cost that doesn't show up in a spreadsheet. Every month a competitor builds authority in your market is a month you'll spend twice as much to catch up. Or never catch up at all.
+          </p>
+          <p className="text-foreground font-medium border-l-4 border-accent pl-4 py-2 bg-accent/5 rounded-r">
+            This isn't a lead gen expense. It's the cost of owning your market before someone else does.
+          </p>
         </div>
       </div>
     </section>
@@ -306,7 +276,7 @@ const ROISection = () => {
 const ComparisonTable = () => {
   const ref = useScrollReveal();
   const rows = [
-    { label: "AI Visibility Optimization (9 articles/month)", values: ["✓", "✓", "✓"] },
+    { label: "Local Authority Content (9 articles/month)", values: ["✓", "✓", "✓"] },
     { label: "Google Ads Management", values: ["✓", "✓", "✓"] },
     { label: "Meta Ads Management", values: ["✓", "✓", "✓"] },
     { label: "Multi-Platform Retargeting", values: ["✓", "✓", "✓"] },
@@ -334,9 +304,9 @@ const ComparisonTable = () => {
             <thead>
               <tr className="border-b-2 border-border">
                 <th className="text-left py-4 pr-4 text-sm font-semibold text-muted-foreground w-2/5">Feature</th>
-                <th className="text-center py-4 px-2 text-sm font-semibold text-foreground">3-Month</th>
-                <th className="text-center py-4 px-2 text-sm font-semibold text-accent">6-Month</th>
-                <th className="text-center py-4 px-2 text-sm font-semibold text-foreground">12-Month</th>
+                <th className="text-center py-4 px-2 text-sm font-semibold text-foreground">Market Entry</th>
+                <th className="text-center py-4 px-2 text-sm font-semibold text-accent">Market Authority</th>
+                <th className="text-center py-4 px-2 text-sm font-semibold text-foreground">Market Dominance</th>
               </tr>
             </thead>
             <tbody>
@@ -371,21 +341,20 @@ const ComparisonTable = () => {
 const GuaranteeSection = () => {
   const ref = useScrollReveal();
   const milestones = [
-    { day: "DAY 7", icon: Clock, text: "If you don't receive your first qualified leads within 7 days of ad launch, we pause billing and work free until you do." },
-    { day: "DAY 30", icon: Bot, text: "If ChatGPT/Perplexity don't show your first AI citation by Day 30, we pause billing and continue optimizing at no charge." },
-    { day: "DAY 90", icon: Shield, text: "If you don't receive minimum 90 qualified leads in first 90 days, we refund 100% of service fees. You only pay the ad spend you actually used." },
-    { day: "DAY 100", icon: HandHeart, text: "If you're unsatisfied for ANY reason, cancel with no penalty. We'll even help you transition to another provider and send you all your content/data." },
+    { day: "DAY 7", icon: Clock, text: "First leads arrive or we pause billing and work free until they do." },
+    { day: "DAY 90", icon: Shield, text: "90 qualified leads delivered or we work until you get 90, 100% free of service fees. You keep everything we built. You only pay the ad spend you actually used." },
+    { day: "DAY 100", icon: HandHeart, text: "Unsatisfied for any reason? Cancel, no penalty, no questions. We'll package up every piece of content, every campaign, every data file and hand it to you." },
   ];
 
   return (
     <section className="section-padding bg-accent/5">
       <div ref={ref} className="container-editorial scroll-reveal">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-4">Our Founding Partner Guarantee</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-4">Our Guarantee is Simple Because We Mean It</h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          We're asking you to trust us without proven client results. So we're putting our money where our mouth is.
+          We're asking you to trust us with no client results yet. So we've structured the guarantee to remove every reason not to.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {milestones.map((m, i) => {
             const Icon = m.icon;
             return (
@@ -400,15 +369,10 @@ const GuaranteeSection = () => {
 
         {/* Requirements */}
         <div className="max-w-3xl mx-auto bg-card border border-border rounded-2xl p-8 mb-8">
-          <h3 className="font-bold text-foreground mb-4">WHAT WE ASK FROM YOU:</h3>
-          <ul className="space-y-2 text-sm text-muted-foreground">
-            <li className="flex items-start gap-2"><Check className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" /> Content approval within 48 hours</li>
-            <li className="flex items-start gap-2"><Check className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" /> Technical access to your website, Google Business Profile, etc.</li>
-            <li className="flex items-start gap-2"><Check className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" /> Response to our questions within 24 hours</li>
-            <li className="flex items-start gap-2"><Check className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" /> Permission to use your results in case studies (anonymized if preferred)</li>
-            <li className="flex items-start gap-2"><Check className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" /> 1-2 referrals if you're satisfied with results</li>
-          </ul>
-          <p className="text-xs text-muted-foreground mt-4 italic">If you go radio silent for more than a week, the guarantee is void. Fair?</p>
+          <h3 className="font-bold text-foreground mb-4">What We Ask in Return:</h3>
+          <p className="text-sm text-muted-foreground mb-4">
+            Respond to content approvals within 24 hours and give us access to the accounts we need. If you go quiet for more than 3 days, the guarantee pauses. Fair trade.
+          </p>
         </div>
 
         {/* Risk comparison */}
@@ -433,52 +397,72 @@ const PricingFAQ = () => {
 
   const faqs = [
     {
-      q: "Can you show proof that ChatGPT actually recommends specific agents?",
-      a: "Yes. Before your sales call, we'll show you live screen recordings of ChatGPT/Perplexity searches in your market, screenshots showing which competitors are currently recommended, and your current visibility score (0-100%). After you become a client, you'll receive weekly citation reports with exact prompts where you appear, before/after comparisons, and screenshots with position tracking."
+      q: "Can you show me what AI search actually looks like in my market right now?",
+      a: "Yes, and we do this on every audit call before you spend a dollar. We show you live screen recordings of ChatGPT and Perplexity searches in your market, which competitors are being cited, your current authority gap, and a plain-English explanation of what it would take to close that gap. The audit is free and takes 15 minutes. If your market is already saturated, we'll tell you."
     },
     {
-      q: "How is \"AI visibility\" actually measured and verified?",
-      a: "We track 3 metrics weekly: 1) Citation Rate — we test 10 high-intent prompts in ChatGPT, Perplexity, Gemini, and Claude (40 total tests/week). Goal: 50%+ citation rate by Month 6. 2) Citation Position — when mentioned, are you #1, #2-3, or just listed? Goal: Top 3 in 30%+ of citations. 3) Organic Traffic from AI Sources — Google Analytics tracking referrals from AI platforms. Goal: 50-100+ visitors/month by Month 6."
+      q: "How do you track and report performance?",
+      a: "We track four things weekly: 1) Lead Volume and Quality — broken down by source. 2) Cost Per Lead Trends — drops 30-40% by Month 3, 50-60% by Month 6. 3) Organic Traffic Growth — the long-term indicator your authority is building. 4) AI Citation Tracking — a directional signal, not the headline metric. Weekly email every Friday, monthly strategy call, quarterly competitive review. No dashboards to learn."
     },
     {
       q: "What exactly qualifies as a \"qualified lead\"?",
-      a: "A qualified lead lives in your service area, owns property or is actively looking to buy/sell, contacted you directly (phone, form, or DM), and expressed genuine interest in your services. We don't count spam, out-of-area contacts, general questions with no intent, or wrong number calls."
+      a: "Someone who lives in your service area, owns property or is actively looking to buy/sell, contacted you directly, and expressed intent to transact. We don't count spam, out-of-area contacts, general information requests, or wrong number calls. If borderline, we err on not counting it."
     },
     {
-      q: "What's the typical lead-to-closing conversion rate, and how does that affect my ROI?",
-      a: "Industry average for AI-sourced leads: 8-12% conversion to close (higher than Zillow at 1-3%, lower than referrals at 20-30%). At 8% conversion from 90 leads: 7 closings × $12,000 commission = $84,000 revenue on ~$8,247 investment = 919% ROI. Even at 3% (pessimistic): 3 closings = $36,000 = 337% ROI."
+      q: "What's the typical lead-to-closing conversion rate?",
+      a: "Inbound leads typically convert at 6-12%, higher than Zillow (1-3%) but lower than referrals (20-30%). At steady state (Month 3): 45 leads × 8% = 3-4 closings × $10-15K commission. Even at 3%, you need one closing in the first 90 days to break even entirely. Your conversion rate depends on what you do with the lead after it arrives."
     },
     {
       q: "Are these buyer leads, seller leads, or both?",
-      a: "Primarily seller leads (70-80%), with some buyer leads (20-30%). AI recommendations typically respond to seller-focused queries like \"Who should I hire to sell my home?\" If you primarily work with buyers, we adjust the strategy — but seller leads convert 2-3x better from this approach."
+      a: "Primarily seller leads (70-80%). When someone is ready to list, they search by agent name or reputation — which maps directly to the authority content we build. Seller leads convert faster and at higher commission value. If you primarily work with buyers, tell us on the audit call and we adjust accordingly."
     },
     {
-      q: "The total first 3 months is $7,500-10,500. What if I don't close a single deal?",
-      a: "We work pro bono 100% free of service fees until you get minimum 90 leads. You only pay the ad spend you used. Plus, if you don't close a deal from 90+ leads, the issue isn't our lead quality. It's likely sales process, pricing, or market positioning (which we can help diagnose)."
+      q: "The first 3 months is $7,500-10,500. What if I don't close a single deal?",
+      a: "If you receive 90+ qualified leads and close zero, the problem isn't the leads. The guarantee covers lead volume: 90 leads or we refund 100% of service fees. At 3% conversion (pessimistic floor), 90 leads produces 2-3 closings — covering your entire investment. No one who follows up consistently with 90 warm inbound leads closes zero."
     },
     {
-      q: "If you \"work for free\" until I get citations, is there a time limit?",
-      a: "No time limit, but you must hold up your end: approve content within 48 hours, implement technical changes we recommend, and respond to strategic questions within 24-48 hours. If you go silent for weeks, the guarantee is void. Based on our research, 94% of properly optimized sites get first citation within 30 days."
+      q: "What does \"work for free\" actually mean?",
+      a: "Two triggers: Day 7 — if no leads within 7 days of ad launch, we pause billing automatically and work free until they arrive. Day 90 — if you haven't received 90 leads, we refund 100% of service fees. No Day 30 citation milestone — AI indexing timelines vary and we won't hold billing hostage to a metric outside our direct control."
     },
     {
-      q: "Will this work in my market? (small town / major metro)",
-      a: "Yes, with adjustments. Small markets (<100K pop): easier citations, lower volume (15-30/month), lower ad spend ($500-1K). Mid-size (100K-500K): sweet spot, 35-55 leads/month. Major metros (500K+): highest competition but highest potential (50-90/month), needs higher ad spend ($2K-3K). We'll run a free audit of your specific market before you commit."
+      q: "Will this work in my market?",
+      a: "Yes. Small markets (<100K): easier authority, lower volume (15-30/month), lower ad spend. Mid-size (100K-500K): the sweet spot, 35-55 leads/month. Major metros (500K+): highest competition but highest potential (50-90/month). We assess your market on the audit call before you commit."
     },
     {
-      q: "Are you already working with another agent in my area?",
-      a: "No. We're taking only 3 Founding Partners total — NOT 3 per market. Once spots fill, we'll open to standard clients and maintain market exclusivity (1 agent per ZIP code for premium clients)."
+      q: "Are you working with other agents in my market?",
+      a: "No. One agent per market. When your market is claimed, we close it. The first agent to claim gets it permanently. On the audit call, we confirm availability before discussing anything else."
     },
     {
       q: "How much of my time is required each week?",
-      a: "Minimal — this is done-for-you. Weekly: 15-20 min reviewing content drafts + 5-10 min for strategic questions. Monthly: 30-min strategy call. We handle all content, ads, optimization, and reporting. If you spend more than 45 min/week, we're not doing our job."
+      a: "Less than an hour. Weekly: 15-20 min reviewing content + 5-10 min for strategic questions. Monthly: 30-min strategy call. Everything else — research, writing, ads, optimization, reporting — is handled by us."
     },
     {
-      q: "What if Google/ChatGPT changes their algorithm?",
-      a: "Algorithm changes are constant — that's why you hire experts. We monitor changes daily, adjust within 24-48 hours, and if a major change causes 30%+ drop lasting >30 days, you can pause service with no penalty. You get visibility across ChatGPT, Perplexity, Gemini, Claude, AND Google AI Overviews — if one changes, others stabilize you."
+      q: "What happens to everything you build if I cancel?",
+      a: "You own all of it. Every article, ad account, campaign, keyword list, and data file. We prepare a complete transition package. You walk away with a working system, not a dependency."
     },
     {
-      q: "Your guarantee says \"minimum 90 leads\" but the projection is 35-55/month. Which is accurate?",
-      a: "Both. 35-55/month is our average performance projection. 90 leads in 90 days (3 months) is our guaranteed minimum (30/month average). Most clients will exceed this, but we guarantee the floor, not the ceiling."
+      q: "Will this still work if AI search changes?",
+      a: "Yes. We're building genuine local authority content — the underlying asset every AI platform uses as input. Google's algorithm changed constantly; agents who owned content survived. We don't build single-platform dependency."
+    },
+    {
+      q: "Your guarantee says \"90 leads\" but projection is 35-55/month. Which is accurate?",
+      a: "Both. The guarantee (90 in 90 days) is the floor — roughly 30/month. The projection (35-55/month) is expected performance. Typical total: 100-135 leads in 3 months. We guarantee the floor and work toward the projection."
+    },
+    {
+      q: "Why are you offering such steep discounts?",
+      a: "Three reasons: we need proof of concept (your success = our case studies), a feedback loop (you shape the product), and referrals. In exchange: 40-60% off for life, first-mover market claim, and direct founder access. This isn't charity — it's a trade with clear terms."
+    },
+    {
+      q: "How is this different from being a beta tester?",
+      a: "A beta tester gets experimental service. A founding partner gets a proven strategy at a discount. The research is done — 6 months, 200+ hours, 50 markets. We're offering a 90-lead guarantee because we're confident enough to put it in writing. You're a first-mover, not a guinea pig."
+    },
+    {
+      q: "What happens to my pricing if I cancel and rejoin?",
+      a: "You lose founding partner pricing permanently. One exception: if we fail to deliver 90 leads and you cancel as a result, you can rejoin at founding partner pricing within six months. This is a one-time offer tied to the first three spots."
+    },
+    {
+      q: "Can I speak with a current client before signing up?",
+      a: "Not yet — there are no current clients. That's the premise of the founding partner structure. We offer instead: a live audit of your market, full transparency on our methodology, and direct access to the founders. The founding partner pricing reflects exactly that asymmetry."
     },
   ];
 
@@ -495,6 +479,11 @@ const PricingFAQ = () => {
               </AccordionItem>
             ))}
           </Accordion>
+          <div className="text-center mt-10">
+            <p className="text-muted-foreground">
+              Still have questions? <a href="mailto:fatih@propertycopydesk.com" className="text-accent hover:underline">fatih@propertycopydesk.com</a> · Response time: &lt;4 hours
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -504,40 +493,23 @@ const PricingFAQ = () => {
 /* ─── Credibility Section ─── */
 const CredibilitySection = () => {
   const ref = useScrollReveal();
-  const items = [
-    { icon: BarChart3, title: "WE'VE DONE THE RESEARCH", points: ["200+ hours testing ChatGPT across 50 real estate markets", "Analyzed 1,000+ searches to identify citation patterns", "Reverse-engineered the top 100 AI-recommended agents", "Tested 50+ optimization strategies (15 worked, 35 failed)"] },
-    { icon: Zap, title: "WE'VE INVESTED REAL MONEY", points: ["Thousands in research and tool development", "Testing paid ad strategies across 12 markets", "6 months full-time building this system", "Zero revenue until now (we're all-in)"] },
-    { icon: Target, title: "WE'RE BETTING OUR REPUTATION", points: ["Public results tracker (updated weekly)", "100% free work guarantee (no questions asked)", "Direct access to founders (not hidden behind support)", "Your success = our case studies"] },
-    { icon: Bot, title: "WE'VE IDENTIFIED THE GAP", points: ["Competitors only do organic OR paid ads (not both)", "They make you wait 60-90 days for first results", "OR your leads stop when you kill paid ads", "We get you leads in 7 days WHILE building organic"] },
-  ];
 
   return (
     <section className="section-padding bg-secondary/30">
       <div ref={ref} className="container-editorial scroll-reveal">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-4">Why Trust Us If We Have No Client Results Yet?</h2>
-        <p className="text-center text-muted-foreground mb-12">Fair question. Here's our credibility:</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {items.map((item, i) => {
-            const Icon = item.icon;
-            return (
-              <div key={i} className="bg-card border border-border rounded-2xl p-6">
-                <Icon className="w-8 h-8 text-accent mb-4" />
-                <h3 className="text-sm font-bold text-foreground mb-3">{item.title}</h3>
-                <ul className="space-y-2">
-                  {item.points.map((p, j) => (
-                    <li key={j} className="text-xs text-muted-foreground flex items-start gap-1.5">
-                      <Check className="w-3 h-3 text-accent mt-0.5 flex-shrink-0" />{p}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
-        </div>
-        <div className="max-w-3xl mx-auto bg-card border-2 border-border rounded-2xl p-8 text-center">
-          <p className="text-muted-foreground mb-2">What we <strong className="text-foreground">DON'T</strong> have: Client testimonials (yet).</p>
-          <p className="text-muted-foreground mb-4">What we <strong className="text-foreground">DO</strong> have: The strategy, the guarantee, and the motivation.</p>
-          <p className="text-foreground font-semibold">You'll be Founding Partner #1, #2, or #3. Your results will become our case studies.</p>
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-4">Why Trust Us Without Client Results</h2>
+        <p className="text-center text-muted-foreground mb-12">Fair question. Here's the honest answer.</p>
+        
+        <div className="max-w-3xl mx-auto space-y-6 text-muted-foreground leading-relaxed">
+          <p>
+            We spent 6 months and significant money building this system before charging a dollar for it. We analyzed how AI recommends agents across 50 markets. We reverse-engineered citation patterns. We tested 50+ optimization approaches and kept the 15 that actually worked.
+          </p>
+          <p>
+            We don't have client testimonials. What we have is a system we believe in enough to guarantee entirely, a results tracker that will be updated every week once Founding Partners launch, and direct access to the founders—on a call, not a support ticket.
+          </p>
+          <p className="text-foreground font-medium border-l-4 border-accent pl-4 py-2 bg-accent/5 rounded-r">
+            Your results become our case studies. Your market position becomes our proof of concept. Instead of hiding behind a free trial, we're betting our entire business on your success.
+          </p>
         </div>
       </div>
     </section>
@@ -547,92 +519,44 @@ const CredibilitySection = () => {
 /* ─── Final CTA ─── */
 const FinalCTA = () => {
   const ref = useScrollReveal();
-  const spots = [
-    { status: "OPEN", color: "bg-green-100 text-green-700 border-green-300", label: "Claim This Spot →" },
-    { status: "OPEN", color: "bg-green-100 text-green-700 border-green-300", label: "Claim This Spot →" },
-    { status: "RESERVED", color: "bg-orange-100 text-orange-700 border-orange-300", label: "Audit Scheduled: March 12" },
-  ];
 
   return (
     <section className="section-padding bg-gradient-to-b from-accent/10 to-accent/5">
       <div ref={ref} className="container-editorial scroll-reveal text-center">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Founding Partner Spots Are Filling</h2>
-        <p className="text-muted-foreground mb-10">Real-time availability:</p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto mb-10">
-          {spots.map((s, i) => (
-            <div key={i} className="bg-card border border-border rounded-2xl p-6">
-              <p className="text-xs font-bold text-muted-foreground mb-2">SPOT {i + 1}</p>
-              <span className={`inline-block text-xs font-bold px-3 py-1 rounded-full border mb-3 ${s.color}`}>{s.status}</span>
-              {s.status === "OPEN" ? (
-                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full btn-gold-shine text-sm py-2 rounded-lg font-semibold mt-2">{s.label}</Button>
-                </a>
-              ) : (
-                <p className="text-xs text-muted-foreground mt-2">{s.label}</p>
-              )}
-            </div>
-          ))}
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">Two Spots. One Market. Yours or Theirs.</h2>
+        
+        <div className="max-w-2xl mx-auto mb-10 space-y-4 text-lg text-muted-foreground leading-relaxed">
+          <p>
+            There are genuinely two spots remaining because we work with three founding partners total and one audit is already scheduled.
+          </p>
+          <p>
+            When these fill, this page goes to a waitlist for standard pricing at $2,499/month with no lifetime lock and no first-mover market protection.
+          </p>
+          <p className="text-foreground font-medium">
+            The choice is simple: own your market now, or pay double to chase whoever claimed it first.
+          </p>
         </div>
 
-        <p className="text-sm text-muted-foreground mb-2">Once all 3 spots fill, this page redirects to a waitlist at $2,499/month (no lifetime lock).</p>
-        <p className="text-sm text-muted-foreground mb-12">Next available start date: <strong className="text-foreground">March 17, 2026</strong></p>
-
-        {/* Two options */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
-          <div className="bg-card border border-border rounded-2xl p-8 text-left">
-            <h3 className="font-bold text-foreground mb-3">📞 Book Free AI Visibility Audit</h3>
-            <p className="text-sm text-muted-foreground mb-4">15-minute call where we:</p>
-            <ul className="space-y-1.5 text-sm text-muted-foreground mb-6">
-              <li>• Show you live ChatGPT searches in your market</li>
-              <li>• Identify which competitors dominate AI search</li>
-              <li>• Reveal your current visibility score (0-100%)</li>
-              <li>• Discuss which tier fits you</li>
-            </ul>
-            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-              <Button className="w-full btn-gold-shine py-3 rounded-lg font-semibold">Book Free Audit Call →</Button>
-            </a>
-          </div>
-          <div className="bg-card border border-border rounded-2xl p-8 text-left">
-            <h3 className="font-bold text-foreground mb-3">⚡ Skip the Audit — Claim Your Spot</h3>
-            <p className="text-sm text-muted-foreground mb-4">If you're ready to commit, we'll send:</p>
-            <ul className="space-y-1.5 text-sm text-muted-foreground mb-6">
-              <li>• Founding Partner agreement (choose your tier)</li>
-              <li>• Onboarding questionnaire (15 minutes)</li>
-              <li>• Kickoff call scheduling (March 17 launch)</li>
-            </ul>
-            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-              <Button className="w-full border-2 border-accent bg-background text-foreground hover:bg-accent hover:text-accent-foreground py-3 rounded-lg font-semibold">Claim Founding Partner Spot →</Button>
-            </a>
-          </div>
+        {/* Two CTA options */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+            <Button size="lg" className="btn-gold-shine text-lg py-6 md:py-8 px-8 md:px-12 rounded-lg font-semibold">
+              Book Your Free Market Audit
+            </Button>
+          </a>
+          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+            <Button size="lg" variant="outline" className="text-lg py-6 md:py-8 px-8 md:px-12 rounded-lg font-semibold border-accent text-foreground hover:bg-accent hover:text-accent-foreground">
+              Claim Your Spot Directly
+            </Button>
+          </a>
         </div>
 
-        {/* Wait vs Act */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8">
-          <div className="bg-card/50 border border-border rounded-xl p-6 text-left">
-            <h4 className="text-sm font-bold text-muted-foreground mb-3">WAIT (and pay full price):</h4>
-            <ul className="space-y-1 text-xs text-muted-foreground">
-              <li>→ March 18: Founding Partner spots filled</li>
-              <li>→ March 25: First client gets AI citation</li>
-              <li>→ April 15: First case study published</li>
-              <li>→ May 1: We open at $2,499/month</li>
-              <li className="font-semibold text-foreground">→ Result: You pay $30,000/year</li>
-            </ul>
-          </div>
-          <div className="bg-accent/10 border-2 border-accent/30 rounded-xl p-6 text-left">
-            <h4 className="text-sm font-bold text-foreground mb-3">ACT NOW (lock in founder pricing):</h4>
-            <ul className="space-y-1 text-xs text-muted-foreground">
-              <li>→ Today: Claim one of 2 remaining spots</li>
-              <li>→ March 17: Ads go live</li>
-              <li>→ March 24: First leads (7 days or free)</li>
-              <li>→ April 15: ChatGPT cites you</li>
-              <li className="font-semibold text-accent">→ Forever: Locked in at 50% off for life</li>
-            </ul>
-          </div>
-        </div>
+        <p className="text-sm text-muted-foreground mb-8">
+          Next available start: March 17, 2026
+        </p>
 
-        <p className="text-sm text-muted-foreground">
-          Questions? <a href="mailto:fatih@propertycopydesk.com" className="text-accent hover:underline">fatih@propertycopydesk.com</a> · Response time: &lt;4 hours
+        <p className="text-muted-foreground italic max-w-2xl mx-auto">
+          P.S. Every day you wait, a competitor is building the authority in your market that you'll spend twice as much to catch up to.
         </p>
       </div>
     </section>

@@ -12,7 +12,6 @@ const ExitIntentPopup = () => {
   const { toast } = useToast();
 
   useEffect(() => {
-    // Check if popup was already shown this session
     const wasShown = sessionStorage.getItem("exitPopupShown");
     if (wasShown) return;
 
@@ -25,7 +24,6 @@ const ExitIntentPopup = () => {
       }
     };
 
-    // Add delay before listening for exit intent
     const timer = setTimeout(() => {
       document.addEventListener("mouseout", handleMouseLeave);
     }, 5000);
@@ -41,16 +39,14 @@ const ExitIntentPopup = () => {
     if (!email) return;
 
     setIsSubmitting(true);
-    
-    // Simulate form submission - replace with actual API call
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     analytics.exitIntentConverted();
-    analytics.leadMagnetDownload("exit_intent_toolkit");
+    analytics.leadMagnetDownload("exit_intent_newsletter");
     
     toast({
-      title: "Success!",
-      description: "Check your email for the free toolkit.",
+      title: "You're in!",
+      description: "Check your inbox — and reply with your website for your free audit.",
     });
     
     setIsSubmitting(false);
@@ -61,13 +57,11 @@ const ExitIntentPopup = () => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      {/* Backdrop */}
       <div 
         className="absolute inset-0 bg-foreground/60 backdrop-blur-sm animate-fade-in"
         onClick={() => setIsVisible(false)}
       />
       
-      {/* Modal */}
       <div className="relative bg-background border border-border rounded-lg shadow-2xl max-w-md w-full p-6 md:p-8 animate-scale-in">
         <button
           onClick={() => setIsVisible(false)}
