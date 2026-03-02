@@ -9,7 +9,8 @@ const FoundingPartnerPricingSection = () => {
 
   const tiers = [
     {
-      name: "3-MONTH COMMITMENT",
+      name: "MARKET ENTRY",
+      subtitle: "3-Month Commitment",
       icon: Star,
       price: "$1,499",
       discount: "40% off",
@@ -17,16 +18,17 @@ const FoundingPartnerPricingSection = () => {
       savings: "$12,000/year",
       features: [
         "Locked in for LIFE (as long as you remain a client)",
-        "$12,000/year savings",
         "3-month minimum, then month-to-month",
-        "100% refund guarantee if <100 leads in 90 days"
+        "Full local authority content (9 articles/month)",
+        "Google + Meta Ads Management",
+        "90-lead guarantee or full refund"
       ],
-      bestFor: "Agents testing a new channel who want flexibility",
       adSpend: "$1,000-1,500/month",
       badge: null
     },
     {
-      name: "6-MONTH COMMITMENT",
+      name: "MARKET AUTHORITY",
+      subtitle: "6-Month Commitment",
       icon: Crown,
       price: "$1,249",
       discount: "50% off",
@@ -34,17 +36,18 @@ const FoundingPartnerPricingSection = () => {
       savings: "$15,000/year",
       features: [
         "Locked in for LIFE (as long as you remain a client)",
-        "$15,000/year savings",
         "6-month minimum, then month-to-month",
-        "100% refund guarantee if <100 leads in 90 days",
-        "Priority support (24-hour response time)"
+        "Full local authority content (9 articles/month)",
+        "Google + Meta Ads Management",
+        "Priority support (24-hour response time)",
+        "90-lead guarantee or full refund"
       ],
-      bestFor: "Serious agents ready to dominate their market",
       adSpend: "$1,000-1,500/month",
       badge: "RECOMMENDED"
     },
     {
-      name: "12-MONTH COMMITMENT",
+      name: "MARKET DOMINANCE",
+      subtitle: "12-Month Commitment",
       icon: Gem,
       price: "$999",
       discount: "60% off",
@@ -52,26 +55,16 @@ const FoundingPartnerPricingSection = () => {
       savings: "$18,000/year",
       features: [
         "Locked in for LIFE (as long as you remain a client)",
-        "$18,000/year savings",
         "12-month minimum, then month-to-month",
-        "100% refund guarantee if <100 leads in 90 days",
+        "Full local authority content (9 articles/month)",
+        "Google + Meta Ads Management",
         "VIP support (12-hour response time)",
         "Quarterly business review calls",
         "Co-development privileges (request features)"
       ],
-      bestFor: "Top producers betting on long-term dominance",
       adSpend: "$1,000-1,500/month",
       badge: "BEST VALUE"
     }
-  ];
-
-  const includedFeatures = [
-    { title: "Full AI Visibility Optimization", desc: "9 BOFU articles/month optimized for bot + human layers, local SEO setup, schema markup" },
-    { title: "Google Ads Management", desc: "Search, Display, YouTube campaigns with daily monitoring + weekly optimization" },
-    { title: "Meta Ads Management", desc: "Facebook + Instagram targeting, advanced retargeting sequences, lookalike audiences" },
-    { title: "Multi-Platform Retargeting", desc: "Never lose a warm lead. Sequential messaging (3-stage nurture)" },
-    { title: "Performance Reporting", desc: "Weekly email updates (every Friday), monthly strategy calls (30 min)" },
-    { title: "AI Citation Tracking", desc: "Monitor ChatGPT, Perplexity, Gemini, Claude with weekly screenshot-based proof" },
   ];
 
   const scrollToPricing = () => {
@@ -81,16 +74,15 @@ const FoundingPartnerPricingSection = () => {
   return (
     <section id="pricing" className="section-padding bg-secondary/30 border-y border-border">
       <div ref={ref} className="container-editorial scroll-reveal">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <span className="section-tag">The Investment</span>
-          <h2 className="section-heading">Founding Partner Pricing</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Choose Your Commitment, Lock In Your Discount Forever
-          </p>
-          <p className="text-muted-foreground mt-2">
-            We're offering 3 tiers based on commitment length. The longer you commit, the deeper your discount—and it's locked in FOR LIFE.
-          </p>
+          <h2 className="section-heading">Lock In Your Market Position at Founding Partner Pricing</h2>
         </div>
+
+        {/* Framing paragraph */}
+        <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-center mb-16 leading-relaxed">
+          The agents who join now aren't just getting a discount. They're getting a first-mover advantage in their market. We work with one agent per market. Once your area is claimed, it's closed to competitors.
+        </p>
 
         {/* Pricing Tiers */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
@@ -100,7 +92,7 @@ const FoundingPartnerPricingSection = () => {
             return (
               <div
                 key={index}
-                className={`relative bg-card border-2 rounded-2xl p-6 ${
+                className={`relative bg-card border-2 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
                   isRecommended ? 'border-accent shadow-lg' : 'border-border'
                 }`}
               >
@@ -118,10 +110,11 @@ const FoundingPartnerPricingSection = () => {
                   <div className="flex items-center justify-center gap-2 mb-3">
                     <Icon className="w-5 h-5 text-accent" />
                     <span className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
-                      FOUNDING PARTNER
+                      Founding Partner
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold text-foreground mb-4">{tier.name}</h3>
+                  <h3 className="text-lg font-bold text-foreground mb-1">{tier.name}</h3>
+                  <p className="text-sm text-muted-foreground mb-4">{tier.subtitle}</p>
                   
                   <div className="mb-2">
                     <span className="text-4xl font-bold text-foreground">{tier.price}</span>
@@ -130,6 +123,11 @@ const FoundingPartnerPricingSection = () => {
                   <div className="text-sm text-accent font-semibold">
                     ({tier.discount} standard {tier.standardPrice} pricing)
                   </div>
+                </div>
+
+                {/* Savings */}
+                <div className="bg-accent/10 border border-accent/30 rounded-lg p-3 text-center mb-6">
+                  <span className="text-sm font-semibold text-accent">💰 {tier.savings} savings</span>
                 </div>
 
                 <ul className="space-y-3 mb-6">
@@ -141,72 +139,39 @@ const FoundingPartnerPricingSection = () => {
                   ))}
                 </ul>
 
-                <div className="text-sm text-muted-foreground mb-4 pb-4 border-b border-border">
-                  <span className="font-medium text-foreground">Best for:</span> {tier.bestFor}
-                </div>
-
-                <div className="text-xs text-muted-foreground">
+                <div className="text-xs text-muted-foreground mb-4 pb-4 border-b border-border">
                   <p>+ {tier.adSpend} ad spend (billed separately)</p>
                   <p className="mt-1">→ Decreases to $500-800/month by Month 6 as organic traffic takes over</p>
                 </div>
+
+                <Button
+                  onClick={scrollToPricing}
+                  className={`w-full py-3 rounded-lg font-semibold ${
+                    isRecommended ? 'btn-gold-shine' : 'border-2 border-accent bg-background text-foreground hover:bg-accent hover:text-accent-foreground'
+                  }`}
+                >
+                  Get Your Free Market Audit →
+                </Button>
               </div>
             );
           })}
         </div>
 
-        {/* What's Included */}
-        <div className="bg-card border border-border rounded-2xl p-8 mb-12">
-          <h3 className="text-xl font-bold text-foreground mb-6 text-center">
-            WHAT'S INCLUDED (ALL TIERS)
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {includedFeatures.map((feature, index) => (
-              <div key={index} className="flex items-start gap-3">
-                <Check className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                <div>
-                  <span className="text-foreground font-medium">{feature.title}</span>
-                  <p className="text-sm text-muted-foreground">{feature.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* ROI Math Box */}
+        {/* ROI Math — Rewritten */}
         <div className="bg-card border border-border rounded-2xl p-8 mb-12 max-w-3xl mx-auto">
           <h3 className="text-xl font-bold text-foreground mb-6 text-center">
-            THE MATH (Why This Is a Steal)
+            The Math
           </h3>
-          <p className="text-muted-foreground text-center mb-6">
-            Let's use the 6-MONTH COMMITMENT tier as an example:
-          </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h4 className="font-semibold text-foreground mb-3">YOUR INVESTMENT (Month 1-3):</h4>
-              <ul className="space-y-1 text-sm text-muted-foreground">
-                <li>• Service: $1,249/month × 3 = $3,747</li>
-                <li>• Ad spend: $1,500/month × 3 = $4,500</li>
-                <li className="font-semibold text-foreground">• TOTAL: $8,247</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-foreground mb-3">CONSERVATIVE OUTCOME:</h4>
-              <ul className="space-y-1 text-sm text-muted-foreground">
-                <li>• 90 qualified leads in 90 days (guaranteed minimum)</li>
-                <li>• 8% conversion = 7 closings</li>
-                <li>• 7 × $12,000 avg commission = $84,000</li>
-                <li className="font-semibold text-accent">• ROI: 919%</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="mt-6 pt-6 border-t border-border text-center">
-            <p className="text-muted-foreground">
-              <span className="font-semibold text-foreground">Even at 3% conversion (pessimistic):</span> 3 closings × $12,000 = $36,000 → <span className="text-accent font-semibold">ROI: 337%</span>
+          <div className="space-y-6 text-muted-foreground leading-relaxed">
+            <p>
+              The math is straightforward. You need to close one deal to cover your first 90 days entirely. But that's besides the point of why serious agents are choosing this.
             </p>
-            <p className="text-foreground font-medium mt-2">
-              You need to close just 1 deal to break even.
+            <p>
+              They're choosing it because waiting has a cost that doesn't show up in a spreadsheet. Every month a competitor builds authority in your market is a month you'll spend twice as much to catch up. Or never catch up at all.
+            </p>
+            <p className="text-foreground font-medium border-l-4 border-accent pl-4 py-2 bg-accent/5 rounded-r">
+              This isn't a lead gen expense. It's the cost of owning your market before someone else does.
             </p>
           </div>
         </div>
@@ -216,62 +181,48 @@ const FoundingPartnerPricingSection = () => {
           <h4 className="font-bold text-foreground mb-3 text-center">AFTER FOUNDING PARTNER SPOTS FILL:</h4>
           <div className="text-sm text-muted-foreground text-center space-y-1">
             <p>Standard Pricing Returns: <span className="font-semibold text-foreground">$2,499/month</span> (no lifetime lock)</p>
-            <p>6-month minimum commitment • No co-development privileges • Standard support (48-hour response)</p>
+            <p>No market exclusivity guarantee · Standard support (48-hour response)</p>
             <p className="text-foreground font-medium mt-3">
-              Founding Partners save $12,000-18,000 EVERY YEAR compared to future clients.
+              Founding Partners save $12,000-18,000 every year compared to future clients.
             </p>
           </div>
         </div>
 
-        {/* Guarantee Box */}
+        {/* Guarantee Section */}
         <div className="bg-accent/10 border-2 border-accent rounded-2xl p-8 mb-12 max-w-3xl mx-auto">
           <div className="flex items-start gap-4">
             <Shield className="w-10 h-10 text-accent flex-shrink-0" />
             <div>
-              <h4 className="text-xl font-bold text-foreground mb-4">OUR FOUNDING PARTNER GUARANTEE</h4>
-              <p className="text-muted-foreground mb-4">
-                We're asking you to trust us without proven client results. So we're putting our money where our mouth is:
-              </p>
+              <h4 className="text-xl font-bold text-foreground mb-4">Our Guarantee is Simple Because We Mean It</h4>
               
-              <div className="space-y-3 mb-6">
-                <div className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground">
-                    <span className="font-semibold text-foreground">DAY 7:</span> If you don't receive your first qualified leads within 7 days of ad launch, we pause billing and work free until you do.
-                  </span>
+              <div className="space-y-4 text-muted-foreground leading-relaxed mb-6">
+                <p>
+                  We're asking you to trust us with no client results yet. So we've structured the guarantee to remove every reason not to.
+                </p>
+                
+                <div className="space-y-3">
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                    <span>
+                      <span className="font-semibold text-foreground">Day 7:</span> First leads arrive or we pause billing and work free until they do.
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                    <span>
+                      <span className="font-semibold text-foreground">Day 90:</span> 90 qualified leads delivered or we work until you get 90, 100% free of service fees. You keep everything we built. You only pay the ad spend you actually used.
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                    <span>
+                      <span className="font-semibold text-foreground">Day 100:</span> Unsatisfied for any reason? Cancel, no penalty, no questions. We'll package up every piece of content, every campaign, every data file and hand it to you. You keep the asset we built together.
+                    </span>
+                  </div>
                 </div>
-                <div className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground">
-                    <span className="font-semibold text-foreground">DAY 30:</span> If ChatGPT/Perplexity don't show your first AI citation by Day 30, we pause billing and continue optimizing at no charge.
-                  </span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground">
-                    <span className="font-semibold text-foreground">DAY 90:</span> If you don't receive minimum 90 qualified leads in first 90 days, we refund 100% of service fees. You only pay the ad spend you actually used.
-                  </span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                  <span className="text-muted-foreground">
-                    <span className="font-semibold text-foreground">DAY 100:</span> If you're unsatisfied for ANY reason, cancel with no penalty. We'll even help you transition to another provider and send you all your content/data.
-                  </span>
-                </div>
-              </div>
 
-              <div className="bg-card border border-border rounded-xl p-4 mb-4">
-                <h5 className="font-semibold text-foreground mb-2">WHAT WE ASK FROM YOU:</h5>
-                <p className="text-sm text-muted-foreground mb-2">This isn't a one-way street. For the guarantee to apply, we need:</p>
-                <ul className="space-y-1 text-sm text-muted-foreground">
-                  <li>✓ Content approval within 48 hours</li>
-                  <li>✓ Technical access to your website, Google Business Profile, etc.</li>
-                  <li>✓ Response to our questions within 24 hours</li>
-                  <li>✓ Permission to use your results in case studies (anonymized if you prefer)</li>
-                  <li>✓ 1-2 referrals if you're satisfied with results</li>
-                </ul>
-                <p className="text-sm text-muted-foreground mt-2 italic">
-                  If you go radio silent for more than a week, the guarantee is void. Fair?
+                <p className="text-foreground font-medium border-l-4 border-accent pl-4 py-2 bg-card rounded-r">
+                  One thing we ask in return: respond to content approvals within 24 hours and give us access to the accounts we need. If you go quiet for more than 3 days, the guarantee pauses. Fair trade.
                 </p>
               </div>
 
@@ -296,13 +247,10 @@ const FoundingPartnerPricingSection = () => {
             size="lg"
             className="btn-gold-shine text-lg md:text-xl py-6 md:py-8 px-8 md:px-12 rounded-lg font-semibold"
           >
-            → Claim Your Founding Partner Spot
+            Get Your Free Market Audit
           </Button>
           <p className="text-sm text-muted-foreground mt-4">
-            Next available start: March 17, 2026 · Only 2 spots remaining
-          </p>
-          <p className="text-xs text-muted-foreground mt-2">
-            This offer closes the moment 3 spots fill. After that, it's gone forever.
+            March 17 start · 2 Founding Partner spots remaining
           </p>
         </div>
       </div>

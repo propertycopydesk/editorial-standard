@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const BOOKING_URL = "https://cal.com/propertycopydesk/auditcall";
@@ -15,8 +16,8 @@ const NewHeader = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToPricing = () => {
-    document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -29,8 +30,8 @@ const NewHeader = () => {
     >
       <nav className="container-editorial py-4">
         <div className="flex items-center justify-between">
-          {/* Logo - Serif font */}
-          <div className="flex flex-col items-start">
+          {/* Logo */}
+          <Link to="/" className="flex flex-col items-start">
             <span className="font-serif text-lg md:text-xl font-semibold tracking-wide text-foreground">
               PROPERTY
             </span>
@@ -38,16 +39,21 @@ const NewHeader = () => {
             <span className="font-serif text-[10px] md:text-xs tracking-[0.2em] text-foreground">
               COPY DESK
             </span>
-          </div>
+          </Link>
 
-          {/* CTA Button - Always visible, no hamburger menu */}
-          <Button
-            onClick={scrollToPricing}
-            className="btn-gold-shine text-sm md:text-base py-2 md:py-3 px-4 md:px-6 rounded-lg font-semibold"
-          >
-            <span className="hidden sm:inline">Founding Partner — $999/mo</span>
-            <span className="sm:hidden">$999/mo</span>
-          </Button>
+          {/* Nav + CTA */}
+          <div className="flex items-center gap-4 md:gap-6">
+            <button onClick={() => scrollTo("pricing")} className="hidden md:block text-sm text-muted-foreground hover:text-foreground transition-colors">How It Works</button>
+            <button onClick={() => scrollTo("faq")} className="hidden md:block text-sm text-muted-foreground hover:text-foreground transition-colors">FAQ</button>
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="hidden md:block text-sm text-muted-foreground hover:text-foreground transition-colors">Book Free Audit</a>
+            <Button
+              onClick={() => scrollTo("pricing")}
+              className="btn-gold-shine text-sm md:text-base py-2 md:py-3 px-4 md:px-6 rounded-lg font-semibold"
+            >
+              <span className="hidden sm:inline">Claim Your Spot</span>
+              <span className="sm:hidden">Claim Spot</span>
+            </Button>
+          </div>
         </div>
       </nav>
     </header>
