@@ -59,52 +59,32 @@ If a lead is borderline, we err on the side of not counting it. We'd rather unde
     },
     {
       question: "What's the typical lead-to-closing conversion rate, and how does that affect my ROI?",
-      answer: `Inbound leads generated through content and paid search typically convert at 6-12%, depending on your follow-up speed, market conditions, and sales process. That's meaningfully higher than Zillow (1-3%) but lower than referrals (20-30%).
+      answer: `Inbound leads generated through content authority typically convert at 6-12%, depending on your follow-up speed, market conditions, and sales process. That's meaningfully higher than Zillow (1-3%) but lower than referrals (20-30%).
 
-The math at steady state (Month 3):
-• 45 qualified leads
-• 8% conversion = 3-4 closings
+The math at steady state (Month 3-6):
+• Organic inquiries from AI-sourced traffic increasing monthly
 • Average commission: varies by market, assume $10,000-15,000
-• Your investment: ~$5,500/month (service + ad spend)
-• ROI: 545-1,000% depending on conversion and commission size
+• Your investment: $1,299/month
 
-Even at 3% conversion, you're closing 1-2 deals per month. You need one closing in the first 90 days to break even on the entire founding period.
+If ONE seller finds you through AI search instead of your competitor, and you close that listing at $10K commission, you've covered 7-8 months of service.
 
-One thing worth saying plainly: your conversion rate depends on what you do with the lead after it arrives. We deliver people who are ready to have a conversation. Closing them is your part of the job.`
+One thing worth saying plainly: your conversion rate depends on what you do with the lead after it arrives. We build the authority that gets you found. Closing them is your part of the job.`
     },
     {
       question: "Are these buyer leads, seller leads, or both?",
       answer: `Primarily seller leads (70-80%), with buyer leads making up the remainder.
 
-When someone is ready to list, they search for agents by name or reputation — "best agent to sell my home in [city]" — which maps directly to the authority content we build. Buyers tend to search by property first, agent second, which is why the buyer volume is lower but still present through retargeting and local search.
+When someone is ready to list, they search for agents by name or reputation — "best agent to sell my home in [city]" — which maps directly to the authority content we build. Buyers tend to search by property first, agent second, which is why the buyer volume is lower but still present through local search.
 
 Seller leads also tend to convert faster and at higher commission value, which is why we lean the content strategy in that direction by default.
 
-If you primarily work with buyers, tell us on the audit call. We adjust the content focus and ad targeting accordingly.`
-    },
-    {
-      question: "The first 3 months is $7,500-10,500. What if I don't close a single deal?",
-      answer: `Honest answer: if you receive 90+ qualified leads in 90 days and close zero, the problem isn't the leads.
-
-That said, here's how the risk is structured:
-
-The guarantee covers the lead volume, not the closing. We commit to 90 qualified leads in 90 days. If we don't deliver, we refund 100% of service fees. You only pay the ad spend you actually used.
-
-The math on downside: At 3% conversion — the pessimistic floor — 90 leads produces 2-3 closings. That covers your entire investment for the founding period and typically then some.
-
-The real risk: Investing $7,500-10,500, getting 90+ leads, and failing to follow up effectively. That's a risk we can't guarantee against. What we can tell you is that no one who follows up consistently with 90 warm inbound leads closes zero.
-
-If you genuinely can't convert warm inbound seller leads, this engagement will help you identify that quickly and cheaply. Most agents find the opposite — the system becomes a mirror that shows them where their process actually breaks down, which is worth knowing.`
+If you primarily work with buyers, tell us on the audit call. We adjust the content focus accordingly.`
     },
     {
       question: "What does \"work for free\" actually mean in your guarantee?",
-      answer: `There are two triggers. Here's exactly what each one covers:
+      answer: `There are three milestone triggers at Day 30, 60, and 90. Here's how each works:
 
-Day 7 — First Lead Trigger: If you don't receive your first qualified lead within 7 days of your ad campaigns going live, we pause billing immediately. We continue running and optimizing the campaigns at no charge until that first lead arrives. You don't ask, we pause automatically.
-
-Day 90 — Total Lead Trigger: If you haven't received 90 qualified leads by Day 90, we refund 100% of service fees. You keep everything we built — every article, every campaign — and you only pay the ad spend you actually used.
-
-There's no Day 30 citation milestone tied to billing. We removed that because AI indexing timelines vary by market and we won't hold your billing hostage to a metric outside our direct control.
+If we miss any milestone — whether it's article count, citation rate, or traffic growth — we pause billing immediately. We continue working at no charge until that milestone is met. You don't ask, we pause automatically.
 
 What we need from you for the guarantee to apply: Content approvals returned within 48 hours, access to the accounts we need to do the work, and responses to strategy questions within 24 hours. If you go quiet for more than a week, the guarantee pauses. We can't build your authority without your participation.`
     },
@@ -112,11 +92,11 @@ What we need from you for the guarantee to apply: Content approvals returned wit
       question: "Will this work in my market?",
       answer: `Yes, with adjustments based on market size and competition level.
 
-Small markets (population under 100K): Less competition means authority is easier to build. Lead volume is lower (15-30/month) but you need fewer of them to dominate. Ad spend is also lower ($500-800/month). These markets often have the fastest path to becoming the obvious local choice.
+Small markets (population under 100K): Less competition means authority is easier to build. These markets often have the fastest path to becoming the obvious local choice.
 
-Mid-size markets (100K-500K): The sweet spot for this system. Moderate competition, strong lead volume, clear opportunity to become the dominant local authority. Expected 35-55 leads per month at steady state.
+Mid-size markets (100K-500K): The sweet spot for this system. Moderate competition, strong opportunity to become the dominant local authority.
 
-Major metros (500K+): Highest competition requires more content volume and higher ad spend ($2,000-3,000/month). Lead potential is highest (50-90/month) and the authority you build has the most durable competitive moat because it's hardest to replicate.
+Major metros (500K+): Highest competition requires more content volume. The authority you build has the most durable competitive moat because it's hardest to replicate.
 
 We assess your specific market on the audit call before you commit. If the opportunity isn't meaningful, we'll tell you.`
     },
@@ -141,19 +121,15 @@ Weekly:
 Monthly:
 • 30-minute strategy call to review performance and plan the next month
 
-As needed:
-• Respond to leads (that part is on you — it's the whole point)
-• Occasional technical access for implementation
-
-Everything else — research, writing, ad creation, optimization, reporting, tracking — is handled by us. If you're spending more than 45 minutes a week on this system, we're not doing our job and you should tell us.`
+Everything else — research, writing, optimization, reporting, tracking — is handled by us. If you're spending more than 45 minutes a week on this system, we're not doing our job and you should tell us.`
     },
     {
       question: "What happens to everything you build if I cancel?",
       answer: `You own all of it.
 
-Every article lives on your domain. Every ad account is in your name. Every piece of content, campaign structure, keyword list, tracking setup, and data file belongs to you from the moment we create it.
+Every article lives on your domain. Every piece of content, keyword list, tracking setup, and data file belongs to you from the moment we create it.
 
-When you cancel, we prepare a complete transition package: a documented handover of all assets, login credentials, campaign notes, and content strategy. You walk away with a working system, not a dependency.
+When you cancel, we prepare a complete transition package: a documented handover of all assets, login credentials, and content strategy. You walk away with a working system, not a dependency.
 
 We build this way deliberately. Agencies that hold your assets hostage are renting you their leverage. We'd rather you stay because the results are working, not because leaving is too painful.`
     },
@@ -173,25 +149,9 @@ We're building you the same thing — an asset that lives on your domain, in you
       question: "What if Google or ChatGPT changes their algorithm?",
       answer: `We monitor algorithm changes across Google, ChatGPT, Perplexity, and other platforms daily. When something significant shifts, we adjust strategy within 24-48 hours. You don't need to track this yourself.
 
-More importantly, we don't build single-platform dependency. Your leads come from Google Search, Meta ads, organic search, AI referrals, and direct traffic. If one channel softens, the others stabilize you.
-
-If a major algorithm change causes a sustained 30%+ drop in lead volume lasting more than 30 days, you can pause service with no penalty while we diagnose and restructure.
+More importantly, we don't build single-platform dependency. Your authority comes from content that every platform uses as input. If one channel softens, the others stabilize you.
 
 The deeper answer is the same as above: the content we build is the input that all platforms use. That doesn't become worthless when an algorithm changes. It becomes more valuable as the shortcut-seekers get filtered out.`
-    },
-    {
-      question: "Your guarantee says \"minimum 90 leads\" but the projection is 35-55 per month. Which is accurate?",
-      answer: `Both. They measure different things.
-
-The guarantee (90 leads in 90 days) is our minimum commitment — roughly 30 per month average. If you don't hit this floor, we refund service fees, no questions asked. This is what we're willing to be held accountable to contractually.
-
-The projection (35-55 per month) is expected performance once the system is running. The monthly progression typically looks like:
-• Month 1: 25-35 leads
-• Month 2: 35-45 leads
-• Month 3: 40-55 leads
-• Total: 100-135 leads
-
-We guarantee the floor and work toward the projection. If you only hit 90 leads, something underperformed and we either diagnose and fix it or refund you. The guarantee isn't the goal — it's the safety net.`
     },
     {
       question: "Why are you offering such steep discounts?",
@@ -203,7 +163,7 @@ We need a feedback loop. Early clients surface things you can't find in internal
 
 We need referrals. If this delivers what we're promising, we'll ask for 1-2 referrals to fellow agents you respect. That's the currency we're asking for in exchange for the discount.
 
-What you get in return: 40-60% off for life, first-mover market claim, and direct founder access for as long as you're a client. After three spots fill, that's gone. Standard pricing at $2,499/month with no lifetime lock and no market priority.
+What you get in return: 48% off for life, first-mover market claim, and direct founder access for as long as you're a client. After three spots fill, that's gone. Standard pricing at $2,499/month with no lifetime lock and no market priority.
 
 This isn't charity. It's a trade with clear terms on both sides.`
     },
@@ -213,7 +173,7 @@ This isn't charity. It's a trade with clear terms on both sides.`
 
 The research is done. Six months, 200+ hours, 50 markets analyzed, 50+ strategies tested. We kept the 15 that worked. You're not funding the research phase — you're getting early access to its output.
 
-The difference in practice: a beta tester has no guarantee because the service is genuinely unproven. We're offering a 90-lead or full-refund guarantee because we're confident enough in the system to put that in writing.
+The difference in practice: a beta tester has no guarantee because the service is genuinely unproven. We're offering a milestone-based guarantee because we're confident enough in the system to put that in writing.
 
 You're a first-mover, not a guinea pig. The discount reflects the trust you're placing in us without a client track record — not the experimental nature of what we're building.`
     },
@@ -223,7 +183,7 @@ You're a first-mover, not a guinea pig. The discount reflects the trust you're p
 
 The lifetime lock applies only as long as you remain a continuous client. If you cancel — for any reason other than us failing to deliver on the guarantee — and later rejoin, you rejoin at standard pricing ($2,499/month).
 
-One exception: If we fail to deliver 90 leads in 90 days and you cancel as a result, you can rejoin at founding partner pricing within six months. If we didn't hold up our end, you shouldn't lose your rate over it.
+One exception: If we fail to deliver on milestones and you cancel as a result, you can rejoin at founding partner pricing within six months. If we didn't hold up our end, you shouldn't lose your rate over it.
 
 This is a one-time offer tied to being in the first three spots. It doesn't come back.`
     },
@@ -238,7 +198,7 @@ Here's what we can offer instead:
 • References from people who've worked with us in other capacities, if that's useful
 
 Once founding partners are generating results, this page will be updated with real metrics and real testimonials. The people reading this in Month 4 will have that. You don't — and the founding partner pricing reflects exactly that asymmetry.`
-    }
+    },
   ];
 
   return (

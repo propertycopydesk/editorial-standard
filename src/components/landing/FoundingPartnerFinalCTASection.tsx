@@ -6,57 +6,48 @@ const BOOKING_URL = "https://cal.com/propertycopydesk/auditcall";
 const FoundingPartnerFinalCTASection = () => {
   const ref = useScrollReveal();
 
-  const bookAudit = () => {
-    window.open(BOOKING_URL, "_blank");
-  };
-
   return (
     <section className="section-padding bg-secondary/30 border-t border-border">
       <div ref={ref} className="container-editorial text-center scroll-reveal">
         <span className="section-tag">Ready?</span>
-        
+
         <h2 className="section-heading max-w-3xl mx-auto">
-          Two Spots. One Market. Yours or Theirs.
+          Get Your Free AI Visibility Audit
         </h2>
 
-        <div className="max-w-2xl mx-auto mb-10 space-y-4 text-lg text-muted-foreground leading-relaxed">
-          <p>
-            There are genuinely two spots remaining because we work with three founding partners total and one audit is already scheduled.
-          </p>
-          <p>
-            When these fill, this page goes to a waitlist for standard pricing at $2,499/month with no lifetime lock and no first-mover market protection.
-          </p>
-          <p className="text-foreground font-medium">
-            The choice is simple: own your market now, or pay double to chase whoever claimed it first.
-          </p>
+        <div className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed space-y-3">
+          <p>15-minute call where we:</p>
+          <ul className="text-left max-w-md mx-auto space-y-2 text-base">
+            <li className="flex items-start gap-2">
+              <span className="text-accent mt-0.5">→</span>
+              <span>Show you live ChatGPT searches in your market</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-accent mt-0.5">→</span>
+              <span>Reveal which competitors are already cited</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-accent mt-0.5">→</span>
+              <span>Identify your current AI visibility score (0-100%)</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-accent mt-0.5">→</span>
+              <span>Explain exactly how we'd build your authority</span>
+            </li>
+          </ul>
+          <p className="text-foreground font-medium">No pitch. No pressure. Just data.</p>
         </div>
 
-        {/* Two CTA options */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-          <Button
-            onClick={bookAudit}
-            size="lg"
-            className="btn-gold-shine text-lg py-6 md:py-8 px-8 md:px-12 rounded-lg font-semibold"
-          >
-            Book Your Free Market Audit
-          </Button>
-          <Button
-            onClick={bookAudit}
-            size="lg"
-            variant="outline"
-            className="text-lg py-6 md:py-8 px-8 md:px-12 rounded-lg font-semibold border-accent text-foreground hover:bg-accent hover:text-accent-foreground"
-          >
-            Claim Your Spot Directly
-          </Button>
-        </div>
+        <Button
+          onClick={() => window.open(BOOKING_URL, "_blank")}
+          size="lg"
+          className="btn-gold-shine text-lg md:text-xl py-6 md:py-8 px-8 md:px-12 rounded-lg font-semibold mb-6"
+        >
+          Book Your Free Audit
+        </Button>
 
-        <p className="text-sm text-muted-foreground mb-8">
-          Next available start: March 17, 2026
-        </p>
-
-        {/* PS */}
-        <p className="text-muted-foreground italic max-w-2xl mx-auto">
-          P.S. Every day you wait, a competitor is building the authority in your market that you'll spend twice as much to catch up to. Or never catch up at all.
+        <p className="text-sm text-muted-foreground">
+          One agent per market · 2 founding spots remaining
         </p>
       </div>
     </section>

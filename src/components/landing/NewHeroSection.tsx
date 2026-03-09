@@ -15,12 +15,22 @@ const NewHeroSection = () => {
       <div ref={ref} className="max-w-4xl mx-auto text-center scroll-reveal">
         {/* Main Headline */}
         <h1 className="text-hero font-bold text-foreground mb-6 leading-tight">
-          Own Your Market Before AI Makes Every Agent Look the Same
+          When Sellers Ask ChatGPT for the Best Agent in Your Market,
+          <br className="hidden md:block" />
+          <span className="text-accent">Which Name Appears?</span>
         </h1>
 
         {/* Subheadline */}
-        <p className="text-subhero text-muted-foreground max-w-3xl mx-auto mb-10">
-          We build the local authority and lead pipeline that lets you command full commissions while other agents race to the bottom.
+        <p className="text-subhero text-muted-foreground max-w-3xl mx-auto mb-4">
+          We build the local authority that gets you cited by search engines and AI: ChatGPT, Perplexity, Gemini, and Claude.
+        </p>
+
+        <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-4">
+          First citations in 30-60 days. Market dominance in 6-12 months. Start now, own your market for the next decade.
+        </p>
+
+        <p className="text-base text-muted-foreground max-w-3xl mx-auto mb-10">
+          Most agents spend $10K/month on Zillow and Google PPC to stay visible in 2024. This is the $1,299/month hedge that ensures those dollars don't become worthless when AI replaces blue links in 2025.
         </p>
 
         {/* Primary CTA Button */}
@@ -29,17 +39,17 @@ const NewHeroSection = () => {
           size="lg"
           className="btn-gold-shine text-lg md:text-xl py-6 md:py-8 px-8 md:px-12 rounded-lg font-semibold mb-4"
         >
-          Get Your Free Market Audit
+          Get Your Free Audit
         </Button>
 
         {/* Secondary line */}
         <p className="text-sm text-muted-foreground mb-8">
-          March 17 start · 2 Founding Partner spots remaining
+          One agent per market · 2 founding partner spots remaining
         </p>
 
-        {/* Single trust line */}
-        <p className="text-lg text-foreground font-medium">
-          First leads in 7 days. Market authority that compounds for years.
+        {/* Trust line */}
+        <p className="text-lg text-foreground font-medium max-w-2xl mx-auto border-l-4 border-accent pl-4 py-2 bg-accent/5 rounded-r text-left">
+          Everything we build lives on your domain, in your accounts, under your name. You own it, even if you leave.
         </p>
       </div>
     </section>

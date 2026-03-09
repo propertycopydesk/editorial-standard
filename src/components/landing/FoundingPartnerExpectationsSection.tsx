@@ -1,83 +1,165 @@
-import { ArrowRight, Zap, TrendingUp, TrendingDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const FoundingPartnerExpectationsSection = () => {
   const ref = useScrollReveal();
 
-  const milestones = [
+  const phases = [
     {
-      icon: Zap,
-      period: "WEEKS 1-2",
-      title: "Immediate Lead Flow",
-      items: [
-        "Google and Meta ads launch Day 1",
-        "First leads arrive within 7 days or we pause billing and work free until they do",
-        "Target: 20-30 qualified leads in the first 30 days"
-      ]
+      period: "DAYS 1-30",
+      title: "Foundation Phase",
+      happening: [
+        "We're publishing 9 articles, optimizing your Google Business Profile, implementing schema markup, and fixing NAP consistency issues",
+        "Google is indexing your content (takes 7-14 days)",
+        "AI platforms are beginning to crawl your domain",
+      ],
+      youllSee: [
+        "Articles live on your website",
+        "First search impressions in Google Search Console",
+        "Your Google Business Profile showing up higher in local pack",
+      ],
+      wontSee: [
+        "High organic traffic (you're at 5-15 visitors/week max)",
+        "Consistent AI citations (too early—AI needs more content to trust you)",
+        "Organic leads (authority hasn't compounded yet)",
+      ],
+      whyItMatters: "You're building infrastructure. Competitors aren't. Every week you're ahead is a week they're behind.",
     },
     {
-      icon: TrendingUp,
-      period: "MONTHS 2-3",
-      title: "Authority Compounds",
-      items: [
-        "Your content starts doing work. AI platforms begin citing you",
-        "Organic traffic layers on top of paid",
-        "You're not dependent on ad spend alone to be seen",
-        "Target: 35-55 leads per month"
-      ]
+      period: "DAYS 31-60",
+      title: "Momentum Phase",
+      happening: [
+        "18 articles published (enough content for AI to recognize topical depth)",
+        "Backlink outreach driving first external citations",
+        "Internal linking establishing domain authority signals",
+      ],
+      youllSee: [
+        "First AI citations appearing (10-20% citation rate in Perplexity/ChatGPT)",
+        "Organic traffic 2-3x from Month 1",
+        "Ranking on page 1-2 for long-tail local queries",
+      ],
+      wontSee: [
+        "High-volume organic traffic (still building)",
+        "Consistent AI citations (30-50% is the threshold, you're at 10-20%)",
+      ],
+      whyItMatters: "This is the \"trough of disillusionment.\" Authority is building but hasn't crossed the compounding threshold yet. Most agents quit here. The ones who don't own the market.",
     },
     {
-      icon: TrendingDown,
-      period: "MONTH 6",
-      title: "You Own the Channel",
-      items: [
-        "The majority of your leads come from content you own, not platforms you rent",
-        "Cost per lead has dropped 40-60%",
-        "You have a market position that took competitors years to build—and you built it in six months",
-        "Target: 50-75 leads per month at a fraction of Month 1 cost"
-      ]
-    }
+      period: "DAYS 61-90",
+      title: "Compounding Phase",
+      happening: [
+        "27 articles published (AI now recognizes you as authoritative on local real estate)",
+        "Citation rate accelerating (30-50% across 4 platforms)",
+        "Google ranking you for high-intent queries",
+      ],
+      youllSee: [
+        "AI citing you 3-5 times out of every 10 searches",
+        "Organic traffic 5-10x from Month 1 baseline",
+        "First organic inquiries from AI-sourced traffic",
+        "Competitors behind you by 60-90 days minimum",
+      ],
+      whyItMatters: "You've crossed the compounding threshold. Authority is now working FOR you, not against you. From here, it accelerates.",
+    },
+    {
+      period: "MONTHS 4-6",
+      title: "Dominance Phase",
+      youOwn: [
+        "50+ articles on your domain",
+        "60-80% AI citation rate (market leader position)",
+        "Top 3 ranking for competitive local keywords",
+        "A 6-month head start on any competitor trying to catch you",
+      ],
+      moat: "A competitor starting today needs 6-12 months to catch you. By then, you'll have 12-18 months of authority. They're always chasing. In a contracting market, being the agent AI recommends isn't a nice-to-have. It's survival.",
+    },
   ];
 
   return (
     <section className="section-padding">
       <div ref={ref} className="container-editorial scroll-reveal">
-        <div className="text-center mb-16">
-          <span className="section-tag">What to Expect</span>
-          <h2 className="section-heading">What Founding Partners Can Expect</h2>
+        <div className="text-center mb-8">
+          <span className="section-tag">Realistic Timeline</span>
+          <h2 className="section-heading">The Honest Timeline: What Founding Partners Can Expect</h2>
         </div>
 
-        {/* Milestones */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {milestones.map((milestone, index) => {
-            const Icon = milestone.icon;
-            return (
-              <div
-                key={index}
-                className="bg-card border border-border rounded-xl p-8 card-glow"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
-                    <Icon className="w-6 h-6 text-accent" />
-                  </div>
-                  <span className="text-sm font-semibold text-accent uppercase tracking-wide">
-                    {milestone.period}
-                  </span>
+        <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-center mb-16 leading-relaxed">
+          We're not promising instant leads or overnight authority. We're promising a defensible market position built on a timeline that creates a competitive moat.
+        </p>
+
+        {/* Phases */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {phases.map((phase, index) => (
+            <div
+              key={index}
+              className="bg-card border border-border rounded-xl p-6 card-glow"
+            >
+              <span className="text-sm font-semibold text-accent uppercase tracking-wide">
+                {phase.period}
+              </span>
+              <h3 className="text-xl font-bold text-foreground mt-1 mb-4">
+                {phase.title}
+              </h3>
+
+              {phase.happening && (
+                <div className="mb-3">
+                  <p className="text-xs font-bold text-foreground uppercase tracking-wide mb-2">What's Happening:</p>
+                  <ul className="space-y-1.5">
+                    {phase.happening.map((item, i) => (
+                      <li key={i} className="flex items-start gap-2 text-muted-foreground text-sm">
+                        <ArrowRight className="w-3 h-3 text-accent mt-1 flex-shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-4">
-                  {milestone.title}
-                </h3>
-                <ul className="space-y-2">
-                  {milestone.items.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2 text-muted-foreground">
-                      <ArrowRight className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
+              )}
+
+              {phase.youllSee && (
+                <div className="mb-3">
+                  <p className="text-xs font-bold text-foreground uppercase tracking-wide mb-2">What You'll See:</p>
+                  <ul className="space-y-1.5">
+                    {phase.youllSee.map((item, i) => (
+                      <li key={i} className="flex items-start gap-2 text-muted-foreground text-sm">
+                        <ArrowRight className="w-3 h-3 text-accent mt-1 flex-shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {phase.wontSee && (
+                <div className="mb-3">
+                  <p className="text-xs font-bold text-muted-foreground uppercase tracking-wide mb-2">What You Won't See Yet:</p>
+                  <ul className="space-y-1.5">
+                    {phase.wontSee.map((item, i) => (
+                      <li key={i} className="flex items-start gap-2 text-muted-foreground/70 text-sm">
+                        <span className="text-muted-foreground/50 mt-0.5">—</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {phase.youOwn && (
+                <div className="mb-3">
+                  <p className="text-xs font-bold text-foreground uppercase tracking-wide mb-2">What You Own:</p>
+                  <ul className="space-y-1.5">
+                    {phase.youOwn.map((item, i) => (
+                      <li key={i} className="flex items-start gap-2 text-muted-foreground text-sm">
+                        <ArrowRight className="w-3 h-3 text-accent mt-1 flex-shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              <p className="text-sm text-foreground font-medium mt-4 pt-3 border-t border-border">
+                {phase.whyItMatters || phase.moat}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

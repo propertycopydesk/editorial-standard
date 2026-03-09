@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { X, Gift } from "lucide-react";
+import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
@@ -72,16 +72,12 @@ const ExitIntentPopup = () => {
         </button>
 
         <div className="text-center">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-6">
-            <Gift className="w-8 h-8 text-accent" />
-          </div>
-
           <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-3">
             Let's Keep in Touch
           </h2>
           
           <p className="text-muted-foreground font-sans mb-6">
-            Every week I share my winning strategies and methods to generate more leads.
+            Every week I share my winning strategies and methods to build AI visibility for real estate agents.
             <br /><br />
             <span className="text-foreground font-medium">If you reply with your website, I will send your brand's AI visibility audit.</span>
           </p>
@@ -108,7 +104,7 @@ const ExitIntentPopup = () => {
           </form>
 
           <p className="text-xs text-muted-foreground mt-4">
-            We respect your privacy. Unsubscribe anytime.
+            No spam. Unsubscribe anytime.
           </p>
         </div>
       </div>

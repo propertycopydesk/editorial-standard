@@ -84,8 +84,8 @@ const Footer = () => {
                   <p style="color: #1a1a1a; font-weight: bold; margin-top: 25px;">Here's what you can expect:</p>
                   <ul style="color: #4a4a4a; line-height: 2; font-size: 16px;">
                     <li>Weekly strategies for building market authority</li>
-                    <li>Lead generation insights and tactics</li>
                     <li>AI visibility trends for real estate</li>
+                    <li>Content insights that compound over time</li>
                   </ul>
                   <div style="text-align: center; margin: 30px 0;">
                     <a href="https://propertycopydesk.com/blog" style="background-color: #c9a962; color: #1a1a1a; padding: 12px 30px; text-decoration: none; font-weight: bold; border-radius: 4px;">Read Our Latest Posts</a>
@@ -148,7 +148,7 @@ const Footer = () => {
               </div>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              The only hybrid system that delivers leads in 7 days while building AI visibility.
+              AI visibility + local authority content that gets you cited by ChatGPT, Perplexity, Gemini, and Claude.
             </p>
             {/* Social Links */}
             <div className="flex gap-4">
@@ -178,7 +178,7 @@ const Footer = () => {
             <h3 className="font-sans text-lg font-bold text-foreground mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <li><Link to="/" className="text-muted-foreground hover:text-accent transition-colors text-sm">Home</Link></li>
-              <li><Link to="/pricing" className="text-muted-foreground hover:text-accent transition-colors text-sm">Pricing</Link></li>
+              <li><a href="/#pricing" className="text-muted-foreground hover:text-accent transition-colors text-sm">Pricing</a></li>
               <li><Link to="/blog" className="text-muted-foreground hover:text-accent transition-colors text-sm">Blog</Link></li>
               <li><a href="/#faq" className="text-muted-foreground hover:text-accent transition-colors text-sm">FAQ</a></li>
             </ul>
@@ -202,7 +202,7 @@ const Footer = () => {
           <div>
             <h3 className="font-sans text-lg font-bold text-foreground mb-6">Stay Updated</h3>
             <p className="text-muted-foreground text-sm mb-4">
-              Weekly strategies for building market authority and generating leads.
+              Weekly strategies for building market authority and AI visibility.
             </p>
             <form onSubmit={handleNewsletterSubmit} className="space-y-3">
               <Input
