@@ -11,7 +11,6 @@ const NewHeader = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -30,7 +29,6 @@ const NewHeader = () => {
     >
       <nav className="container-editorial py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <Link to="/" className="flex flex-col items-start">
             <span className="font-serif text-lg md:text-xl font-semibold tracking-wide text-foreground">
               PROPERTY
@@ -41,17 +39,16 @@ const NewHeader = () => {
             </span>
           </Link>
 
-          {/* Nav + CTA */}
           <div className="flex items-center gap-4 md:gap-6">
-            <button onClick={() => scrollTo("pricing")} className="hidden md:block text-sm text-muted-foreground hover:text-foreground transition-colors">How It Works</button>
+            <button onClick={() => scrollTo("pricing")} className="hidden md:block text-sm text-muted-foreground hover:text-foreground transition-colors">Pricing</button>
             <button onClick={() => scrollTo("faq")} className="hidden md:block text-sm text-muted-foreground hover:text-foreground transition-colors">FAQ</button>
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="hidden md:block text-sm text-muted-foreground hover:text-foreground transition-colors">Book Free Audit</a>
             <Button
-              onClick={() => scrollTo("pricing")}
+              onClick={() => window.open(BOOKING_URL, "_blank")}
               className="btn-gold-shine text-sm md:text-base py-2 md:py-3 px-4 md:px-6 rounded-lg font-semibold"
             >
-              <span className="hidden sm:inline">Claim Your Spot</span>
-              <span className="sm:hidden">Claim Spot</span>
+              <span className="hidden sm:inline">Get AI Visibility Check</span>
+              <span className="sm:hidden">Free Audit</span>
             </Button>
           </div>
         </div>

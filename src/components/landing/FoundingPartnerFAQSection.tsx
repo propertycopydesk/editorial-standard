@@ -9,195 +9,123 @@ import {
 const FoundingPartnerFAQSection = () => {
   const ref = useScrollReveal();
 
-  const faqs = [
+  const topFaqs = [
     {
-      question: "Can you show me what AI search actually looks like in my market right now?",
-      answer: `Yes, and we do this on every audit call before you spend a dollar.
+      question: "Why not just buy Zillow leads?",
+      answer: `Zillow charges $60-150 per lead. You compete with 5 other agents for the same lead. Conversion rate: 1-3%.
 
-Before you commit:
-• Screen recordings of ChatGPT and Perplexity searches using real buyer and seller queries in your market
-• Which competitors are being cited and how consistently
-• Your current authority gap — what's missing from your online presence that's causing AI platforms to overlook you
-• A plain-English explanation of what it would take to close that gap
+This builds authority that generates FREE organic leads. No competition (AI gives YOUR name specifically). Higher conversion (they already researched you before calling).
 
-After you become a client:
-• Weekly performance reports showing lead volume, source breakdown, and organic traffic trends
-• AI citation tracking as one signal among several — we monitor ChatGPT, Perplexity, Gemini, and Google AI Overviews
-• Monthly before/after comparisons showing authority growth across all channels
+Cost per lead on Zillow: $80
+Cost per lead after Month 6 with AI visibility: $0
 
-The audit is free and takes 15 minutes. If your market is already saturated or the opportunity isn't there, we'll tell you that too.`
+One is a rental. One is an asset you own forever.`,
     },
     {
-      question: "How do you track and report performance?",
-      answer: `We track four things weekly and report on all of them every Friday:
+      question: "What if AI platforms change their algorithm?",
+      answer: `We monitor 5 platforms daily. When changes happen, we adapt within 24-48 hours.
 
-1. Lead Volume and Quality — Total qualified leads delivered, broken down by source (paid search, paid social, organic). This is the primary metric everything else feeds.
+More importantly: local authority content is what ALL platforms use as input when deciding who to recommend. We're not exploiting a loophole. We're building the underlying asset.
 
-2. Cost Per Lead Trends — Starts higher in Month 1 (paid-only). Drops 30-40% by Month 3 as organic compounds. Drops 50-60% by Month 6 as authority content carries more of the load.
-
-3. Organic Traffic Growth — Google Analytics showing traffic from search, AI referrals, and direct. This is the long-term indicator that your authority is building.
-
-4. AI Citation Tracking — We test high-intent prompts weekly across ChatGPT, Perplexity, Gemini, and Claude and track when and where your name appears. This isn't the headline metric — it's a directional signal that the content is working.
-
-You'll receive a weekly email every Friday, a 30-minute monthly strategy call, and a quarterly review covering competitive positioning. No dashboards to learn, no logins to check. We send it to you.`
+Google changed. Facebook changed. Zillow changed their terms. Agents who owned their content survived every one. We're building you the same thing.`,
     },
     {
-      question: "What exactly qualifies as a \"qualified lead\"?",
-      answer: `A qualified lead is someone who:
-• Lives in your service area
-• Owns property or is actively looking to buy or sell
-• Contacted you directly — phone call, form submission, or direct message
-• Expressed intent to transact, not just asking a general question
+      question: "Why does it take 6 months?",
+      answer: `AI needs 30-50 articles to recognize you as authoritative. That's 9/month × 6 months.
 
-We don't count:
-• Spam inquiries
-• Out-of-area contacts
-• General information requests with no transaction intent
-• Wrong number calls
+Google takes 7-14 days to index each article. AI platforms crawl Google's index. This timeline can't be rushed—which is exactly why it becomes a moat.
 
-If a lead is borderline, we err on the side of not counting it. We'd rather under-report and over-deliver than pad your numbers with leads that don't close.`
+If this could be done in 2 weeks, every agent would do it. The fact that it takes 6 months is WHY competitors can't replicate it quickly.
+
+Patience isn't a weakness here. It's the competitive advantage.`,
     },
     {
-      question: "What's the typical lead-to-closing conversion rate, and how does that affect my ROI?",
-      answer: `Inbound leads generated through content authority typically convert at 6-12%, depending on your follow-up speed, market conditions, and sales process. That's meaningfully higher than Zillow (1-3%) but lower than referrals (20-30%).
+      question: "What if I cancel—do I lose everything?",
+      answer: `No. Every article lives on YOUR domain. Every optimization stays in YOUR accounts.
 
-The math at steady state (Month 3-6):
-• Organic inquiries from AI-sourced traffic increasing monthly
-• Average commission: varies by market, assume $10,000-15,000
-• Your investment: $1,299/month
+Cancel anytime and keep:
+→ All 50+ articles we wrote (worth $10,000-15,000)
+→ Schema markup implementation
+→ Google Business Profile optimization
+→ All tracking and analytics setup
 
-If ONE seller finds you through AI search instead of your competitor, and you close that listing at $10K commission, you've covered 7-8 months of service.
-
-One thing worth saying plainly: your conversion rate depends on what you do with the lead after it arrives. We build the authority that gets you found. Closing them is your part of the job.`
+We're building YOUR asset, not ours. If you leave, you take it with you.`,
     },
     {
-      question: "Are these buyer leads, seller leads, or both?",
-      answer: `Primarily seller leads (70-80%), with buyer leads making up the remainder.
+      question: "How is this different from regular SEO?",
+      answer: `Regular SEO = rank in Google search results (10 blue links)
+AI visibility = get CITED when ChatGPT/Perplexity answers questions directly
 
-When someone is ready to list, they search for agents by name or reputation — "best agent to sell my home in [city]" — which maps directly to the authority content we build. Buyers tend to search by property first, agent second, which is why the buyer volume is lower but still present through local search.
+Different algorithms. Different strategies. Different outcomes.
 
-Seller leads also tend to convert faster and at higher commission value, which is why we lean the content strategy in that direction by default.
+We optimize for both simultaneously—rank in Google AND get cited by AI.
 
-If you primarily work with buyers, tell us on the audit call. We adjust the content focus accordingly.`
+Most SEO agencies don't understand AI citation yet. They're optimizing for yesterday's search behavior.`,
     },
+  ];
+
+  const additionalFaqs = [
     {
-      question: "What does \"work for free\" actually mean in your guarantee?",
-      answer: `There are three milestone triggers at Day 30, 60, and 90. Here's how each works:
+      question: "Can I see proof this works?",
+      answer: `We don't have client testimonials yet—you'd be founding partner #1, #2, or #3.
 
-If we miss any milestone — whether it's article count, citation rate, or traffic growth — we pause billing immediately. We continue working at no charge until that milestone is met. You don't ask, we pause automatically.
+What we have:
+→ 6 months of research testing this across 50 markets
+→ $12,000 invested validating the strategy before offering it
+→ A milestone-based guarantee (we work for free if we don't deliver)
+→ Direct founder access (not a support team)
 
-What we need from you for the guarantee to apply: Content approvals returned within 48 hours, access to the accounts we need to do the work, and responses to strategy questions within 24 hours. If you go quiet for more than a week, the guarantee pauses. We can't build your authority without your participation.`
+Your results become our proof. The founding partner discount reflects that risk.`,
     },
     {
       question: "Will this work in my market?",
-      answer: `Yes, with adjustments based on market size and competition level.
+      answer: `Yes, with adjustments based on market size:
 
-Small markets (population under 100K): Less competition means authority is easier to build. These markets often have the fastest path to becoming the obvious local choice.
+Small markets (<100K population): Less competition, faster to dominate. Lower lead volume (20-35/month at steady state). Perfect for agents who don't need high volume.
 
-Mid-size markets (100K-500K): The sweet spot for this system. Moderate competition, strong opportunity to become the dominant local authority.
+Mid-size markets (100K-500K): Sweet spot for this system. Moderate competition, strong lead volume. Expected 40-60 organic leads/month at steady state.
 
-Major metros (500K+): Highest competition requires more content volume. The authority you build has the most durable competitive moat because it's hardest to replicate.
+Major metros (500K+): Highest competition, most content needed. Largest lead potential (60-90/month). Biggest competitive moat once established.
 
-We assess your specific market on the audit call before you commit. If the opportunity isn't meaningful, we'll tell you.`
+We assess your specific market on the audit call before you commit.`,
     },
     {
-      question: "Are you working with other agents in my market?",
-      answer: `No. One agent per market.
-
-When your market is claimed, we close it. We don't take on competitors in the same area, adjust your positioning to "coexist," or manage multiple relationships in the same geography. That would directly undermine the market ownership we're helping you build.
-
-This is also why the founding partner window matters. The first agent to claim a market gets it permanently. Once the spot is taken, the next agent who asks us about that market gets put on a waitlist and told it's not available.
-
-On the audit call, we'll confirm your market's availability before we discuss anything else. If it's already claimed, we'll tell you immediately.`
-    },
-    {
-      question: "How much of my time is required each week?",
-      answer: `Less than an hour, if we're doing our job.
+      question: "What's the time commitment for me?",
+      answer: `Less than 45 minutes per week:
 
 Weekly:
-• 15-20 minutes to review and approve content drafts
-• 5-10 minutes to respond to any strategic questions
+→ 20-30 minutes to review and approve article drafts
+→ 5-10 minutes to answer strategic questions
 
 Monthly:
-• 30-minute strategy call to review performance and plan the next month
+→ 30-minute strategy call
 
-Everything else — research, writing, optimization, reporting, tracking — is handled by us. If you're spending more than 45 minutes a week on this system, we're not doing our job and you should tell us.`
+That's it. Everything else—research, writing, optimization, tracking, reporting—is handled by us.
+
+If you're spending more than 1 hour/week on this, we're not doing our job.`,
     },
     {
-      question: "What happens to everything you build if I cancel?",
-      answer: `You own all of it.
+      question: "Do you guarantee a certain number of leads?",
+      answer: `No. We guarantee AI VISIBILITY (citations), not lead volume.
 
-Every article lives on your domain. Every piece of content, keyword list, tracking setup, and data file belongs to you from the moment we create it.
+Here's why: We can control whether AI cites you. We can't control how many people search, how many convert, or how you follow up.
 
-When you cancel, we prepare a complete transition package: a documented handover of all assets, login credentials, and content strategy. You walk away with a working system, not a dependency.
+What we guarantee:
+→ Month 3: First AI citation
+→ Month 6: 60-80% citation rate
+→ Everything built lives on your domain
 
-We build this way deliberately. Agencies that hold your assets hostage are renting you their leverage. We'd rather you stay because the results are working, not because leaving is too painful.`
+What we've observed (but can't guarantee): Agents with 60-80% citation rates typically see 40-60 organic inquiries per month by Month 6-9. But that depends on market size, seasonality, and your follow-up system.`,
     },
     {
-      question: "Will this still work if AI search changes again?",
-      answer: `Yes. Here's why.
+      question: "Can I pause and resume later?",
+      answer: `You can cancel anytime and keep everything we built.
 
-The thing that gets you cited by ChatGPT today is the same thing that got you ranked by Google five years ago and will get you found by whatever platform exists five years from now: genuine local authority content that people and machines recognize as credible and relevant.
+If you want to resume:
+→ Within 6 months: Rejoin at founding partner pricing
+→ After 6 months: Rejoin at standard pricing ($1,599/month)
 
-We're not exploiting a loophole in how ChatGPT works. We're building the underlying asset — authoritative, specific, locally-relevant content on your domain — that every AI platform uses as an input when deciding who to recommend.
-
-Google's algorithm changed constantly. Agents who owned their content survived every update. Facebook changed reach and ad targeting. Agents who owned their list survived. Zillow changed their terms. Agents who owned their direct relationships survived.
-
-We're building you the same thing — an asset that lives on your domain, in your accounts, under your name, that no platform can take away when they update their rules.`
-    },
-    {
-      question: "What if Google or ChatGPT changes their algorithm?",
-      answer: `We monitor algorithm changes across Google, ChatGPT, Perplexity, and other platforms daily. When something significant shifts, we adjust strategy within 24-48 hours. You don't need to track this yourself.
-
-More importantly, we don't build single-platform dependency. Your authority comes from content that every platform uses as input. If one channel softens, the others stabilize you.
-
-The deeper answer is the same as above: the content we build is the input that all platforms use. That doesn't become worthless when an algorithm changes. It becomes more valuable as the shortcut-seekers get filtered out.`
-    },
-    {
-      question: "Why are you offering such steep discounts?",
-      answer: `Three reasons, all straightforward.
-
-We need proof of concept. We've validated this system through our own testing and research, but we don't have client results yet. Your success becomes the case studies that let us charge full price to everyone after you.
-
-We need a feedback loop. Early clients surface things you can't find in internal testing. What's the onboarding friction? Where does the reporting confuse people? What does a real agent actually need versus what we assumed? You'll shape the product.
-
-We need referrals. If this delivers what we're promising, we'll ask for 1-2 referrals to fellow agents you respect. That's the currency we're asking for in exchange for the discount.
-
-What you get in return: 48% off for life, first-mover market claim, and direct founder access for as long as you're a client. After three spots fill, that's gone. Standard pricing at $2,499/month with no lifetime lock and no market priority.
-
-This isn't charity. It's a trade with clear terms on both sides.`
-    },
-    {
-      question: "How is this different from just being a beta tester?",
-      answer: `A beta tester gets experimental service at a discount. A founding partner gets a proven strategy at a discount.
-
-The research is done. Six months, 200+ hours, 50 markets analyzed, 50+ strategies tested. We kept the 15 that worked. You're not funding the research phase — you're getting early access to its output.
-
-The difference in practice: a beta tester has no guarantee because the service is genuinely unproven. We're offering a milestone-based guarantee because we're confident enough in the system to put that in writing.
-
-You're a first-mover, not a guinea pig. The discount reflects the trust you're placing in us without a client track record — not the experimental nature of what we're building.`
-    },
-    {
-      question: "What happens to my pricing if I cancel and rejoin later?",
-      answer: `You lose founding partner pricing permanently.
-
-The lifetime lock applies only as long as you remain a continuous client. If you cancel — for any reason other than us failing to deliver on the guarantee — and later rejoin, you rejoin at standard pricing ($2,499/month).
-
-One exception: If we fail to deliver on milestones and you cancel as a result, you can rejoin at founding partner pricing within six months. If we didn't hold up our end, you shouldn't lose your rate over it.
-
-This is a one-time offer tied to being in the first three spots. It doesn't come back.`
-    },
-    {
-      question: "Can I speak with a current client before signing up?",
-      answer: `Not yet — there are no current clients. That's the entire premise of the founding partner structure and we're not going to pretend otherwise.
-
-Here's what we can offer instead:
-• A live audit showing you exactly what AI search looks like in your market right now — real searches, real results, no slides
-• Full transparency on our research methodology and what we tested before building this
-• Direct access to the founders on the strategy call — not a sales rep reading from a script
-• References from people who've worked with us in other capacities, if that's useful
-
-Once founding partners are generating results, this page will be updated with real metrics and real testimonials. The people reading this in Month 4 will have that. You don't — and the founding partner pricing reflects exactly that asymmetry.`
+Exception: If WE fail to deliver (miss milestones) and you cancel as a result, you can rejoin at founding partner pricing anytime within 12 months.`,
     },
   ];
 
@@ -210,24 +138,38 @@ Once founding partners are generating results, this page will be updated with re
         </div>
 
         <div className="max-w-3xl mx-auto">
+          {/* Top 5 FAQs - Always Visible */}
+          <div className="space-y-6 mb-12">
+            {topFaqs.map((faq, index) => (
+              <div key={index} className="bg-card border border-border rounded-xl p-6">
+                <h3 className="text-lg font-bold text-foreground mb-3">{faq.question}</h3>
+                <div className="text-sm text-muted-foreground whitespace-pre-line leading-relaxed">
+                  {faq.answer}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Additional FAQ - Expandable */}
+          <h3 className="text-lg font-semibold text-foreground mb-4">More Questions</h3>
           <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq, index) => (
+            {additionalFaqs.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
                 className="bg-card border border-border rounded-xl px-6 data-[state=open]:border-accent/50"
               >
-                <AccordionTrigger className="text-left text-foreground font-semibold hover:no-underline py-6">
+                <AccordionTrigger className="text-left text-foreground font-semibold hover:no-underline py-5">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6 whitespace-pre-line leading-relaxed">
+                <AccordionContent className="text-muted-foreground pb-6 whitespace-pre-line leading-relaxed text-sm">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
 
-          {/* Contact in FAQ only */}
+          {/* Contact */}
           <div className="text-center mt-10">
             <p className="text-muted-foreground">
               Still have questions? <a href="mailto:fatih@propertycopydesk.com" className="text-accent hover:underline">fatih@propertycopydesk.com</a> · Response time: &lt;4 hours

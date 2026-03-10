@@ -7,7 +7,7 @@ const WhoThisIsntForSection = () => {
     "Agents who need leads this week (we build authority, not instant lead flow)",
     "Agents who only believe in \"proven\" strategies (you'd be Founding Partner #1-3)",
     "Agents who want someone else to own the asset (everything lives on YOUR domain)",
-    "Agents who don't have $1,299/month for 6-12 months (this compounds over time)",
+    "Agents who don't have $999/month for 6 months (this compounds over time)",
   ];
 
   const isFor = [

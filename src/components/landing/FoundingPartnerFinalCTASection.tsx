@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { Check } from "lucide-react";
 
 const BOOKING_URL = "https://cal.com/propertycopydesk/auditcall";
 
@@ -12,43 +13,64 @@ const FoundingPartnerFinalCTASection = () => {
         <span className="section-tag">Ready?</span>
 
         <h2 className="section-heading max-w-3xl mx-auto">
-          Get Your Free AI Visibility Audit
+          Two Spots. One Market. Claim It Before Your Competitor Does.
         </h2>
 
-        <div className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed space-y-3">
-          <p>15-minute call where we:</p>
-          <ul className="text-left max-w-md mx-auto space-y-2 text-base">
-            <li className="flex items-start gap-2">
-              <span className="text-accent mt-0.5">→</span>
-              <span>Show you live ChatGPT searches in your market</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-accent mt-0.5">→</span>
-              <span>Reveal which competitors are already cited</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-accent mt-0.5">→</span>
-              <span>Identify your current AI visibility score (0-100%)</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-accent mt-0.5">→</span>
-              <span>Explain exactly how we'd build your authority</span>
-            </li>
-          </ul>
-          <p className="text-foreground font-medium">No pitch. No pressure. Just data.</p>
+        <div className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed space-y-4">
+          <p>
+            We're not running countdown timers or fake urgency.
+          </p>
+          <p>
+            There are genuinely 2 spots remaining because we work with 3 founding partners total and one audit is already scheduled.
+          </p>
+          <p>
+            When these fill, this page goes to a waitlist for standard pricing at $1,599/month with no lifetime lock and no market protection.
+          </p>
+          <p className="text-foreground font-semibold text-xl">
+            The choice is simple:
+          </p>
+          <p>
+            Own your market's AI visibility now at $999/month (locked forever)... or pay $1,599/month to compete with whoever claimed it first.
+          </p>
         </div>
 
         <Button
           onClick={() => window.open(BOOKING_URL, "_blank")}
           size="lg"
-          className="btn-gold-shine text-lg md:text-xl py-6 md:py-8 px-8 md:px-12 rounded-lg font-semibold mb-6"
+          className="btn-gold-shine text-lg md:text-xl py-6 md:py-8 px-8 md:px-12 rounded-lg font-semibold mb-4"
         >
-          Book Your Free Audit
+          Get Your Free AI Visibility Check
         </Button>
 
-        <p className="text-sm text-muted-foreground">
-          One agent per market · 2 founding spots remaining
+        <p className="text-sm text-muted-foreground mb-2">
+          See exactly where you rank when AI recommends agents
         </p>
+        <p className="text-xs text-muted-foreground mb-8">
+          15-minute audit · No pitch · One agent per market
+        </p>
+
+        <div className="max-w-xl mx-auto text-left bg-card border border-border rounded-xl p-6">
+          <p className="text-sm font-semibold text-foreground mb-3">On the call, we'll show you:</p>
+          <ul className="space-y-2 text-sm text-muted-foreground">
+            <li className="flex items-start gap-2">
+              <Check className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+              <span><span className="font-medium text-foreground">Live test:</span> Who ChatGPT recommends in your market (and where you rank)</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+              <span><span className="font-medium text-foreground">Your authority gap:</span> What's missing that's keeping AI from citing you</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+              <span><span className="font-medium text-foreground">Competitive analysis:</span> Which agents are beating you and how</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+              <span><span className="font-medium text-foreground">Custom strategy:</span> What it would take to dominate your market</span>
+            </li>
+          </ul>
+          <p className="text-xs text-muted-foreground mt-4 text-center">No obligation. No pitch. Just data.</p>
+        </div>
       </div>
     </section>
   );
