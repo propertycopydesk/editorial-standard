@@ -35,7 +35,7 @@ export const trackEvent = (
     window.gtag('event', eventName, parameters);
   }
   // Also log in development
-  if (process.env.NODE_ENV === 'development') {
+  if (import.meta.env.DEV) {
     console.log('[Analytics]', eventName, parameters);
   }
 };
