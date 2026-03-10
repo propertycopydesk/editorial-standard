@@ -74,7 +74,7 @@ const FoundingPartnerExpectationsSection = () => {
   ];
 
   return (
-    <section className="section-padding">
+    <section className="section-padding bg-secondary/20">
       <div ref={ref} className="container-editorial scroll-reveal">
         <div className="text-center mb-8">
           <span className="section-tag">Realistic Timeline</span>
@@ -85,19 +85,13 @@ const FoundingPartnerExpectationsSection = () => {
           We're not promising instant leads or overnight authority. We're promising a defensible market position built on a timeline that creates a competitive moat.
         </p>
 
-        {/* Phases */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {phases.map((phase, index) => (
-            <div
-              key={index}
-              className="bg-card border border-border rounded-xl p-6 card-glow"
-            >
+            <div key={index} className="bg-card border border-border rounded-xl p-6 card-glow">
               <span className="text-sm font-semibold text-accent uppercase tracking-wide">
                 {phase.period}
               </span>
-              <h3 className="text-xl font-bold text-foreground mt-1 mb-4">
-                {phase.title}
-              </h3>
+              <h3 className="text-xl font-bold text-foreground mt-1 mb-4">{phase.title}</h3>
 
               {phase.happening && (
                 <div className="mb-3">
