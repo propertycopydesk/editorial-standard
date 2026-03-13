@@ -110,11 +110,11 @@ const NewHeroSection = () => {
           </span>
           <span className="flex items-center gap-1.5">
             <Check className="w-4 h-4 text-accent" />
-            Everything we build lives on YOUR domain
+            Everything we build lives on YOUR domain (you own it forever)
           </span>
           <span className="flex items-center gap-1.5">
             <Check className="w-4 h-4 text-accent" />
-            2 founding partner spots remaining
+            2 introductory offer spots remaining
           </span>
         </div>
       </div>

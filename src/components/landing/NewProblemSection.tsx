@@ -40,7 +40,11 @@ const NewProblemSection = () => {
           </div>
 
           <p>
-            And here's the part that should terrify you: The agents AI IS recommending? They claimed their visibility 6 months ago. While you were focused on this month's closings, they were building the authority that's feeding them free, organic seller leads today.
+            And here's the part that should terrify you: The agents AI IS recommending?
+          </p>
+
+          <p>
+            They claimed their visibility 6 months ago. While you were focused on this month's closings, they were building the authority that's feeding them free, organic seller leads today.
           </p>
 
           <p className="text-foreground font-medium">

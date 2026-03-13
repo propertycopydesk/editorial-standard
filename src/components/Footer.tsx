@@ -148,7 +148,7 @@ const Footer = () => {
               </div>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              AI visibility + local authority content that gets you cited by ChatGPT, Perplexity, Gemini, and Claude.
+              AI visibility + local authority content that gets you cited by AI.
             </p>
             {/* Social Links */}
             <div className="flex gap-4">

@@ -21,7 +21,7 @@ const FoundingPartnerFinalCTASection = () => {
             We're not running countdown timers or fake urgency.
           </p>
           <p>
-            There are genuinely 2 spots remaining because we work with 3 founding partners total and one audit is already scheduled.
+            There are genuinely 2 spots remaining because we work with 3 introductory offer clients total and one audit is already scheduled.
           </p>
           <p>
             When these fill, this page goes to a waitlist for standard pricing at $1,599/month with no lifetime lock and no market protection.
