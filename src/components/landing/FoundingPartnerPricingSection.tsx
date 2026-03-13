@@ -12,7 +12,7 @@ const FoundingPartnerPricingSection = () => {
       <div ref={ref} className="container-editorial scroll-reveal">
         <div className="text-center mb-12">
           <span className="section-tag">The Investment</span>
-          <h2 className="section-heading">Founding Partner Pricing</h2>
+          <h2 className="section-heading">Introductory Offer</h2>
           <p className="text-lg text-accent font-semibold">Locked for Life · 2 Spots Remaining</p>
         </div>
 
@@ -94,7 +94,7 @@ const FoundingPartnerPricingSection = () => {
         {/* Investment Breakdown */}
         <div className="bg-card border border-border rounded-2xl p-8 max-w-2xl mx-auto mb-12">
           <h3 className="text-lg font-bold text-foreground mb-4 text-center">
-            YOUR YEAR 1 INVESTMENT (Founding Partner)
+            YOUR YEAR 1 INVESTMENT (Introductory Offer)
           </h3>
           <div className="space-y-2 text-sm text-muted-foreground mb-4">
             <div className="flex justify-between">
@@ -118,9 +118,9 @@ const FoundingPartnerPricingSection = () => {
           </p>
         </div>
 
-        {/* After Founding Partners */}
+        {/* After Introductory Offers */}
         <div className="bg-secondary/50 border border-border rounded-xl p-6 max-w-2xl mx-auto mb-12">
-          <h4 className="font-bold text-foreground mb-3 text-center">AFTER FOUNDING PARTNERS FILL:</h4>
+          <h4 className="font-bold text-foreground mb-3 text-center">AFTER INTRODUCTORY OFFERS SELL OUT:</h4>
           <div className="text-sm text-muted-foreground text-center space-y-1">
             <p>Build Phase (Months 1-6): <span className="font-semibold text-foreground">$1,599/month</span></p>
             <p>Maintenance (Month 7+): <span className="font-semibold text-foreground">$1,299/month</span></p>
@@ -128,7 +128,7 @@ const FoundingPartnerPricingSection = () => {
           </div>
           <div className="flex items-center justify-center gap-2 mt-4 text-accent font-bold">
             <Lock className="w-4 h-4" />
-            <span>YOUR FOUNDING PARTNER SAVINGS: $7,200</span>
+            <span>YOUR INTRODUCTORY OFFER SAVINGS: $7,200</span>
           </div>
           <p className="text-xs text-muted-foreground text-center mt-1">(Locked in forever as long as you remain a client)</p>
         </div>

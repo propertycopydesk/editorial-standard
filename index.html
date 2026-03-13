@@ -4,20 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PropertyCopyDesk | AI Visibility for Real Estate Agents</title>
-    <meta name="description" content="Get cited by ChatGPT, Google AI & Perplexity when sellers search for agents. AI-optimized local authority content. 1 agent per market. $999/mo founding rate." />
+    <meta name="description" content="Get cited by ChatGPT, Google AI & Perplexity when sellers search for agents. AI-optimized local authority content. 1 agent per market. $999/mo introductory rate." />
     <meta name="keywords" content="AI visibility, real estate agents, ChatGPT citations, local authority content, AI search optimization, real estate marketing" />
     
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="PropertyCopyDesk | AI Visibility for Real Estate Agents" />
-    <meta property="og:description" content="Get cited by ChatGPT, Google AI & Perplexity when sellers search for agents. AI-optimized local authority content. 1 agent per market. $999/mo founding rate." />
+    <meta property="og:title" content="Own Your Market Before AI Changes Real Estate" />
+    <meta property="og:description" content="AI visibility for real estate agents. Local authority content that gets you cited by ChatGPT, Google AI & Perplexity. 1 agent per market. $999/mo introductory rate." />
     <meta property="og:url" content="https://propertycopydesk.com" />
     <meta property="og:image" content="https://propertycopydesk.com/og-image.png" />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="PropertyCopyDesk | AI Visibility for Real Estate Agents" />
-    <meta name="twitter:description" content="Get cited by ChatGPT, Google AI & Perplexity when sellers search for agents. AI-optimized local authority content. 1 agent per market. $999/mo founding rate." />
+    <meta name="twitter:title" content="Own Your Market Before AI Changes Real Estate" />
+    <meta name="twitter:description" content="AI visibility for real estate agents. Local authority content that gets you cited by ChatGPT, Google AI & Perplexity. 1 agent per market. $999/mo introductory rate." />
     <meta name="twitter:image" content="https://propertycopydesk.com/og-image.png" />
     
     <!-- Canonical -->
@@ -25,9 +25,34 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png" />
+
     <!-- Preconnect for fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- DNS prefetch -->
+    <link rel="dns-prefetch" href="https://cal.com" />
+
+    <!-- Lenis smooth scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Only enable Lenis on desktop
+        if (window.innerWidth > 768) {
+          var lenis = new Lenis({
+            duration: 1.2,
+            easing: function(t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
+            smooth: true,
+            smoothTouch: false
+          });
+          function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+          }
+          requestAnimationFrame(raf);
+        }
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>

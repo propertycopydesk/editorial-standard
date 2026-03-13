@@ -13,15 +13,15 @@ const WhyAICitesSection = () => {
 
         <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
           <p>
-            AI platforms don't pick agents randomly. They cite agents with <span className="font-semibold text-foreground">local authority</span>—agents who've published dozens of helpful articles answering the exact questions buyers and sellers ask.
+            AI platforms don't pick agents randomly. They cite agents with <span className="font-semibold text-foreground">local authority</span> agents who've published dozens of helpful articles answering the exact questions buyers and sellers ask.
           </p>
 
           <p>
-            When someone asks ChatGPT "How much is my Austin home worth?" or "Should I sell now or wait?" AI scans millions of websites looking for credible, specific, locally-relevant answers.
+            When someone asks ChatGPT "How much is my Austin home worth?" or "Should I sell now or wait?" AI scans millions of websites looking for credible, recent, specific, and locally-relevant answers.
           </p>
 
           <p>
-            If you have 50+ articles on your website answering these questions—with proper technical optimization so AI can understand them—you get cited.
+            If you have 50+ articles on your website answering these questions (with proper technical optimization so AI can understand them) you get cited.
           </p>
 
           <p>
@@ -31,11 +31,11 @@ const WhyAICitesSection = () => {
           <div className="space-y-4 pt-4">
             <p><span className="font-bold text-foreground">The problem:</span> Building that authority takes 6 months minimum.</p>
             <p><span className="font-bold text-foreground">The opportunity:</span> Most agents in your market haven't figured this out yet.</p>
-            <p><span className="font-bold text-foreground">The urgency:</span> The agents who START NOW will own their market for the next 5-10 years.</p>
+            <p><span className="font-bold text-foreground">The urgency:</span> The agents who START NOW will own their market.</p>
           </div>
 
           <p>
-            The agents who wait will spend 18-24 months trying to catch up to whoever claimed the position first. Or they'll never catch up at all.
+            The agents who wait will get left behind or spend 18-24 months trying to catch up to whoever claimed the position first.
           </p>
         </div>
 
@@ -54,14 +54,14 @@ const WhyAICitesSection = () => {
             </li>
             <li className="flex items-start gap-2">
               <span className="text-accent mt-0.5">→</span>
-              <span>They're always chasing</span>
+              <span>They get left behind</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-accent mt-0.5">→</span>
               <span>You're always ahead</span>
             </li>
           </ul>
-          <p className="text-foreground font-medium mt-4">It's infrastructure that compounds for years. Not a tactic.</p>
+          <p className="text-foreground font-medium mt-4">This is infrastructure that compounds for years.</p>
         </div>
       </div>
     </section>

@@ -64,7 +64,7 @@ const HowItWorksNew = () => {
             phase="MONTH 3-4"
             title="Momentum"
             whatWeBuild={[
-              "18 more articles (36 total—enough for AI to recognize topical depth)",
+              "18 more articles (36 total, enough for AI to recognize topical depth)",
               "Competitive analysis (who's beating you, how we displace them)",
               "Internal linking structure (helps AI understand your expertise)",
             ]}
