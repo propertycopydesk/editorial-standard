@@ -332,7 +332,7 @@ Your marketing dollars are better spent on traditional networking, referrals, an
             {/* Q4: Partnership */}
             <AccordionItem value="tier1-3" className="bg-card border border-border rounded-xl px-6 data-[state=open]:border-accent/50">
               <AccordionTrigger className="text-left text-foreground font-semibold hover:no-underline py-5">
-                What do we need from you?
+                What do you need from me?
               </AccordionTrigger>
               <AccordionContent className="pb-6">
                 <div className="space-y-5 text-sm text-muted-foreground">
