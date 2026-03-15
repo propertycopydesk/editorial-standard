@@ -454,7 +454,7 @@ Your marketing dollars are better spent on traditional networking, referrals, an
             {/* Q6: Credibility */}
             <AccordionItem value="tier1-5" className="bg-card border border-border rounded-xl px-6 data-[state=open]:border-accent/50">
               <AccordionTrigger className="text-left text-foreground font-semibold hover:no-underline py-5">
-                Why should you trust us?
+                Why should I trust you?
               </AccordionTrigger>
               <AccordionContent className="pb-6">
                 <div className="space-y-5 text-sm text-muted-foreground">

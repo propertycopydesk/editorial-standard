@@ -61,18 +61,6 @@
     scroll-padding-top: 80px;
   }
 
-  /* Disable smooth scroll when Lenis is active */
-  html.lenis, html.lenis body {
-    height: auto;
-  }
-
-  .lenis.lenis-smooth {
-    scroll-behavior: auto;
-  }
-
-  .lenis.lenis-smooth [data-lenis-prevent] {
-    overscroll-behavior: contain;
-  }
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
