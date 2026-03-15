@@ -16,6 +16,8 @@ import {
   getPostsByCategory 
 } from "@/data/blogPosts";
 
+const BOOKING_URL = "https://cal.com/propertycopydesk/auditcall";
+
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState("");
@@ -44,37 +46,32 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <header className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-b border-border z-40">
+      {/* Navigation - matching landing page */}
+      <header className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border z-40">
         <nav className="container-editorial py-4">
           <div className="flex items-center justify-between">
-            <Link to="/" className="focus:outline-none">
-              <div className="flex flex-col items-start">
-                <span className="font-serif text-lg font-semibold tracking-wide text-foreground">
-                  PROPERTY
-                </span>
-                <div className="w-10 h-px bg-accent my-0.5" />
-                <span className="font-serif text-xs tracking-[0.2em] text-foreground">
-                  COPY DESK
-                </span>
-              </div>
+            <Link to="/" className="flex flex-col items-start">
+              <span className="font-serif text-lg md:text-xl font-semibold tracking-wide text-foreground">
+                PROPERTY
+              </span>
+              <div className="w-10 h-px bg-accent my-0.5" />
+              <span className="font-serif text-[10px] md:text-xs tracking-[0.2em] text-foreground">
+                COPY DESK
+              </span>
             </Link>
 
-            <div className="hidden md:flex items-center gap-8">
-              <Link to="/" className="text-sm font-sans text-muted-foreground hover:text-foreground transition-colors">
+            <div className="hidden md:flex items-center gap-4 md:gap-6">
+              <Link to="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Home
               </Link>
-              <Link to="/service" className="text-sm font-sans text-muted-foreground hover:text-foreground transition-colors">
-                Listings
-              </Link>
-              <Link to="/blog" className="text-sm font-sans text-foreground font-medium">
+              <Link to="/blog" className="text-sm text-foreground font-medium">
                 Blog
               </Link>
-              <Link to="/consulting" className="text-sm font-sans text-muted-foreground hover:text-foreground transition-colors">
-                Consulting
-              </Link>
-              <Button variant="editorial" size="sm" onClick={() => setIsModalOpen(true)}>
-                Get Started
+              <Button
+                onClick={() => window.open(BOOKING_URL, "_blank")}
+                className="btn-gold-shine text-sm md:text-base py-2 md:py-3 px-4 md:px-6 rounded-lg font-semibold"
+              >
+                Get AI Visibility Check
               </Button>
             </div>
 
@@ -89,20 +86,17 @@ const Blog = () => {
 
           {isMobileMenuOpen && (
             <div className="md:hidden mt-4 pt-4 border-t border-border space-y-4">
-              <Link to="/" className="block text-sm font-sans text-muted-foreground hover:text-foreground transition-colors">
+              <Link to="/" className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Home
               </Link>
-              <Link to="/service" className="block text-sm font-sans text-muted-foreground hover:text-foreground transition-colors">
-                Listings
-              </Link>
-              <Link to="/blog" className="block text-sm font-sans text-foreground font-medium">
+              <Link to="/blog" className="block text-sm text-foreground font-medium">
                 Blog
               </Link>
-              <Link to="/consulting" className="block text-sm font-sans text-muted-foreground hover:text-foreground transition-colors">
-                Consulting
-              </Link>
-              <Button variant="editorial" size="sm" className="w-full" onClick={() => { setIsModalOpen(true); setIsMobileMenuOpen(false); }}>
-                Get Started
+              <Button
+                onClick={() => { window.open(BOOKING_URL, "_blank"); setIsMobileMenuOpen(false); }}
+                className="btn-gold-shine w-full text-sm py-2 px-4 rounded-lg font-semibold"
+              >
+                Get AI Visibility Check
               </Button>
             </div>
           )}
@@ -188,7 +182,6 @@ const Blog = () => {
 
             {/* Sidebar */}
             <aside className="space-y-8">
-              {/* Lead Magnet CTA */}
               <LeadMagnetBox
                 title="Download Free Toolkit"
                 description="10 templates + 5 scripts that save 5+ hours per week"
@@ -196,7 +189,6 @@ const Blog = () => {
                 variant="sidebar"
               />
 
-              {/* Recent Posts */}
               <div className="bg-card border border-border rounded-lg p-5">
                 <h3 className="font-serif text-lg text-foreground mb-4">Recent Posts</h3>
                 <div className="space-y-0">
@@ -206,7 +198,6 @@ const Blog = () => {
                 </div>
               </div>
 
-              {/* Popular Posts */}
               <div className="bg-card border border-border rounded-lg p-5">
                 <h3 className="font-serif text-lg text-foreground mb-4">Popular Posts</h3>
                 <div className="space-y-0">
@@ -216,7 +207,6 @@ const Blog = () => {
                 </div>
               </div>
 
-              {/* Email Signup */}
               <div className="bg-muted border border-border rounded-lg p-5">
                 <h3 className="font-serif text-lg text-foreground mb-2">Stay Updated</h3>
                 <p className="text-sm text-muted-foreground mb-4 font-sans">

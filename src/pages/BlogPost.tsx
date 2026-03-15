@@ -7,6 +7,8 @@ import LeadMagnetBox from "@/components/LeadMagnetBox";
 import ConsultationModal from "@/components/ConsultationModal";
 import { getPostBySlug, getRelatedPosts } from "@/data/blogPosts";
 
+const BOOKING_URL = "https://cal.com/propertycopydesk/auditcall";
+
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = getPostBySlug(slug || "");
@@ -35,17 +37,23 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-b border-border z-40">
+      <header className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border z-40">
         <nav className="container-editorial py-4 flex items-center justify-between">
           <Link to="/" className="flex flex-col items-start">
-            <span className="font-serif text-lg font-semibold tracking-wide text-foreground">PROPERTY</span>
+            <span className="font-serif text-lg md:text-xl font-semibold tracking-wide text-foreground">PROPERTY</span>
             <div className="w-10 h-px bg-accent my-0.5" />
-            <span className="font-serif text-xs tracking-[0.2em] text-foreground">COPY DESK</span>
+            <span className="font-serif text-[10px] md:text-xs tracking-[0.2em] text-foreground">COPY DESK</span>
           </Link>
-          <div className="hidden md:flex items-center gap-8">
-            <Link to="/" className="text-sm font-sans text-muted-foreground hover:text-foreground">Home</Link>
-            <Link to="/blog" className="text-sm font-sans text-foreground font-medium">Blog</Link>
-            <Link to="/consulting" className="text-sm font-sans text-muted-foreground hover:text-foreground">Consulting</Link>
+          <div className="flex items-center gap-4 md:gap-6">
+            <Link to="/" className="hidden md:block text-sm text-muted-foreground hover:text-foreground transition-colors">Home</Link>
+            <Link to="/blog" className="hidden md:block text-sm text-muted-foreground hover:text-foreground transition-colors">Blog</Link>
+            <Button
+              onClick={() => window.open(BOOKING_URL, "_blank")}
+              className="btn-gold-shine text-sm md:text-base py-2 md:py-3 px-4 md:px-6 rounded-lg font-semibold"
+            >
+              <span className="hidden sm:inline">Get AI Visibility Check</span>
+              <span className="sm:hidden">Free Audit</span>
+            </Button>
           </div>
         </nav>
       </header>
