@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import ChatGPTArticle from "./pages/ChatGPTArticle";
 import Pricing from "./pages/Pricing";
 import NotFound from "./pages/NotFound";
 import ExitIntentPopup from "./components/ExitIntentPopup";
