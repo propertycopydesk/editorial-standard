@@ -387,7 +387,7 @@ Your marketing dollars are better spent on traditional networking, referrals, an
             {/* Q5: Maintenance */}
             <AccordionItem value="tier1-4" className="bg-card border border-border rounded-xl px-6 data-[state=open]:border-accent/50">
               <AccordionTrigger className="text-left text-foreground font-semibold hover:no-underline py-5">
-                What happens if you stop after Month 6?
+                What happens if I stop after Month 6?
               </AccordionTrigger>
               <AccordionContent className="pb-6">
                 <div className="space-y-5 text-sm text-muted-foreground">
