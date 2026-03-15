@@ -1,22 +1,49 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Helmet } from "react-helmet-async";
 import Footer from "@/components/Footer";
 
 const BOOKING_URL = "https://cal.com/propertycopydesk/auditcall";
 
-const ChatGPTArticle = () => {
-  return (
-    <>
-      <Helmet>
-        <title>How Real Estate Agents Get Cited by ChatGPT in 2025</title>
-        <meta name="description" content="31% of buyers used AI to find agents in 2025. Here's exactly how real estate agents get cited by ChatGPT, Perplexity, and Gemini — and how long it takes." />
-        <link rel="canonical" href="https://propertycopydesk.com/blog/how-real-estate-agents-get-cited-by-chatgpt" />
-        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"Article","headline":"How Real Estate Agents Get Cited by ChatGPT in 2025","description":"31% of buyers used AI to find agents in 2025. Here's exactly how real estate agents get cited by ChatGPT, Perplexity, and Gemini — and how long it takes.","author":{"@type":"Person","name":"Fatih","url":"https://propertycopydesk.com"},"publisher":{"@type":"Organization","name":"PropertyCopyDesk","url":"https://propertycopydesk.com"},"datePublished":"2026-03-15","dateModified":"2026-03-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://propertycopydesk.com/blog/how-real-estate-agents-get-cited-by-chatgpt"},"keywords":["how to get cited by chatgpt","AI visibility for real estate agents","chatgpt real estate marketing"]}`}</script>
-        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does ChatGPT decide which real estate agents to recommend?","acceptedAnswer":{"@type":"Answer","text":"ChatGPT primarily draws from Bing's web index for its recommendations. Agents who appear in AI responses typically have published content that Bing has indexed and associated with their market and specialty. Factors that influence this include topical authority, domain trust, schema markup, and Google Business Profile optimization. There's no paid placement. It's based on how well AI can associate your name with a subject."}},{"@type":"Question","name":"How many articles do I need to get cited by AI?","acceptedAnswer":{"@type":"Answer","text":"Semrush research suggests topical authority is typically achieved around 20-30 interconnected articles on a focused subject. For real estate agents targeting a specific market, that means 20-30 articles focused on that market's real estate conditions, neighborhoods, and buyer and seller topics. Publishing them within 60-90 days rather than spread over years significantly accelerates the process."}},{"@type":"Question","name":"Does Google Business Profile affect AI citations?","acceptedAnswer":{"@type":"Answer","text":"Yes, for location-specific queries it has a meaningful impact. Gemini draws directly from Google's index, and GBP signals are part of that index. A fully optimized GBP with accurate categories, active posts, and consistent name, address, and phone data contributes to how confidently Google's systems associate you with a specific market."}},{"@type":"Question","name":"Can I get cited by ChatGPT without a blog?","acceptedAnswer":{"@type":"Answer","text":"Technically yes, but practically it's very difficult. AI models cite sources they've seen address a topic in detail. Without published content, the only way you'd appear is through third-party mentions, press coverage, or highly visible directory profiles. A blog or article section on your website is the most direct, controllable path to AI citations."}},{"@type":"Question","name":"How long does it take to show up in AI search?","acceptedAnswer":{"@type":"Answer","text":"Expect 60-90 days from when you start publishing consistently, assuming you're publishing 2-3 articles per week with schema markup in place and an optimized Google Business Profile. The first 30 days are mostly invisible. Days 31-60 often produce described citations where AI uses your content without naming you. Named citations typically follow in months 2-3."}}]}`}</script>
-      </Helmet>
+const ARTICLE_SCHEMA = '{"@context":"https://schema.org","@type":"Article","headline":"How Real Estate Agents Get Cited by ChatGPT in 2025","description":"31% of buyers used AI to find agents in 2025. Here\'s exactly how real estate agents get cited by ChatGPT, Perplexity, and Gemini — and how long it takes.","author":{"@type":"Person","name":"Fatih","url":"https://propertycopydesk.com"},"publisher":{"@type":"Organization","name":"PropertyCopyDesk","url":"https://propertycopydesk.com"},"datePublished":"2026-03-15","dateModified":"2026-03-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://propertycopydesk.com/blog/how-real-estate-agents-get-cited-by-chatgpt"},"keywords":["how to get cited by chatgpt","AI visibility for real estate agents","chatgpt real estate marketing"]}';
 
+const FAQ_SCHEMA = '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does ChatGPT decide which real estate agents to recommend?","acceptedAnswer":{"@type":"Answer","text":"ChatGPT primarily draws from Bing\'s web index for its recommendations. Agents who appear in AI responses typically have published content that Bing has indexed and associated with their market and specialty."}},{"@type":"Question","name":"How many articles do I need to get cited by AI?","acceptedAnswer":{"@type":"Answer","text":"Semrush research suggests topical authority is typically achieved around 20-30 interconnected articles on a focused subject."}},{"@type":"Question","name":"Does Google Business Profile affect AI citations?","acceptedAnswer":{"@type":"Answer","text":"Yes, for location-specific queries it has a meaningful impact. Gemini draws directly from Google\'s index, and GBP signals are part of that index."}},{"@type":"Question","name":"Can I get cited by ChatGPT without a blog?","acceptedAnswer":{"@type":"Answer","text":"Technically yes, but practically it\'s very difficult. AI models cite sources they\'ve seen address a topic in detail."}},{"@type":"Question","name":"How long does it take to show up in AI search?","acceptedAnswer":{"@type":"Answer","text":"Expect 60-90 days from when you start publishing consistently, assuming you\'re publishing 2-3 articles per week with schema markup in place and an optimized Google Business Profile."}}]}';
+
+const ChatGPTArticle = () => {
+  useEffect(() => {
+    document.title = "How Real Estate Agents Get Cited by ChatGPT in 2025";
+    
+    // Set meta description
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) { metaDesc = document.createElement("meta"); metaDesc.setAttribute("name", "description"); document.head.appendChild(metaDesc); }
+    metaDesc.setAttribute("content", "31% of buyers used AI to find agents in 2025. Here's exactly how real estate agents get cited by ChatGPT, Perplexity, and Gemini — and how long it takes.");
+
+    // Set canonical
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) { canonical = document.createElement("link"); canonical.setAttribute("rel", "canonical"); document.head.appendChild(canonical); }
+    canonical.setAttribute("href", "https://propertycopydesk.com/blog/how-real-estate-agents-get-cited-by-chatgpt");
+
+    // Add JSON-LD schemas
+    const script1 = document.createElement("script");
+    script1.type = "application/ld+json";
+    script1.textContent = ARTICLE_SCHEMA;
+    script1.id = "article-schema";
+    document.head.appendChild(script1);
+
+    const script2 = document.createElement("script");
+    script2.type = "application/ld+json";
+    script2.textContent = FAQ_SCHEMA;
+    script2.id = "faq-schema";
+    document.head.appendChild(script2);
+
+    return () => {
+      document.getElementById("article-schema")?.remove();
+      document.getElementById("faq-schema")?.remove();
+    };
+  }, []);
+
+  return (
       <div className="min-h-screen bg-background">
         {/* Navigation */}
         <header className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border z-40">
