@@ -33,26 +33,6 @@
     <!-- DNS prefetch -->
     <link rel="dns-prefetch" href="https://cal.com" />
 
-    <!-- Lenis smooth scroll -->
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js" defer></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // Only enable Lenis on desktop
-        if (window.innerWidth > 768) {
-          var lenis = new Lenis({
-            duration: 1.2,
-            easing: function(t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
-            smooth: true,
-            smoothTouch: false
-          });
-          function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-          }
-          requestAnimationFrame(raf);
-        }
-      });
-    </script>
   </head>
   <body>
     <div id="root"></div>
