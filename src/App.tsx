@@ -22,6 +22,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/how-real-estate-agents-get-cited-by-chatgpt" element={<ChatGPTArticle />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="*" element={<NotFound />} />

@@ -280,7 +280,6 @@ const ChatGPTArticle = () => {
 
         <Footer />
       </div>
-    </>
   );
 };
 
