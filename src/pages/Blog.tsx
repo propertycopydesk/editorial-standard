@@ -4,7 +4,6 @@ import { Search, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import BlogPostCard from "@/components/BlogPostCard";
-import LeadMagnetBox from "@/components/LeadMagnetBox";
 import Footer from "@/components/Footer";
 import ConsultationModal from "@/components/ConsultationModal";
 import { 
