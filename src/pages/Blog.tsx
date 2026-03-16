@@ -45,7 +45,7 @@ const Blog = () => {
   const popularPosts = getPopularPosts(5);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background grid-pattern">
       {/* Navigation - matching landing page */}
       <header className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border z-40">
         <nav className="container-editorial py-4">
