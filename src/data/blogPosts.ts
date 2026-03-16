@@ -5,6 +5,7 @@ import blogTrcImage from "@/assets/blog-trc.webp";
 import blogUnlockImage from "@/assets/blog-unlock.png";
 import blogDeskImage from "@/assets/blog-desk.png";
 import blogFutureImage from "@/assets/blog-future.webp";
+import blogChatgptImage from "@/assets/blog-chatgpt.webp";
 
 export interface BlogPost {
   id: string;
