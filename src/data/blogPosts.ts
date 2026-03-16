@@ -5,6 +5,7 @@ import blogTrcImage from "@/assets/blog-trc.webp";
 import blogUnlockImage from "@/assets/blog-unlock.png";
 import blogDeskImage from "@/assets/blog-desk.png";
 import blogFutureImage from "@/assets/blog-future.webp";
+import blogChatgptImage from "@/assets/blog-chatgpt.webp";
 
 export interface BlogPost {
   id: string;
@@ -46,7 +47,7 @@ export const blogPosts: BlogPost[] = [
     publishDate: "2026-03-15",
     author: "Fatih",
     featured: true,
-    heroImage: blogGenaiImage,
+    heroImage: blogChatgptImage,
     sections: [
       { title: "What Getting Cited by AI Actually Means", content: "When someone asks ChatGPT 'who should list my home in Austin,' the model doesn't search the internet in real time. It pulls from its training data, supplemented by Bing's index. A citation is when AI mentions your name, brand, or website in a response." },
       { title: "The 5 Factors That Determine Which Agents AI Recommends", content: "Topical authority, content freshness, schema markup, local signals, and domain authority. Together these determine whether AI platforms associate you with expertise in your market." },
