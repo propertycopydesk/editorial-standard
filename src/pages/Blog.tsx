@@ -107,10 +107,10 @@ const Blog = () => {
         {/* Hero Section */}
         <section className="container-editorial text-center mb-16">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-4">
-            Real Estate Insights & Time-Saving Tips
+            Building Local Authority Through AI
           </h1>
           <p className="font-sans text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Learn how top agents save 10-15 hours per week with better copy and smarter workflows
+            Learn how top agents gain visibility, and organic leads with targeted copy and citation tracking
           </p>
         </section>
 
