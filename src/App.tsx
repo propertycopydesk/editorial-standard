@@ -7,7 +7,6 @@ import Index from "./pages/Index";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import ChatGPTArticle from "./pages/ChatGPTArticle";
-import Pricing from "./pages/Pricing";
 import NotFound from "./pages/NotFound";
 import ExitIntentPopup from "./components/ExitIntentPopup";
 
@@ -24,7 +23,7 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/how-real-estate-agents-get-cited-by-chatgpt" element={<ChatGPTArticle />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/pricing" element={<Pricing />} />
+          {/* pricing route removed */}
           <Route path="*" element={<NotFound />} />
         </Routes>
         <ExitIntentPopup />

@@ -4,7 +4,6 @@ import { Search, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import BlogPostCard from "@/components/BlogPostCard";
-import LeadMagnetBox from "@/components/LeadMagnetBox";
 import Footer from "@/components/Footer";
 import ConsultationModal from "@/components/ConsultationModal";
 import { 
@@ -45,7 +44,7 @@ const Blog = () => {
   const popularPosts = getPopularPosts(5);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background grid-pattern">
       {/* Navigation - matching landing page */}
       <header className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border z-40">
         <nav className="container-editorial py-4">
@@ -107,10 +106,10 @@ const Blog = () => {
         {/* Hero Section */}
         <section className="container-editorial text-center mb-16">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-4">
-            Real Estate Insights & Time-Saving Tips
+            Building Local Authority Through AI
           </h1>
           <p className="font-sans text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Learn how top agents save 10-15 hours per week with better copy and smarter workflows
+            Learn how top agents gain visibility, and organic leads with targeted copy and citation tracking
           </p>
         </section>
 
@@ -182,13 +181,6 @@ const Blog = () => {
 
             {/* Sidebar */}
             <aside className="space-y-8">
-              <LeadMagnetBox
-                title="Download Free Toolkit"
-                description="10 templates + 5 scripts that save 5+ hours per week"
-                buttonText="Get Free Toolkit"
-                variant="sidebar"
-              />
-
               <div className="bg-card border border-border rounded-lg p-5">
                 <h3 className="font-serif text-lg text-foreground mb-4">Recent Posts</h3>
                 <div className="space-y-0">
@@ -205,17 +197,6 @@ const Blog = () => {
                     <BlogPostCard key={post.id} post={post} variant="compact" />
                   ))}
                 </div>
-              </div>
-
-              <div className="bg-muted border border-border rounded-lg p-5">
-                <h3 className="font-serif text-lg text-foreground mb-2">Stay Updated</h3>
-                <p className="text-sm text-muted-foreground mb-4 font-sans">
-                  Get weekly tips on real estate copy and workflows
-                </p>
-                <LeadMagnetBox
-                  buttonText="Subscribe"
-                  variant="compact"
-                />
               </div>
             </aside>
           </div>

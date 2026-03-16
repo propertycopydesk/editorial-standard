@@ -35,6 +35,33 @@ export const authorBio = "Fatih Can is the founder of PropertyCopyDesk, bringing
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "0",
+    slug: "how-real-estate-agents-get-cited-by-chatgpt",
+    title: "How Real Estate Agents Get Cited by ChatGPT in 2025",
+    excerpt: "31% of buyers used AI to find agents in 2025. Here's exactly how real estate agents get cited by ChatGPT, Perplexity, and Gemini — and how long it takes.",
+    metaDescription: "31% of buyers used AI to find agents in 2025. Here's exactly how real estate agents get cited by ChatGPT, Perplexity, and Gemini — and how long it takes.",
+    targetKeyword: "how to get cited by chatgpt",
+    category: "Market Trends",
+    readTime: 12,
+    publishDate: "2026-03-15",
+    author: "Fatih",
+    featured: true,
+    heroImage: blogGenaiImage,
+    sections: [
+      { title: "What Getting Cited by AI Actually Means", content: "When someone asks ChatGPT 'who should list my home in Austin,' the model doesn't search the internet in real time. It pulls from its training data, supplemented by Bing's index. A citation is when AI mentions your name, brand, or website in a response." },
+      { title: "The 5 Factors That Determine Which Agents AI Recommends", content: "Topical authority, content freshness, schema markup, local signals, and domain authority. Together these determine whether AI platforms associate you with expertise in your market." },
+      { title: "How to Build Your AI Visibility Foundation", content: "Start with your Google Business Profile, add schema markup, and check NAP consistency across all platforms." },
+      { title: "The Content Strategy That Gets AI Citations", content: "Publish 2-3 articles per week with FAQ sections. Focus on educational queries your target clients actually ask." },
+      { title: "How Long It Takes to See First Results", content: "60-90 days for your first AI citation. At the 6-month mark with 50+ articles, expect 60-80% citation rate in your target market." },
+      { title: "The Bottom Line", content: "The agents who show up in AI search in 2026 are the ones who started building in 2025. The entry barrier is still low." }
+    ],
+    cta: {
+      type: "consultation",
+      text: "Want this done for you? PropertyCopyDesk handles the full system.",
+      buttonText: "Get Your Free AI Visibility Check"
+    }
+  },
+  {
     id: "1",
     slug: "crafting-click-worthy-headlines-and-irresistible-property-descriptions",
     title: "Crafting Click-Worthy Headlines and Irresistible Property Descriptions: Your Ultimate Guide to Transform Browsers into Buyers!",
