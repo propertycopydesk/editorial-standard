@@ -182,13 +182,6 @@ const Blog = () => {
 
             {/* Sidebar */}
             <aside className="space-y-8">
-              <LeadMagnetBox
-                title="Download Free Toolkit"
-                description="10 templates + 5 scripts that save 5+ hours per week"
-                buttonText="Get Free Toolkit"
-                variant="sidebar"
-              />
-
               <div className="bg-card border border-border rounded-lg p-5">
                 <h3 className="font-serif text-lg text-foreground mb-4">Recent Posts</h3>
                 <div className="space-y-0">
@@ -205,17 +198,6 @@ const Blog = () => {
                     <BlogPostCard key={post.id} post={post} variant="compact" />
                   ))}
                 </div>
-              </div>
-
-              <div className="bg-muted border border-border rounded-lg p-5">
-                <h3 className="font-serif text-lg text-foreground mb-2">Stay Updated</h3>
-                <p className="text-sm text-muted-foreground mb-4 font-sans">
-                  Get weekly tips on real estate copy and workflows
-                </p>
-                <LeadMagnetBox
-                  buttonText="Subscribe"
-                  variant="compact"
-                />
               </div>
             </aside>
           </div>

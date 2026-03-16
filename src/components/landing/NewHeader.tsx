@@ -42,7 +42,7 @@ const NewHeader = () => {
           <div className="flex items-center gap-4 md:gap-6">
             <button onClick={() => scrollTo("pricing")} className="hidden md:block text-sm text-muted-foreground hover:text-foreground transition-colors">Pricing</button>
             <button onClick={() => scrollTo("faq")} className="hidden md:block text-sm text-muted-foreground hover:text-foreground transition-colors">FAQ</button>
-            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="hidden md:block text-sm text-muted-foreground hover:text-foreground transition-colors">Book Free Audit</a>
+            <Link to="/blog" className="hidden md:block text-sm text-muted-foreground hover:text-foreground transition-colors">Blog</Link>
             <Button
               onClick={() => window.open(BOOKING_URL, "_blank")}
               className="btn-gold-shine text-sm md:text-base py-2 md:py-3 px-4 md:px-6 rounded-lg font-semibold"
