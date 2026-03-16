@@ -89,12 +89,21 @@ const ChatGPTArticle = () => {
               <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-4 leading-tight">
                 How Real Estate Agents Get Cited by ChatGPT in 2025
               </h1>
-              <div className="flex items-center gap-4 text-sm text-muted-foreground font-sans mb-10">
+              <div className="flex items-center gap-4 text-sm text-muted-foreground font-sans mb-8">
                 <span>By Fatih</span>
                 <span>·</span>
                 <span>March 15, 2026</span>
                 <span>·</span>
                 <span>12 min read</span>
+              </div>
+
+              <div className="aspect-[1200/628] rounded-lg overflow-hidden bg-muted mb-10">
+                <img
+                  src={blogChatgptImage}
+                  alt="How Real Estate Agents Get Cited by ChatGPT in 2025"
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                />
               </div>
 
               {/* Article Body */}
