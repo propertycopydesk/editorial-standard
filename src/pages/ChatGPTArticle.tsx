@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
-import blogChatgptImage from "https://propertycopydesk.com/blog-chatgpt.webp";
+import blogChatgptImage from "@/assets/blog-chatgpt.webp";
 
 const BOOKING_URL = "https://cal.com/propertycopydesk/auditcall";
 
