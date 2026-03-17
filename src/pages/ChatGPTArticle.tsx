@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
-import blogChatgptImage from "@/assets/blog-chatgpt.webp";
+import blogChatgptImage from "https://propertycopydesk.com/blog-chatgpt.webp";
 
 const BOOKING_URL = "https://cal.com/propertycopydesk/auditcall";
 
-const ARTICLE_SCHEMA = '{"@context":"https://schema.org","@type":"Article","headline":"How Real Estate Agents Get Cited by ChatGPT in 2025","description":"31% of buyers used AI to find agents in 2025. Here\'s exactly how real estate agents get cited by ChatGPT, Perplexity, and Gemini — and how long it takes.","author":{"@type":"Person","name":"Fatih","url":"https://propertycopydesk.com"},"publisher":{"@type":"Organization","name":"PropertyCopyDesk","url":"https://propertycopydesk.com"},"datePublished":"2026-03-15","dateModified":"2026-03-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://propertycopydesk.com/blog/how-real-estate-agents-get-cited-by-chatgpt"},"keywords":["how to get cited by chatgpt","AI visibility for real estate agents","chatgpt real estate marketing"]}';
+const ARTICLE_SCHEMA = '{"@context":"https://schema.org","@type":"Article","headline":"How Real Estate Agents Get Cited by ChatGPT in 2026","description":"31% of buyers used AI to find agents in 2026. Here\'s exactly how real estate agents get cited by ChatGPT, Perplexity, and Gemini — and how long it takes.","author":{"@type":"Person","name":"Fatih","url":"https://propertycopydesk.com"},"publisher":{"@type":"Organization","name":"PropertyCopyDesk","url":"https://propertycopydesk.com"},"datePublished":"2026-03-15T00:00:00+00:00","dateModified":"2026-03-17T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://propertycopydesk.com/blog/how-real-estate-agents-get-cited-by-chatgpt"},"keywords":["how to get cited by chatgpt","AI visibility for real estate agents","chatgpt real estate marketing"]}';
 
 const FAQ_SCHEMA = '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does ChatGPT decide which real estate agents to recommend?","acceptedAnswer":{"@type":"Answer","text":"ChatGPT primarily draws from Bing\'s web index for its recommendations. Agents who appear in AI responses typically have published content that Bing has indexed and associated with their market and specialty."}},{"@type":"Question","name":"How many articles do I need to get cited by AI?","acceptedAnswer":{"@type":"Answer","text":"Semrush research suggests topical authority is typically achieved around 20-30 interconnected articles on a focused subject."}},{"@type":"Question","name":"Does Google Business Profile affect AI citations?","acceptedAnswer":{"@type":"Answer","text":"Yes, for location-specific queries it has a meaningful impact. Gemini draws directly from Google\'s index, and GBP signals are part of that index."}},{"@type":"Question","name":"Can I get cited by ChatGPT without a blog?","acceptedAnswer":{"@type":"Answer","text":"Technically yes, but practically it\'s very difficult. AI models cite sources they\'ve seen address a topic in detail."}},{"@type":"Question","name":"How long does it take to show up in AI search?","acceptedAnswer":{"@type":"Answer","text":"Expect 60-90 days from when you start publishing consistently, assuming you\'re publishing 2-3 articles per week with schema markup in place and an optimized Google Business Profile."}}]}';
 
 const ChatGPTArticle = () => {
   useEffect(() => {
-    document.title = "How Real Estate Agents Get Cited by ChatGPT in 2025";
+    document.title = "How Real Estate Agents Get Cited by ChatGPT in 2026";
     
     // Set meta description
     let metaDesc = document.querySelector('meta[name="description"]');
@@ -87,7 +87,7 @@ const ChatGPTArticle = () => {
                 AI Visibility
               </span>
               <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-foreground mb-4 leading-tight">
-                How Real Estate Agents Get Cited by ChatGPT in 2025
+                How Real Estate Agents Get Cited by ChatGPT in 2026
               </h1>
               <div className="flex items-center gap-4 text-sm text-muted-foreground font-sans mb-8">
                 <span>By Fatih</span>
@@ -100,7 +100,7 @@ const ChatGPTArticle = () => {
               <div className="aspect-[1200/628] rounded-lg overflow-hidden bg-muted mb-10">
                 <img
                   src={blogChatgptImage}
-                  alt="How Real Estate Agents Get Cited by ChatGPT in 2025"
+                  alt="How Real Estate Agents Get Cited by ChatGPT in 2026"
                   className="w-full h-full object-cover"
                   loading="eager"
                 />
