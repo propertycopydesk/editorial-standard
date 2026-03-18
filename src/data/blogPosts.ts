@@ -75,7 +75,7 @@ export const blogPosts: BlogPost[] = [
   publishDate: "2026-03-18",
   author: "Fatih",
   featured: true,
-  heroImage: blogChatgptImage,
+  heroImage: blogAiVisibilityImage,
   sections: [
     { title: "The 4 Reasons AI Doesn't Know You Exist", content: "No topical authority, no schema markup, thin or duplicated content, and weak local signals. Together these four gaps explain why most real estate agents are invisible in AI search." },
     { title: "What AI Crawlers Actually Look For on Your Website", content: "Three things: crawlability, relevance signals, and authority indicators. Your site needs to be indexed, associated with a specific market and specialty, and backed by credible external references." },
