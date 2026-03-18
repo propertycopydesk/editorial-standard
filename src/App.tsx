@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import ChatGPTArticle from "./pages/ChatGPTArticle";
+import AIVisibilityArticle from "./pages/AIVisibilityArticle";
 import NotFound from "./pages/NotFound";
 import ExitIntentPopup from "./components/ExitIntentPopup";
 
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/how-real-estate-agents-get-cited-by-chatgpt" element={<ChatGPTArticle />} />
+          <Route path="/blog/why-your-real-estate-website-doesnt-show-up-in-chatgpt" element={<AIVisibilityArticle />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           {/* pricing route removed */}
           <Route path="*" element={<NotFound />} />
