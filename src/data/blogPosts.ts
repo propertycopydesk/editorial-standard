@@ -38,7 +38,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "0",
     slug: "how-real-estate-agents-get-cited-by-chatgpt",
-    title: "How Real Estate Agents Get Cited by ChatGPT in 2025",
+    title: "How Real Estate Agents Get Cited by ChatGPT in 2026",
     excerpt: "31% of buyers used AI to find agents in 2025. Here's exactly how real estate agents get cited by ChatGPT, Perplexity, and Gemini — and how long it takes.",
     metaDescription: "31% of buyers used AI to find agents in 2025. Here's exactly how real estate agents get cited by ChatGPT, Perplexity, and Gemini — and how long it takes.",
     targetKeyword: "how to get cited by chatgpt",
@@ -62,6 +62,33 @@ export const blogPosts: BlogPost[] = [
       buttonText: "Get Your Free AI Visibility Check"
     }
   },
+  {
+  id: "8",
+  slug: "why-your-real-estate-website-doesnt-show-up-in-chatgpt",
+  title: "Why Your Real Estate Website Doesn't Show Up in ChatGPT",
+  excerpt: "You searched for your name in ChatGPT and got nothing. Here are the 4 specific reasons AI doesn't know your real estate website exists — and how to fix each one in 60-90 days.",
+  metaDescription: "You searched for your name in ChatGPT and got nothing. Here are the 4 specific reasons AI doesn't know your real estate website exists — and how to fix each one in 60-90 days.",
+  targetKeyword: "why doesn't chatgpt recommend me",
+  category: "Market Trends",
+  readTime: 9,
+  publishDate: "2026-03-18",
+  author: "Fatih",
+  featured: true,
+  heroImage: blogChatgptImage,
+  sections: [
+    { title: "The 4 Reasons AI Doesn't Know You Exist", content: "No topical authority, no schema markup, thin or duplicated content, and weak local signals. Together these four gaps explain why most real estate agents are invisible in AI search." },
+    { title: "What AI Crawlers Actually Look For on Your Website", content: "Three things: crawlability, relevance signals, and authority indicators. Your site needs to be indexed, associated with a specific market and specialty, and backed by credible external references." },
+    { title: "The Minimum Viable AI Presence for a Real Estate Agent", content: "20-30 interconnected articles, Article and FAQPage schema on every piece, a fully optimized Google Business Profile, and a sitemap submitted to Google Search Console." },
+    { title: "A Simple Test to Check Your AI Visibility Right Now", content: "Search your market in ChatGPT, Perplexity, and Gemini. Note who appears. Then search your name directly. If AI returns nothing, your content footprint is too thin to draw from." },
+    { title: "How to Fix This in 60-90 Days", content: "Week 1: audit and optimize GBP. Weeks 2-5: publish 2-3 articles per week with FAQ sections. Week 6: add schema to all posts. Weeks 7-8: build internal links and submit sitemap." },
+    { title: "The Bottom Line", content: "The agents appearing in AI search in 2026 built their content infrastructure before their competitors started paying attention. Most markets still have open territory — but the window is closing." }
+  ],
+  cta: {
+    type: "consultation",
+    text: "Want this done for you? PropertyCopyDesk handles the full build for one agent per market.",
+    buttonText: "Get Your Free AI Visibility Check"
+  }
+},
   {
     id: "1",
     slug: "crafting-click-worthy-headlines-and-irresistible-property-descriptions",
