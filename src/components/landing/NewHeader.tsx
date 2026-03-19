@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
-const BOOKING_URL = "https://cal.com/propertycopydesk/auditcall";
-
 const NewHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -44,11 +42,16 @@ const NewHeader = () => {
             <button onClick={() => scrollTo("faq")} className="hidden md:block text-sm text-muted-foreground hover:text-foreground transition-colors">FAQ</button>
             <Link to="/blog" className="hidden md:block text-sm text-muted-foreground hover:text-foreground transition-colors">Blog</Link>
             <Button
-              onClick={() => window.open(BOOKING_URL, "_blank")}
-              className="btn-gold-shine text-sm md:text-base py-2 md:py-3 px-4 md:px-6 rounded-lg font-semibold"
+              data-tally-open="D4eE7N"
+              data-tally-layout="modal"
+              data-tally-emoji-text="🌀"
+              data-tally-emoji-animation="spin"
+              data-tally-auto-close="3000"
+              data-tally-form-events-forwarding="1"
+              className="btn-gold-shine text-sm md:text-base py-2 md:py-3 px-4 md:px-6 rounded-lg font-semibold cursor-pointer"
             >
-              <span className="hidden sm:inline">Get AI Visibility Check</span>
-              <span className="sm:hidden">Free Audit</span>
+              <span className="hidden sm:inline">Am I Invisible to AI?</span>
+              <span className="sm:hidden">Am I Invisible?</span>
             </Button>
           </div>
         </div>
