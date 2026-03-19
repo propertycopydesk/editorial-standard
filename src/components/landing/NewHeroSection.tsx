@@ -97,9 +97,20 @@ const NewHeroSection = () => {
           <p className="text-sm text-muted-foreground mb-1">
             See exactly where you rank when AI recommends agents in your market
           </p>
-          <p className="text-xs text-muted-foreground">
+          <p className="text-xs text-muted-foreground mb-4">
             15-minute audit · No pitch · One agent per market
           </p>
+          <button
+            data-tally-open="D4eE7N"
+            data-tally-layout="modal"
+            data-tally-emoji-text="🌀"
+            data-tally-emoji-animation="spin"
+            data-tally-auto-close="3000"
+            data-tally-form-events-forwarding="1"
+            className="text-sm text-muted-foreground hover:text-accent underline underline-offset-2 transition-colors cursor-pointer"
+          >
+            Not ready for a call? Get a free AI Visibility Score instead →
+          </button>
         </div>
 
         {/* Trust Lines */}
