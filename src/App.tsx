@@ -9,7 +9,6 @@ import BlogPost from "./pages/BlogPost";
 import ChatGPTArticle from "./pages/ChatGPTArticle";
 import AIVisibilityArticle from "./pages/AIVisibilityArticle";
 import NotFound from "./pages/NotFound";
-import ExitIntentPopup from "./components/ExitIntentPopup";
 
 const queryClient = new QueryClient();
 
@@ -28,7 +27,6 @@ const App = () => (
           {/* pricing route removed */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <ExitIntentPopup />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
