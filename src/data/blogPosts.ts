@@ -7,7 +7,7 @@ import blogDeskImage from "@/assets/blog-desk.png";
 import blogFutureImage from "@/assets/blog-future.webp";
 import blogChatgptImage from "@/assets/blog-chatgpt.webp";
 import blogAiVisibilityImage from "@/assets/blog-chatgpt1.jpg";
-import blogZillowImage from "@/assets/blog-chatgpt.webp";
+import blogZillowImage from "@/assets/blog-zillow.jpeg";
 
 export interface BlogPost {
   id: string;
