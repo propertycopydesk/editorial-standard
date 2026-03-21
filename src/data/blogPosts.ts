@@ -7,6 +7,7 @@ import blogDeskImage from "@/assets/blog-desk.png";
 import blogFutureImage from "@/assets/blog-future.webp";
 import blogChatgptImage from "@/assets/blog-chatgpt.webp";
 import blogAiVisibilityImage from "@/assets/blog-chatgpt1.jpg";
+import blogZillowImage from "@/assets/blog-chatgpt.webp";
 
 export interface BlogPost {
   id: string;
@@ -87,6 +88,33 @@ export const blogPosts: BlogPost[] = [
   cta: {
     type: "consultation",
     text: "Want this done for you? PropertyCopyDesk handles the full build for one agent per market.",
+    buttonText: "Get Your Free AI Visibility Check"
+  }
+},
+  {
+    id: "9",
+    slug: "ai-visibility-for-real-estate-agents-why-zillow-leads-wont-save-you",
+    title: "AI Visibility for Real Estate Agents: Why Zillow Leads Won't Save You",
+    excerpt: "Zillow leads cost $2,000-15,000 per closing and reset to zero when you stop paying. Here's why AI visibility is the marketing stack that survives 2025-2030.",
+    metaDescription: "Zillow leads cost $2,000-15,000 per closing and reset to zero when you stop paying. Here's why AI visibility is the marketing stack that survives 2025-2030.",
+    targetKeyword: "AI marketing for real estate agents",
+    category: "Market Trends",
+    readTime: 11,
+    publishDate: "2026-03-21",
+    author: "Fatih",
+   featured: true,
+    heroImage: blogZillowImage,
+    sections: [
+    { title: "The Zillow Lead Economics Problem", content: "At a 2% conversion rate and $100 per lead average, you need 50 Zillow leads to close one deal. That's $5,000 in lead spend per closing before factoring in your time — and every dollar resets to zero the moment you stop paying." },
+    { title: "What Happens When AI Replaces the Zillow Search", content: "31% of buyers used AI to research agents in 2025, projected to reach 65% by 2027. Your Zillow Premier Agent profile doesn't feed the AI index. The agents appearing in ChatGPT responses have built published expertise on their own domain." },
+    { title: "Owned Visibility vs. Rented Visibility", content: "Zillow leads are rented. AI citations are owned. Content on your domain compounds over time, survives platform changes, and cannot be taken away when a platform changes its terms." },
+    { title: "The Marketing Stack That Survives 2025-2030", content: "Four layers: a 20-30 article content cluster, Article and FAQPage schema on every piece, a fully optimized Google Business Profile, and direct lead capture on your own website." },
+    { title: "How Top Agents Are Already Making This Shift", content: "Agents who appear in AI search have published 15-20+ focused articles, included FAQ sections, updated their GBP recently, and added schema markup. The allocation is shifting from rented platforms to owned content." },
+    { title: "The Conservative Math", content: "6 months of Zillow at $1,500/mo = $9,000, 1-2 closings, zero compounding. 6 months of AI visibility build = ~$6,000, 54 articles, 60-80% citation rate by month 6, with maintenance costs dropping after." }
+  ],
+  cta: {
+    type: "consultation",
+    text: "Want to know if you're visible in AI search right now? We check across 4 platforms. Free. One agent per market.",
     buttonText: "Get Your Free AI Visibility Check"
   }
 },
