@@ -2,9 +2,11 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import Blog from "./pages/Blog";
+import PrivacyPage from "./pages/PrivacyPage";
+import TermsPage from "./pages/TermsPage";
 import BlogPost from "./pages/BlogPost";
 import ChatGPTArticle from "./pages/ChatGPTArticle";
 import AIVisibilityArticle from "./pages/AIVisibilityArticle";
@@ -26,6 +28,10 @@ const App = () => (
           <Route path="/blog/why-your-real-estate-website-doesnt-show-up-in-chatgpt" element={<AIVisibilityArticle />} />
           <Route path="/blog/ai-visibility-for-real-estate-agents-why-zillow-leads-wont-save-you" element={<ZillowArticle />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="/terms" element={<TermsPage />} />
+          <Route path="/service" element={<Navigate to="/" replace />} />
+          <Route path="/consulting" element={<Navigate to="/" replace />} />
           {/* pricing route removed */}
           <Route path="*" element={<NotFound />} />
         </Routes>
