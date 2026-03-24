@@ -12,6 +12,7 @@ import ChatGPTArticle from "./pages/ChatGPTArticle";
 import AIVisibilityArticle from "./pages/AIVisibilityArticle";
 import NotFound from "./pages/NotFound";
 import ZillowArticle from "./pages/ZillowArticle";
+import PerplexityArticle from "./pages/PerplexityArticle";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/service" element={<Navigate to="/" replace />} />
           <Route path="/consulting" element={<Navigate to="/" replace />} />
+          <Route path="/blog/the-real-estate-agents-guide-to-ranking-in-perplexity-chatgpt-and-gemini" element={<PerplexityArticle />} />
           {/* pricing route removed */}
           <Route path="*" element={<NotFound />} />
         </Routes>

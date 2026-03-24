@@ -8,6 +8,7 @@ import blogFutureImage from "@/assets/blog-future.webp";
 import blogChatgptImage from "@/assets/blog-chatgpt.webp";
 import blogAiVisibilityImage from "@/assets/blog-chatgpt1.jpg";
 import blogZillowImage from "@/assets/blog-zillow.jpeg";
+import blogPerplexityImage from "@/assets/blog-perplexity.webp";
 
 export interface BlogPost {
   id: string;
@@ -37,6 +38,33 @@ export interface BlogPost {
 export const authorBio = "Fatih Can is the founder of PropertyCopyDesk, bringing together expertise in copywriting, property investment, and marketing to create compelling property copy that connects emotionally and converts into sales.";
 
 export const blogPosts: BlogPost[] = [
+  {
+  id: "10",
+  slug: "the-real-estate-agents-guide-to-ranking-in-perplexity-chatgpt-and-gemini",
+  title: "The Real Estate Agent's Guide to Ranking in Perplexity, ChatGPT, and Gemini",
+  excerpt: "Google isn't the only search engine anymore. Here's exactly how ChatGPT, Perplexity, and Gemini each find and recommend real estate agents — and the 90-day plan to get cited on all three.",
+  metaDescription: "Google isn't the only search engine anymore. Here's exactly how ChatGPT, Perplexity, and Gemini each find and recommend real estate agents — and the 90-day plan to get cited on all three.",
+  targetKeyword: "how to rank in AI search",
+  category: "Market Trends",
+  readTime: 11,
+  publishDate: "2026-03-24",
+  author: "Fatih",
+  featured: true,
+  heroImage: blogPerplexityImage,
+  sections: [
+    { title: "How Each AI Platform Finds and Recommends Agents", content: "ChatGPT draws from Bing's pre-crawled index. Perplexity performs real-time web crawls and cites sources directly. Gemini draws from Google's index and is most responsive to local signals like Google Business Profile." },
+    { title: "The Universal Ranking Factors Across All Three Platforms", content: "Topical authority, content freshness, structured data, and local signals improve your ranking on all three platforms simultaneously." },
+    { title: "Platform-Specific Optimization for Real Estate Agents", content: "For ChatGPT: submit to Bing Webmaster Tools. For Perplexity: write quotable, data-specific passages. For Gemini: treat your Google Business Profile as a content asset with weekly posts." },
+    { title: "The Content Format AI Prefers", content: "FAQ-structured content, how-to guides with numbered steps, and data-driven comparisons all earn citations. Each article should contain at least one self-contained passage Perplexity can pull and quote directly." },
+    { title: "Schema Markup That Speaks to AI Crawlers", content: "Article, FAQPage, LocalBusiness, and Person schema remove ambiguity for AI crawlers. The more specific your schema — author, date, keywords — the stronger the signal." },
+    { title: "A 90-Day Plan to Get Cited on All Three Platforms", content: "Month 1: technical foundation and first content cluster. Month 2: volume and internal linking. Month 3: external citations and GBP reviews. First citations typically appear between days 60 and 90." }
+    ],
+    cta: {
+      type: "consultation",
+      text: "Want this done for you? PropertyCopyDesk handles the full system.",
+      buttonText: "Get Your Free AI Visibility Check"
+    }
+  },
   {
     id: "0",
     slug: "how-real-estate-agents-get-cited-by-chatgpt",
