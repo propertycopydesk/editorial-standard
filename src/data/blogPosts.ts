@@ -9,6 +9,7 @@ import blogChatgptImage from "@/assets/blog-chatgpt.webp";
 import blogAiVisibilityImage from "@/assets/blog-chatgpt1.jpg";
 import blogZillowImage from "@/assets/blog-zillow.jpeg";
 import blogPerplexityImage from "@/assets/blog-perplexity.webp";
+import blogAgentsImage from "@/assets/blog-agents.webp";
 
 export interface BlogPost {
   id: string;
@@ -38,6 +39,34 @@ export interface BlogPost {
 export const authorBio = "Fatih Can is the founder of PropertyCopyDesk, bringing together expertise in copywriting, property investment, and marketing to create compelling property copy that connects emotionally and converts into sales.";
 
 export const blogPosts: BlogPost[] = [
+  {
+  id: "11",
+  slug: "5-real-estate-agents-who-dominate-ai-search",
+  title: "5 Real Estate Agents Who Dominate AI Search (And How They Did It)",
+  excerpt: "We analyzed AI search results across 50+ U.S. markets. These 5 anonymized agents consistently show up in ChatGPT, Perplexity, and Gemini — and their strategies are more repeatable than you'd expect.",
+  metaDescription: "We analyzed AI search results across 50+ U.S. markets. These 5 anonymized agents consistently show up in ChatGPT, Perplexity, and Gemini — and their strategies are more repeatable than you'd expect.",
+  targetKeyword: "real estate agent marketing case studies",
+  category: "Market Trends",
+  readTime: 10,
+  publishDate: "2026-03-27",
+  author: "Fatih",
+  featured: true,
+  heroImage: blogAgentsImage,
+  sections: [
+    { title: "What These 5 Agents Have in Common", content: "Topical authority in a defined niche, consistent publishing schedule, schema markup on every article, and an optimized Google Business Profile with reviews that name their market." },
+    { title: "Agent 1: The Austin Luxury Specialist", content: "34 articles, all focused on the Austin luxury market. First citation at month four. Cited in ChatGPT for three distinct query types and directly in Perplexity with article links." },
+    { title: "Agent 2: The Phoenix Relocation Expert", content: "28 articles answering one question: where should California transplants actually live in Phoenix? First citation at 52 days. Two external links from California finance blogs drove outsized ChatGPT citation frequency." },
+    { title: "Agent 3: The Nashville Neighborhood Authority", content: "41 articles covering 22 Nashville neighborhoods. 94 Google reviews, 31 mentioning specific neighborhoods. Gemini cited them in 7 of 10 test queries." },
+    { title: "Agent 4: The Tampa First-Time Buyer Guide", content: "19 articles with heavy FAQ structure and FAQPage schema on every page. Cited consistently despite lower volume — precision beat volume in this case." },
+    { title: "Agent 5: The Charlotte Investment Property Advisor", content: "27 articles on small multifamily investing in Charlotte. Two external links from a local business blog had outsized impact on ChatGPT citation frequency." },
+    { title: "The Pattern You Should Copy", content: "Pick one niche. Publish consistently for at least four months. Schema on everything. Get one or two external links from credible local sources. None of these agents had a marketing team or paid distribution." }
+    ],
+    cta: {
+      type: "consultation",
+      text: "Want this done for you? PropertyCopyDesk handles the full system.",
+      buttonText: "Get Your Free AI Visibility Check"
+    }
+  },
   {
   id: "10",
   slug: "the-real-estate-agents-guide-to-ranking-in-perplexity-chatgpt-and-gemini",
