@@ -14,6 +14,10 @@ import NotFound from "./pages/NotFound";
 import ZillowArticle from "./pages/ZillowArticle";
 import PerplexityArticle from "./pages/PerplexityArticle";
 import AgentsArticle from "./pages/AgentsArticle";
+import RoadmapArticle from "./pages/RoadmapArticle";
+import RecessionArticle from "./pages/RecessionArticle";
+import SchemaArticle from "./pages/SchemaArticle";
+import CommissionArticle from "./pages/CommissionArticle";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +41,10 @@ const App = () => (
           <Route path="/blog/the-real-estate-agents-guide-to-ranking-in-perplexity-chatgpt-and-gemini" element={<PerplexityArticle />} />
           {/* pricing route removed */}
           <Route path="/blog/5-real-estate-agents-who-dominate-ai-search" element={<AgentsArticle />} />
+          <Route path="/blog/the-60-day-ai-visibility-roadmap-for-real-estate-agents" element={<RoadmapArticle />} />
+          <Route path="/blog/local-authority-vs-paid-ads-which-strategy-survives-a-recession" element={<RecessionArticle />} />
+          <Route path="/blog/schema-markup-for-real-estate-the-missing-piece-in-your-ai-strategy" element={<SchemaArticle />} />
+          <Route path="/blog/commission-compression-2026-how-top-agents-build-market-moats" element={<CommissionArticle />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

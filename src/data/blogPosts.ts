@@ -10,6 +10,10 @@ import blogAiVisibilityImage from "@/assets/blog-chatgpt1.jpg";
 import blogZillowImage from "@/assets/blog-zillow.jpeg";
 import blogPerplexityImage from "@/assets/blog-perplexity.webp";
 import blogAgentsImage from "@/assets/blog-agents.webp";
+import blogRoadmapImage from "@/assets/blog-roadmap.webp";
+import blogRecessionImage from "@/assets/blog-recession.webp";
+import blogSchemaImage from "@/assets/blog-schema.webp";
+import blogCommissionImage from "@/assets/blog-commission.webp";
 
 export interface BlogPost {
   id: string;
@@ -39,6 +43,111 @@ export interface BlogPost {
 export const authorBio = "Fatih Can is the founder of PropertyCopyDesk, bringing together expertise in copywriting, property investment, and marketing to create compelling property copy that connects emotionally and converts into sales.";
 
 export const blogPosts: BlogPost[] = [
+  {
+  id: "12",
+  slug: "the-60-day-ai-visibility-roadmap-for-real-estate-agents",
+  title: "The 60-Day AI Visibility Roadmap for Real Estate Agents",
+  excerpt: "Most real estate marketing plans are built for Google 2019, not AI 2026. Here's the exact 60-day roadmap to get your first AI citation — week by week.",
+  metaDescription: "Most real estate marketing plans are built for Google 2019, not AI 2026. Here's the exact 60-day roadmap to get your first AI citation — week by week.",
+  targetKeyword: "real estate marketing plan",
+  category: "Market Trends",
+  readTime: 10,
+  publishDate: "2026-03-30",
+  author: "Fatih",
+  featured: true,
+  heroImage: blogRoadmapImage,
+  sections: [
+    { title: "Weeks 1-2: Foundation", content: "Domain audit, GBP optimization, Organization + LocalBusiness schema on homepage, sitemap submitted to Google Search Console and Bing Webmaster Tools, baseline citation check across ChatGPT/Perplexity/Gemini." },
+    { title: "Weeks 3-4: First Content Push", content: "Publish first 6 articles targeting long-tail AI queries. Each needs Article + FAQPage schema and internal links to the others. Submit every URL to Search Console immediately." },
+    { title: "Weeks 5-6: Technical Optimization", content: "Audit internal linking, validate schema with Rich Results Test, check GBP for pending edits, expand any thin content." },
+    { title: "Weeks 7-8: Amplification and Tracking", content: "Distribute each article on LinkedIn. Reach out to one local publication. Run citation check across all 3 AI platforms and adjust topics based on gaps." },
+    { title: "What to Expect at Day 60", content: "1-3 citations on at least one platform. Foundation fully built. 6-12 articles indexed. Topical cluster forming. Not a viral moment — a structural shift in how AI sees you." },
+    { title: "What Happens After Day 60", content: "Months 3-6: keep publishing 1-2x/week, internal linking compounds, external citations appear, citation frequency increases. Agents who stop at day 60 lose the compounding effect." },
+  ],
+    cta: {
+      type: "consultation",
+      text: "Want this done for you? PropertyCopyDesk handles the full system.",
+      buttonText: "Get Your Free AI Visibility Check"
+    }
+},
+{
+  id: "13",
+  slug: "local-authority-vs-paid-ads-which-strategy-survives-a-recession",
+  title: "Local Authority vs. Paid Ads: Which Strategy Survives a Recession?",
+  excerpt: "When budgets tighten, paid ad CPL spikes and pipelines collapse overnight. Here's the math on why local authority content is the only real estate marketing strategy that gets stronger in a downturn.",
+  metaDescription: "When budgets tighten, paid ad CPL spikes and pipelines collapse overnight. Here's the math on why local authority content is the only real estate marketing strategy that gets stronger in a downturn.",
+  targetKeyword: "best marketing for real estate agents recession",
+  category: "Market Trends",
+  readTime: 9,
+  publishDate: "2026-04-02",
+  author: "Fatih",
+  featured: true,
+  heroImage: blogRecessionImage,
+  sections: [
+    { title: "What Happens to Paid Ad Budgets in a Downturn", content: "Ad spend is the first line item cut. CPL spikes when fewer transactions mean more agents competing for less volume. Paid pipelines collapse within 2 weeks of pausing spend." },
+    { title: "Why Local Authority Content Compounds During Recessions", content: "Less competition publishing lowers the bar. AI adoption accelerates during uncertainty. Content published in 2026 owns market authority through the recovery in 2027-2028." },
+    { title: "The Math: $18,000/Year in Zillow vs. $12,000/Year in Content", content: "$1,500/month Zillow at 2-3% close rate = $1,000-$5,000 cost per closing. Content at $1,000/month compounds to 50+ articles by month 6, each generating leads at zero marginal cost." },
+    { title: "What Recession-Proof Marketing Actually Looks Like", content: "Owned assets that don't require monthly spend to maintain. Compounding visibility. Zero marginal cost per lead. Local trust that makes you the default agent before the first call." },
+    { title: "How to Start Building Your Recession Moat Now", content: "Pick your niche. Publish first 5 articles. Add schema. Optimize GBP. The agents who start during a downturn own the recovery." },
+  ],
+    cta: {
+      type: "consultation",
+      text: "Want this done for you? PropertyCopyDesk handles the full system.",
+      buttonText: "Get Your Free AI Visibility Check"
+    }
+},
+{
+  id: "14",
+  slug: "schema-markup-for-real-estate-the-missing-piece-in-your-ai-strategy",
+  title: "Schema Markup for Real Estate: The Missing Piece in Your AI Strategy",
+  excerpt: "Schema markup is how you translate your website into a language AI can read. Here are the 4 schema types every real estate agent needs and exactly how to add them.",
+  metaDescription: "Schema markup is how you translate your website into a language AI can read. Here are the 4 schema types every real estate agent needs and exactly how to add them.",
+  targetKeyword: "schema markup real estate",
+  category: "Market Trends",
+  readTime: 8,
+  publishDate: "2026-04-05",
+  author: "Fatih",
+  featured: false,
+  heroImage: blogSchemaImage,
+  sections: [
+    { title: "What Schema Markup Is (and Why AI Cares)", content: "Structured data in JSON-LD format that explicitly tells crawlers what your content is. Without it, AI guesses. With it, you declare exactly what type of content this is, who wrote it, and what questions it answers." },
+    { title: "The 4 Schema Types Every Real Estate Agent Needs", content: "RealEstateAgent (LocalBusiness subtype), Article, FAQPage, and Person. Each sends a different signal. FAQPage schema on articles is the most commonly missed." },
+    { title: "How to Add Schema to Your Website", content: "WordPress: Rank Math or Yoast handle it automatically. Manual: paste JSON-LD script into your page head. React/custom site: inject via useEffect, clean up on unmount." },
+    { title: "How to Test Your Schema", content: "Google Rich Results Test (search.google.com/test/rich-results) and Schema.org Validator (validator.schema.org). Look for no errors and all required fields present." },
+    { title: "Common Schema Mistakes", content: "Missing image field in Article schema. Wrong @type on homepage. No FAQPage schema on articles with FAQ sections. Outdated dateModified. Generic description fields with no market or specialty." },
+  ],
+    cta: {
+      type: "consultation",
+      text: "Want this done for you? PropertyCopyDesk handles the full system.",
+      buttonText: "Get Your Free AI Visibility Check"
+    }
+},
+{
+  id: "15",
+  slug: "commission-compression-2026-how-top-agents-build-market-moats",
+  title: "Commission Compression in 2026: How Top Agents Build Market Moats",
+  excerpt: "The NAR settlement changed the math on commissions. Here's how the agents who keep their rates — and their clients — are building something discount brokerages can't compete with.",
+  metaDescription: "The NAR settlement changed the math on commissions. Here's how the agents who keep their rates — and their clients — are building something discount brokerages can't compete with.",
+  targetKeyword: "real estate commission compression",
+  category: "Market Trends",
+  readTime: 9,
+  publishDate: "2026-04-08",
+  author: "Fatih",
+  featured: true,
+  heroImage: blogCommissionImage,
+  sections: [
+    { title: "The Commission Compression Timeline", content: "Pre-2024: 5-6% standard. August 2024 NAR settlement: buyer agent compensation removed from MLS. 2025-2026: average total commission trending to 4-4.5%. Discount models growing." },
+    { title: "Why Discount Agents Win on Price and Lose on Volume", content: "A 1% listing agent needs 3x the volume to match a 3% agent's income. Sellers who choose on price are not the same sellers who value local expertise." },
+    { title: "The Agents Who Are Immune to Commission Pressure", content: "They don't get compared. When a seller already trusts you before the first call — through AI citations, market content, and local authority — the conversation doesn't start at commission." },
+    { title: "Building a Market Moat That Justifies Your Commission", content: "Content that answers real local questions. AI citations as pre-selling evidence. Schema that makes authority visible to crawlers. Reviews that name markets and outcomes." },
+    { title: "The 3-Step Plan to Defend Your Commission Rate", content: "Build the pre-selling asset (20+ articles in 90 days). Make the moat visible (GBP + schema + Search Console). Convert authority into calls via low-friction lead capture." },
+  ],
+    cta: {
+      type: "consultation",
+      text: "Want this done for you? PropertyCopyDesk handles the full system.",
+      buttonText: "Get Your Free AI Visibility Check"
+    }
+},
   {
   id: "11",
   slug: "5-real-estate-agents-who-dominate-ai-search",
