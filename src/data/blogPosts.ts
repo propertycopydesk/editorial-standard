@@ -6,7 +6,7 @@ import blogUnlockImage from "@/assets/blog-unlock.png";
 import blogDeskImage from "@/assets/blog-desk.png";
 import blogFutureImage from "@/assets/blog-future.webp";
 import blogChatgptImage from "@/assets/blog-chatgpt.webp";
-import blogAiVisibilityImage from "@/assets/blog-chatgpt1.jpg";
+import blogAiVisibilityImage from "@/assets/blog-ai-visibility.webp";
 import blogZillowImage from "@/assets/blog-zillow.jpeg";
 import blogPerplexityImage from "@/assets/blog-perplexity.webp";
 import blogAgentsImage from "@/assets/blog-agents.webp";
