@@ -14,6 +14,7 @@ import blogRoadmapImage from "@/assets/blog-roadmap.webp";
 import blogRecessionImage from "@/assets/blog-recession.webp";
 import blogSchemaImage from "@/assets/blog-schema.webp";
 import blogCommissionImage from "@/assets/blog-commission.webp";
+import blogSEOImage from "@/assets/blog-seo.webp";
 
 export interface BlogPost {
   id: string;
@@ -44,6 +45,33 @@ export const authorBio = "Fatih Can is the founder of PropertyCopyDesk, bringing
 
 export const blogPosts: BlogPost[] = [
   {
+  id: "16",
+  slug: "the-seo-playbook-just-split-in-two-heres-what-actually-changed",
+  title: "The SEO Playbook Just Split in Two. Here's What Actually Changed",
+  excerpt: "Traditional SEO optimizes for search engines. GEO optimizes for the AI that's replacing them. They're not the same game anymore — and confusing them will cost you.",
+  metaDescription: "Traditional SEO optimizes for search engines. GEO optimizes for the AI that's replacing them. They're not the same game anymore — and confusing them will cost you.",
+  targetKeyword: "SEO vs GEO",
+  category: "Market Trends",
+  readTime: 11,
+  publishDate: "2026-04-11",
+  author: "Fatih",
+  featured: true,
+  heroImage: blogSEOImage,
+  sections: [
+    { title: "Traditional SEO Still Works. It Also Has a Ceiling Now.", content: "Google processes billions of queries daily. But when AI Overviews appear, only 8% of users click through to traditional results. Gartner forecasts search volume will drop 25% by 2026." },
+    { title: "GEO: The New Layer You Can't Ignore", content: "Generative Engine Optimization asks: how do I become the answer the AI gives? Traditional SEO rewards position. GEO rewards extraction. AI cites 90-95% from third-party sources, not brand websites." },
+    { title: "What AI Systems Actually Evaluate When Deciding What to Cite", content: "Entity clarity over keyword density. Third-party trust signals (Reddit, YouTube, Substack). Structure for machine readability (FAQPage schema). Answer-first content architecture." },
+    { title: "The Conversion Gap Should Wake You Up", content: "Visitors from AI search convert 4.4x higher than traditional organic. AI users arrive pre-qualified. They've already compared options. That's the highest-intent traffic available." },
+    { title: "Agentic Commerce: Where This Goes Next", content: "AI agents handling the entire purchase journey could drive $190-385 billion in US e-commerce by 2030. If your product data and content aren't AI-readable, you're not losing a channel. You're losing access to a new buying surface." },
+    { title: "What This Means For Your Business Right Now", content: "Don't abandon traditional SEO. Layer GEO on top. Rewrite for AI readability. Invest in third-party mentions. Structure everything with schema. Monitor AI visibility separately. Think consumer need state, not product features." },
+  ],
+  cta: {
+      type: "consultation",
+      text: "Want this done for you? PropertyCopyDesk handles the full system.",
+      buttonText: "Get Your Free AI Visibility Check"
+    }
+},
+{
   id: "12",
   slug: "the-60-day-ai-visibility-roadmap-for-real-estate-agents",
   title: "The 60-Day AI Visibility Roadmap for Real Estate Agents",
