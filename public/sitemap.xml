@@ -1,16 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://propertycopydesk.com/</loc>
-  <lastmod>2026-04-16T17:54:19+00:00</lastmod>
-</url>
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://propertycopydesk.com/</loc>
+    <lastmod>2026-04-16T15:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://propertycopydesk.com/privacy</loc>
+    <lastmod>2026-04-16T15:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://propertycopydesk.com/terms</loc>
+    <lastmod>2026-04-16T15:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://propertycopydesk.com/blog</loc>
+    <lastmod>2026-04-16T15:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://propertycopydesk.com/blog/5-real-estate-agents-who-dominate-ai-search/</loc>
+    <lastmod>2026-04-16T15:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://propertycopydesk.com/blog/ai-visibility-for-real-estate-agents-why-zillow-leads-wont-save-you/</loc>
+    <lastmod>2026-04-16T15:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://propertycopydesk.com/blog/commission-compression-2026-how-top-agents-build-market-moats/</loc>
+    <lastmod>2026-04-16T15:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://propertycopydesk.com/blog/how-real-estate-agents-get-cited-by-chatgpt/</loc>
+    <lastmod>2026-04-16T15:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://propertycopydesk.com/blog/local-authority-vs-paid-ads-which-strategy-survives-a-recession/</loc>
+    <lastmod>2026-04-16T15:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://propertycopydesk.com/blog/schema-markup-for-real-estate-the-missing-piece-in-your-ai-strategy/</loc>
+    <lastmod>2026-04-16T15:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://propertycopydesk.com/blog/the-60-day-ai-visibility-roadmap-for-real-estate-agents/</loc>
+    <lastmod>2026-04-16T15:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://propertycopydesk.com/blog/the-real-estate-agents-guide-to-ranking-in-perplexity-chatgpt-and-gemini/</loc>
+    <lastmod>2026-04-16T15:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://propertycopydesk.com/blog/why-your-real-estate-website-doesnt-show-up-in-chatgpt/</loc>
+    <lastmod>2026-04-16T15:00:00+00:00</lastmod>
+  </url>
 </urlset>
