@@ -28,6 +28,13 @@ import FirstTimeBuyersArticle from "./pages/FirstTimeBuyersArticle";
 import SALTDeductionArticle from "./pages/SALTDeductionArticle";
 import PriceCutsRelistingsArticle from "./pages/PriceCutsRelistingsArticle";
 import SFAustinAIContentArticle from "./pages/SFAustinAIContentArticle";
+import FutureOfRealEstateCopywritingArticle from "./pages/FutureOfRealEstateCopywritingArticle";
+import WhyGenericAIToolsFallShortArticle from "./pages/WhyGenericAIToolsFallShortArticle";
+import WhatSetsEffectiveRealEstateCopyApartArticle from "./pages/WhatSetsEffectiveRealEstateCopyApartArticle";
+import ListingDescriptionMistakesArticle from "./pages/ListingDescriptionMistakesArticle";
+import RealCostOfDiyCopywritingArticle from "./pages/RealCostOfDiyCopywritingArticle";
+import UnlockingRealEstateCopywritingSecretsArticle from "./pages/UnlockingRealEstateCopywritingSecretsArticle";
+import CraftingClickWorthyHeadlinesArticle from "./pages/CraftingClickWorthyHeadlinesArticle";
 
 const queryClient = new QueryClient();
 
@@ -65,6 +72,14 @@ const App = () => (
           <Route path="/blog/salt-deduction-changed-real-estate-content" element={<SALTDeductionArticle />} />
           <Route path="/blog/record-price-cuts-relistings-ai-visibility" element={<PriceCutsRelistingsArticle />} />
           <Route path="/blog/san-francisco-austin-ai-content-lesson" element={<SFAustinAIContentArticle />} />
+          <Route path="/blog/future-of-real-estate-copywriting" element={<FutureOfRealEstateCopywritingArticle />} />
+          <Route path="/blog/why-generic-ai-tools-fall-short" element={<WhyGenericAIToolsFallShortArticle />} />
+          <Route path="/blog/what-sets-effective-real-estate-copy-apart" element={<WhatSetsEffectiveRealEstateCopyApartArticle />} />
+          <Route path="/blog/listing-description-mistakes" element={<ListingDescriptionMistakesArticle />} />
+          <Route path="/blog/real-cost-of-diy-copywriting" element={<RealCostOfDiyCopywritingArticle />} />
+          <Route path="/blog/unlocking-real-estate-copywriting-secrets" element={<UnlockingRealEstateCopywritingSecretsArticle />} />
+          <Route path="/blog/crafting-click-worthy-headlines-and-irresistible-property-descriptions" element={<CraftingClickWorthyHeadlinesArticle />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

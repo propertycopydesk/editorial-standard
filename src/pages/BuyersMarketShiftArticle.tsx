@@ -40,7 +40,7 @@ const BuyersMarketsArticle: React.FC = () => {
         "datePublished": "2026-04-30T00:00:00+00:00",
         "description": "Redfin data shows 38 major metros shifted to buyer's markets in March 2026. Agents who publish local analysis of this shift will own AI search queries buyers are already asking.",
         "image": "https://propertycopydesk.com/blog-ai-visibility.webp",
-        "dateModified": "2026-04-30T00:00:00+00:00",
+        "dateModified": "2026-04-22T00:00:00+00:00",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://propertycopydesk.com/blog/38-metros-buyers-markets-agent-content"

@@ -40,7 +40,7 @@ const RedfinChatGPTArticle: React.FC = () => {
         "datePublished": "2026-04-21T00:00:00+00:00",
         "description": "Three major portals launched AI search integrations in 90 days. Here's what that means for independent agents and how to build AI visibility before the window closes.",
         "image": "https://propertycopydesk.com/blog-ai-visibility.webp",
-        "dateModified": "2026-04-21T00:00:00+00:00",
+        "dateModified": "2026-04-22T00:00:00+00:00",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://propertycopydesk.com/blog/redfin-realtor-chatgpt-ai-search-agents"
