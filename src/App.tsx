@@ -19,6 +19,15 @@ import RecessionArticle from "./pages/RecessionArticle";
 import SchemaArticle from "./pages/SchemaArticle";
 import CommissionArticle from "./pages/CommissionArticle";
 import SEOPlaybookArticle from "./pages/SEOPlaybookArticle";
+import RedfInChatGPTArticle from "./pages/RedfinChatGPTArticle";
+import RentVsBuyAIArticle from "./pages/RentVsBuyAIArticle";
+import ZillowVsChatGPTArticle from "./pages/ZillowVsChatGPTArticle";
+import BuyersMarketsArticle from "./pages/BuyersMarketShiftArticle.tsx";
+import CommissionDiscoveryArticle from "./pages/CommissionDiscoveryArticle";
+import FirstTimeBuyersArticle from "./pages/FirstTimeBuyersArticle";
+import SALTDeductionArticle from "./pages/SALTDeductionArticle";
+import PriceCutsRelistingsArticle from "./pages/PriceCutsRelistingsArticle";
+import SFAustinAIContentArticle from "./pages/SFAustinAIContentArticle";
 
 const queryClient = new QueryClient();
 
@@ -47,6 +56,15 @@ const App = () => (
           <Route path="/blog/schema-markup-for-real-estate-the-missing-piece-in-your-ai-strategy" element={<SchemaArticle />} />
           <Route path="/blog/commission-compression-2026-how-top-agents-build-market-moats" element={<CommissionArticle />} />
           <Route path="/blog/the-seo-playbook-just-split-in-two-heres-what-actually-changed" element={<SEOPlaybookArticle />} />
+          <Route path="/blog/redfin-realtor-chatgpt-ai-search-agents" element={<RedfInChatGPTArticle />} />
+          <Route path="/blog/rent-vs-buy-ai-search-question" element={<RentVsBuyAIArticle />} />
+          <Route path="/blog/listing-found-zillow-not-chatgpt" element={<ZillowVsChatGPTArticle />} />
+          <Route path="/blog/38-metros-buyers-markets-agent-content" element={<BuyersMarketsArticle />} />
+          <Route path="/blog/commission-squeeze-discovery-problem" element={<CommissionDiscoveryArticle />} />
+          <Route path="/blog/first-time-buyers-40-year-low-content-strategy" element={<FirstTimeBuyersArticle />} />
+          <Route path="/blog/salt-deduction-changed-real-estate-content" element={<SALTDeductionArticle />} />
+          <Route path="/blog/record-price-cuts-relistings-ai-visibility" element={<PriceCutsRelistingsArticle />} />
+          <Route path="/blog/san-francisco-austin-ai-content-lesson" element={<SFAustinAIContentArticle />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

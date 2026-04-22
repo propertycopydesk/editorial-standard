@@ -15,6 +15,15 @@ import blogRecessionImage from "@/assets/blog-recession.webp";
 import blogSchemaImage from "@/assets/blog-schema.webp";
 import blogCommissionImage from "@/assets/blog-commission.webp";
 import blogSEOImage from "@/assets/blog-seo.webp";
+import blogPortalsImage from "@/assets/blog-portals-chatgpt.webp";
+import blogRentVsBuyImage from "@/assets/blog-rent-vs-buy.webp";
+import blogZillowChatgpt from "@/assets/blog-zillow-chatgpt.webp";
+import blogBuyersMarkets from "@/assets/blog-buyers-markets.webp";
+import blogCommissionDiscovery from "@/assets/blog-commission-discovery.webp";
+import blogFirstTimeBuyers from "@/assets/blog-first-time-buyers.webp";
+import blogSaltDeduction from "@/assets/blog-salt-deduction.webp";
+import blogPriceCutsRelistings from "@/assets/blog-price-cuts-relistings.webp";
+import blogSfAustinContent from "@/assets/blog-sf-austin-content.webp";
 
 export interface BlogPost {
   id: string;
@@ -45,6 +54,438 @@ export const authorBio = "Fatih Can is the founder of PropertyCopyDesk, bringing
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "17",
+    slug: "redfin-realtor-chatgpt-ai-search-agents",
+    title: "Redfin Is in ChatGPT. Realtor.com Is in ChatGPT. Where Are You?",
+    excerpt:
+      "Three major portals launched AI search integrations in 90 days. Here's what that means for independent agents and how to build AI visibility before the window closes.",
+    metaDescription:
+      "Three major portals launched AI search integrations in 90 days. Here's what that means for independent agents and how to build AI visibility before the window closes.",
+    targetKeyword: "AI home search real estate agents",
+    category: "Market Trends",
+    readTime: 7,
+    publishDate: "2026-04-21",
+    author: "Fatih",
+    featured: true,
+    heroImage: blogPortalsImage,
+    sections: [
+      {
+        title: "What the Portal AI Race Actually Means for Agents",
+        content:
+          "Redfin, Realtor.com, and Zillow are repositioning to intercept buyers at the pre-search phase — before buyers fill out a lead form or call an agent. This is not a future scenario; these integrations launched in Q1 2026.",
+      },
+      {
+        title: "How AI Search Engines Decide Whose Answer to Cite",
+        content:
+          "AI models synthesize answers from open-web content — blog posts, market analyses, FAQ pages. Agents who publish specific, answer-first content have a real chance of being cited; agents with only listing profiles do not.",
+      },
+      {
+        title: "The Pre-Search Funnel Is the New Front Door",
+        content:
+          "Buyers now form trust with a local expert during an AI-assisted research phase before any agent contact. Being cited in that first AI response is the new first impression.",
+      },
+      {
+        title: "What Agents Can Do Right Now",
+        content:
+          "Publish answer-first content on the five most common local buyer questions. Use specific neighborhoods, ZIP codes, and current data to give AI models confidence in citing your content.",
+      },
+      {
+        title: "The Window to Act Is Narrow",
+        content:
+          "Portals have scale and domain authority but cannot replicate hyper-local working agent expertise. That advantage window will close as portals invest in local content generation.",
+      },
+    ],
+  cta: {
+      type: "consultation",
+      text: "Want this done for you? PropertyCopyDesk handles the full system.",
+      buttonText: "Get Your Free AI Visibility Check"
+  }
+},
+{
+    id: "18",
+    slug: "rent-vs-buy-ai-search-question",
+    title: "The Rent vs. Buy Question Is Now an AI Search Question",
+    excerpt:
+      "Renting is cheaper than buying in all 50 major US metros. When buyers ask ChatGPT 'should I rent or buy in Austin?', here's how agents can own that query.",
+    metaDescription:
+      "Renting is cheaper than buying in all 50 major US metros. When buyers ask ChatGPT 'should I rent or buy in Austin?', here's how agents can own that query.",
+    targetKeyword: "rent vs buy AI search real estate",
+    category: "Market Trends",
+    readTime: 6,
+    publishDate: "2026-04-21",
+    author: "Fatih",
+    featured: true,
+    heroImage: blogRentVsBuyImage,
+    sections: [
+      {
+        title: "Why Buyers Are Asking AI Before Asking Agents",
+        content:
+          "The rent vs. buy decision is financially complex and emotionally charged. AI search feels like a neutral starting point. Agents who publish local rent vs. buy analysis get cited — and enter the buyer's consideration set before any other agent.",
+      },
+      {
+        title: "The National Numbers Don't Win Local Queries",
+        content:
+          "Realtor.com's $920 average monthly savings figure is national context, not local answer. An agent who publishes specific rent-to-mortgage differentials for their ZIP codes has something no portal can replicate.",
+      },
+      {
+        title: "How to Structure a Rent vs. Buy Article That Gets Cited",
+        content:
+          "Answer-first structure: lead with the direct local verdict in paragraph one. Follow with local median rent, mortgage payment at current rates, down payment requirements, and break-even timeline.",
+      },
+      {
+        title: "The Conversion Angle Hidden in This Content",
+        content:
+          "A buyer who reads a local rent vs. buy analysis arrives at the first conversation already calibrated and trusting the agent as a local authority. Content-sourced leads are higher quality.",
+      },
+      {
+        title: "The Renting-as-Strategy Framing That Opens Conversations",
+        content:
+          "Positioning renting as a deliberate, tactical bridge to buying — rather than an alternative — converts long-term leads and keeps the agent in the buyer's consideration set through the waiting period.",
+      },
+    ],
+  cta: {
+      type: "consultation",
+      text: "Want this done for you? PropertyCopyDesk handles the full system.",
+      buttonText: "Get Your Free AI Visibility Check"
+    }
+},
+{
+    id: "19",
+    slug: "listing-found-zillow-not-chatgpt",
+    title: "Why Your Listing Gets Found on Zillow But Not on ChatGPT",
+    excerpt:
+      "Zillow visibility and AI search visibility run on completely different rules. Here's what agents need to understand about the gap — and how to close it.",
+    metaDescription:
+      "Zillow visibility and AI search visibility run on completely different rules. Here's what agents need to understand about the gap — and how to close it.",
+    targetKeyword: "real estate listing AI search visibility",
+    category: "Market Trends",
+    readTime: 6,
+    publishDate: "2026-04-21",
+    author: "Fatih",
+    featured: true,
+    heroImage: blogZillowChatgpt,
+    sections: [
+      {
+        title: "How Zillow Visibility Works",
+        content:
+          "Zillow visibility is a distribution problem: MLS data flows through syndication automatically. Your presence there is largely handled by MLS participation. It has nothing to do with AI search.",
+      },
+      {
+        title: "How AI Search Visibility Works",
+        content:
+          "AI search synthesizes from open-web content — blog posts, neighborhood guides, FAQ pages. Agents who publish structured, answer-first content about their market get cited. Portal profiles do not.",
+      },
+      {
+        title: "Why the Gap Is Widening",
+        content:
+          "Portals are fighting the listing-access battle at the syndication level while simultaneously racing to own AI pre-search. Independent agents focused only on listing syndication are losing the second battle by default.",
+      },
+      {
+        title: "What Wins in AI Search That Zillow Cannot Provide",
+        content:
+          "Current, specific local intelligence — contingency norms, neighborhood-level price cut concentration, concession rates — is what AI search engines cite. It is also what no portal publishes at a working-agent level of specificity.",
+      },
+      {
+        title: "The Two-Channel Strategy Agents Need",
+        content:
+          "Listing syndication (handled through MLS) and AI search visibility (built through published content) are separate strategies that reinforce each other. A buyer can find your listing on Zillow and then find your market commentary via AI.",
+      },
+    ],
+  cta: {
+      type: "consultation",
+      text: "Want this done for you? PropertyCopyDesk handles the full system.",
+      buttonText: "Get Your Free AI Visibility Check"
+  }
+},
+{
+    id: "20",
+    slug: "38-metros-buyers-markets-agent-content",
+    title: "38 Metros Just Became Buyer's Markets. Most Agent Blogs Won't Mention It.",
+    excerpt:
+      "Redfin data shows 38 major metros shifted to buyer's markets in March 2026. Agents who publish local analysis of this shift will own the AI search queries buyers are already asking.",
+    metaDescription:
+      "Redfin data shows 38 major metros shifted to buyer's markets in March 2026. Agents who publish local analysis of this shift will own the AI search queries buyers are already asking.",
+    targetKeyword: "buyer's market 2026 real estate content strategy",
+    category: "Market Trends",
+    readTime: 6,
+    publishDate: "2026-04-21",
+    author: "Fatih",
+    featured: true,
+    heroImage: blogBuyersMarkets,
+    sections: [
+      {
+        title: "Why Most Agents Miss This as a Content Opportunity",
+        content:
+          "Most agent content is templated and generic. A buyer asking 'is Phoenix a buyer's market?' gets no useful answer from content that says 'the national market is shifting.' They get a citation from content that cites specific local inventory, days on market, and concession rates.",
+      },
+      {
+        title: "The National vs. Local Gap Is the Advantage",
+        content:
+          "Taking the national buyer's market story and running it through local data is the highest-value content move available right now. No national portal publishes ZIP-level analysis. That gap is where agent content wins.",
+      },
+      {
+        title: "What Buyers Are Actually Searching Right Now",
+        content:
+          "Queries like 'how much can I negotiate off list price in [city]?' and 'are sellers offering concessions in [neighborhood]?' are entering AI search at scale as buyer leverage grows. These are answerable with local expert knowledge.",
+      },
+      {
+        title: "The Seller Strategy Content That Converts",
+        content:
+          "The buyer's market shift is equally a seller content opportunity. An agent who publishes a clear guide to selling in a buyer's market in their specific city wins AI citations from both sides of the transaction.",
+      },
+      {
+        title: "Why Generic Market Recaps Fail on Both Fronts",
+        content:
+          "A monthly recap that says 'inventory rose slightly' fails buyers, fails sellers, and fails AI search simultaneously. Specificity — exact numbers, clear positions, local context — is the formula for content that works in 2026.",
+      },
+    ],
+  cta: {
+      type: "consultation",
+      text: "Want this done for you? PropertyCopyDesk handles the full system.",
+      buttonText: "Get Your Free AI Visibility Check"
+  }
+},
+{
+    id: "21",
+    slug: "commission-squeeze-discovery-problem",
+    title: "The Commission Squeeze and the Discovery Problem Are the Same Problem",
+    excerpt:
+      "Post-settlement commission pressure and AI-driven pre-search are converging on one point: agents who can't be found and trusted early in the funnel are losing on both fronts simultaneously.",
+    metaDescription:
+      "Post-settlement commission pressure and AI-driven pre-search are converging on one point: agents who can't be found and trusted early in the funnel are losing on both fronts simultaneously.",
+    targetKeyword: "real estate commission AI discovery strategy",
+    category: "Market Trends",
+    readTime: 7,
+    publishDate: "2026-04-21",
+    author: "Fatih",
+    featured: true,
+    heroImage: blogCommissionDiscovery,
+    sections: [
+      {
+        title: "What the Post-Settlement Landscape Actually Changed",
+        content:
+          "The 2024 NAR settlement eliminated blanket MLS compensation offers, required buyer agreements before touring, and made compensation explicitly negotiable. Ongoing antitrust lawsuits keep the legal pressure active.",
+      },
+      {
+        title: "What the AI Pre-Search Shift Actually Changed",
+        content:
+          "Portals are racing to own the buyer's research phase before any agent contact. Agents without published content are invisible at the moment buyer trust is being formed — which is also the moment the commission justification begins.",
+      },
+      {
+        title: "Why These Two Pressures Are the Same Problem",
+        content:
+          "Commission pressure is a trust and value-demonstration problem. AI pre-search visibility is also a trust and value-demonstration problem. Content that establishes expertise before the first conversation solves both simultaneously.",
+      },
+      {
+        title: "The Old Competitive Advantage No Longer Holds",
+        content:
+          "MLS access, off-market inventory, and standardized fee structures have all eroded as competitive differentiators. Published local expertise is the competitive advantage that neither a portal nor a settlement can take away.",
+      },
+      {
+        title: "The Content Strategy That Solves Both Problems at Once",
+        content:
+          "Specific, locally-grounded market content builds AI search visibility and justifies the commission in the same motion. The content is the commission argument. It also happens to be the mechanism for being found in the first place.",
+      },
+    ],
+  cta: {
+      type: "consultation",
+      text: "Want this done for you? PropertyCopyDesk handles the full system.",
+      buttonText: "Get Your Free AI Visibility Check"
+  }
+},
+{
+    id: "22",
+    slug: "first-time-buyers-40-year-low-content-strategy",
+    title: "First-Time Buyers Just Hit a 40-Year Low. Your Content Strategy Should Respond.",
+    excerpt:
+      "NAR data shows first-time buyers at 21% — the lowest since 1981. This demographic turns to AI search first, making content strategy the most important lead generation tool for agents serving them.",
+    metaDescription:
+      "NAR data shows first-time buyers at 21% — the lowest since 1981. This demographic turns to AI search first, making content strategy the most important lead generation tool for agents serving them.",
+    targetKeyword: "first time buyer content strategy AI search real estate",
+    category: "Market Trends",
+    readTime: 7,
+    publishDate: "2026-04-21",
+    author: "Fatih",
+    featured: true,
+    heroImage: blogFirstTimeBuyers,
+    sections: [
+      {
+        title: "Why First-Time Buyers Search Before They Call",
+        content:
+          "With no prior transaction experience, first-time buyers research everything before contacting an agent. They are the demographic most likely to find their agent through AI search — making AI-visible content the highest-value acquisition channel for this segment.",
+      },
+      {
+        title: "The Mismatch Between Supply and This Buyer's Needs",
+        content:
+          "Empty nesters own 28% of large family-sized homes versus 16% for millennial families. An agent who explains this specific inventory constraint in local content is answering questions that first-time buyers are searching for but finding few local answers to.",
+      },
+      {
+        title: "Down Payment Assistance Is Vastly Under-Covered in Agent Content",
+        content:
+          "State and local down payment assistance programs vary significantly by county and income level, yet most agents publish nothing about them. The first agent in a market to publish accurate, current program details will own that AI query.",
+      },
+      {
+        title: "Why the 21% Statistic Is Actually a Positive Signal for Patient Agents",
+        content:
+          "Record-low first-time buyer share means a large pool of delayed buyers in active research mode. Agents who publish content that accompanies buyers through the renting-while-saving phase are positioned for the purchase when conditions improve.",
+      },
+      {
+        title: "The Content Map for First-Time Buyer AI Visibility",
+        content:
+          "Five high-value topics cluster around first-time buyer searches: rent vs. buy calculations, down payment assistance programs, what to expect at closing, how to evaluate neighborhoods, and how to negotiate in current conditions.",
+      },
+    ],
+  cta: {
+      type: "consultation",
+      text: "Want this done for you? PropertyCopyDesk handles the full system.",
+      buttonText: "Get Your Free AI Visibility Check"
+  }
+},
+{
+    id: "23",
+    slug: "salt-deduction-changed-real-estate-content",
+    title: "The SALT Deduction Changed. Most Real Estate Content About It Is Wrong.",
+    excerpt:
+      "The federal SALT deduction limit is now $40,000 as of July 2025. Most agent content either ignores it or references the old $10,000 cap. Accurate local coverage wins AI citations during filing season.",
+    metaDescription:
+      "The federal SALT deduction limit is now $40,000 as of July 2025. Most agent content either ignores it or references the old $10,000 cap. Accurate local coverage wins AI citations during filing season.",
+    targetKeyword: "SALT deduction real estate 2026 homeowners",
+    category: "Market Trends",
+    readTime: 6,
+    publishDate: "2026-04-21",
+    author: "Fatih",
+    featured: true,
+    heroImage: blogSaltDeduction,
+    sections: [
+      {
+        title: "What Changed and When",
+        content:
+          "The federal SALT deduction cap increased from $10,000 to $40,000 under legislation signed July 4, 2025. The IRS has confirmed this as the current limit, making it directly relevant to homeowners in high property-tax states during the current filing season.",
+      },
+      {
+        title: "Who This Change Actually Affects",
+        content:
+          "Taxpayers in New Jersey, New York, California, Connecticut, and Illinois benefit most — particularly those who itemize and have combined state income and property tax obligations approaching $40,000.",
+      },
+      {
+        title: "Why Most Agent Content About This Is Wrong",
+        content:
+          "Two failure modes dominate: agents avoid tax topics entirely, or they reference the outdated $10,000 cap. Both failures create a content gap that agents with accurate, localized SALT information can fill and own in AI search.",
+      },
+      {
+        title: "How to Publish SALT Content Without Practicing Law",
+        content:
+          "State facts, contextualize for the local market, and direct readers to their CPA for personalized application. An accurate, well-structured local SALT overview is more useful than most existing content and earns AI citations during peak filing demand.",
+      },
+      {
+        title: "The New York Pied-à-Terre Proposal as Local Content Angle",
+        content:
+          "New York's April 2026 proposal for a pied-à-terre tax on second homes above $5 million illustrates the direction of political pressure on high-end ownership — useful framing for luxury and second-home market agents anywhere.",
+      },
+    ],    
+  cta: {
+      type: "consultation",
+      text: "Want this done for you? PropertyCopyDesk handles the full system.",
+      buttonText: "Get Your Free AI Visibility Check"
+  }
+},
+{
+    id: "24",
+    slug: "record-price-cuts-relistings-ai-visibility",
+    title: "Record Price Cuts, Record Relistings. The Overlooked Reason Your Listing Won't Sell.",
+    excerpt:
+      "34.2% of sellers cut their list price in February 2026. 45,000 January relistings set a record. The standard advice is 'don't overprice.' The real problem runs deeper.",
+    metaDescription:
+      "34.2% of sellers cut their list price in February 2026. 45,000 January relistings set a record. The standard advice is 'don't overprice.' The real problem runs deeper.",
+    targetKeyword: "real estate price cuts relistings seller strategy 2026",
+    category: "Market Trends",
+    readTime: 6,
+    publishDate: "2026-04-21",
+    author: "Fatih",
+    featured: true,
+    heroImage: blogPriceCutsRelistings,
+    sections: [
+      {
+        title: "The Pricing Problem Is a Market Information Problem",
+        content:
+          "Most overpriced listings result from sellers anchoring to peak 2021-2022 comparables in a market that has shifted significantly. Published, specific local data is the tool that makes current market reality undeniable to sellers.",
+      },
+      {
+        title: "What Relistings Signal to Buyers — and to AI",
+        content:
+          "A pattern of stale listings and relistings builds a data trail that sophisticated buyers and AI-assisted search tools recognize. At the agent level over time, this pattern can erode the professional reputation that referrals depend on.",
+      },
+      {
+        title: "Why Seller Strategy Content Is Undervalued by Most Agents",
+        content:
+          "Most agents focus content on buyers. Seller strategy content is comparatively rare despite high search demand. 'How do I price my home in a buyer's market?' has specific, local answers that AI search engines need from local experts.",
+      },
+      {
+        title: "The Concession Data That Sellers Need",
+        content:
+          "In a market where sellers are outnumbered by buyers nationally by 43%, concession rates are rising. An agent who publishes current local concession norms is providing something that no national portal offers at a local level.",
+      },
+      {
+        title: "The Content That Prevents Overpriced Listings Before They Happen",
+        content:
+          "Pre-listing seller education content calibrates sellers to current market reality before the first conversation. A seller who arrives already understanding the market makes the pricing conversation easier and the listing more likely to succeed.",
+      },
+    ],
+  cta: {
+      type: "consultation",
+      text: "Want this done for you? PropertyCopyDesk handles the full system.",
+      buttonText: "Get Your Free AI Visibility Check"
+  }
+},
+{
+    id: "25",
+    slug: "san-francisco-austin-ai-content-lesson",
+    title: "San Francisco Is Up 14%. Austin Is Cooling. The AI Content Lesson Hidden in the Data.",
+    excerpt:
+      "San Francisco saw 14.4% median price growth in March 2026 while national markets softened. The divergence reveals why hyper-local content wins AI citations — and national commentary doesn't.",
+    metaDescription:
+      "San Francisco saw 14.4% median price growth in March 2026 while national markets softened. The divergence reveals why hyper-local content wins AI citations — and national commentary doesn't.",
+    targetKeyword: "hyper-local real estate content AI search citations",
+    category: "Market Trends",
+    readTime: 6,
+    publishDate: "2026-04-21",
+    author: "Fatih",
+    featured: true,
+    heroImage: blogSfAustinContent,
+    sections: [
+      {
+        title: "Why National Market Narratives Always Mislead Someone",
+        content:
+          "National housing statistics are composites that rarely describe any specific place accurately. A seller in San Francisco reading that the national market is buyer-friendly is being actively misled by accurate national data.",
+      },
+      {
+        title: "What the SF-Austin Divergence Actually Illustrates",
+        content:
+          "San Francisco's 14.4% price growth is driven by AI-industry wealth concentration. Austin's relative cooling reflects supply normalization post-boom. Same interest rate environment, opposite conditions — the local factor is everything.",
+      },
+      {
+        title: "Why AI Search Rewards Local Specificity",
+        content:
+          "When a buyer asks 'is now a good time to buy in Austin?', an article with specific Austin inventory, days on market, and ZIP-level data will outcompete a national overview that mentions Austin in passing.",
+      },
+      {
+        title: "The Content That Portals Cannot Publish at Scale",
+        content:
+          "Working agents carry neighborhood-level market intelligence that no portal database captures in real time. That intelligence, published as structured content, creates an AI citation advantage that portal scale cannot overcome.",
+      },
+      {
+        title: "The Framework for Local-Authority Content in a Fragmented Market",
+        content:
+          "The core question for every article: what does the national narrative get wrong about my specific market right now? Identifying that divergence and publishing it with local data is the formula for AI citation and genuine local authority.",
+      },
+    ],
+  cta: {
+      type: "consultation",
+      text: "Want this done for you? PropertyCopyDesk handles the full system.",
+      buttonText: "Get Your Free AI Visibility Check"
+  }
+},
+{
   id: "16",
   slug: "the-seo-playbook-just-split-in-two-heres-what-actually-changed",
   title: "The SEO Playbook Just Split in Two. Here's What Actually Changed",
