@@ -37,10 +37,10 @@ const SFAustinAIContentArticle: React.FC = () => {
             "name": "PropertyCopyDesk",
             "url": "https://propertycopydesk.com"
         },
-        "datePublished": "2026-04-21T00:00:00+00:00",
+        "datePublished": "2026-05-15T00:00:00+00:00",
         "description": "San Francisco saw 14.4% median price growth in March 2026 while national markets softened. The divergence reveals why hyper-local content wins AI citations — and national commentary doesn't.",
         "image": "https://propertycopydesk.com/blog-ai-visibility.webp",
-        "dateModified": "2026-04-21T00:00:00+00:00",
+        "dateModified": "2026-05-15T00:00:00+00:00",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://propertycopydesk.com/blog/san-francisco-austin-ai-content-lesson"
@@ -121,7 +121,7 @@ const SFAustinAIContentArticle: React.FC = () => {
             <h1 className="text-4xl font-bold text-gray-900 leading-tight mb-4">
               San Francisco Is Up 14%. Austin Is Cooling. The AI Content Lesson Hidden in the Data.
             </h1>
-            <p className="text-gray-500 text-sm">By Fatih · April 21, 2026 · 6 min read</p>
+            <p className="text-gray-500 text-sm">By Fatih · May 15, 2026 · 6 min read</p>
           </header>
 
           <div className="prose prose-lg max-w-none text-gray-700">

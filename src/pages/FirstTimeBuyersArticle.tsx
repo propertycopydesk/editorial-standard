@@ -37,10 +37,10 @@ const FirstTimeBuyersArticle: React.FC = () => {
             "name": "PropertyCopyDesk",
             "url": "https://propertycopydesk.com"
         },
-        "datePublished": "2026-04-21T00:00:00+00:00",
+        "datePublished": "2026-05-06T00:00:00+00:00",
         "description": "First-time buyers are at their lowest share since 1981. This demographic turns to AI search first — making content strategy the most important lead generation tool for agents serving them.",
         "image": "https://propertycopydesk.com/blog-ai-visibility.webp",
-        "dateModified": "2026-04-21T00:00:00+00:00",
+        "dateModified": "2026-05-06T00:00:00+00:00",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://propertycopydesk.com/blog/first-time-buyers-40-year-low-content-strategy"
@@ -121,7 +121,7 @@ const FirstTimeBuyersArticle: React.FC = () => {
             <h1 className="text-4xl font-bold text-gray-900 leading-tight mb-4">
               First-Time Buyers Just Hit a 40-Year Low. Your Content Strategy Should Respond.
             </h1>
-            <p className="text-gray-500 text-sm">By Fatih · April 21, 2026 · 7 min read</p>
+            <p className="text-gray-500 text-sm">By Fatih · May 6, 2026 · 7 min read</p>
           </header>
 
           <div className="prose prose-lg max-w-none text-gray-700">

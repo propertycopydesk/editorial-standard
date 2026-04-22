@@ -37,10 +37,10 @@ const BuyersMarketsArticle: React.FC = () => {
             "name": "PropertyCopyDesk",
             "url": "https://propertycopydesk.com"
         },
-        "datePublished": "2026-04-21T00:00:00+00:00",
+        "datePublished": "2026-04-30T00:00:00+00:00",
         "description": "Redfin data shows 38 major metros shifted to buyer's markets in March 2026. Agents who publish local analysis of this shift will own AI search queries buyers are already asking.",
         "image": "https://propertycopydesk.com/blog-ai-visibility.webp",
-        "dateModified": "2026-04-21T00:00:00+00:00",
+        "dateModified": "2026-04-30T00:00:00+00:00",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://propertycopydesk.com/blog/38-metros-buyers-markets-agent-content"
@@ -121,7 +121,7 @@ const BuyersMarketsArticle: React.FC = () => {
             <h1 className="text-4xl font-bold text-gray-900 leading-tight mb-4">
               38 Metros Just Became Buyer's Markets. Most Agent Blogs Won't Mention It.
             </h1>
-            <p className="text-gray-500 text-sm">By Fatih · April 21, 2026 · 6 min read</p>
+            <p className="text-gray-500 text-sm">By Fatih · April 30, 2026 · 6 min read</p>
           </header>
 
           <div className="prose prose-lg max-w-none text-gray-700">

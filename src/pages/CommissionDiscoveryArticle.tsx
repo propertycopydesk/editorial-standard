@@ -37,10 +37,10 @@ const CommissionDiscoveryArticle: React.FC = () => {
             "name": "PropertyCopyDesk",
             "url": "https://propertycopydesk.com"
         },
-        "datePublished": "2026-04-21T00:00:00+00:00",
+        "datePublished": "2026-05-03T00:00:00+00:00",
         "description": "Post-settlement commission pressure and AI-driven pre-search are converging on one point: agents who can't be found and trusted early in the funnel are losing on both fronts.",
         "image": "https://propertycopydesk.com/blog-ai-visibility.webp",
-        "dateModified": "2026-04-21T00:00:00+00:00",
+        "dateModified": "2026-05-03T00:00:00+00:00",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://propertycopydesk.com/blog/commission-squeeze-discovery-problem"
@@ -121,7 +121,7 @@ const CommissionDiscoveryArticle: React.FC = () => {
             <h1 className="text-4xl font-bold text-gray-900 leading-tight mb-4">
               The Commission Squeeze and the Discovery Problem Are the Same Problem
             </h1>
-            <p className="text-gray-500 text-sm">By Fatih · April 21, 2026 · 7 min read</p>
+            <p className="text-gray-500 text-sm">By Fatih · May 3, 2026 · 7 min read</p>
           </header>
 
           <div className="prose prose-lg max-w-none text-gray-700">

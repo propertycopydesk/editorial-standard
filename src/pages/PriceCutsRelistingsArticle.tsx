@@ -37,10 +37,10 @@ const PriceCutsRelistingsArticle: React.FC = () => {
             "name": "PropertyCopyDesk",
             "url": "https://propertycopydesk.com"
         },
-        "datePublished": "2026-04-21T00:00:00+00:00",
+        "datePublished": "2026-05-12T00:00:00+00:00",
         "description": "34.2% of sellers cut their list price in February 2026. January relistings hit 45,000. The standard advice is 'don't overprice.' The real problem runs deeper — and connects to AI visibility.",
         "image": "https://propertycopydesk.com/blog-ai-visibility.webp",
-        "dateModified": "2026-04-21T00:00:00+00:00",
+        "dateModified": "2026-05-12T00:00:00+00:00",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://propertycopydesk.com/blog/record-price-cuts-relistings-ai-visibility"
@@ -121,7 +121,7 @@ const PriceCutsRelistingsArticle: React.FC = () => {
             <h1 className="text-4xl font-bold text-gray-900 leading-tight mb-4">
               Record Price Cuts, Record Relistings. The Overlooked Reason Your Listing Won't Sell.
             </h1>
-            <p className="text-gray-500 text-sm">By Fatih · April 21, 2026 · 6 min read</p>
+            <p className="text-gray-500 text-sm">By Fatih · May 12, 2026 · 6 min read</p>
           </header>
 
           <div className="prose prose-lg max-w-none text-gray-700">

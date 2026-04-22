@@ -37,10 +37,10 @@ const SALTDeductionArticle: React.FC = () => {
             "name": "PropertyCopyDesk",
             "url": "https://propertycopydesk.com"
         },
-        "datePublished": "2026-04-21T00:00:00+00:00",
+        "datePublished": "2026-05-09T00:00:00+00:00",
         "description": "The federal SALT deduction limit is now $40,000 as of July 2025. Most agent content either ignores it or gets the details wrong. Here's why accurate local coverage wins AI citations.",
         "image": "https://propertycopydesk.com/blog-ai-visibility.webp",
-        "dateModified": "2026-04-21T00:00:00+00:00",
+        "dateModified": "2026-05-09T00:00:00+00:00",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://propertycopydesk.com/blog/salt-deduction-changed-real-estate-content"
@@ -121,7 +121,7 @@ const SALTDeductionArticle: React.FC = () => {
             <h1 className="text-4xl font-bold text-gray-900 leading-tight mb-4">
               The SALT Deduction Changed. Most Real Estate Content About It Is Wrong.
             </h1>
-            <p className="text-gray-500 text-sm">By Fatih · April 21, 2026 · 6 min read</p>
+            <p className="text-gray-500 text-sm">By Fatih · May 9, 2026 · 6 min read</p>
           </header>
 
           <div className="prose prose-lg max-w-none text-gray-700">

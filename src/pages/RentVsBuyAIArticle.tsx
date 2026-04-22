@@ -37,10 +37,10 @@ const RentVsBuyAIArticle: React.FC = () => {
             "name": "PropertyCopyDesk",
             "url": "https://propertycopydesk.com"
         },
-        "datePublished": "2026-04-21T00:00:00+00:00",
+        "datePublished": "2026-04-24T00:00:00+00:00",
         "description": "Renting is cheaper than buying in all 50 major metros. When buyers ask ChatGPT 'should I rent or buy in Austin?', who answers? Here's how agents can own that query.",
         "image": "https://propertycopydesk.com/blog-ai-visibility.webp",
-        "dateModified": "2026-04-21T00:00:00+00:00",
+        "dateModified": "2026-04-24T00:00:00+00:00",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://propertycopydesk.com/blog/rent-vs-buy-ai-search-question"
@@ -121,7 +121,7 @@ const RentVsBuyAIArticle: React.FC = () => {
             <h1 className="text-4xl font-bold text-gray-900 leading-tight mb-4">
               The Rent vs. Buy Question Is Now an AI Search Question
             </h1>
-            <p className="text-gray-500 text-sm">By Fatih · April 21, 2026 · 6 min read</p>
+            <p className="text-gray-500 text-sm">By Fatih · April 24, 2026 · 6 min read</p>
           </header>
 
           <div className="prose prose-lg max-w-none text-gray-700">

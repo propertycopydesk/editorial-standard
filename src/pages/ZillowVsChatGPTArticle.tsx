@@ -37,10 +37,10 @@ const ZillowVsChatGPTArticle: React.FC = () => {
             "name": "PropertyCopyDesk",
             "url": "https://propertycopydesk.com"
         },
-        "datePublished": "2026-04-21T00:00:00+00:00",
+        "datePublished": "2026-04-27T00:00:00+00:00",
         "description": "Zillow visibility and AI search visibility run on completely different rules. Here's what agents need to understand about the gap — and how to close it.",
         "image": "https://propertycopydesk.com/blog-ai-visibility.webp",
-        "dateModified": "2026-04-21T00:00:00+00:00",
+        "dateModified": "2026-04-27T00:00:00+00:00",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://propertycopydesk.com/blog/listing-found-zillow-not-chatgpt"
@@ -121,7 +121,7 @@ const ZillowVsChatGPTArticle: React.FC = () => {
             <h1 className="text-4xl font-bold text-gray-900 leading-tight mb-4">
               Why Your Listing Gets Found on Zillow But Not on ChatGPT
             </h1>
-            <p className="text-gray-500 text-sm">By Fatih · April 21, 2026 · 6 min read</p>
+            <p className="text-gray-500 text-sm">By Fatih · April 27, 2026 · 6 min read</p>
           </header>
 
           <div className="prose prose-lg max-w-none text-gray-700">
