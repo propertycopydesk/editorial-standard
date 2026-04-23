@@ -1046,30 +1046,35 @@ export const getPostBySlug = (slug: string): BlogPost | undefined => {
   return blogPosts.find(post => post.slug === slug);
 };
 
+const byDateDesc = (a: BlogPost, b: BlogPost) =>
+  new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime();
+
+const sortedPosts = (): BlogPost[] => [...blogPosts].sort(byDateDesc);
+
 export const getRelatedPosts = (currentSlug: string, category: string, limit: number = 3): BlogPost[] => {
-  return blogPosts
+  return sortedPosts()
     .filter(post => post.slug !== currentSlug && post.category === category)
     .slice(0, limit);
 };
 
 export const getFeaturedPosts = (limit: number = 3): BlogPost[] => {
-  return blogPosts.filter(post => post.featured).slice(0, limit);
+  return sortedPosts().filter(post => post.featured).slice(0, limit);
 };
 
 export const getRecentPosts = (limit: number = 5): BlogPost[] => {
-  return [...blogPosts]
-    .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime())
-    .slice(0, limit);
+  return sortedPosts().slice(0, limit);
 };
 
 export const getPopularPosts = (limit: number = 5): BlogPost[] => {
-  // In a real app, this would be based on actual view counts
-  return blogPosts.filter(post => post.featured).slice(0, limit);
+  // Featured posts ordered by recency as a stand-in for popularity
+  return sortedPosts().filter(post => post.featured).slice(0, limit);
 };
 
 export const getPostsByCategory = (category: string): BlogPost[] => {
-  if (category === "All") return blogPosts;
-  return blogPosts.filter(post => post.category === category);
+  const all = sortedPosts();
+  if (category === "All") return all;
+  return all.filter(post => post.category === category);
 };
 
 export const categories = ["All", "Listing Copy", "Team Efficiency", "AI Tools", "Market Trends"] as const;
+
