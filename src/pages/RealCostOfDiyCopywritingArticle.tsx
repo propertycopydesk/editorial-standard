@@ -1,130 +1,38 @@
-import React, { useEffect } from "react";
+import LongFormArticleLayout from "@/components/LongFormArticleLayout";
+import heroImage from "@/assets/blog-trc.webp";
 
-const RealCostOfDiyCopywritingArticle: React.FC = () => {
-  const title = "The Real Cost of DIY Copywriting | PropertyCopyDesk";
-  const description =
-    "DIY copywriting looks free, but hidden time, performance, and compliance costs can exceed professional support.";
-  const canonicalUrl = "https://propertycopydesk.com/blog/real-cost-of-diy-copywriting";
-  const datePublished = "2026-01-04T00:00:00+00:00";
-  const dateModified = "2026-04-22T00:00:00+00:00";
-
-  useEffect(() => {
-    document.title = title;
-
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (!metaDesc) {
-      metaDesc = document.createElement("meta");
-      metaDesc.setAttribute("name", "description");
-      document.head.appendChild(metaDesc);
+const RealCostOfDiyCopywritingArticle = () => (
+  <LongFormArticleLayout
+    category="Team Efficiency"
+    title="The Real Cost of DIY Copywriting (It's More Than You Think)"
+    metaTitle="The Real Cost of DIY Copywriting | PropertyCopyDesk"
+    metaDescription="DIY copywriting looks free, but hidden time, performance, and compliance costs can exceed professional support. Here is the full math."
+    canonicalSlug="real-cost-of-diy-copywriting"
+    datePublished="2026-01-03"
+    dateModified="2026-04-22"
+    displayDate="January 3, 2026"
+    author="Fatih Can"
+    readTime={8}
+    heroImage={heroImage}
+    keywords={["real estate copywriting cost", "team efficiency", "listing operations"]}
+    intro={
+      <>When agents write their own listing copy, they treat it as free because there is no out-of-pocket expense. That logic ignores the hidden costs that compound with every listing — time, lost opportunity, weaker conversion, and asymmetric compliance risk. If your pipeline depends on consistent listing performance, copy is an operations function, not a side task.</>
     }
-    metaDesc.setAttribute("content", description);
-
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement("link");
-      canonical.setAttribute("rel", "canonical");
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute("href", canonicalUrl);
-
-    const schema = {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "@id": `${canonicalUrl}#article`,
-      headline: "The Real Cost of DIY Copywriting",
-      description,
-      author: { "@type": "Person", name: "Fatih Can" },
-      publisher: { "@type": "Organization", name: "PropertyCopyDesk", url: "https://propertycopydesk.com" },
-      datePublished,
-      dateModified,
-      mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
-      keywords: ["real estate copywriting cost", "team efficiency", "listing operations"],
-    };
-
-    const scriptId = "article-schema-diy-cost";
-    document.getElementById(scriptId)?.remove();
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.id = scriptId;
-    script.textContent = JSON.stringify(schema);
-    document.head.appendChild(script);
-
-    return () => document.getElementById(scriptId)?.remove();
-  }, []);
-
-  return (
-    <main className="max-w-3xl mx-auto px-4 py-12">
-      <article>
-        <header className="mb-10">
-          <div className="text-sm font-medium text-amber-600 uppercase tracking-wide mb-3">Team Efficiency</div>
-          <h1 className="text-4xl font-bold text-gray-900 leading-tight mb-4">The Real Cost of DIY Copywriting</h1>
-          <p className="text-gray-500 text-sm">By Fatih Can · January 4, 2026 · 8 min read</p>
-        </header>
-
-        <div className="prose prose-lg max-w-none text-gray-700">
-          <p>
-            DIY copywriting feels free because there is no invoice. But the real cost shows up in hours lost, lower conversion quality,
-            and avoidable risk. If your pipeline depends on consistent listing performance, copy is an operations function, not side work.
-          </p>
-
-          <h2>Time Cost Is Usually Underestimated</h2>
-          <p>
-            Most agents spend far more time drafting and revising than they assume. Even 90 minutes per listing compounds quickly.
-            Those are hours not spent prospecting, negotiating, or relationship-building.
-          </p>
-
-          <h2>Opportunity Cost Is a Revenue Leak</h2>
-          <p>
-            Every low-value writing hour displaces high-value sales activity. The right comparison is not "free vs paid copy."
-            The right comparison is "owner time on copy vs owner time on pipeline creation."
-          </p>
-
-          <h2>Performance Cost Is Invisible But Expensive</h2>
-          <p>
-            Weak copy attracts weaker inquiry intent. Better copy improves listing-level conversion quality by setting expectations clearly
-            and framing value more effectively. The missed upside from poor copy is often larger than the direct cost of professional support.
-          </p>
-
-          <h2>Compliance Risk Carries Asymmetric Downside</h2>
-          <p>
-            A single language mistake can create outsized legal exposure. DIY workflows without review guardrails increase this risk.
-            Professional review lowers both compliance risk and brand-level trust damage.
-          </p>
-
-          <h2>What a Better Cost Model Looks Like</h2>
-          <p>
-            Use a total-cost model: time + opportunity + performance + risk. When evaluated this way, structured copy support is usually
-            a leverage decision, not an expense decision.
-          </p>
-
-          <section className="mt-10">
-            <h2>Frequently Asked Questions</h2>
-            <h3>Is DIY always bad?</h3>
-            <p>No. DIY can work with a strong framework, quality standards, and disciplined review process.</p>
-            <h3>When should I outsource?</h3>
-            <p>When listing volume is increasing, quality is inconsistent, or owner time is becoming the bottleneck.</p>
-            <h3>What metric should I track?</h3>
-            <p>Track listing inquiry quality and speed-to-first-qualified-conversation, not just raw lead count.</p>
-          </section>
-        </div>
-
-        <div className="mt-12 bg-amber-50 border border-amber-200 rounded-xl p-8">
-          <h3 className="text-xl font-bold text-gray-900 mb-2">Want to reduce hidden copy costs?</h3>
-          <p className="text-gray-700 mb-4">
-            PropertyCopyDesk helps agents turn copy into a repeatable, efficient, performance-focused workflow.
-          </p>
-          <a
-            href="https://cal.com/propertycopydesk/auditcall"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-semibold px-6 py-3 rounded-lg transition"
-          >
-            Get Your Free Audit
-          </a>
-        </div>
-      </article>
-    </main>
-  );
-};
+    sections={[
+      { heading: "Time Cost Is Always Underestimated", paragraphs: ["Most agents spend between 90 minutes and 3 hours writing each listing description, including the inevitable revisions when something does not sound quite right. For an agent managing three listings per month, that is 6–9 hours monthly — roughly 72–108 hours annually — spent on a task that a professional process can complete faster and more consistently. That number gets bigger the more listings you carry."] },
+      { heading: "Opportunity Cost Is the Real Revenue Leak", paragraphs: ["The honest comparison is not \"free vs paid copy.\" It is \"owner time on copy vs owner time on pipeline creation.\" Those 6–9 hours per month could be spent prospecting, networking, showing properties, or negotiating offers. If your hourly value as a productive agent is even a conservative $100/hour, you are effectively spending $600–$900/month in displaced revenue activity to write copy yourself."] },
+      { heading: "Performance Cost Is Invisible Until You Measure It", paragraphs: ["Agent-written descriptions typically underperform professionally edited copy by roughly 18% in inquiry generation. For a $400,000 listing, that can be the difference between three showings and five — or between a single offer and the multiple competing offers that drive price up. The missed upside from weak copy is almost always larger than the cost of professional support."] },
+      { heading: "Compliance Risk Carries Asymmetric Downside", paragraphs: ["A single Fair Housing violation in a description carries fines that start around $10,000 for a first offense and scale rapidly for repeat issues. DIY workflows without review guardrails increase that exposure. Professional editing includes compliance review as standard practice, which lowers both legal risk and brand-level trust damage."] },
+      { heading: "What a Better Cost Model Looks Like", paragraphs: ["Use a total-cost model: time + opportunity + performance + risk. Run the math on a single month. For most agents producing three or more listings, structured copy support is a leverage decision rather than an expense. Professional support that costs $75 per listing and arrives in 24 hours pays back through time recovery alone — before any of the conversion lift is factored in."] },
+      { heading: "When DIY Still Makes Sense", paragraphs: ["DIY can work for low-volume agents with a strong personal voice, a disciplined editorial checklist, and the time to maintain quality consistently. The decision point is volume and consistency. The moment listing volume increases, quality starts drifting, or owner time becomes the bottleneck, the math flips toward outsourcing."] },
+    ]}
+    faqs={[
+      { q: "Is DIY copywriting always more expensive than outsourcing?", a: "Not always. For very low-volume agents with strong writing skills and a disciplined process, DIY can work. The math flips toward outsourcing as listing volume increases or quality becomes inconsistent." },
+      { q: "What metric should I track to decide?", a: "Track listing inquiry quality, days on market, and your own hours spent per listing. Together they reveal whether copy is helping or hurting your pipeline." },
+      { q: "What if I use AI tools to write listings myself?", a: "AI plus a strong editorial checklist can shrink the time cost. Without review discipline, AI tends to amplify generic, low-trust phrasing and can introduce compliance risk." },
+      { q: "How do I justify the cost to my brokerage?", a: "Frame it as a margin and time-leverage decision. Even a 15% lift in inquiry quality combined with reclaimed owner hours typically more than covers structured copy support." },
+    ]}
+  />
+);
 
 export default RealCostOfDiyCopywritingArticle;
