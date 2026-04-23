@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
+import ArticleTOC from "@/components/ArticleTOC";
 import blogImage from "@/assets/blog-roadmap.webp";
 
 const BOOKING_URL = "https://cal.com/propertycopydesk/auditcall";
@@ -109,6 +110,18 @@ const RoadmapArticle = () => {
 
             {/* Article Body */}
             <div className="space-y-8">
+              <ArticleTOC items={[
+                { id: "weeks-1-2-foundation-build-the-infrastructure-ai-can-crawl", title: "Weeks 1-2: Foundation — Build the Infrastructure AI Can Crawl" },
+                { id: "weeks-3-4-first-content-push-build-topical-authority", title: "Weeks 3-4: First Content Push — Build Topical Authority" },
+                { id: "weeks-5-6-technical-optimization-validate-and-strengthen-your-infrastructure", title: "Weeks 5-6: Technical Optimization — Validate and Strengthen Your Infrastructure" },
+                { id: "weeks-7-8-amplification-and-tracking-extend-reach-and-monitor-progress", title: "Weeks 7-8: Amplification and Tracking — Extend Reach and Monitor Progress" },
+                { id: "what-to-expect-at-day-60-realistic-outcomes", title: "What to Expect at Day 60 — Realistic Outcomes" },
+                { id: "what-happens-after-day-60-months-3-6-compounding-effect", title: "What Happens After Day 60 — Months 3-6: Compounding Effect" },
+                { id: "frequently-asked-questions", title: "Frequently Asked Questions" },
+                { id: "related-reading", title: "Related Reading" },
+                { id: "the-bottom-line", title: "The Bottom Line" },
+              ]} />
+
               {/* Opening */}
               <p className="font-sans text-lg text-muted-foreground leading-relaxed">
                 Most real estate marketing plans are built for Google 2019, not AI 2026. Agents have playbooks for things that no longer work the same way. You've built your visibility strategy on Google rankings, third-party portals, and paid ads—all tools that still matter, but none of them account for how AI now intermediates search. ChatGPT, Perplexity, and Gemini are redirecting conversations that used to start on Google. Your clients are asking these platforms questions about real estate before they ever search your name. If AI doesn't know you exist, you don't exist to people using AI search.
@@ -116,7 +129,7 @@ const RoadmapArticle = () => {
 
               {/* Section: Weeks 1-2 Foundation */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">Weeks 1-2: Foundation — Build the Infrastructure AI Can Crawl</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="weeks-1-2-foundation-build-the-infrastructure-ai-can-crawl">Weeks 1-2: Foundation — Build the Infrastructure AI Can Crawl</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     The first two weeks aren't about content. They're about making sure AI can find you and understand what your website is about. Most real estate websites have zero infrastructure for AI indexing beyond the default.
@@ -141,7 +154,7 @@ const RoadmapArticle = () => {
 
               {/* Section: Weeks 3-4 First Content Push */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">Weeks 3-4: First Content Push — Build Topical Authority</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="weeks-3-4-first-content-push-build-topical-authority">Weeks 3-4: First Content Push — Build Topical Authority</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     Now you publish. Your goal: six focused articles targeting long-tail AI queries specific to your market. Not SEO-tool-generated keywords. Questions your clients actually ask. If you work with first-time homebuyers in Austin, your articles should answer their questions: "How much of a down payment do I need in Austin right now?" "What neighborhoods are best for young professionals in Austin?" "How to negotiate inspection repairs in Texas." "Why are closing costs higher in Austin than Dallas?"
@@ -163,7 +176,7 @@ const RoadmapArticle = () => {
 
               {/* Section: Weeks 5-6 Technical Optimization */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">Weeks 5-6: Technical Optimization — Validate and Strengthen Your Infrastructure</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="weeks-5-6-technical-optimization-validate-and-strengthen-your-infrastructure">Weeks 5-6: Technical Optimization — Validate and Strengthen Your Infrastructure</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     Your six articles are published. Now you optimize them. This phase is about making sure everything you built validates, links correctly, and signals topical authority to crawlers.
@@ -185,7 +198,7 @@ const RoadmapArticle = () => {
 
               {/* Section: Weeks 7-8 Amplification and Tracking */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">Weeks 7-8: Amplification and Tracking — Extend Reach and Monitor Progress</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="weeks-7-8-amplification-and-tracking-extend-reach-and-monitor-progress">Weeks 7-8: Amplification and Tracking — Extend Reach and Monitor Progress</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     Your foundation is built and your first cluster is published. Now amplify. Distribution doesn't mean paid ads. It means making sure your content finds the people and platforms that matter.
@@ -207,7 +220,7 @@ const RoadmapArticle = () => {
 
               {/* Section: What to Expect at Day 60 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">What to Expect at Day 60 — Realistic Outcomes</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="what-to-expect-at-day-60-realistic-outcomes">What to Expect at Day 60 — Realistic Outcomes</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     You've followed this roadmap for eight weeks. What does success look like? Be specific about what's realistic so you don't get discouraged.
@@ -232,7 +245,7 @@ const RoadmapArticle = () => {
 
               {/* Section: What Happens After Day 60 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">What Happens After Day 60 — Months 3-6: Compounding Effect</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="what-happens-after-day-60-months-3-6-compounding-effect">What Happens After Day 60 — Months 3-6: Compounding Effect</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     The 60-day sprint gets you to the starting line. The real race is what happens next.
@@ -257,7 +270,7 @@ const RoadmapArticle = () => {
 
               {/* FAQ Section */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6">Frequently Asked Questions</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6" id="frequently-asked-questions">Frequently Asked Questions</h2>
                 <div className="space-y-6">
                   {[
                     {
@@ -287,7 +300,7 @@ const RoadmapArticle = () => {
 
               {/* Related Articles Section */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">Related Reading</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="related-reading">Related Reading</h2>
                 <div className="space-y-3 font-sans text-muted-foreground">
                   <p>
                     This roadmap gives you the framework. Here are the deeper dives on specific pieces:
@@ -308,7 +321,7 @@ const RoadmapArticle = () => {
 
               {/* Bottom Line */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The Bottom Line</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-bottom-line">The Bottom Line</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     This roadmap is not a guess. It's a system that agents in 6 different markets have executed with measurable results. The agents who see citations by month 3 follow the sequence. The agents who see nothing after 60 days either skipped steps (no schema, no GBP optimization, thin content) or quit before citations started appearing (which is after day 60, not before).

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
+import ArticleTOC from "@/components/ArticleTOC";
 import blogImage from "@/assets/blog-ai-visibility.webp";
 
 const BOOKING_URL = "https://cal.com/propertycopydesk/auditcall";
@@ -108,6 +109,16 @@ const AIVisibilityArticle = () => {
 
             {/* Article Body */}
             <div className="space-y-8">
+              <ArticleTOC items={[
+                { id: "the-4-reasons-ai-doesnt-know-you-exist", title: "The 4 Reasons AI Doesn't Know You Exist" },
+                { id: "what-ai-crawlers-actually-look-for-on-your-website", title: "What AI Crawlers Actually Look For on Your Website" },
+                { id: "the-minimum-viable-ai-presence-for-a-real-estate-agent", title: "The Minimum Viable AI Presence for a Real Estate Agent" },
+                { id: "a-simple-test-to-check-your-ai-visibility-right-now", title: "A Simple Test to Check Your AI Visibility Right Now" },
+                { id: "how-to-fix-this-in-60-90-days", title: "How to Fix This in 60-90 Days" },
+                { id: "frequently-asked-questions", title: "Frequently Asked Questions" },
+                { id: "the-bottom-line", title: "The Bottom Line" },
+              ]} />
+
               {/* Opening */}
               <p className="font-sans text-lg text-muted-foreground leading-relaxed">
                 You searched for your name in ChatGPT. You tried your market. You typed "best real estate agent in [your city]." Someone else showed up. Maybe multiple competitors. Not you. That's an AI visibility problem, and it has a specific cause. Here's what's blocking you and how to fix it.
@@ -115,7 +126,7 @@ const AIVisibilityArticle = () => {
 
               {/* Section: 4 Reasons */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The 4 Reasons AI Doesn't Know You Exist</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-4-reasons-ai-doesnt-know-you-exist">The 4 Reasons AI Doesn't Know You Exist</h2>
                 <div className="space-y-5 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     <strong className="text-foreground">No topical authority.</strong> AI models associate agents with markets and specialties based on content volume and interconnection. If your website has 3 pages, a contact form, and an IDX feed, that's not enough signal. You're not demonstrating expertise. You're just present. Topical authority requires 20-30 interconnected articles on a specific subject, published consistently. Without them, AI has no basis to recommend you over someone who has published 25 articles on your market.
@@ -134,7 +145,7 @@ const AIVisibilityArticle = () => {
 
               {/* Section: What AI Crawlers Look For */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">What AI Crawlers Actually Look For on Your Website</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="what-ai-crawlers-actually-look-for-on-your-website">What AI Crawlers Actually Look For on Your Website</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     Three things determine whether AI indexes your content: crawlability, relevance signals, and authority indicators.
@@ -153,7 +164,7 @@ const AIVisibilityArticle = () => {
 
               {/* Section: Minimum Viable AI Presence */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The Minimum Viable AI Presence for a Real Estate Agent</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-minimum-viable-ai-presence-for-a-real-estate-agent">The Minimum Viable AI Presence for a Real Estate Agent</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     The baseline for consistent AI citations is lower than most agents expect, but it's still a real investment.
@@ -172,7 +183,7 @@ const AIVisibilityArticle = () => {
 
               {/* Section: Test */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">A Simple Test to Check Your AI Visibility Right Now</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="a-simple-test-to-check-your-ai-visibility-right-now">A Simple Test to Check Your AI Visibility Right Now</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     Do this in the next 10 minutes. Open ChatGPT, Perplexity, and Gemini in three separate tabs.
@@ -191,7 +202,7 @@ const AIVisibilityArticle = () => {
 
               {/* Section: Fix in 60-90 Days */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">How to Fix This in 60-90 Days</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="how-to-fix-this-in-60-90-days">How to Fix This in 60-90 Days</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     <strong className="text-foreground">Week 1:</strong> Audit your Google Business Profile. Update your category to "Real Estate Agent" (not "Realtor" or "Real Estate Agency"). Write a 750-word description covering your markets, specialties, and client types. Schedule two posts per week for the next 30 days.
@@ -210,7 +221,7 @@ const AIVisibilityArticle = () => {
 
               {/* FAQ Section */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6">Frequently Asked Questions</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6" id="frequently-asked-questions">Frequently Asked Questions</h2>
                 <div className="space-y-6">
                   {[
                     {
@@ -240,7 +251,7 @@ const AIVisibilityArticle = () => {
 
               {/* Bottom Line */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The Bottom Line</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-bottom-line">The Bottom Line</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     The agents appearing in AI search in 2026 aren't there because they paid for placement. They're there because they built a content infrastructure before most competitors started paying attention. The gap between agents with AI visibility and those without is widening. Most markets still have open territory. If your website isn't showing up now, the window to claim your market without significant competition is still open, but it's closing.

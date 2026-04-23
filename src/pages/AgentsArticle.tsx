@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
+import ArticleTOC from "@/components/ArticleTOC";
 import blogImage from "@/assets/blog-agents.webp";
 
 // NOTE: Upload an image named blog-agents.webp to src/assets/ before deploying.
@@ -105,6 +106,18 @@ const AgentsArticle = () => {
             </div>
 
             <div className="space-y-8">
+              <ArticleTOC items={[
+                { id: "what-these-5-agents-have-in-common", title: "What These 5 Agents Have in Common" },
+                { id: "agent-1-the-austin-luxury-specialist", title: "Agent 1: The Austin Luxury Specialist" },
+                { id: "agent-2-the-phoenix-relocation-expert", title: "Agent 2: The Phoenix Relocation Expert" },
+                { id: "agent-3-the-nashville-neighborhood-authority", title: "Agent 3: The Nashville Neighborhood Authority" },
+                { id: "agent-4-the-tampa-first-time-buyer-guide", title: "Agent 4: The Tampa First-Time Buyer Guide" },
+                { id: "agent-5-the-charlotte-investment-property-advisor", title: "Agent 5: The Charlotte Investment Property Advisor" },
+                { id: "the-pattern-you-should-copy", title: "The Pattern You Should Copy" },
+                { id: "frequently-asked-questions", title: "Frequently Asked Questions" },
+                { id: "the-window-is-smaller-than-it-was-last-year", title: "The Window Is Smaller Than It Was Last Year" },
+              ]} />
+
 
               {/* Opening */}
               <p className="font-sans text-lg text-muted-foreground leading-relaxed">
@@ -116,7 +129,7 @@ const AgentsArticle = () => {
 
               {/* What they have in common */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">What These 5 Agents Have in Common</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="what-these-5-agents-have-in-common">What These 5 Agents Have in Common</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     Before the individual profiles, it's worth naming the four things every agent in this list shares. These aren't optional variables — they're the consistent pattern across all five.
@@ -138,7 +151,7 @@ const AgentsArticle = () => {
 
               {/* Agent 1 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">Agent 1: The Austin Luxury Specialist</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="agent-1-the-austin-luxury-specialist">Agent 1: The Austin Luxury Specialist</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     This agent had been operating in the Austin luxury market for eleven years when we first ran the test. They were showing up in ChatGPT for three distinct query types: "best luxury real estate agent in Austin," "who to use for a home over $2M in Austin," and "Austin real estate market above $1.5M." Perplexity cited them directly in two responses, with article links.
@@ -157,7 +170,7 @@ const AgentsArticle = () => {
 
               {/* Agent 2 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">Agent 2: The Phoenix Relocation Expert</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="agent-2-the-phoenix-relocation-expert">Agent 2: The Phoenix Relocation Expert</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     This agent built their entire content strategy around one question they kept getting from clients: "We're moving from California — where should we actually live in Phoenix?" They turned that question into 28 articles. Neighborhood-by-neighborhood cost-of-living comparisons. Which suburbs are closest to which tech corridors. The real commute times, not the Google Maps estimate. School district data by zip code for families with specific ages of children.
@@ -176,7 +189,7 @@ const AgentsArticle = () => {
 
               {/* Agent 3 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">Agent 3: The Nashville Neighborhood Authority</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="agent-3-the-nashville-neighborhood-authority">Agent 3: The Nashville Neighborhood Authority</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     This agent took a different approach to specificity: instead of focusing on a buyer type or price bracket, they went deep on geography. One neighborhood per article, with enough depth that a buyer who'd never visited could understand exactly what it was like to live there. Not just demographics and median prices — the actual texture. Which streets are walkable. Which blocks are buying vs. selling cycles ahead of the rest. What the renovation activity in a 4-block radius tells you about where values are heading.
@@ -195,7 +208,7 @@ const AgentsArticle = () => {
 
               {/* Agent 4 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">Agent 4: The Tampa First-Time Buyer Guide</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="agent-4-the-tampa-first-time-buyer-guide">Agent 4: The Tampa First-Time Buyer Guide</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     This is the youngest business in the five profiles — the agent had been licensed for three years at the time of our test. They also had the smallest content library: 19 articles. But they were showing up in Perplexity and ChatGPT for first-time buyer queries in Tampa consistently enough that we ran the test multiple times to confirm it wasn't an anomaly.
@@ -214,7 +227,7 @@ const AgentsArticle = () => {
 
               {/* Agent 5 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">Agent 5: The Charlotte Investment Property Advisor</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="agent-5-the-charlotte-investment-property-advisor">Agent 5: The Charlotte Investment Property Advisor</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     This agent operates in a corner of real estate most content strategies ignore: small residential investment properties — duplexes, triplexes, small multifamily — in the Charlotte metro. Their content is written for a reader who is evaluating an investment, not buying a home to live in. Cap rates. Cash-on-cash return benchmarks by submarket. The actual landlord experience in specific Charlotte zip codes, including vacancy rates and tenant quality signals.
@@ -233,7 +246,7 @@ const AgentsArticle = () => {
 
               {/* The pattern */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The Pattern You Should Copy</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-pattern-you-should-copy">The Pattern You Should Copy</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     Five profiles. Five different markets. Five different niches and price points. The pattern underneath all of them is identical.
@@ -258,7 +271,7 @@ const AgentsArticle = () => {
 
               {/* FAQ */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6">Frequently Asked Questions</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6" id="frequently-asked-questions">Frequently Asked Questions</h2>
                 <div className="space-y-6">
                   {[
                     {
@@ -284,7 +297,7 @@ const AgentsArticle = () => {
 
               {/* Conclusion */}
               <section className="border-t border-border pt-8">
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The Window Is Smaller Than It Was Last Year</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-window-is-smaller-than-it-was-last-year">The Window Is Smaller Than It Was Last Year</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     When we started running these market tests twelve months ago, most markets returned zero consistent AI citations for any real estate agent. The window was wide open. That's changed. In roughly a third of the markets we test now, there's at least one agent who has figured this out and is pulling consistent citations across two or three platforms.

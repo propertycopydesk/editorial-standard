@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
+import ArticleTOC from "@/components/ArticleTOC";
 import blogImage from "@/assets/blog-perplexity.webp";
 
 // NOTE: Upload an image named blog-perplexity.webp to src/assets/ before deploying.
@@ -105,6 +106,17 @@ const PerplexityArticle = () => {
             </div>
 
             <div className="space-y-8">
+              <ArticleTOC items={[
+                { id: "how-each-ai-platform-finds-and-recommends-agents", title: "How Each AI Platform Finds and Recommends Agents" },
+                { id: "the-universal-ranking-factors-across-all-three-platforms", title: "The Universal Ranking Factors Across All Three Platforms" },
+                { id: "platform-specific-optimization-for-real-estate-agents", title: "Platform-Specific Optimization for Real Estate Agents" },
+                { id: "the-content-format-ai-prefers", title: "The Content Format AI Prefers" },
+                { id: "schema-markup-that-speaks-to-ai-crawlers", title: "Schema Markup That Speaks to AI Crawlers" },
+                { id: "a-90-day-plan-to-get-cited-on-all-three-platforms", title: "A 90-Day Plan to Get Cited on All Three Platforms" },
+                { id: "frequently-asked-questions", title: "Frequently Asked Questions" },
+                { id: "the-window-is-still-open", title: "The Window Is Still Open" },
+              ]} />
+
 
               {/* Opening */}
               <p className="font-sans text-lg text-muted-foreground leading-relaxed">
@@ -113,7 +125,7 @@ const PerplexityArticle = () => {
 
               {/* Section 1 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">How Each AI Platform Finds and Recommends Agents</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="how-each-ai-platform-finds-and-recommends-agents">How Each AI Platform Finds and Recommends Agents</h2>
                 <div className="space-y-5 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     The three platforms aren't built the same way, and understanding the difference is the first thing most agents miss. They assume AI search works like Google — a single algorithm, a single approach. It doesn't.
@@ -132,7 +144,7 @@ const PerplexityArticle = () => {
 
               {/* Section 2 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The Universal Ranking Factors Across All Three Platforms</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-universal-ranking-factors-across-all-three-platforms">The Universal Ranking Factors Across All Three Platforms</h2>
                 <div className="space-y-5 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     Despite their differences, all three platforms reward the same foundational behaviors. Build these and you're building for all three simultaneously.
@@ -154,7 +166,7 @@ const PerplexityArticle = () => {
 
               {/* Section 3 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">Platform-Specific Optimization for Real Estate Agents</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="platform-specific-optimization-for-real-estate-agents">Platform-Specific Optimization for Real Estate Agents</h2>
                 <div className="space-y-5 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     The universal factors get you most of the way there. These platform-specific moves close the gap.
@@ -173,7 +185,7 @@ const PerplexityArticle = () => {
 
               {/* Section 4 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The Content Format AI Prefers</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-content-format-ai-prefers">The Content Format AI Prefers</h2>
                 <div className="space-y-5 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     AI systems are trained on text that is clear, structured, and self-evidently useful. They've been fed enormous amounts of human content and have learned what "good answer" looks like from the patterns in that data. This is useful to understand because it tells you what to write, not just how much.
@@ -192,7 +204,7 @@ const PerplexityArticle = () => {
 
               {/* Section 5 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">Schema Markup That Speaks to AI Crawlers</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="schema-markup-that-speaks-to-ai-crawlers">Schema Markup That Speaks to AI Crawlers</h2>
                 <div className="space-y-5 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     Schema markup is structured data embedded in your page's HTML that explicitly tells search engines and AI crawlers what your content is. It's written in a format called JSON-LD and placed in the head of your page. AI systems use it to reduce ambiguity when deciding whether your content is relevant to a query.
@@ -208,7 +220,7 @@ const PerplexityArticle = () => {
 
               {/* Section 6 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">A 90-Day Plan to Get Cited on All Three Platforms</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="a-90-day-plan-to-get-cited-on-all-three-platforms">A 90-Day Plan to Get Cited on All Three Platforms</h2>
                 <div className="space-y-5 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     The timeline is real. Most agents who follow this consistently see their first AI citations within 60-90 days of starting. Here's how the 90 days break down.
@@ -230,7 +242,7 @@ const PerplexityArticle = () => {
 
               {/* FAQ Section */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6">Frequently Asked Questions</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6" id="frequently-asked-questions">Frequently Asked Questions</h2>
                 <div className="space-y-6">
                   {[
                     {
@@ -264,7 +276,7 @@ const PerplexityArticle = () => {
 
               {/* Conclusion */}
               <section className="border-t border-border pt-8">
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The Window Is Still Open</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-window-is-still-open">The Window Is Still Open</h2>
                 <div className="space-y-5 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     Most real estate agents haven't thought about Perplexity once. A meaningful number haven't checked whether ChatGPT knows they exist. That gap is the opportunity.

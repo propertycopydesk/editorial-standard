@@ -1,132 +1,38 @@
-import React, { useEffect } from "react";
+import LongFormArticleLayout from "@/components/LongFormArticleLayout";
+import heroImage from "@/assets/blog-mistakes.png";
 
-const ListingDescriptionMistakesArticle: React.FC = () => {
-  const title = "Listing Description Mistakes That Kill Buyer Interest | PropertyCopyDesk";
-  const description =
-    "Five listing description mistakes reduce trust, clicks, and conversion quality. Learn practical fixes with examples.";
-  const canonicalUrl = "https://propertycopydesk.com/blog/listing-description-mistakes";
-  const datePublished = "2025-12-27T00:00:00+00:00";
-  const dateModified = "2026-04-22T00:00:00+00:00";
-
-  useEffect(() => {
-    document.title = title;
-
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (!metaDesc) {
-      metaDesc = document.createElement("meta");
-      metaDesc.setAttribute("name", "description");
-      document.head.appendChild(metaDesc);
+const ListingDescriptionMistakesArticle = () => (
+  <LongFormArticleLayout
+    category="Listing Copy"
+    title="The Five Fatal Mistakes Most Agents Make With Listing Copy"
+    metaTitle="The Five Fatal Mistakes Most Agents Make With Listing Copy | PropertyCopyDesk"
+    metaDescription="Five listing description mistakes reduce trust, clicks, and conversion quality. Learn practical fixes with examples drawn from thousands of real listings."
+    canonicalSlug="listing-description-mistakes"
+    datePublished="2025-12-26"
+    dateModified="2026-04-22"
+    displayDate="December 26, 2025"
+    author="Fatih Can"
+    readTime={7}
+    heroImage={heroImage}
+    keywords={["listing description mistakes", "real estate copy", "property marketing"]}
+    intro={
+      <>After analyzing thousands of real estate listings, certain patterns emerge in ineffective copy. These mistakes appear so frequently they have become industry standard — which is exactly why fixing them is one of the highest-leverage moves an agent can make. If your descriptions read clearly but inquiries are flat, you are almost certainly making one of the five mistakes below.</>
     }
-    metaDesc.setAttribute("content", description);
-
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement("link");
-      canonical.setAttribute("rel", "canonical");
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute("href", canonicalUrl);
-
-    const schema = {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "@id": `${canonicalUrl}#article`,
-      headline: "Listing Description Mistakes That Kill Buyer Interest",
-      description,
-      author: { "@type": "Person", name: "Fatih Can" },
-      publisher: { "@type": "Organization", name: "PropertyCopyDesk", url: "https://propertycopydesk.com" },
-      datePublished,
-      dateModified,
-      mainEntityOfPage: { "@type": "WebPage", "@id": canonicalUrl },
-      keywords: ["listing description mistakes", "real estate copy", "property marketing"],
-    };
-
-    const scriptId = "article-schema-listing-mistakes";
-    document.getElementById(scriptId)?.remove();
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.id = scriptId;
-    script.textContent = JSON.stringify(schema);
-    document.head.appendChild(script);
-
-    return () => document.getElementById(scriptId)?.remove();
-  }, []);
-
-  return (
-    <main className="max-w-3xl mx-auto px-4 py-12">
-      <article>
-        <header className="mb-10">
-          <div className="text-sm font-medium text-amber-600 uppercase tracking-wide mb-3">Listing Copy</div>
-          <h1 className="text-4xl font-bold text-gray-900 leading-tight mb-4">
-            The Five Listing Description Mistakes That Kill Buyer Interest
-          </h1>
-          <p className="text-gray-500 text-sm">By Fatih Can · December 27, 2025 · 7 min read</p>
-        </header>
-
-        <div className="prose prose-lg max-w-none text-gray-700">
-          <p>
-            Most listing copy underperforms for predictable reasons. The good news is that these issues are fixable.
-            If your descriptions are clear but not converting, you are likely making one of the five mistakes below.
-          </p>
-
-          <h2>Mistake 1: Writing a Spec Sheet Instead of a Narrative</h2>
-          <p>
-            Data fields already list rooms and dimensions. Your copy should explain why those details matter in real life.
-            Describe outcomes, not just inputs.
-          </p>
-
-          <h2>Mistake 2: Using Empty Adjectives</h2>
-          <p>
-            Words like "stunning," "charming," and "must-see" are overused and low-trust when unsupported.
-            Replace generic adjectives with specific proof and buyer-relevant context.
-          </p>
-
-          <h2>Mistake 3: Leading with Features, Not Benefits</h2>
-          <p>
-            Features matter, but benefits convert. Instead of listing materials, explain the experience and practical upside.
-            Buyers need to visualize what ownership improves.
-          </p>
-
-          <h2>Mistake 4: Tone Mismatch</h2>
-          <p>
-            Starter-home copy should not sound like luxury-brand language. Luxury listings should not sound generic.
-            Effective copy adapts tone to property type, buyer profile, and market expectations.
-          </p>
-
-          <h2>Mistake 5: Weak or Missing Next Step</h2>
-          <p>
-            Many descriptions end without direction. Tell the reader exactly what to do next and why timing matters.
-            A clear call-to-action improves inquiry volume and quality.
-          </p>
-
-          <section className="mt-10">
-            <h2>Frequently Asked Questions</h2>
-            <h3>How long should a listing description be?</h3>
-            <p>Long enough to communicate positioning clearly. For most listings, 180-300 words of focused copy is effective.</p>
-            <h3>Can AI help avoid these mistakes?</h3>
-            <p>Yes, if your prompt and review process enforce specificity, tone fit, and compliance-safe language.</p>
-            <h3>What should I fix first?</h3>
-            <p>Fix the opening and CTA first. These two areas usually create the biggest performance lift quickly.</p>
-          </section>
-        </div>
-
-        <div className="mt-12 bg-amber-50 border border-amber-200 rounded-xl p-8">
-          <h3 className="text-xl font-bold text-gray-900 mb-2">Want professional listing copy support?</h3>
-          <p className="text-gray-700 mb-4">
-            We help agents remove conversion-killing mistakes and build repeatable listing systems.
-          </p>
-          <a
-            href="https://cal.com/propertycopydesk/auditcall"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-amber-500 hover:bg-amber-600 text-white font-semibold px-6 py-3 rounded-lg transition"
-          >
-            Book Your Free Audit
-          </a>
-        </div>
-      </article>
-    </main>
-  );
-};
+    sections={[
+      { heading: "Mistake 1: Treating Listings as Specification Sheets", paragraphs: ["Persuasive marketing dies the moment every sentence begins with \"This property features\" or \"The home includes.\" Buyers can already see specifications in the data fields — bedrooms, square footage, year built. Your description has to do something the data fields cannot: create an emotional connection and paint a picture of what life in this home could be. Lead with outcomes. Describe how the kitchen layout supports the way real families cook and gather. Describe how the natural light changes through the day. Spec sheets inform. Narratives sell."] },
+      { heading: "Mistake 2: Using Vague, Meaningless Phrases", paragraphs: ["Phrases like \"must see,\" \"won't last long,\" \"charming,\" and \"cozy\" have been overused to the point of meaninglessness. They signal to buyers that the agent had nothing specific to say. Replace generic claims with concrete proof. Instead of \"won't last long,\" write \"three offers received during the first 48 hours.\" Instead of \"charming,\" describe the original 1925 hardwood floors and the leaded-glass dining room window. Specificity is what builds trust in copy that buyers are skimming in seconds."] },
+      { heading: "Mistake 3: Focusing on Features While Ignoring Benefits", paragraphs: ["A primary suite with an ensuite bathroom is a feature. A primary suite that \"offers a private retreat where you can start each day in your spa-like bathroom without fighting for mirror space\" is a benefit. Features are the raw materials of a listing — but benefits are what buyers actually buy. Every feature in your copy should be tied to an outcome the buyer will experience. The fastest way to convert features to benefits is to add the phrase \"so that\" and complete the sentence."] },
+      { heading: "Mistake 4: Writing in a Monotonous Tone", paragraphs: ["Tone has to match the property and the buyer. A luxury estate demands sophisticated, elevated language. A starter home for first-time buyers needs an approachable, exciting copy that acknowledges the significance of the milestone. A family home should emphasize space, comfort, and the potential for creating core memories. When tone is mismatched — luxury copy on a starter home, or generic copy on a luxury listing — the disconnect is immediately felt by buyers and the listing reads as inauthentic."] },
+      { heading: "Mistake 5: Neglecting the Headline Entirely", paragraphs: ["Your headline determines whether a buyer opens the listing at all. On portals where dozens of properties compete for attention in the same scroll, the headline is your only differentiator. Yet most agents default to the address, the price, or a generic phrase like \"Beautiful Home in [Neighborhood].\" These headlines are functionally invisible. Lead with the most distinctive, buyer-relevant detail — a specific feature, a recent renovation, an outcome the buyer cares about. The headline carries more conversion weight than any other element of the listing."] },
+      { heading: "How to Fix These Mistakes Quickly", paragraphs: ["Audit your last five listings against this list. For each mistake you find, rewrite one section. Track the change in click-through and inquiry rate. Most agents who tighten the opening, the headline, and the call-to-action see meaningful lift inside two weeks. Copy is not a static asset. It is a system that compounds when treated like one."] },
+    ]}
+    faqs={[
+      { q: "How long should a listing description be?", a: "Long enough to communicate positioning clearly. For most listings, 180–300 words of focused copy outperforms longer, less-disciplined writing." },
+      { q: "Can AI tools help avoid these mistakes?", a: "Yes, if your prompt and review process enforce specificity, tone fit, and compliance-safe language. AI without an editorial standard tends to amplify the same mistakes." },
+      { q: "Which mistake should I fix first?", a: "Fix the headline and the call-to-action first. These two elements typically create the largest performance lift in the shortest time." },
+      { q: "Do these mistakes affect Fair Housing compliance?", a: "Some do. Vague phrases like \"perfect for families\" or \"ideal for young professionals\" can violate Fair Housing rules. A compliance-aware editor catches these before they reach the MLS." },
+    ]}
+  />
+);
 
 export default ListingDescriptionMistakesArticle;
