@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
+import ArticleTOC from "@/components/ArticleTOC";
 import blogImage from "@/assets/blog-seo.webp";
 
 // NOTE: Upload blog-seo.webp to src/assets/ before deploying.
@@ -105,6 +106,17 @@ const SEOPlaybookArticle = () => {
             </div>
 
             <div className="space-y-8">
+              <ArticleTOC items={[
+                { id: "traditional-seo-still-works-it-also-has-a-ceiling-now", title: "Traditional SEO Still Works. It Also Has a Ceiling Now." },
+                { id: "geo-the-new-layer-you-cant-ignore", title: "GEO: The New Layer You Can't Ignore" },
+                { id: "what-ai-systems-actually-evaluate-when-deciding-what-to-cite", title: "What AI Systems Actually Evaluate When Deciding What to Cite" },
+                { id: "the-conversion-gap-should-wake-you-up", title: "The Conversion Gap Should Wake You Up" },
+                { id: "agentic-commerce-where-this-goes-next", title: "Agentic Commerce: Where This Goes Next" },
+                { id: "what-this-means-for-your-business-right-now", title: "What This Means For Your Business Right Now" },
+                { id: "the-bottom-line", title: "The Bottom Line" },
+                { id: "frequently-asked-questions", title: "Frequently Asked Questions" },
+              ]} />
+
 
               {/* Opening */}
               <p className="font-sans text-lg text-muted-foreground leading-relaxed">
@@ -116,7 +128,7 @@ const SEOPlaybookArticle = () => {
 
               {/* Section 1 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">Traditional SEO Still Works. It Also Has a Ceiling Now.</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="traditional-seo-still-works-it-also-has-a-ceiling-now">Traditional SEO Still Works. It Also Has a Ceiling Now.</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     Traditional SEO optimizes for crawlers and ranking signals. Backlinks, keyword density, page speed, meta descriptions, domain authority. You know the drill. You rank higher on Google's results page, you get more clicks, you get more traffic, you get more leads. That model still matters. Google processes billions of queries daily. Organic search still drives the majority of website traffic worldwide.
@@ -132,7 +144,7 @@ const SEOPlaybookArticle = () => {
 
               {/* Section 2 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">GEO: The New Layer You Can't Ignore</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="geo-the-new-layer-you-cant-ignore">GEO: The New Layer You Can't Ignore</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     The industry is calling it Generative Engine Optimization (GEO), sometimes AI SEO or Answer Engine Optimization (AEO). Whatever the label, the core idea is the same: optimizing your content so that AI systems understand it, trust it, and cite it when generating answers.
@@ -148,7 +160,7 @@ const SEOPlaybookArticle = () => {
 
               {/* Section 3 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">What AI Systems Actually Evaluate When Deciding What to Cite</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="what-ai-systems-actually-evaluate-when-deciding-what-to-cite">What AI Systems Actually Evaluate When Deciding What to Cite</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     <strong className="text-foreground">Entity clarity over keyword density.</strong> AI models process information through entity recognition. They identify your brand as an entity of a certain type in a certain category before analyzing keyword relevance. If your website clearly defines what you are, who you serve, and what problem you solve in plain, descriptive language, AI can extract and cite that.
@@ -167,7 +179,7 @@ const SEOPlaybookArticle = () => {
 
               {/* Section 4 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The Conversion Gap Should Wake You Up</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-conversion-gap-should-wake-you-up">The Conversion Gap Should Wake You Up</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     The numbers on AI-referred traffic are striking. Visitors arriving from AI search convert at dramatically higher rates than traditional organic visitors. Some benchmarks show 4.4x higher conversion rates. Across 329 ecommerce brands tracked in one recent study, LLM traffic posted the second-highest engagement rate of any channel at 2.69%, behind only SMS.
@@ -180,7 +192,7 @@ const SEOPlaybookArticle = () => {
 
               {/* Section 5 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">Agentic Commerce: Where This Goes Next</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="agentic-commerce-where-this-goes-next">Agentic Commerce: Where This Goes Next</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     The shift gets more dramatic when you look at what's coming. Agentic commerce, where AI agents handle the entire purchase journey from discovery to checkout, could drive $190-385 billion in US e-commerce spending by 2030, representing 10-20% of the market.
@@ -196,7 +208,7 @@ const SEOPlaybookArticle = () => {
 
               {/* Section 6 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">What This Means For Your Business Right Now</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="what-this-means-for-your-business-right-now">What This Means For Your Business Right Now</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     <strong className="text-foreground">Don't abandon traditional SEO. Layer GEO on top of it.</strong> Your technical SEO foundation (crawlability, site speed, clean HTML) still matters because AI crawlers use the same access patterns as traditional search crawlers. A page blocked from Googlebot is also blocked from AI model training data. Fix the foundation, then add the GEO-specific layers.
@@ -218,7 +230,7 @@ const SEOPlaybookArticle = () => {
 
               {/* Section 7 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The Bottom Line</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-bottom-line">The Bottom Line</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     AI SEO and traditional SEO aren't enemies. They share a foundation of quality content, technical soundness, and topical authority. But GEO adds critical requirements that traditional SEO doesn't address: entity-level brand optimization, answer-first content architecture, multi-platform AI visibility, and a fundamentally different measurement framework.
@@ -234,7 +246,7 @@ const SEOPlaybookArticle = () => {
 
               {/* FAQ */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6">Frequently Asked Questions</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6" id="frequently-asked-questions">Frequently Asked Questions</h2>
                 <div className="space-y-6">
                   {[
                     {

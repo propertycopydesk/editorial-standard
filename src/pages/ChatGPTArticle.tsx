@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
+import ArticleTOC from "@/components/ArticleTOC";
 import blogChatgptImage from "@/assets/blog-chatgpt.webp";
 
 const BOOKING_URL = "https://cal.com/propertycopydesk/auditcall";
@@ -108,6 +109,16 @@ const ChatGPTArticle = () => {
 
               {/* Article Body */}
               <div className="space-y-8">
+              <ArticleTOC items={[
+                { id: "what-getting-cited-by-ai-actually-means", title: "What \"Getting Cited by AI\" Actually Means" },
+                { id: "the-5-factors-that-determine-which-agents-ai-recommends", title: "The 5 Factors That Determine Which Agents AI Recommends" },
+                { id: "how-to-build-your-ai-visibility-foundation", title: "How to Build Your AI Visibility Foundation" },
+                { id: "the-content-strategy-that-gets-ai-citations", title: "The Content Strategy That Gets AI Citations" },
+                { id: "how-long-it-takes-to-see-first-results", title: "How Long It Takes to See First Results" },
+                { id: "frequently-asked-questions", title: "Frequently Asked Questions" },
+                { id: "the-bottom-line", title: "The Bottom Line" },
+              ]} />
+
                 {/* Opening */}
                 <p className="font-sans text-lg text-muted-foreground leading-relaxed">
                   31% of buyers used AI to research real estate agents in 2025. That number is projected to hit 65% by 2027. The problem is that only 12-14% of agents show up in AI search results consistently. The rest are invisible, and most of them don't know it yet. Getting cited by ChatGPT, Google AI, Perplexity, and Gemini is a buildable system. Here's exactly how it works.
@@ -115,7 +126,7 @@ const ChatGPTArticle = () => {
 
                 {/* Section: What "Getting Cited" Means */}
                 <section>
-                  <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">What "Getting Cited by AI" Actually Means</h2>
+                  <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="what-getting-cited-by-ai-actually-means">What "Getting Cited by AI" Actually Means</h2>
                   <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                     <p>
                       When someone asks ChatGPT "who should list my home in Austin," the model doesn't search the internet in real time. It pulls from its training data, supplemented by Bing's index for ChatGPT and Google's index for Gemini. What appears in the response is whoever those indexes associate with expertise on that topic in that market.
@@ -134,7 +145,7 @@ const ChatGPTArticle = () => {
 
                 {/* Section: 5 Factors */}
                 <section>
-                  <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The 5 Factors That Determine Which Agents AI Recommends</h2>
+                  <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-5-factors-that-determine-which-agents-ai-recommends">The 5 Factors That Determine Which Agents AI Recommends</h2>
                   <div className="space-y-6 font-sans text-muted-foreground leading-relaxed">
                     <div>
                       <p>
@@ -166,7 +177,7 @@ const ChatGPTArticle = () => {
 
                 {/* Section: Build Foundation */}
                 <section>
-                  <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">How to Build Your AI Visibility Foundation</h2>
+                  <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="how-to-build-your-ai-visibility-foundation">How to Build Your AI Visibility Foundation</h2>
                   <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                     <p>
                       Start with your Google Business Profile. Make sure your category is set to "Real Estate Agent" (not "Realtor" or "Real Estate Agency"), your description includes your target markets and specialties, and your posts are updated at least twice a month. GBP optimization is free and most agents have set it up once and forgotten about it.
@@ -182,7 +193,7 @@ const ChatGPTArticle = () => {
 
                 {/* Section: Content Strategy */}
                 <section>
-                  <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The Content Strategy That Gets AI Citations</h2>
+                  <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-content-strategy-that-gets-ai-citations">The Content Strategy That Gets AI Citations</h2>
                   <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                     <p>
                       The content format AI models cite most is the comprehensive how-to guide with a FAQ section. AI is optimized to answer questions, so content that directly answers questions in self-contained FAQ format gets pulled more consistently than narrative content.
@@ -201,7 +212,7 @@ const ChatGPTArticle = () => {
 
                 {/* Section: Timeline */}
                 <section>
-                  <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">How Long It Takes to See First Results</h2>
+                  <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="how-long-it-takes-to-see-first-results">How Long It Takes to See First Results</h2>
                   <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                     <p>
                       The honest answer is 60-90 days for your first AI citation, assuming you're publishing consistently and your technical foundation (schema, GBP, NAP consistency) is in place.
@@ -220,7 +231,7 @@ const ChatGPTArticle = () => {
 
                 {/* FAQ Section */}
                 <section>
-                  <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6">Frequently Asked Questions</h2>
+                  <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6" id="frequently-asked-questions">Frequently Asked Questions</h2>
                   <div className="space-y-6">
                     {[
                       {
@@ -254,7 +265,7 @@ const ChatGPTArticle = () => {
 
                 {/* Bottom Line */}
                 <section>
-                  <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The Bottom Line</h2>
+                  <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-bottom-line">The Bottom Line</h2>
                   <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                     <p>
                       The agents who show up in AI search results in 2026 and beyond are the ones who started building this infrastructure in 2025. The entry barrier is still low because most agents haven't started. You need 20-30 tightly focused articles, solid schema markup, an optimized Google Business Profile, and consistent publishing. That's a 60-90 day build. The agents who do it now are locking in market positions before their competitors wake up to the shift.

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
+import ArticleTOC from "@/components/ArticleTOC";
 import blogImage from "@/assets/blog-commission.webp";
 
 const BOOKING_URL = "https://cal.com/propertycopydesk/auditcall";
@@ -109,6 +110,17 @@ const CommissionArticle = () => {
 
             {/* Article Body */}
             <div className="space-y-8">
+              <ArticleTOC items={[
+                { id: "the-commission-compression-timeline", title: "The Commission Compression Timeline" },
+                { id: "why-discount-agents-win-on-price-and-lose-on-volume", title: "Why Discount Agents Win on Price and Lose on Volume" },
+                { id: "the-agents-who-are-immune-to-commission-pressure", title: "The Agents Who Are Immune to Commission Pressure" },
+                { id: "building-a-market-moat-that-justifies-your-commission", title: "Building a Market Moat That Justifies Your Commission" },
+                { id: "the-3-step-plan-to-defend-your-commission-rate", title: "The 3-Step Plan to Defend Your Commission Rate" },
+                { id: "frequently-asked-questions", title: "Frequently Asked Questions" },
+                { id: "the-bottom-line", title: "The Bottom Line" },
+                { id: "related-reading", title: "Related Reading" },
+              ]} />
+
               {/* Opening */}
               <p className="font-sans text-lg text-muted-foreground leading-relaxed">
                 The NAR settlement changed everything about how commissions work. Buyer agent compensation is no longer automatically baked into MLS listings. Sellers no longer assume they're paying for both sides. Average commission rates are trending down—from the pre-2024 standard of 5-6% combined to 4-4.5% in many markets, with further compression coming as the new market structure settles. The agents asking "how do I compete?" are asking the wrong question. The right question is: "Why would a seller pay full commission to me instead of a discount alternative?" The answer has nothing to do with negotiation. It has everything to do with what you've built before the phone rings.
@@ -116,7 +128,7 @@ const CommissionArticle = () => {
 
               {/* Section: Commission Timeline */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The Commission Compression Timeline</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-commission-compression-timeline">The Commission Compression Timeline</h2>
                 <div className="space-y-5 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     <strong className="text-foreground">Pre-2024: The Automatic Era.</strong> Total commissions across listing and buyer sides averaged 5-6%, with the seller covering both. This was standard. IDX listings automatically included buyer agent compensation. A broker had to opt in to change the terms—and most didn't bother. The market was structured to make the default outcome favorable to agents.
@@ -135,7 +147,7 @@ const CommissionArticle = () => {
 
               {/* Section: Why Discount Agents Win and Lose */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">Why Discount Agents Win on Price and Lose on Volume</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="why-discount-agents-win-on-price-and-lose-on-volume">Why Discount Agents Win on Price and Lose on Volume</h2>
                 <div className="space-y-5 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     The math of discount brokerages is simple and brutal: a 1% listing agent needs to close 3x the volume to earn what a 3% agent earns. Discount models work—but only in high-volume, commoditized markets where the buyers and sellers are price-elastic. Selling a home becomes a commodity transaction, not a specialty service.
@@ -154,7 +166,7 @@ const CommissionArticle = () => {
 
               {/* Section: The Agents Who Are Immune */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The Agents Who Are Immune to Commission Pressure</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-agents-who-are-immune-to-commission-pressure">The Agents Who Are Immune to Commission Pressure</h2>
                 <div className="space-y-5 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     The agents winning in commission compression environments share one trait: they don't get compared. When a seller already trusts you before the first call—because they've read your market breakdowns, watched your AI citations in ChatGPT, seen the data your neighbors reference—the conversation doesn't start at "what's your commission?" It starts at "when can you come by?"
@@ -173,7 +185,7 @@ const CommissionArticle = () => {
 
               {/* Section: Building Market Moats */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">Building a Market Moat That Justifies Your Commission</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="building-a-market-moat-that-justifies-your-commission">Building a Market Moat That Justifies Your Commission</h2>
                 <div className="space-y-5 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     A market moat is accumulated advantage that makes you the default choice in your area. It's built in layers, and each layer compounds the others.
@@ -195,7 +207,7 @@ const CommissionArticle = () => {
 
               {/* Section: 3-Step Plan */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The 3-Step Plan to Defend Your Commission Rate</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-3-step-plan-to-defend-your-commission-rate">The 3-Step Plan to Defend Your Commission Rate</h2>
                 <div className="space-y-5 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     <strong className="text-foreground">Step 1: Build the pre-selling asset.</strong> Publish market-specific content that answers the questions your ideal sellers are asking before they list. "How is my neighborhood trending?" "What are homes in my area actually selling for?" "Should I sell now or wait?" "How do upgrades affect value in my market?" These are the questions sellers are Googling, asking in community groups, and feeding to ChatGPT. You answer them with published, indexed, citable content. Aim for 20+ articles on your target market and specialty within 90 days. This is where the moat gets built. One agent publishing 20 focused articles in 90 days will have more visible authority in that market than ten agents publishing 2 articles each over the same period. Velocity compounds.
@@ -211,7 +223,7 @@ const CommissionArticle = () => {
 
               {/* FAQ Section */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6">Frequently Asked Questions</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6" id="frequently-asked-questions">Frequently Asked Questions</h2>
                 <div className="space-y-6">
                   {[
                     {
@@ -237,7 +249,7 @@ const CommissionArticle = () => {
 
               {/* Conclusion */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The Bottom Line</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-bottom-line">The Bottom Line</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     Commission compression isn't a negotiation problem. It's a visibility problem. The agents who survive and thrive in 2026 aren't the ones who negotiated harder or dropped rates first. They're the ones who made the negotiation irrelevant by building AI visibility and local authority before sellers called.
@@ -253,7 +265,7 @@ const CommissionArticle = () => {
 
               {/* Internal Links Section */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">Related Reading</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="related-reading">Related Reading</h2>
                 <div className="space-y-3 font-sans text-muted-foreground">
                   <p>
                     <Link to="/blog/ai-visibility-for-real-estate-agents-why-zillow-leads-wont-save-you" className="text-accent hover:underline font-medium">

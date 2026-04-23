@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
+import ArticleTOC from "@/components/ArticleTOC";
 import blogImage from "@/assets/blog-schema.webp";
 
 const BOOKING_URL = "https://cal.com/propertycopydesk/auditcall";
@@ -110,6 +111,16 @@ const SchemaArticle = () => {
 
             {/* Article Body */}
             <div className="space-y-8">
+              <ArticleTOC items={[
+                { id: "what-schema-markup-is-and-why-ai-cares-about-it", title: "What Schema Markup Is (and Why AI Cares About It)" },
+                { id: "the-4-schema-types-every-real-estate-agent-needs", title: "The 4 Schema Types Every Real Estate Agent Needs" },
+                { id: "how-to-add-schema-to-your-website", title: "How to Add Schema to Your Website" },
+                { id: "how-to-test-your-schema-markup", title: "How to Test Your Schema Markup" },
+                { id: "common-schema-mistakes-that-hurt-your-ai-visibility", title: "Common Schema Mistakes That Hurt Your AI Visibility" },
+                { id: "frequently-asked-questions", title: "Frequently Asked Questions" },
+                { id: "the-bottom-line", title: "The Bottom Line" },
+              ]} />
+
               {/* Opening */}
               <p className="font-sans text-lg text-muted-foreground leading-relaxed">
                 Schema markup is how you translate your website into a language AI can read. Most agents have never heard of it. The ones who show up in AI search consistently have it on every page.
@@ -117,7 +128,7 @@ const SchemaArticle = () => {
 
               {/* Section: What Schema Markup Is */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">What Schema Markup Is (and Why AI Cares About It)</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="what-schema-markup-is-and-why-ai-cares-about-it">What Schema Markup Is (and Why AI Cares About It)</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     Schema is structured data embedded in your page's HTML as JSON-LD that explicitly tells crawlers what your content is. Without it, crawlers guess. With it, you're declaring exactly what type of content this is, who wrote it, what questions it answers.
@@ -136,7 +147,7 @@ const SchemaArticle = () => {
 
               {/* Section: 4 Schema Types */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The 4 Schema Types Every Real Estate Agent Needs</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-4-schema-types-every-real-estate-agent-needs">The 4 Schema Types Every Real Estate Agent Needs</h2>
                 <div className="space-y-8">
 
                   {/* RealEstateAgent Schema */}
@@ -259,7 +270,7 @@ const SchemaArticle = () => {
 
               {/* Section: How to Add Schema */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">How to Add Schema to Your Website</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="how-to-add-schema-to-your-website">How to Add Schema to Your Website</h2>
                 <div className="space-y-5 font-sans text-muted-foreground leading-relaxed">
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Option A: WordPress</h3>
@@ -295,7 +306,7 @@ const SchemaArticle = () => {
 
               {/* Section: How to Test */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">How to Test Your Schema Markup</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="how-to-test-your-schema-markup">How to Test Your Schema Markup</h2>
                 <div className="space-y-5 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     Never publish schema without testing. A broken schema implementation wastes your effort.
@@ -326,7 +337,7 @@ const SchemaArticle = () => {
 
               {/* Section: Common Mistakes */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">Common Schema Mistakes That Hurt Your AI Visibility</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="common-schema-mistakes-that-hurt-your-ai-visibility">Common Schema Mistakes That Hurt Your AI Visibility</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Missing the image field in Article schema</h3>
@@ -374,7 +385,7 @@ const SchemaArticle = () => {
 
               {/* FAQ Section */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6">Frequently Asked Questions</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6" id="frequently-asked-questions">Frequently Asked Questions</h2>
                 <div className="space-y-6">
                   {[
                     {
@@ -404,7 +415,7 @@ const SchemaArticle = () => {
 
               {/* Bottom Line */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The Bottom Line</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-bottom-line">The Bottom Line</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     Schema markup is the difference between your website being an opaque content blob to AI crawlers and being a clearly structured, authoritative source. Most real estate websites have zero schema. That's your competitive advantage. Adding schema to your 20-30 published articles gives you an edge over 95% of agents in your market.

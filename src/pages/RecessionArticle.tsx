@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
+import ArticleTOC from "@/components/ArticleTOC";
 import blogImage from "@/assets/blog-recession.webp";
 
 const BOOKING_URL = "https://cal.com/propertycopydesk/auditcall";
@@ -110,6 +111,16 @@ const RecessionArticle = () => {
 
             {/* Article Body */}
             <div className="space-y-8">
+              <ArticleTOC items={[
+                { id: "what-happens-to-paid-ad-budgets-in-a-downturn", title: "What Happens to Paid Ad Budgets in a Downturn" },
+                { id: "why-local-authority-content-compounds-during-recessions", title: "Why Local Authority Content Compounds During Recessions" },
+                { id: "the-math-18000year-in-zillow-leads-vs-12000year-in-content", title: "The Math: $18,000/Year in Zillow Leads vs. $12,000/Year in Content" },
+                { id: "what-recession-proof-marketing-actually-looks-like", title: "What \"Recession-Proof Marketing\" Actually Looks Like" },
+                { id: "how-to-start-building-your-recession-moat-now", title: "How to Start Building Your Recession Moat Now" },
+                { id: "frequently-asked-questions", title: "Frequently Asked Questions" },
+                { id: "the-bottom-line", title: "The Bottom Line" },
+              ]} />
+
               {/* Opening */}
               <p className="font-sans text-lg text-muted-foreground leading-relaxed">
                 Commission compression is already underway. Inventory is shifting. Economic uncertainty is creeping into every board meeting and client call. Agents are asking the same question across the country: which marketing bets do I keep, and which do I cut? The answer isn't an opinion. It's math. Here's why local authority content is the only real estate marketing strategy that gets stronger in a downturn, while paid ads collapse.
@@ -117,7 +128,7 @@ const RecessionArticle = () => {
 
               {/* Section: What Happens to Paid Ad Budgets */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">What Happens to Paid Ad Budgets in a Downturn</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="what-happens-to-paid-ad-budgets-in-a-downturn">What Happens to Paid Ad Budgets in a Downturn</h2>
                 <div className="space-y-5 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     When revenue pressure hits, ad spend is always the first line item cut. Not because marketing stops working. Because the math breaks. And in a recession, the math breaks faster than it does in stable years.
@@ -136,7 +147,7 @@ const RecessionArticle = () => {
 
               {/* Section: Why Local Authority Compounds */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">Why Local Authority Content Compounds During Recessions</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="why-local-authority-content-compounds-during-recessions">Why Local Authority Content Compounds During Recessions</h2>
                 <div className="space-y-5 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     The opposite dynamic happens with content. When budgets tighten, most agents cut content production. Blogs go quiet. Publishing schedules stop. The competitive bar to dominate AI search in your market doesn't stay flat. It actually drops. Most agents are leaving the field.
@@ -152,7 +163,7 @@ const RecessionArticle = () => {
 
               {/* Section: The Math */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The Math: $18,000/Year in Zillow Leads vs. $12,000/Year in Content</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-math-18000year-in-zillow-leads-vs-12000year-in-content">The Math: $18,000/Year in Zillow Leads vs. $12,000/Year in Content</h2>
                 <div className="space-y-5 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     <strong className="text-foreground">The Zillow model:</strong> $1,500 per month = $18,000 per year. Assuming a 2-3 percent close rate on leads and 50 leads per month, that's 1-1.5 closings per month at best. Cost per closing: $1,000-$1,500 at absolute best case. More realistically, with lower close rates and higher CPL in a recession, you're looking at $2,000-$5,000 cost per closing. And every month, you need to keep paying. The moment you pause, your pipeline stops.
@@ -171,7 +182,7 @@ const RecessionArticle = () => {
 
               {/* Section: What Recession-Proof Actually Looks Like */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">What "Recession-Proof Marketing" Actually Looks Like</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="what-recession-proof-marketing-actually-looks-like">What "Recession-Proof Marketing" Actually Looks Like</h2>
                 <div className="space-y-5 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     Recession-proof doesn't mean "you'll never need to adjust." It means your core visibility engine doesn't require external spend to function. Content does this. Paid ads don't.
@@ -193,7 +204,7 @@ const RecessionArticle = () => {
 
               {/* Section: How to Start */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">How to Start Building Your Recession Moat Now</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="how-to-start-building-your-recession-moat-now">How to Start Building Your Recession Moat Now</h2>
                 <div className="space-y-5 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     <strong className="text-foreground">Week 1: Pick your niche.</strong> Not "the whole market." Not "everything." One neighborhood. One property type. One client scenario. Example: "Selling a rental property for 1031 exchange in West Austin." Narrow. Defensible. Ownable.
@@ -215,7 +226,7 @@ const RecessionArticle = () => {
 
               {/* FAQ Section */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6">Frequently Asked Questions</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6" id="frequently-asked-questions">Frequently Asked Questions</h2>
                 <div className="space-y-6">
                   {[
                     {
@@ -241,7 +252,7 @@ const RecessionArticle = () => {
 
               {/* Bottom Line */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The Bottom Line</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-bottom-line">The Bottom Line</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     Recessions are when the math gets real. Paid ads stop making sense. CPL climbs. Close rates drop. The agents who stay in paid auctions during downturns are betting that next year's transaction volume will justify this year's spend. It usually doesn't.

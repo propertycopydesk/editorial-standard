@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
+import ArticleTOC from "@/components/ArticleTOC";
 import blogImage from "@/assets/blog-zillow.jpeg";
 
 const BOOKING_URL = "https://cal.com/propertycopydesk/auditcall";
@@ -97,6 +98,16 @@ const ZillowArticle = () => {
             </div>
 
             <div className="space-y-8">
+              <ArticleTOC items={[
+                { id: "the-zillow-lead-economics-problem", title: "The Zillow Lead Economics Problem" },
+                { id: "what-happens-when-ai-replaces-the-zillow-search", title: "What Happens When AI Replaces the Zillow Search" },
+                { id: "owned-visibility-vs-rented-visibility", title: "Owned Visibility vs. Rented Visibility" },
+                { id: "the-marketing-stack-that-survives-2025-2030", title: "The Marketing Stack That Survives 2025-2030" },
+                { id: "how-top-agents-are-already-making-this-shift", title: "How Top Agents Are Already Making This Shift" },
+                { id: "frequently-asked-questions", title: "Frequently Asked Questions" },
+                { id: "the-conservative-math", title: "The Conservative Math" },
+              ]} />
+
 
               {/* Opening */}
               <p className="font-sans text-lg text-muted-foreground leading-relaxed">
@@ -105,7 +116,7 @@ const ZillowArticle = () => {
 
               {/* Section 1 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The Zillow Lead Economics Problem</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-zillow-lead-economics-problem">The Zillow Lead Economics Problem</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     Zillow's lead model is built on a simple premise: agents compete for zip codes, Zillow monetizes that competition. A typical zip code costs $300-1,500 per month depending on market size and competition level. At $60 per lead with a 3% conversion rate, you need 33 leads to close one deal — $1,980 in lead spend at best-case numbers. At $150 per lead with a 1% conversion rate, you need 100 leads — $15,000 per closing.
@@ -124,7 +135,7 @@ const ZillowArticle = () => {
 
               {/* Section 2 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">What Happens When AI Replaces the Zillow Search</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="what-happens-when-ai-replaces-the-zillow-search">What Happens When AI Replaces the Zillow Search</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     In 2025, 31% of buyers used AI to research real estate agents. That number is projected to reach 65% by 2027. The shift is not coming. It is already underway in every major U.S. market.
@@ -143,7 +154,7 @@ const ZillowArticle = () => {
 
               {/* Section 3 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">Owned Visibility vs. Rented Visibility</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="owned-visibility-vs-rented-visibility">Owned Visibility vs. Rented Visibility</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     There are two types of marketing assets in real estate. Rented visibility means you pay a platform for access to their audience. The moment you stop paying, your visibility drops to zero. Owned visibility means you build assets that live on your domain, compound over time, and cannot be taken away when a platform changes its terms.
@@ -162,7 +173,7 @@ const ZillowArticle = () => {
 
               {/* Section 4 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The Marketing Stack That Survives 2025-2030</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-marketing-stack-that-survives-2025-2030">The Marketing Stack That Survives 2025-2030</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     The marketing infrastructure that holds up through platform changes, AI adoption, and commission compression looks like four layers.
@@ -184,7 +195,7 @@ const ZillowArticle = () => {
 
               {/* Section 5 */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">How Top Agents Are Already Making This Shift</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="how-top-agents-are-already-making-this-shift">How Top Agents Are Already Making This Shift</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     Across 50+ U.S. markets analyzed for AI citation patterns, the agents who consistently appear in AI search results share a recognizable profile. They have published at least 15-20 articles on a focused market topic. Their articles include FAQ sections. Their Google Business Profile has been updated in the last 60 days. Their site has some form of schema markup, even if minimal.
@@ -203,7 +214,7 @@ const ZillowArticle = () => {
 
               {/* FAQ Section */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6">Frequently Asked Questions</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-6" id="frequently-asked-questions">Frequently Asked Questions</h2>
                 <div className="space-y-6">
                   {[
                     {
@@ -233,7 +244,7 @@ const ZillowArticle = () => {
 
               {/* Bottom Line */}
               <section>
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4">The Conservative Math</h2>
+                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-4" id="the-conservative-math">The Conservative Math</h2>
                 <div className="space-y-4 font-sans text-muted-foreground leading-relaxed">
                   <p>
                     Six months of Zillow Premier Agent in a competitive market: $1,500 per month times 6 equals $9,000. Leads produced: approximately 60-90. Closings from those leads: 1-2 at a 2% conversion rate. Those 1-2 closings cover the spend but nothing compounds. Month 7 looks exactly like Month 1.
