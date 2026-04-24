@@ -9,6 +9,7 @@ import FoundingPartnerPricingSection from "@/components/landing/FoundingPartnerP
 import FoundingPartnerFAQSection from "@/components/landing/FoundingPartnerFAQSection";
 import FoundingPartnerFinalCTASection from "@/components/landing/FoundingPartnerFinalCTASection";
 import Footer from "@/components/Footer";
+import ExitIntentPopup from "@/components/ExitIntentPopup";
 
 const Index = () => {
   return (
@@ -37,6 +38,7 @@ const Index = () => {
       </main>
 
       <Footer />
+      <ExitIntentPopup />
     </div>
   );
 };
