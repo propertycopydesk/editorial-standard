@@ -291,12 +291,16 @@ const LongFormArticleLayout = ({
               )}
 
               {/* CTA Box */}
-              <div className="bg-accent/10 border border-accent/20 rounded-lg p-8 text-center">
-                <p className="font-serif text-xl text-foreground mb-3">{ctaTitle}</p>
-                <p className="font-sans text-muted-foreground mb-6">{ctaSubtitle}</p>
+              <div className="bg-accent/10 border border-accent/30 rounded-2xl p-8 md:p-12 text-center my-4">
+                <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4 leading-snug">
+                  {ctaTitle}
+                </h3>
+                <p className="font-sans text-base md:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+                  {ctaSubtitle}
+                </p>
                 <Button
                   onClick={() => window.open(BOOKING_URL, "_blank")}
-                  className="btn-gold-shine text-base py-3 px-8 rounded-lg font-semibold"
+                  className="btn-gold-shine text-base md:text-lg py-3 md:py-4 px-8 md:px-10 rounded-lg font-semibold"
                 >
                   {ctaButtonText}
                 </Button>
